@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Estudos - Allan Gomes Silva</title>
+    
+    <style>
+        /* 1. RESET E BASE */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        /* 2. MENU DE NAVEGAÇÃO SUPERIOR */
+        .menu-principal {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            position: sticky; /* Faz o menu ficar fixo no topo ao rolar */
+            top: 0;
+            z-index: 1000;
+        }
+
+        .menu-principal a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #444;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .menu-principal a:hover {
+            background-color: #bd4343;
+        }
+
+        /* 3. HERO SECTION (IMAGEM PRINCIPAL) */
+        .hero-home {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                              url('https://media.istockphoto.com/id/1161294710/pt/foto/knowledge-and-inspiration.jpg?s=1024x1024&w=is&k=20&c=rSrHmvtSgcSSu7PlboAtRWnTOFdi6XlWcYbH-sfV934=');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 80vh; /* Ajustado para não esconder os cards */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-home h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            padding: 0 20px;
+        }
+
+        .hero-home p {
+            font-size: 1.3rem;
+            color: #ccc;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+
+        /* 4. GRID DE MATÉRIAS (CARDS) */
+        .grid-materias {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: -60px; /* Efeito de sobreposição */
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .materia-card {
+            background-color: white;
+            color: #333;
+            text-decoration: none;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transition: 0.3s;
+            width: 280px;
+            text-align: center;
+        }
+
+        .materia-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+            background-color: #fffdfd;
+        }
+
+        .materia-card h3 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #777;
+            margin-top: 50px;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+        @media (max-width: 600px) {
+    .hero-home h1 { font-size: 2rem; }
+    .materia-card { width: 100%; } /* Cards ocupam a largura toda no celular */
+}
+    </style>
+</head>
+<body>
+
+    <nav class="menu-principal">
+        
+        <a href="portugues.html">Português</a>
+        <a href="raciocinio.html">Raciocínio Lógico</a>
+        <a href="Curso Especifico.html">CURSO ESPECÍFICO</a>
+        <a href="Legistalção GO.html">LEGISLAÇÃO GO</a>
+        
+    </nav>
+
+    <header class="hero-home">
+        <h1>BEM-VINDO AOS ESTUDOS</h1>
+        <p>A persistência é o caminho do êxito.</p>
+    </header>
+
+    <section class="grid-materias">
+    <a href="portugues.html" class="materia-card">
+        <h3>Português</h3>
+    </a>
+    <a href="raciocinio.html" class="materia-card">
+        <h3>Raciocínio Lógico</h3>
+    </a>
+    <a href="Curso Especifico.html" class="materia-card"> 
+        <h3>Curso Especializado</h3>
+    </a>
+    <a href="Legistalção GO.html" class="materia-card">
+        <h3>Legislação GO</h3>
+    </a>
+</section>
+
+    <footer>
+        &copy; 2026 Allan Gomes Silva -  Concurseiro
+    </footer>
+
+</body>
+</html>
