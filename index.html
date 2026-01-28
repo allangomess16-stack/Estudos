@@ -115,14 +115,29 @@
     .hero-home h1 { font-size: 2rem; }
     .materia-card { width: 100%; } /* Cards ocupam a largura toda no celular */
 }
+        @media (max-width: 600px) {
+    .hero-home h1 { font-size: 2rem; }
+    .materia-card { width: 100%; }
+    /* Adicione isto para o menu não amontoar */
+    .menu-principal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu-principal a {
+        padding: 8px 10px;
+        margin: 5px;
+        font-size: 14px;
+    }
+}
     </style>
 </head>
 <body>
 
     <nav class="menu-principal">
         
-        <a href="portugues.html">Português</a>
-        <a href="raciocinio.html">Raciocínio Lógico</a>
+       <a href="PORTUGUÊS.html">Português</a>
+       <a href="RACIOCINIO.html">Raciocínio Lógico</a>
         <a href="Curso Especifico.html">CURSO ESPECÍFICO</a>
         <a href="Legistalção GO.html">LEGISLAÇÃO GO</a>
         
@@ -155,4 +170,5 @@
 </body>
 
 </html>
+
 
