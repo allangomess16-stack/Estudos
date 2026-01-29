@@ -218,6 +218,41 @@ html {
 
 
 
+"EXERCÍCIOS "
+<section style="padding: 20px; max-width: 900px; margin: 40px auto; background-color: #fff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif;">
+    <h2 style="color: #ad3131; border-bottom: 2px solid #ad3131; padding-bottom: 10px;">Simulado de Revisão - Português</h2>
+
+    <div style="margin-bottom: 30px; padding: 15px; border-left: 5px solid #ecc903; background: #fffdf0;">
+        <p><strong>1. Na frase "Estudei muito, PORÉM não fui aprovado", a conjunção em destaque é:</strong></p>
+        <input type="radio" name="q1" id="q1a"> <label for="q1a">a) Aditiva</label><br>
+        <input type="radio" name="q1" id="q1b"> <label for="q1b">b) Conclusiva</label><br>
+        <input type="radio" name="q1" id="q1c"> <label for="q1c">c) Adversativa (Oposição)</label><br>
+        <input type="radio" name="q1" id="q1d"> <label for="q1d">d) Explicativa</label>
+        <button onclick="mostrarGabarito('res1')" style="display:block; margin-top:10px; cursor:pointer; background:#333; color:white; border:none; padding:5px 10px; border-radius:4px;">Ver Resposta</button>
+        <p id="res1" style="display:none; color: #279c6f; font-weight: bold; margin-top: 10px;">Gabarito: C. "Porém" indica um contraste à ideia anterior.</p>
+    </div>
+
+    <div style="margin-bottom: 30px; padding: 15px; border-left: 5px solid #ecc903; background: #fffdf0;">
+        <p><strong>2. Qual destas palavras perdeu o acento com o Novo Acordo Ortográfico?</strong></p>
+        <input type="radio" name="q2" id="q2a"> <label for="q2a">a) Herói</label><br>
+        <input type="radio" name="q2" id="q2b"> <label for="q2b">b) Ideia</label><br>
+        <input type="radio" name="q2" id="q2c"> <label for="q2c">c) Chapéu</label><br>
+        <input type="radio" name="q2" id="q2d"> <label for="q2d">d) Piauí</label>
+        <button onclick="mostrarGabarito('res2')" style="display:block; margin-top:10px; cursor:pointer; background:#333; color:white; border:none; padding:5px 10px; border-radius:4px;">Ver Resposta</button>
+        <p id="res2" style="display:none; color: #279c6f; font-weight: bold; margin-top: 10px;">Gabarito: B. Ditongos abertos "ei" e "oi" em paroxítonas não levam mais acento.</p>
+    </div>
+</section>
+
+<script>
+    function mostrarGabarito(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
 
 
 
