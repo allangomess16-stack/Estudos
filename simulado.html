@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <title>ESTUDOS PARA CONCURSO - ALLAN GOMES SILVA</title> 
+  
+    <nav class="menu-principal">
+    <a href="index.HTML">RETORNAR AO MENU</a>
+    <a href="raciocinio.html">RACIOCINIO LOGICO</a>
+    <a href="Curso Especifico.html">CURSO ESPECÍFICO</a>
+    <a href="Legistalção GO.html">LEGISLAÇÃO GO</a>
+ 
+</nav>
+
+    <style>   
+        /* 1. RESET: Remove espaços padrões do navegador */
+        body { 
+        .menu-principal a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #444;
+    transition: 0.3s;
+    /* Adicione as duas linhas abaixo para igualar ao index */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold; 
+}
+        }
+
+        /* 2. FAIXA HERO (A de cima com imagem) */
+        .faixa-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), 
+                              url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .faixa-hero h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        /* 3. FAIXA DE SUBTÍTULO (Vermelha) */
+        .faixa-subtitulo {
+            background-color: #1adb3a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .faixa-subtitulo p {
+            margin: 5px 0; /* Espaçamento entre as linhas de texto */
+        }
+
+        /* 4. ESTILO DOS TÓPICOS E CONTEÚDO */
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 40px;
+        }
+
+        /* Estilo para as imagens de estudo não ficarem gigantes */
+        img {
+            display: block;
+            margin: 20px auto; /* Centraliza a imagem */
+            max-width: 90%;    /* Garante que não ultrapasse a tela do celular */
+            border: 2px solid #ccc;
+            border-radius: 8px; /* Bordas arredondadas nas fotos */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Estilo para o parágrafo que dá título às imagens */
+        .titulo-imagem {
+            background-color: #6bdb0f;
+            color: #000;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            width: 80%;
+            margin: 20px auto 0 auto;
+        }
+
+        /* Estilo do botão flutuante */
+.btn-topo {
+    position: fixed;     /* Fixa o botão na tela, ele não sai do lugar ao rolar */
+    bottom: 20px;        /* Distância do fundo */
+    right: 20px;         /* Distância da direita */
+    width: 50px;         /* Largura do botão */
+    height: 50px;        /* Altura do botão */
+    background-color: #080505; /* Mesma cor da sua faixa de subtítulo */
+    color: white;        /* Cor da seta */
+    text-decoration: none; /* Remove o sublinhado de link */
+    border-radius: 50%;  /* Faz o botão ficar redondo */
+    display: flex;       /* Ajuda a centralizar a seta */
+    justify-content: center; /* Centraliza a seta horizontalmente */
+    align-items: center;     /* Centraliza a seta verticalmente */
+    font-size: 24px;     /* Tamanho da seta */
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* Sombra para dar profundidade */
+    z-index: 1000;       /* Garante que o botão fique por cima das imagens */
+    transition: background 0.3s; /* Efeito suave ao passar o rato */
+}
+
+.btn-topo:hover {
+    background-color: #d40202; /* Muda de cor levemente ao passar o rato */
+}
+
+/* Deixa a rolagem suave em vez de um salto brusco */
+html {
+    scroll-behavior: smooth;
+}
+
+
+.menu-principal {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-principal a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #444;
+    transition: 0.3s;
+}
+
+.menu-principal a:hover {
+    background-color: #bd4343; /* Cor de destaque ao passar o mouse */
+}
+
+    </style>
+
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado Oficial - 40 Questões</title>
+    <style>
+        :root { --primary: #002855; --bg: #f0f2f5; --success: #28a745; --danger: #dc3545; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); padding: 20px; line-height: 1.4; }
+        .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        header { text-align: center; border-bottom: 4px solid var(--primary); margin-bottom: 20px; position: sticky; top: 0; background: white; padding: 10px; z-index: 10; }
+        .section-h { padding: 10px; border-radius: 5px; margin: 20px 0; font-weight: bold; color: white; text-transform: uppercase; font-size: 0.9em; }
+        .bg-p { background: var(--primary); } .bg-l { background: #e65100; } .bg-e { background: #6a1b9a; }
+        .question { margin-bottom: 15px; padding: 15px; border-left: 5px solid #ddd; border-bottom: 1px solid #eee; }
+        .question.correct { border-left-color: var(--success); background: #e9f7ef; }
+        .question.wrong { border-left-color: var(--danger); background: #fdf2f2; }
+        .options label { display: block; padding: 8px; margin: 4px 0; border: 1px solid #eee; border-radius: 4px; cursor: pointer; font-size: 0.9em; }
+        .btn-check { width: 100%; padding: 20px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1.2em; cursor: pointer; font-weight: bold; margin-top: 20px; }
+        #res { display: none; margin-top: 20px; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2em; border: 2px solid; }
+        .exp { display: none; font-size: 0.8em; margin-top: 5px; color: #555; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Simulado Completo: 40 Questões</h1>
+        <p>Operador de Caracteres | Pesos: Port(2), Log(1), Esp(3)</p>
+    </header>
+
+    <form id="f">
+        <div class="section-h bg-p">Língua Portuguesa (Peso 2.0)</div>
+        <div id="qs-port"></div>
+
+        <div class="section-h bg-l">Raciocínio Lógico (Peso 1.0)</div>
+        <div id="qs-log"></div>
+
+        <div class="section-h bg-e">Conhecimentos Específicos (Peso 3.0)</div>
+        <div id="qs-esp"></div>
+
+        <button type="button" class="btn-check" onclick="verificar()">FINALIZAR E CALCULAR NOTA</button>
+    </form>
+    <div id="res"></div>
+</div>
+
+<script>
+    const data = [
+        // PORTUGUES (Q1-Q10) - PESO 2
+        { id: 1, s: 'p', p: 2, q: "Regra de acentuação de 'concluído':", o: ["Juiz", "Saída", "Café", "Órgão"], a: 1, e: "Regra do Hiato: i ou u tônico sozinho na sílaba." },
+        { id: 2, s: 'p', p: 2, q: "Por que 'heroico' perdeu o acento?", o: ["Oxítona", "Paroxítona com ditongo aberto 'oi'", "Proparoxítona"], a: 1, e: "Acordo Ortográfico: paroxítonas com ditongos 'ei'/'oi' perderam acento." },
+        { id: 3, s: 'p', p: 2, q: "Acento incorreto:", o: ["Ele detém", "Eles detêm", "Ele pôde ontem, mas pôde hoje"], a: 2, e: "No presente é 'pode' (sem acento)." },
+        { id: 4, s: 'p', p: 2, q: "'Estratégia' acentua-se como:", o: ["Técnica", "Água", "Alguém"], a: 1, e: "Ambas paroxítonas em ditongo." },
+        { id: 5, s: 'p', p: 2, q: "Crase obrigatória:", o: ["Entregou a diretora", "A partir de agora", "Entregou à diretora"], a: 2, e: "Substantivo feminino determinado." },
+        { id: 6, s: 'p', p: 2, q: "Acento em 'vêm' (eles) indica:", o: ["Tonicidade", "Número (plural)", "Hiato"], a: 1, e: "Diferencia singular (vem) de plural (vêm)." },
+        { id: 7, s: 'p', p: 2, q: "Palavra proparoxítona:", o: ["Automático", "Relógio", "Pajé"], a: 0, e: "Todas as proparoxítonas são acentuadas." },
+        { id: 8, s: 'p', p: 2, q: "Uso de 'consequentemente' indica:", o: ["Oposição", "Conclusão/Consequência", "Causa"], a: 1, e: "Conectivo conclusivo." },
+        { id: 9, s: 'p', p: 2, q: "Correlação verbal correta:", o: ["Pediu que refaça", "Pediu que refizesse", "Pediu que refaz"], a: 1, e: "Passado pede imperfeito do subjuntivo." },
+        { id: 10, s: 'p', p: 2, q: "Acentua-se como 'pública':", o: ["Técnica", "Água", "Herói"], a: 0, e: "Ambas proparoxítonas." },
+
+        // LOGICA (Q11-Q15) - PESO 1
+        { id: 11, s: 'l', p: 1, q: "Negação de 'Se estudo, passo':", o: ["Se não estudo, não passo", "Estudo e não passo", "Não estudo ou passo"], a: 1, e: "Regra do Mané." },
+        { id: 12, s: 'l', p: 1, q: "'P ou não P' é:", o: ["Contradição", "Tautologia", "Contingência"], a: 1, e: "Sempre verdadeiro." },
+        { id: 13, s: 'l', p: 1, q: "Negação de 'Todo parlamentar é orador':", o: ["Nenhum é", "Algum não é", "Todos não são"], a: 1, e: "Todo -> Algum não." },
+        { id: 14, s: 'l', p: 1, q: "Negação de 'Estudo ou Trabalho':", o: ["Não estudo ou não trabalho", "Não estudo e não trabalho", "Estudo e trabalho"], a: 1, e: "Lei de De Morgan (nega e troca ou por e)." },
+        { id: 15, s: 'l', p: 1, q: "Se 'P então Q' é verdade e Q é falso:", o: ["P é verdade", "P é falso", "Nada se conclui"], a: 1, e: "Modus Tollens." },
+
+        // ESPECIFICAS (Q16-Q40) - PESO 3
+        { id: 16, s: 'e', p: 3, q: "Resolução Full HD:", o: ["1280x720", "1920x1080", "3840x2160"], a: 1, e: "Padrão 1080p." },
+        { id: 17, s: 'e', p: 3, q: "Margem de segurança para textos:", o: ["Action Safe", "Title Safe", "Overscan"], a: 1, e: "Title Safe = 80%." },
+        { id: 18, s: 'e', p: 3, q: "Processo de sobreposição de vídeo:", o: ["Rendering", "Keying", "Fading"], a: 1, e: "Keying é o recorte/fusão." },
+        { id: 19, s: 'e', p: 3, q: "Formato com transparência (Alfa):", o: ["JPG", "PNG", "BMP"], a: 1, e: "PNG é o padrão para transparência." },
+        { id: 20, s: 'e', p: 3, q: "Espaço vertical entre linhas:", o: ["Kerning", "Leading", "Tracking"], a: 1, e: "Leading = entrelinha." },
+        { id: 21, s: 'e', p: 3, q: "Janela de LIBRAS (visão telespectador):", o: ["Inf. Esquerdo", "Inf. Direito", "Sup. Direito"], a: 1, e: "Lado direito de quem assiste." },
+        { id: 22, s: 'e', p: 3, q: "Barramento para PREPARAÇÃO:", o: ["Program", "Preview", "DSK"], a: 1, e: "Preview confere antes de ir ao ar." },
+        { id: 23, s: 'e', p: 3, q: "Dobrar 1080p para 4K gera quantos pixels?", o: ["O dobro", "O quádruplo", "O triplo"], a: 1, e: "2x largura x 2x altura = 4x pixels." },
+        { id: 24, s: 'e', p: 3, q: "Termo para sombra projetada:", o: ["Stroke", "Drop Shadow", "Glow"], a: 1, e: "Drop Shadow separa o texto do fundo." },
+        { id: 25, s: 'e', p: 3, q: "Parede 12m2 com placas 50x50cm:", o: ["24", "48", "60"], a: 1, e: "0.25m2 por placa. 12 / 0.25 = 48." },
+        { id: 26, s: 'e', p: 3, q: "Sinal entrelaçado é o:", o: ["1080p", "1080i", "720p"], a: 1, e: "i = interlaced (entrelaçado)." },
+        { id: 27, s: 'e', p: 3, q: "Letreiro horizontal é:", o: ["Roll", "Crawl", "Lower Third"], a: 1, e: "Crawl = rastejar (horizontal)." },
+        { id: 28, s: 'e', p: 3, q: "Créditos verticais no fim:", o: ["Crawl", "Roll", "Bug"], a: 1, e: "Roll = rolar (vertical)." },
+        { id: 29, s: 'e', p: 3, q: "Última camada de vídeo (logos/bugs):", o: ["Preview", "DSK", "Aux"], a: 1, e: "Downstream Keyer." },
+        { id: 30, s: 'e', p: 3, q: "Sistema de cor para monitores/TV:", o: ["CMYK", "RGB", "Pantone"], a: 1, e: "Sistema aditivo de luz." },
+        { id: 31, s: 'e', p: 3, q: "Espaço entre LETRAS específicas (A e V):", o: ["Kerning", "Leading", "Tracking"], a: 0, e: "Kerning ajusta pares de letras." },
+        { id: 32, s: 'e', p: 3, q: "Formato de vídeo 4K comercial:", o: ["HD", "Full HD", "UHD"], a: 2, e: "Ultra High Definition." },
+        { id: 33, s: 'e', p: 3, q: "Vantagem do SVG no Canva:", o: ["É leve", "Vetor (não pixeliza)", "Tem mais cores"], a: 1, e: "Pode ser ampliado sem perda." },
+        { id: 34, s: 'e', p: 3, q: "Margem de 90% da tela:", o: ["Action Safe", "Title Safe", "Clock Safe"], a: 0, e: "Protege o enquadramento da ação." },
+        { id: 35, s: 'e', p: 3, q: "Recorte por cor (fundo verde):", o: ["Luma Key", "Chroma Key", "Alpha Key"], a: 1, e: "Chroma = cor." },
+        { id: 36, s: 'e', p: 3, q: "Proporção de tela Full HD:", o: ["4:3", "16:9", "21:9"], a: 1, e: "Widescreen." },
+        { id: 37, s: 'e', p: 3, q: "Parede 3x4m com placas 25x25cm:", o: ["144", "192", "240"], a: 1, e: "12m2 / 0.0625 = 192." },
+        { id: 38, s: 'e', p: 3, q: "Fonte ideal para Crawl:", o: ["Com serifa", "Sem serifa (Sans Serif)", "Cursiva"], a: 1, e: "Sans serif evita cintilação (flicker)." },
+        { id: 39, s: 'e', p: 3, q: "Contorno da letra:", o: ["Shadow", "Stroke", "Bevel"], a: 1, e: "Stroke dá contraste ao texto." },
+        { id: 40, s: 'e', p: 3, q: "Sinal Fill & Key serve para:", o: ["Transparência", "Aumentar brilho", "Sincronizar áudio"], a: 0, e: "Fill (cor) + Key (mapa de recorte)." }
+    ];
+
+    function build() {
+        data.forEach(q => {
+            const div = document.createElement('div');
+            div.className = 'question'; div.id = `q${q.id}-b`;
+            div.innerHTML = `<p><strong>${q.id.toString().padStart(2, '0')}. ${q.q}</strong></p>
+                <div class="options">${q.o.map((o, i) => `<label><input type="radio" name="q${q.id}" value="${i}"> ${String.fromCharCode(65+i)}) ${o}</label>`).join('')}</div>
+                <div class="exp" id="e${q.id}">${q.e}</div>`;
+            document.getElementById(`qs-${q.s === 'p' ? 'port' : q.s === 'l' ? 'log' : 'esp'}`).appendChild(div);
+        });
+    }
+
+    function verificar() {
+        let nota = 0, total = 0;
+        data.forEach(q => {
+            total += q.p;
+            const sel = document.querySelector(`input[name="q${q.id}"]:checked`);
+            const b = document.getElementById(`q${q.id}-b`);
+            document.getElementById(`e${q.id}`).style.display = 'block';
+            if(sel && parseInt(sel.value) === q.a) { nota += q.p; b.className = 'question correct'; }
+            else { b.className = 'question wrong'; }
+        });
+        const perc = (nota/total)*100;
+        const r = document.getElementById('res'); r.style.display = 'block';
+        r.style.background = perc >= 85 ? '#d4edda' : '#f8d7da';
+        r.innerHTML = `Nota: ${nota.toFixed(1)} / ${total.toFixed(1)} (${perc.toFixed(1)}%)<br>${perc >= 85 ? 'APROVADO!' : 'PRECISA REVISAR!'}`;
+        window.scrollTo(0,0);
+    }
+    build();
+</script>
+</body>
+</html>
