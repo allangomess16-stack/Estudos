@@ -2,34 +2,44 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESTUDOS PARA CONCURSO - ALLAN GOMES SILVA</title> 
   
-    <nav class="menu-principal">
-    <a href="index.html">RETORNAR AO MENU</a>
-   <a href="RACIOCINIO.html">RACIOCÍNIO LÓGICO</a>
-    <a href="Curso Especifico.html">CURSO ESPECÍFICO</a>
-    <a href="Legistalção GO.html">LEGISLAÇÃO GO</a>
- 
-</nav>
-
-    <style>   
-        /* 1. RESET: Remove espaços padrões do navegador */
+    <style>    
+        /* 1. RESET E ESTILOS GERAIS */
         body { 
-        .menu-principal a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    background-color: #444;
-    transition: 0.3s;
-    /* Adicione as duas linhas abaixo para igualar ao index */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold; 
-}
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
         }
 
-        /* 2. FAIXA HERO (A de cima com imagem) */
+        .menu-principal {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .menu-principal a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #444;
+            transition: 0.3s;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .menu-principal a:hover {
+            background-color: #bd4343;
+        }
+
+        /* 2. FAIXA HERO */
         .faixa-hero {
             background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), 
                               url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070');
@@ -51,7 +61,7 @@
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
         }
 
-        /* 3. FAIXA DE SUBTÍTULO (Vermelha) */
+        /* 3. FAIXA DE SUBTÍTULO */
         .faixa-subtitulo {
             background-color: #1adb3a;
             color: white;
@@ -59,28 +69,20 @@
             text-align: center;
         }
 
-        .faixa-subtitulo p {
-            margin: 5px 0; /* Espaçamento entre as linhas de texto */
-        }
+        .faixa-subtitulo p { margin: 5px 0; }
 
-        /* 4. ESTILO DOS TÓPICOS E CONTEÚDO */
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-top: 40px;
-        }
+        /* 4. CONTEÚDO */
+        h2 { text-align: center; color: #333; margin-top: 40px; }
 
-        /* Estilo para as imagens de estudo não ficarem gigantes */
         img {
             display: block;
-            margin: 20px auto; /* Centraliza a imagem */
-            max-width: 90%;    /* Garante que não ultrapasse a tela do celular */
+            margin: 20px auto;
+            max-width: 90%;
             border: 2px solid #ccc;
-            border-radius: 8px; /* Bordas arredondadas nas fotos */
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        /* Estilo para o parágrafo que dá título às imagens */
         .titulo-imagem {
             background-color: #6bdb0f;
             color: #000;
@@ -91,81 +93,41 @@
             margin: 20px auto 0 auto;
         }
 
-        /* Estilo do botão flutuante */
-.btn-topo {
-    position: fixed;     /* Fixa o botão na tela, ele não sai do lugar ao rolar */
-    bottom: 20px;        /* Distância do fundo */
-    right: 20px;         /* Distância da direita */
-    width: 50px;         /* Largura do botão */
-    height: 50px;        /* Altura do botão */
-    background-color: #080505; /* Mesma cor da sua faixa de subtítulo */
-    color: white;        /* Cor da seta */
-    text-decoration: none; /* Remove o sublinhado de link */
-    border-radius: 50%;  /* Faz o botão ficar redondo */
-    display: flex;       /* Ajuda a centralizar a seta */
-    justify-content: center; /* Centraliza a seta horizontalmente */
-    align-items: center;     /* Centraliza a seta verticalmente */
-    font-size: 24px;     /* Tamanho da seta */
-    font-weight: bold;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* Sombra para dar profundidade */
-    z-index: 1000;       /* Garante que o botão fique por cima das imagens */
-    transition: background 0.3s; /* Efeito suave ao passar o rato */
-}
+        .btn-topo {
+            position: fixed; bottom: 20px; right: 20px;
+            width: 50px; height: 50px;
+            background-color: #080505; color: white;
+            text-decoration: none; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 24px; font-weight: bold;
+            z-index: 1000; box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
 
-.btn-topo:hover {
-    background-color: #d40202; /* Muda de cor levemente ao passar o rato */
-}
+        .btn-topo:hover { background-color: #d40202; }
 
-/* Deixa a rolagem suave em vez de um salto brusco */
-html {
-    scroll-behavior: smooth;
-}
-
-
-.menu-principal {
-    background-color: #333;
-    padding: 10px;
-    text-align: center;
-}
-
-.menu-principal a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    background-color: #444;
-    transition: 0.3s;
-}
-
-.menu-principal a:hover {
-    background-color: #bd4343; /* Cor de destaque ao passar o mouse */
-}
+        html { scroll-behavior: smooth; }
 
         @media (max-width: 600px) {
-    .hero-home h1 { font-size: 2rem; }
-    .materia-card { width: 100%; }
-    /* Adicione isto para o menu não amontoar */
-    .menu-principal {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .menu-principal a {
-        padding: 8px 10px;
-        margin: 5px;
-        font-size: 14px;
-    }
-}
+            .faixa-hero h1 { font-size: 2rem; }
+            .menu-principal { display: flex; flex-wrap: wrap; justify-content: center; }
+            .menu-principal a { padding: 8px 10px; margin: 5px; font-size: 14px; }
+        }
     </style>
 </head>
 
 <body>
 
+    <nav class="menu-principal">
+        <a href="index.html">RETORNAR AO MENU</a>
+        <a href="RACIOCINIO.html">RACIOCÍNIO LÓGICO</a>
+        <a href="Curso Especifico.html">CURSO ESPECÍFICO</a>
+        <a href="Legistalção GO.html">LEGISLAÇÃO GO</a>
+        <a href="simulado.html">SIMULADO</a>
+    </nav>
+
     <div id="topo"></div>
-
-<a href="#topo" class="btn-topo">↑</a>
-
+    <a href="#topo" class="btn-topo">↑</a>
 
     <header class="faixa-hero">
         <h1>ESTUDOS PARA CONCURSO PORTUGUÊS </h1>
@@ -179,153 +141,48 @@ html {
 
     <section style="padding: 20px; text-align: center;">
         <h2>LISTA DE TÓPICOS</h2>
-        <nav>
-            <ul style="display: inline-block; text-align: left;">
-                <li>Conjunções</li>      
-                <li>Acentuação</li>
-                <li>Tempos verbais</li>
-                <li>Tipos e gêneros textuais</li>
-            </ul>   
-        </nav>
+        <ul style="display: inline-block; text-align: left;">
+            <li>Conjunções</li>      
+            <li>Acentuação</li>
+            <li>Tempos verbais</li>
+            <li>Tipos e gêneros textuais</li>
+        </ul>   
     </section>
 
-    <hr> <h2>CONTEÚDO DAS MATÉRIAS</h2>
+    <hr>
+    <h2>CONTEÚDO DAS MATÉRIAS</h2>
+    <p style="text-align:center;">Aqui estarão os principais conteúdos dos estudos</p>
 
-    
-   
- 
-<h2>Aqui estara os principais conteudos dos estudos</h2>
-<p class="titulo-imagem">CONJUNÇÕES COORDENATIVAS</p>
-<img src="conjunções/conjunções coordenativas.PNG"/>
+    <p class="titulo-imagem">CONJUNÇÕES COORDENATIVAS</p>
+    <img src="conjunções/conjunções coordenativas.PNG"/>
 
-<p class="titulo-imagem">CONJUNÇÕES SUBORDINATIVAS</p>
-<img src="conjunções/conjunções subordinativas.PNG"/>
+    <p class="titulo-imagem">CONJUNÇÕES SUBORDINATIVAS</p>
+    <img src="conjunções/conjunções subordinativas.PNG"/>
 
-<p class="titulo-imagem">ACENTUAÇÃO GRAFICA</p>
-<img src="interpretação/Acentuação/Acentos e Sinais Gráficos.PNG"/>
+    <p class="titulo-imagem">ACENTUAÇÃO GRÁFICA</p>
+    <img src="interpretação/Acentuação/Acentos e Sinais Gráficos.PNG"/>
 
-<p class=" titulo-imagem">NOVO ACORDO ORTOGRÁFICO (NAO)</p>
-<img src="interpretação/Acentuação/Alterações do Novo Acordo Ortográfico (NAO).PNG"/>
+    <p class="titulo-imagem">NOVO ACORDO ORTOGRÁFICO (NAO)</p>
+    <img src="interpretação/Acentuação/Alterações do Novo Acordo Ortográfico (NAO).PNG"/>
 
-<p class=" titulo-imagem">REGRAS GERAIS DE ACENTUAÇÃO</p>
-<img src="interpretação/Acentuação/Regras Gerais de acentuação.PNG"/>
+    <section style="padding: 20px; max-width: 900px; margin: 40px auto; background-color: #fff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+        <h2 style="color: #ad3131; border-bottom: 2px solid #ad3131; padding-bottom: 10px;">Simulado de Revisão - Português</h2>
 
-<p class="titulo-imagem">USO DO HÍFEN</p>
-<img src="interpretação/Acentuação/Uso do Hífen (Regras do NAO).PNG"/>
+        <div style="margin-bottom: 20px; padding: 15px; border-left: 5px solid #ecc903; background: #fffdf0;">
+            <p><strong>1. Na frase "Estudei muito, PORÉM não fui aprovado", a conjunção em destaque é:</strong></p>
+            <input type="radio" name="q1" id="q1a"> <label for="q1a">a) Aditiva</label><br>
+            <input type="radio" name="q1" id="q1b"> <label for="q1b">b) Conclusiva</label><br>
+            <input type="radio" name="q1" id="q1c"> <label for="q1c">c) Adversativa (Oposição)</label><br>
+            <button onclick="ver('r1')" style="margin-top:10px; cursor:pointer; background:#333; color:white; border:none; padding:5px 10px; border-radius:4px;">Ver Resposta</button>
+            <p id="r1" style="display:none; color: #279c6f; font-weight: bold; margin-top: 10px;">Gabarito: C. "Porém" indica um contraste à ideia anterior.</p>
+        </div>
+    </section>
 
-<p class="titulo-imagem">DICAS DO USO DE EMBORA X SOBRETUDO</p>
-<img src="interpretação/conjunções/dicas de sobretudo e embora.PNG"/>
-
-
-
-/*EXERCICIOS REVISÃO */
-<section style="padding: 20px; max-width: 900px; margin: 40px auto; background-color: #fff; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif;">
-    <h2 style="color: #ad3131; border-bottom: 2px solid #ad3131; padding-bottom: 10px;">Simulado de Revisão - Português</h2>
-
-    <div style="margin-bottom: 30px; padding: 15px; border-left: 5px solid #ecc903; background: #fffdf0;">
-      
-        <p><strong>1. Na frase "Estudei muito, PORÉM não fui aprovado", a conjunção em destaque é:</strong></p>
-        <input type="radio" name="q1" id="q1a"> <label for="q1a">a) Aditiva</label><br>
-        <input type="radio" name="q1" id="q1b"> <label for="q1b">b) Conclusiva</label><br>
-        <input type="radio" name="q1" id="q1c"> <label for="q1c">c) Adversativa (Oposição)</label><br>
-        <input type="radio" name="q1" id="q1d"> <label for="q1d">d) Explicativa</label>
-        <button onclick="mostrarGabarito('res1')" style="display:block; margin-top:10px; cursor:pointer; background:#333; color:white; border:none; padding:5px 10px; border-radius:4px;">Ver Resposta</button>
-        <p id="res1" style="display:none; color: #279c6f; font-weight: bold; margin-top: 10px;">Gabarito: C. "Porém" indica um contraste à ideia anterior.</p>
-    </div>
-
-    <div style="margin-bottom: 30px; padding: 15px; border-left: 5px solid #ecc903; background: #fffdf0;">
-        <p><strong>2. Qual destas palavras perdeu o acento com o Novo Acordo Ortográfico?</strong></p>
-        <input type="radio" name="q2" id="q2a"> <label for="q2a">a) Herói</label><br>
-        <input type="radio" name="q2" id="q2b"> <label for="q2b">b) Ideia</label><br>
-        <input type="radio" name="q2" id="q2c"> <label for="q2c">c) Chapéu</label><br>
-        <input type="radio" name="q2" id="q2d"> <label for="q2d">d) Piauí</label>
-        <button onclick="mostrarGabarito('res2')" style="display:block; margin-top:10px; cursor:pointer; background:#333; color:white; border:none; padding:5px 10px; border-radius:4px;">Ver Resposta</button>
-        <p id="res2" style="display:none; color: #279c6f; font-weight: bold; margin-top: 10px;">Gabarito: B. Ditongos abertos "ei" e "oi" em paroxítonas não levam mais acento.</p>
-    </div>
-
-
-
-
-
-
-
-    <h3 style="color: #333; background: #eee; padding: 5px 10px;">Tema: Conjunções</h3>
-    <div style="margin-bottom: 20px; padding: 15px; border-left: 5px solid #ecc903;">
-        <p><strong>1. "Estudou tanto QUE passou em primeiro lugar". A conjunção destacada indica:</strong></p>
-        <input type="radio" name="p1" id="p1a"> <label for="p1a">a) Causa</label><br>
-        <input type="radio" name="p1" id="p1b"> <label for="p1b">b) Consequência (Consecutiva)</label><br>
-        <button onclick="ver('r1')" style="margin-top:10px; cursor:pointer;">Gabarito</button>
-        <p id="r1" style="display:none; color: green;">Resposta: B. O "que" após "tanto" indica o resultado do estudo.</p>
-    </div>
-    <div style="margin-bottom: 20px; padding: 15px; border-left: 5px solid #ecc903;">
-        <p><strong>2. Qual conjunção substitui "CONTUDO" sem mudar o sentido?</strong></p>
-        <input type="radio" name="p2" id="p2a"> <label for="p2a">a) Portanto</label><br>
-        <input type="radio" name="p2" id="p2b"> <label for="p2b">b) Todavia</label><br>
-        <button onclick="ver('r2')" style="margin-top:10px; cursor:pointer;">Gabarito</button>
-        <p id="r2" style="display:none; color: green;">Resposta: B. Ambas são adversativas (oposição).</p>
-    </div>
-
-    <h3 style="color: #333; background: #eee; padding: 5px 10px;">Tema: Acentuação</h3>
-    <div style="margin-bottom: 20px; padding: 15px; border-left: 5px solid #ad3131;">
-        <p><strong>3. A palavra "MÉDICO" é acentuada por ser:</strong></p>
-        <input type="radio" name="p3" id="p3a"> <label for="p3a">a) Paroxítona</label><br>
-        <input type="radio" name="p3" id="p3b"> <label for="p3b">b) Proparoxítona</label><br>
-        <button onclick="ver('r3')" style="margin-top:10px; cursor:pointer;">Gabarito</button>
-        <p id="r3" style="display:none; color: green;">Resposta: B. Todas as proparoxítonas são acentuadas.</p>
-    </div>
-    <div style="margin-bottom: 20px; padding: 15px; border-left: 5px solid #ad3131;">
-        <p><strong>4. Qual palavra NÃO leva mais acento (Novo Acordo)?</strong></p>
-        <input type="radio" name="p4" id="p4a"> <label for="p4a">a) Jibóia</label><br>
-        <input type="radio" name="p4" id="p4b"> <label for="p4b">b) Herói</label><br>
-        <button onclick="ver('r4')" style="margin-top:10px; cursor:pointer;">Gabarito</button>
-        <p id="r4" style="display:none; color: green;">Resposta: A. Jiboia (paroxítona com ditongo aberto "oi").</p>
-    </div>
-
-    <h3 style="color: #333; background: #eee; padding: 5px 10px;">Tema: Tempos Verbais</h3>
-    <div style="margin-bottom: 20px; padding: 15px; border-left: 5px solid #279c6f;">
-        <p><strong>5. "Se eu ESTUDASSE, passaria". O verbo está no:</strong></p>
-        <input type="radio" name="p5" id="p5a"> <label for="p5a">a) Pretérito Imperfeito do Subjuntivo</label><br>
-        <input type="radio" name="p5" id="p5b"> <label for="p5b">b) Futuro do Presente</label><br>
-        <button onclick="ver('r5')" style="margin-top:10px; cursor:pointer;">Gabarito</button>
-        <p id="r5" style="display:none; color: green;">Resposta: A. Indica uma condição hipotética.</p>
-    </div>
-    <div style="margin-bottom: 20px; padding: 15px; border-left: 5px solid #279c6f;">
-        <p><strong>6. "Eu ESTUDARA para a prova". O tempo é:</strong></p>
-        <input type="radio" name="p6" id="p6a"> <label for="p6a">a) Pretérito Perfeito</label><br>
-        <input type="radio" name="p6" id="p6b"> <label for="p6b">b) Pretérito Mais-que-perfeito</label><br>
-        <button onclick="ver('r6')" style="margin-top:10px; cursor:pointer;">Gabarito</button>
-        <p id="r6" style="display:none; color: green;">Resposta: B. Indica um passado anterior a outro passado.</p>
-    </div>
-
-    <h3 style="color: #333; background: #eee; padding: 5px 10px;">Tema: Gêneros Textuais</h3>
-    <div style="margin-bottom: 20px; padding: 15px; border-left: 5px solid #333;">
-        <p><strong>7. Um texto que narra fatos do dia a dia de forma poética é uma:</strong></p>
-        <input type="radio" name="p7" id="p7a"> <label for="p7a">a) Crônica</label><br>
-        <input type="radio" name="p7" id="p7b"> <label for="p7b">b) Reportagem</label><br>
-        <button onclick="ver('r7')" style="margin-top:10px; cursor:pointer;">Gabarito</button>
-        <p id="r7" style="display:none; color: green;">Resposta: A. A crônica foca no cotidiano.</p>
-    </div>
-    <div style="margin-bottom: 20px; padding: 15px; border-left: 5px solid #333;">
-        <p><strong>8. A função principal de uma Dissertação é:</strong></p>
-        <input type="radio" name="p8" id="p8a"> <label for="p8a">a) Narrar uma história</label><br>
-        <input type="radio" name="p8" id="p8b"> <label for="p8b">b) Defender uma ideia/argumento</label><br>
-        <button onclick="ver('r8')" style="margin-top:10px; cursor:pointer;">Gabarito</button>
-        <p id="r8" style="display:none; color: green;">Resposta: B. Dissertar é discutir um tema.</p>
-    </div>
-</section>
-    
-
-<script>
-    function ver(id) {
-        var x = document.getElementById(id);
-        x.style.display = (x.style.display === "none") ? "block" : "none";
-    }
-</script>
-
-
+    <script>
+        function ver(id) {
+            var x = document.getElementById(id);
+            x.style.display = (x.style.display === "none") ? "block" : "none";
+        }
+    </script>
 </body>
-
-
-    </html>
-
-
+</html>
