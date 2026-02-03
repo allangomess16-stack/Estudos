@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMULADO MASTER - CÂMARA DE GOIÂNIA</title> 
+    <style>    
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f0f2f5; }
+        .menu-principal { background-color: #333; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        .menu-principal a { color: white; text-decoration: none; padding: 10px 20px; margin: 0 10px; border-radius: 5px; background-color: #444; transition: 0.3s; font-weight: bold; }
+        .menu-principal a:hover { background-color: #bd4343; }
+
+        :root { --primary: #002855; --success: #28a745; --danger: #dc3545; }
+        .container { max-width: 1000px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        header { text-align: center; border-bottom: 4px solid var(--primary); margin-bottom: 20px; padding-bottom: 10px;}
+
+        .section-h { padding: 12px; border-radius: 5px; margin: 25px 0; font-weight: bold; color: white; text-transform: uppercase; text-align: center; }
+        .bg-p { background: var(--primary); } 
+        .bg-l { background: #e65100; } 
+        .bg-e { background: #6a1b9a; }
+
+        .question { margin-bottom: 20px; padding: 20px; border-left: 6px solid #ddd; border-bottom: 1px solid #eee; transition: 0.3s; }
+        .question.correct { border-left-color: var(--success); background: #e9f7ef; }
+        .question.wrong { border-left-color: var(--danger); background: #fdf2f2; }
+
+        .options label { display: block; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+        .options label:hover { background: #f8f9fa; border-color: #bbb; }
+
+        .btn-check { width: 100%; padding: 25px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1.3em; cursor: pointer; font-weight: bold; margin-top: 30px; }
+        .btn-check:hover { background: #bd4343; }
+
+        .exp { display: none; margin-top: 15px; padding: 15px; background: #fff; border: 1px dashed #bbb; border-radius: 6px; font-size: 0.9em; line-height: 1.6; }
+        #res { display: none; margin-top: 20px; padding: 30px; border-radius: 8px; text-align: center; font-size: 1.5em; font-weight: bold; border: 3px solid; }
+
+        .btn-topo { position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; background-color: #333; color: white; text-decoration: none; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 24px; z-index: 1000; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+
+<nav class="menu-principal">
+    <a href="index.html">RETORNAR AO MENU</a>
+    <a href="raciocinio.html">RACIOCÍNIO</a>
+    <a href="Curso Especifico.html">ESPECÍFICO</a>
+    <a href="Legistalção GO.html">LEGISLAÇÃO</a>
+    <a href="simulado.html">SIMULADO</a>
+</nav>
+
+const data = [
+    // --- PORTUGUÊS (Nível Médio - Gramática e Contexto) ---
+    { 
+        id: 1, s: 'p', p: 2, 
+        q: "Analise a frase: 'O projeto da Câmara foi CONCLUÍDO com ÊXITO'. As palavras destacadas são acentuadas, respectivamente, pelas regras de:", 
+        o: ["Hiato e Paroxítona terminada em ditongo.", "Oxítona e Proparoxítona.", "Monossílabo tônico e Hiato."], 
+        a: 0, 
+        e: "<b>Gabarito: A.</b> Conclu-í-do (Hiato: I tônico sozinho na sílaba) e Êxi-to (Proparoxítona: tônica na antepenúltima)." 
+    },
+    { 
+        id: 2, s: 'p', p: 2, 
+        q: "No trecho 'Estudamos muito, PORTANTO seremos aprovados', a conjunção estabelece uma relação lógica que pode ser substituída, sem perda de sentido, por:", 
+        o: ["Entretanto", "Porquanto", "Logo"], 
+        a: 2, 
+        e: "<b>Gabarito: C.</b> 'Portanto' e 'Logo' são conjunções conclusivas." 
+    },
+    { 
+        id: 3, s: 'p', p: 2, 
+        q: "Assinale a opção em que o uso do 'PORQUE' está gramaticalmente correto:", 
+        o: ["Não sei o porque de tanto barulho.", "Você está rindo por que?", "Estudo porque quero passar."], 
+        a: 2, 
+        e: "<b>Gabarito: C.</b> 'Porque' junto e sem acento é usado para explicações ou causas." 
+    },
+
+    // --- RACIOCÍNIO LÓGICO (Nível Médio - Tabelas e Negações) ---
+    { 
+        id: 16, s: 'l', p: 1, 
+        q: "Considere a afirmação: 'Se o sinal cai, então o operador reinicia o sistema'. De acordo com a lógica proposicional, a NEGAÇÃO dessa frase é:", 
+        o: ["Se o sinal não cai, o operador não reinicia.", "O sinal cai e o operador não reinicia o sistema.", "O sinal não cai ou o operador reinicia o sistema."], 
+        a: 1, 
+        e: "<b>Gabarito: B.</b> Regra do MANÉ (Mantém a 1ª E nega a 2ª)." 
+    },
+    { 
+        id: 17, s: 'l', p: 1, 
+        q: "Na tabela verdade da Condicional (P -> Q), em qual única situação o resultado final será FALSO?", 
+        o: ["Quando P e Q forem falsos.", "Quando o antecedente (P) for verdadeiro e o consequente (Q) for falso.", "Quando o antecedente (P) for falso e o consequente (Q) for verdadeiro."], 
+        a: 1, 
+        e: "<b>Gabarito: B.</b> A famosa 'Vera Fischer' (V -> F = F)." 
+    },
+
+    // --- ESPECÍFICAS (Nível Médio - Operador de Caracteres) ---
+    { 
+        id: 31, s: 'e', p: 3, 
+        q: "Ao configurar um GC (Gerador de Caracteres) para a TV Senado, o operador deve garantir que o nome do parlamentar esteja dentro da 'Title Safe Area'. Essa área padrão corresponde a:", 
+        o: ["90% da área da imagem.", "80% da área da imagem.", "100% da área da imagem."], 
+        a: 1, 
+        e: "<b>Gabarito: B.</b> A margem de 80% (Title Safe) evita que textos sejam cortados em diferentes tipos de televisores." 
+    },
+    { 
+        id: 32, s: 'e', p: 3, 
+        q: "O formato de imagem PNG é amplamente utilizado em produções de vídeo profissional devido à sua capacidade de suportar:", 
+        o: ["Compressão com perda total de dados.", "Canal Alpha para transparência de fundo.", "Apenas 256 cores."], 
+        a: 1, 
+        e: "<b>Gabarito: B.</b> O Canal Alpha permite sobrepor o caractere ao vídeo sem um fundo sólido." 
+    },
+    { 
+        id: 33, s: 'e', p: 3, 
+        q: "O efeito de texto que desliza horizontalmente na parte inferior da tela, geralmente com notícias ou avisos, é chamado de:", 
+        o: ["Roll", "Crawl", "Lower Third"], 
+        a: 1, 
+        e: "<b>Gabarito: B.</b> Crawl é o movimento horizontal. Roll é o movimento vertical (créditos)." 
+    }
+];
+
+// Allan, continue preenchendo as outras 52 questões seguindo esse padrão de 3 alternativas,
+// que é comum em provas de nível médio/técnico para agilizar a leitura sem perder o foco.
