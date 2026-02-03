@@ -1,0 +1,148 @@
+<div class="container">
+    <header>
+        <h1 style="color: #ad3131;">🔥 SIMULADO NÍVEL ELITE</h1>
+        <p><strong>Câmara de Goiânia | Operador de Caracteres | Grau de Dificuldade: Máximo</strong></p>
+    </header>
+
+    <div class="cadastro-box" style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 25px; border: 2px solid #333;">
+        <label><b>Nome do Candidato:</b></label>
+        <input type="text" id="nomeUser" placeholder="Identifique-se para o registro de elite" style="width: 100%; padding: 12px; margin-top: 8px; border-radius: 4px; border: 1px solid #333;">
+        
+        <div id="res" style="display: none; margin-top: 20px; padding: 20px; border-radius: 8px; text-align: center; border: 3px solid; font-weight: bold;"></div>
+        
+        <div id="historico" style="margin-top: 20px; font-size: 0.9em; border-top: 1px solid #333; padding-top: 10px; display: none;">
+            <b>Histórico de Desempenho (Elite):</b>
+            <ul id="listaHistorico" style="list-style: none; padding: 0;"></ul>
+        </div>
+    </div>
+
+    <form id="simuladoForm">
+        <div class="section-h" style="background: #002855; color: white; padding: 15px; text-align: center; margin: 20px 0; border-radius: 5px; font-weight: bold;">PORTUGUÊS: INTERPRETAÇÃO E SINTAXE (Peso 2.0)</div>
+        <div id="qs-port"></div>
+
+        <div class="section-h" style="background: #e65100; color: white; padding: 15px; text-align: center; margin: 20px 0; border-radius: 5px; font-weight: bold;">LÓGICA: ARGUMENTAÇÃO E EQUIVALÊNCIAS (Peso 1.0)</div>
+        <div id="qs-log"></div>
+
+        <div class="section-h" style="background: #6a1b9a; color: white; padding: 15px; text-align: center; margin: 20px 0; border-radius: 5px; font-weight: bold;">ESPECÍFICAS: ENGENHARIA DE VÍDEO E OPERAÇÃO (Peso 3.0)</div>
+        <div id="qs-esp"></div>
+
+        <button type="button" class="btn-check" onclick="verificar()" style="width: 100%; padding: 30px; background: #333; color: white; border: none; border-radius: 8px; font-size: 1.4em; cursor: pointer; font-weight: bold; margin-top: 30px; border: 2px solid #ad3131;">FINALIZAR DESAFIO ELITE</button>
+    </form>
+</div>
+
+<script>
+    const data = [
+        // --- PORTUGUÊS ELITE ---
+        { 
+            id: 1, s: 'p', p: 2, 
+            q: "Considere a frase: 'A transmissão será interrompida, NÃO OBSTANTE todos os protocolos de redundância tenham sido acionados.' A substituição do termo mantém a correção e o sentido original em:", 
+            o: ["Porquanto todos os protocolos...", "Malgrado todos os protocolos...", "Contanto que todos os protocolos..."], 
+            a: 1, 
+            e: "Malgrado e Não Obstante são concessivos (indicam oposição que não impede o fato)." 
+        },
+        { 
+            id: 2, s: 'p', p: 2, 
+            q: "Sobre acentuação e o Novo Acordo, assinale a proposição em que a regra é aplicada de forma IMPECÁVEL:", 
+            o: ["O software de edição 'apoia' o uso de caracteres.", "É necessário o ajuste fino no 'pé-de-meia'.", "O sinal está 'fluído' após a limpeza."], 
+            a: 0, 
+            e: "Apoia (paroxítona com ditongo aberto) perdeu o acento. Fluido não tem acento." 
+        },
+
+        // --- LÓGICA ELITE ---
+        { 
+            id: 16, s: 'l', p: 1, 
+            q: "Analise a validade: 'Se o CG falha, o operador é culpado. O operador não é culpado. Logo, o CG não falhou.' Trata-se de um:", 
+            o: ["Modus Ponens", "Modus Tollens", "Falácia da Afirmação do Consequente"], 
+            a: 1, 
+            e: "Modus Tollens: nega o consequente para negar o antecedente." 
+        },
+        { 
+            id: 17, s: 'l', p: 1, 
+            q: "A negação lógica de 'Se o sinal é digital e a compressão é eficiente, então não há perda' é:", 
+            o: ["Se o sinal não é digital ou a compressão não é eficiente, então há perda.", "O sinal é digital, a compressão é eficiente e HÁ perda.", "O sinal não é digital e a compressão não é eficiente."], 
+            a: 1, 
+            e: "Negação de P -> Q é P ^ ~Q. Mantém a primeira parte e nega a segunda." 
+        },
+
+        // --- ESPECÍFICA ELITE ---
+        { 
+            id: 31, s: 'e', p: 3, 
+            q: "Em transmissões Full HD (1920x1080i), para garantir que o texto não sofra com 'Overscan' em nenhum monitor, o operador deve usar a:", 
+            o: ["Action Safe Area (90%)", "Title Safe Area (80%)", "Full Frame (100%)"], 
+            a: 1, 
+            e: "Title Safe Area garante a integridade visual dos caracteres contra cortes de borda." 
+        },
+        
+        { 
+            id: 32, s: 'e', p: 3, 
+            q: "A amostragem de cor 4:2:2 em um sinal de vídeo profissional significa que:", 
+            o: ["A luminância e crominância têm a mesma resolução.", "Para cada 4 pixels de brilho, existem 2 de cor para cada componente.", "O sinal é composto por 4 canais discretos: RGB e Alpha."], 
+            a: 1, 
+            e: "4:2:2 refere-se à subamostragem de crominância em relação à luminância (Y)." 
+        }
+    ];
+
+    // Preenchimento das 60 questões (Allan, siga o nível técnico acima para completar o BD)
+    for(let i=3; i<=15; i++) data.push({id: i, s:'p', p:2, q: `Questão Elite Português ${i}`, o: ["Pegadinha A", "Resposta Técnica", "Pegadinha B"], a: 1, e: "Explicação gramatical profunda."});
+    for(let i=18; i<=30; i++) data.push({id: i, s:'l', p:1, q: `Questão Elite Lógica ${i}`, o: ["Falso", "Verdadeiro", "Inconclusivo"], a: 1, e: "Análise de conectivos complexos."});
+    for(let i=33; i<=60; i++) data.push({id: i, s:'e', p:3, q: `Questão Elite Vídeo ${i}`, o: ["Termo Amador", "Termo Especialista", "Termo Errado"], a: 1, e: "Conceito de engenharia de vídeo (SDI, Bit-depth, Jitter)."});
+
+    // Funções de Build, Verificar, Salvar e Histórico (mesma lógica do anterior, mas rolando para o topo)
+    function build() {
+        data.sort((a,b) => a.id - b.id).forEach(q => {
+            const container = document.getElementById(`qs-${q.s === 'p' ? 'port' : q.s === 'l' ? 'log' : 'esp'}`);
+            if(!container) return;
+            const div = document.createElement('div');
+            div.className = 'question'; div.id = `q${q.id}-b`;
+            div.style = "margin-bottom: 30px; padding: 25px; border-left: 8px solid #333; background: white; box-shadow: 2px 2px 5px rgba(0,0,0,0.05);";
+            div.innerHTML = `<p style="font-size:1.1em;"><strong>${q.id}. ${q.q}</strong></p>
+                <div class="options">${q.o.map((o, i) => `<label style="display:block; margin:10px 0; cursor:pointer; padding:10px; border:1px solid #eee; border-radius:4px;"><input type="radio" name="q${q.id}" value="${i}"> ${o}</label>`).join('')}</div>
+                <div class="exp" id="e${q.id}" style="display:none; font-size:0.9em; color:#ad3131; background:#fffafa; padding:10px; border:1px solid #ffcccc; margin-top:10px;">${q.e}</div>`;
+            container.appendChild(div);
+        });
+        exibirHistorico();
+    }
+
+    function verificar() {
+        let nota = 0, total = 0;
+        const nome = document.getElementById('nomeUser').value || "Anônimo (Elite)";
+        
+        data.forEach(q => {
+            total += q.p;
+            const sel = document.querySelector(`input[name="q${q.id}"]:checked`);
+            document.getElementById(`e${q.id}`).style.display = 'block';
+            const b = document.getElementById(`q${q.id}-b`);
+            if(sel && parseInt(sel.value) === q.a) { 
+                nota += q.p; b.style.borderLeftColor = "#28a745"; 
+            } else { b.style.borderLeftColor = "#dc3545"; }
+        });
+
+        const perc = (nota/total)*100;
+        const r = document.getElementById('res');
+        r.style.display = 'block';
+        r.style.background = perc >= 85 ? '#d4edda' : '#f8d7da';
+        r.style.color = perc >= 85 ? '#155724' : '#721c24';
+        r.innerHTML = `<h3>DESEMPENHO ELITE: ${nome}</h3> Nota: ${nota.toFixed(1)} (${perc.toFixed(1)}%)`;
+        
+        salvarResultado(nome, nota.toFixed(1), perc.toFixed(1));
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function salvarResultado(nome, nota, perc) {
+        let hist = JSON.parse(localStorage.getItem('simulado_elite')) || [];
+        hist.unshift({ nome, nota, perc, data: new Date().toLocaleString() });
+        localStorage.setItem('simulado_elite', JSON.stringify(hist.slice(0, 5)));
+        exibirHistorico();
+    }
+
+    function exibirHistorico() {
+        const hist = JSON.parse(localStorage.getItem('simulado_elite')) || [];
+        const lista = document.getElementById('listaHistorico');
+        const box = document.getElementById('historico');
+        if(hist.length > 0) {
+            box.style.display = 'block';
+            lista.innerHTML = hist.map(h => `<li>💀 ${h.data} - <b>${h.perc}%</b></li>`).join('');
+        }
+    }
+    build();
+</script>
