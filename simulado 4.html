@@ -47,35 +47,35 @@
 </nav>
 <a href="simulado 3.html">RETORNAR AO MENU</a>
     <a href="simulado 2.html">RACIOCÍNIO</a>
+<a href="PORTUGUÊS.html">Português</a>
+
 
 
 <div class="container">
     <header>
-        <h1 style="color: #ad3131;">🔥 SIMULADO NÍVEL ELITE</h1>
+        <h1 style="color: #ad3131;">💀 SIMULADO MASTER: NÍVEL ELITE</h1>
         <p><strong>Câmara de Goiânia | Operador de Caracteres | Grau de Dificuldade: Máximo</strong></p>
     </header>
 
     <div class="cadastro-box" style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 25px; border: 2px solid #333;">
-        <label><b>Nome do Candidato:</b></label>
-        <input type="text" id="nomeUser" placeholder="Identifique-se para o registro de elite" style="width: 100%; padding: 12px; margin-top: 8px; border-radius: 4px; border: 1px solid #333;">
-        
+        <label><b>Identificação do Candidato:</b></label>
+        <input type="text" id="nomeUser" placeholder="Seu nome completo" style="width: 100%; padding: 12px; margin-top: 8px; border-radius: 4px; border: 1px solid #333;">
         <div id="res" style="display: none; margin-top: 20px; padding: 20px; border-radius: 8px; text-align: center; border: 3px solid; font-weight: bold;"></div>
-        
         <div id="historico" style="margin-top: 20px; font-size: 0.9em; border-top: 1px solid #333; padding-top: 10px; display: none;">
-            <b>Histórico de Desempenho (Elite):</b>
+            <b>Seus Últimos Desempenhos (Elite):</b>
             <ul id="listaHistorico" style="list-style: none; padding: 0;"></ul>
         </div>
     </div>
 
     <form id="simuladoForm">
-        <div class="section-h" style="background: #002855; color: white; padding: 15px; text-align: center; margin: 20px 0; border-radius: 5px; font-weight: bold;">PORTUGUÊS: INTERPRETAÇÃO E SINTAXE (Peso 2.0)</div>
-        <div id="qs-port"></div>
+        <div class="section-h" style="background: #002855; color: white; padding: 15px; text-align: center; margin: 20px 0; border-radius: 5px; font-weight: bold;">LÍNGUA PORTUGUESA (Peso 2.0)</div>
+        <div id="qs-p"></div>
 
-        <div class="section-h" style="background: #e65100; color: white; padding: 15px; text-align: center; margin: 20px 0; border-radius: 5px; font-weight: bold;">LÓGICA: ARGUMENTAÇÃO E EQUIVALÊNCIAS (Peso 1.0)</div>
-        <div id="qs-log"></div>
+        <div class="section-h" style="background: #e65100; color: white; padding: 15px; text-align: center; margin: 20px 0; border-radius: 5px; font-weight: bold;">RACIOCÍNIO LÓGICO (Peso 1.0)</div>
+        <div id="qs-l"></div>
 
-        <div class="section-h" style="background: #6a1b9a; color: white; padding: 15px; text-align: center; margin: 20px 0; border-radius: 5px; font-weight: bold;">ESPECÍFICAS: ENGENHARIA DE VÍDEO E OPERAÇÃO (Peso 3.0)</div>
-        <div id="qs-esp"></div>
+        <div class="section-h" style="background: #6a1b9a; color: white; padding: 15px; text-align: center; margin: 20px 0; border-radius: 5px; font-weight: bold;">CONHECIMENTOS ESPECÍFICOS (Peso 3.0)</div>
+        <div id="qs-e"></div>
 
         <button type="button" class="btn-check" onclick="verificar()" style="width: 100%; padding: 30px; background: #333; color: white; border: none; border-radius: 8px; font-size: 1.4em; cursor: pointer; font-weight: bold; margin-top: 30px; border: 2px solid #ad3131;">FINALIZAR DESAFIO ELITE</button>
     </form>
@@ -83,27 +83,51 @@
 
 <script>
     const data = [
-        // --- PORTUGUÊS ELITE ---
-        { 
-            id: 1, s: 'p', p: 2, 
-            q: "Considere a frase: 'A transmissão será interrompida, NÃO OBSTANTE todos os protocolos de redundância tenham sido acionados.' A substituição do termo mantém a correção e o sentido original em:", 
-            o: ["Porquanto todos os protocolos...", "Malgrado todos os protocolos...", "Contanto que todos os protocolos..."], 
-            a: 1, 
-            e: "Malgrado e Não Obstante são concessivos (indicam oposição que não impede o fato)." 
-        },
-        { 
-            id: 2, s: 'p', p: 2, 
-            q: "Sobre acentuação e o Novo Acordo, assinale a proposição em que a regra é aplicada de forma IMPECÁVEL:", 
-            o: ["O software de edição 'apoia' o uso de caracteres.", "É necessário o ajuste fino no 'pé-de-meia'.", "O sinal está 'fluído' após a limpeza."], 
-            a: 0, 
-            e: "Apoia (paroxítona com ditongo aberto) perdeu o acento. Fluido não tem acento." 
-        },
+        // --- PORTUGUÊS (1-15) ---
+        { id: 1, s: 'p', p: 2, q: "No que tange à acentuação, a frase em que a regra é aplicada de forma impecável é:", o: ["O software de edição apoia o uso de caracteres.", "É necessário o ajuste no pé-de-meia.", "O sinal está fluído após a limpeza."], a: 0, e: "Apoia perdeu o acento (paroxítona ditongo aberto). Fluido não tem acento." },
+        { id: 2, s: 'p', p: 2, q: "Substituir 'NÃO OBSTANTE' mantém o sentido original em:", o: ["Porquanto todos os protocolos...", "Malgrado todos os protocolos...", "Contanto que todos os protocolos..."], a: 1, e: "Malgrado e Não Obstante são concessivos." },
+        { id: 3, s: 'p', p: 2, q: "Indique a alternativa onde a crase ocorre por regência e gênero:", o: ["Entregou àquela diretora", "Fomos à pé", "Referiu-se à transmissão"], a: 2, e: "Referir-se exige a preposição 'a' + artigo 'a' de transmissão." },
+        { id: 4, s: 'p', p: 2, q: "A palavra 'EXCEÇÃO' possui:", o: ["Um dígrafo e um ditongo", "Dois dígrafos", "Um hiato e um dígrafo"], a: 0, e: "XC é dígrafo; ÃO é ditongo nasal." },
+        { id: 5, s: 'p', p: 2, q: "Em 'Allan, o técnico, finalizou o GC; porém...', o ponto e vírgula separa:", o: ["Orações coordenadas com contraste", "Itens de uma lista", "Aposto e sujeito"], a: 0, e: "Separa orações coordenadas adversativas já pontuadas internamente." },
+        { id: 6, s: 'p', p: 2, q: "O termo 'MALGRADO' é classificado como:", o: ["Conjunção concessiva", "Conjunção explicativa", "Preposição acidental"], a: 0, e: "Indica uma concessão (oposição que não impede o fato)." },
+        { id: 7, s: 'p', p: 2, q: "Assinale a grafia correta pós-reforma:", o: ["Micro-ondas", "Microondas", "Micro ondas"], a: 0, e: "Prefixos iguais se separam por hífen." },
+        { id: 8, s: 'p', p: 2, q: "Sinônimo técnico de 'Adjacente':", o: ["Contíguo", "Remoto", "Subjacente"], a: 0, e: "Contíguo significa que está ao lado, encostado." },
+        { id: 9, s: 'p', p: 2, q: "Qual oração apresenta voz passiva analítica?", o: ["O GC foi gerado pelo Allan", "Allan gerou o GC", "Gerou-se o GC"], a: 0, e: "Voz passiva analítica: Verbo ser + particípio." },
+        { id: 10, s: 'p', p: 2, q: "O prefixo 'SUB' exige hífen diante de:", o: ["R e H", "Apenas H", "Qualquer vogal"], a: 0, e: "Sub-região, sub-humano." },
+        { id: 11, s: 'p', p: 2, q: "Significado de 'PROLIXO':", o: ["Objetivo", "Demasiadamente longo", "Incompleto"], a: 1, e: "Texto que usa palavras em excesso." },
+        { id: 12, s: 'p', p: 2, q: "Antônimo de 'REITERAR':", o: ["Repetir", "Abster", "Confirmar"], a: 1, e: "Reiterar é repetir; abster é não fazer." },
+        { id: 13, s: 'p', p: 2, q: "Figura de linguagem em 'A TV Senado é um farol':", o: ["Metáfora", "Metonímia", "Catacrese"], a: 0, e: "Comparação implícita." },
+        { id: 14, s: 'p', p: 2, q: "Diferença entre 'EMERGIR' e 'IMERGIR':", o: ["Subir / Afundar", "Afundar / Subir", "Sair / Entrar"], a: 0, e: "Emergir é vir à tona." },
+        { id: 15, s: 'p', p: 2, q: "Indique a oração com sujeito indeterminado:", o: ["Diz-se que haverá prova", "Allan disse a verdade", "Nevou ontem"], a: 0, e: "Verbo + SE sem objeto direto definido." },
 
-        // --- LÓGICA ELITE ---
-        { 
-            id: 16, s: 'l', p: 1, 
-            q: "Analise a validade: 'Se o CG falha, o operador é culpado. O operador não é culpado. Logo, o CG não falhou.' Trata-se de um:", 
-            o: ["Modus Ponens", "Modus Tollens", "Falácia da Afirmação do Consequente"], 
+        // --- LÓGICA (16-30) ---
+        { id: 16, s: 'l', p: 1, q: "Negação de 'Se o sinal cai, então o operador atua':", o: ["O sinal cai e o operador não atua", "Se o sinal não cai, o operador não atua", "O sinal não cai ou o operador atua"], a: 0, e: "Regra do MANÉ (Mantém a 1ª E nega a 2ª)." },
+        { id: 17, s: 'l', p: 1, q: "A estrutura 'Se P então Q. Não Q. Logo não P' é:", o: ["Modus Ponens", "Modus Tollens", "Falácia"], a: 1, e: "Modus Tollens: nega o consequente para negar o antecedente." },
+        { id: 18, s: 'l', p: 1, q: "Negação de 'Ninguém na TV Senado dorme':", o: ["Todos dormem", "Pelo menos um dorme", "Alguns não dormem"], a: 1, e: "Negação de Ninguém (Todo Não) é Pelo Menos Um." },
+        { id: 19, s: 'l', p: 1, q: "Uma Tautologia é uma proposição que:", o: ["Pode ser F ou V", "É sempre verdadeira", "É sempre falsa"], a: 1, e: "Sempre V em todas as linhas da tabela verdade." },
+        { id: 20, s: 'l', p: 1, q: "Equivalência de P -> Q (Contrapositiva):", o: ["~Q -> ~P", "Q -> P", "~P -> ~Q"], a: 0, e: "Inverte as proposições negando ambas." },
+        { id: 21, s: 'l', p: 1, q: "Se P é F e Q é V, qual o valor de P <-> Q?", o: ["Verdadeiro", "Falso", "Indeterminado"], a: 1, e: "Bicondicional só é V se os valores forem iguais." },
+        { id: 22, s: 'l', p: 1, q: "Quantas linhas tem a tabela verdade de (P ^ Q) -> R?", o: ["4", "8", "16"], a: 1, e: "2³ = 8 linhas (três proposições: P, Q, R)." },
+        { id: 23, s: 'l', p: 1, q: "A negação de 'P v Q' (Lei de Morgan) é:", o: ["~P ^ ~Q", "~P v ~Q", "P ^ Q"], a: 0, e: "Nega as duas e troca OU por E." },
+        { id: 24, s: 'l', p: 1, q: "O que caracteriza uma Contingência?", o: ["Sempre V", "Sempre F", "Pode ser V ou F"], a: 2, e: "Resultado final depende dos valores das entradas." },
+        { id: 25, s: 'l', p: 1, q: "Argumento válido: 'Todo A é B. X é A. Logo X é B'.", o: ["Verdadeiro", "Falso", "Depende do valor de X"], a: 0, e: "Silogismo categórico válido." },
+        { id: 26, s: 'l', p: 1, q: "Negação de 'Algum técnico é concursado':", o: ["Nenhum técnico é concursado", "Todo técnico é concursado", "Algum técnico não é"], a: 0, e: "Negação de Algum é Nenhum." },
+        { id: 27, s: 'l', p: 1, q: "Qual conectivo tem maior precedência?", o: ["~ (Negação)", "^ (Conjunção)", "-> (Condicional)"], a: 0, e: "A negação é resolvida primeiro." },
+        { id: 28, s: 'l', p: 1, q: "P -> Q é equivalente a:", o: ["~P v Q", "P ^ ~Q", "Q -> P"], a: 0, e: "Regra do NEUMAR (Nega a 1ª OU mantém a 2ª)." },
+        { id: 29, s: 'l', p: 1, q: "Se a conjunção P ^ Q é verdadeira, então:", o: ["Ambas são verdadeiras", "Apenas uma é verdadeira", "Pode haver uma falsa"], a: 0, e: "No 'E' tudo precisa ser verdade." },
+        { id: 30, s: 'l', p: 1, q: "Silogismo: 'Algum A é B. Algum B é C. Logo...' ", o: ["Algum A é C", "Todo A é C", "Nada se conclui"], a: 2, e: "De duas premissas particulares nada se conclui." },
+
+        // --- ESPECÍFICAS (31-60) ---
+        { id: 31, s: 'e', p: 3, q: "Área 'Title Safe' (80%) garante que:", o: ["O enquadramento está correto", "O texto não será cortado em telas antigas", "A cor está calibrada"], a: 1, e: "Área de segurança para caracteres." },
+        { id: 32, s: 'e', p: 3, q: "Sinal Full HD progressivo possui quantos pixels verticais?", o: ["720", "1080", "2160"], a: 1, e: "Full HD é 1920x1080." },
+        { id: 33, s: 'e', p: 3, q: "A amostragem de cor profissional 4:2:2 refere-se à:", o: ["Resolução horizontal", "Subamostragem de crominância", "Taxa de quadros"], a: 1, e: "Redução de dados de cor sem perda perceptível." },
+        { id: 34, s: 'e', p: 3, q: "O sinal de 'Key' (recorte) em um DSK define:", o: ["A cor do texto", "A transparência/mapa de recorte", "O brilho"], a: 1, e: "Define onde o vídeo de fundo aparece através do gráfico." },
+        { id: 35, s: 'e', p: 3, q: "O termo 'Crawl' refere-se ao texto que se move:", o: ["Verticalmente", "Horizontalmente", "Fica estático"], a: 1, e: "Crawl: movimento horizontal (rodapé)." },
+        { id: 36, s: 'e', p: 3, q: "Diferença entre 1080i e 1080p:", o: ["Entrelaçado vs Progressivo", "Analógico vs Digital", "Resolução"], a: 0, e: "i = interlaced; p = progressive." },
+        { id: 37, s: 'e', p: 3, q: "Proporção de tela (Aspect Ratio) do Full HD:", o: ["4:3", "16:9", "21:9"], a: 1, e: "Widescreen padrão." },
+        { id: 38, s: 'e', p: 3, q: "Cabo SDI é usado para transmitir:", o: ["Sinal de internet", "Vídeo digital profissional", "Energia AC"], a: 1, e: "Serial Digital Interface." },
+        { id: 39, s: 'e', p: 3, q: "O Canal Alpha (Transparência) em PNG-32 possui quantos bits?", o: ["1 bit", "8 bits", "24 bits"], a: 1, e
+"], 
             a: 1, 
             e: "Modus Tollens: nega o consequente para negar o antecedente." 
         },
