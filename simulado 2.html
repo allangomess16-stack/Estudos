@@ -3,167 +3,202 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMULADO MODERADO - CÂMARA DE GOIÂNIA</title> 
+    <title>SIMULADO - ALLAN GOMES SILVA</title> 
 
-    <nav class="menu-principal">
-    <a href="index.html">RETORNAR AO MENU</a>
-    <a href="raciocinio.html">RACIOCINIO LOGICO</a>
-    <a href="Curso Especifico.html">CURSO ESPECÍFICO</a>
-    <a href="Legistalção GO.html">LEGISLAÇÃO GO</a>
-    <a href="simulado.html">SIMULADO FÁCIL</a>
-     <a href="simulado 3.html">SIMULADO DIFÍCIL</a>
-     <a href="simulado 4.html">SIMULADO ELITE</a>
-</nav>
     <style>    
         body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f0f2f5; }
-        .menu-principal { background-color: #333; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        .menu-principal a { color: white; text-decoration: none; padding: 10px 20px; margin: 0 10px; border-radius: 5px; background-color: #444; transition: 0.3s; font-weight: bold; }
-        .menu-principal a:hover { background-color: #bd4343; }
         
+        /* MENU FLEXÍVEL */
+        .menu-principal {
+            background-color: #333; padding: 10px; display: flex; flex-wrap: wrap;
+            justify-content: center; gap: 10px; position: sticky; top: 0; z-index: 1000;
+        }
+        .menu-principal a {
+            color: white; text-decoration: none; padding: 10px 15px; border-radius: 5px;
+            background-color: #444; transition: 0.3s; font-weight: bold; font-size: 13px; white-space: nowrap;
+        }
+        .menu-principal a:hover { background-color: #bd4343; }
+
+        /* CONTAINER */
         :root { --primary: #002855; --success: #28a745; --danger: #dc3545; }
         .container { max-width: 1000px; margin: 30px auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-        header { text-align: center; border-bottom: 4px solid var(--primary); margin-bottom: 20px; padding-bottom: 10px;}
-        
+        header { text-align: center; border-bottom: 4px solid #ad3131; margin-bottom: 20px; padding-bottom: 10px;}
+
+        /* IDENTIFICAÇÃO */
+        .cadastro-box { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #333; }
+        .cadastro-box input { width: 100%; padding: 12px; margin-top: 8px; border-radius: 4px; border: 1px solid #ccc; box-sizing: border-box; }
+
+        /* TABELA DE HISTÓRICO NO FINAL */
+        .historico-section { margin-top: 50px; padding-top: 20px; border-top: 2px solid #eee; }
+        .ranking-table { width: 100%; border-collapse: collapse; margin-top: 15px; background: white; font-size: 0.9em; }
+        .ranking-table th, .ranking-table td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        .ranking-table th { background-color: #333; color: white; }
+        .ranking-table tr:nth-child(even) { background-color: #f2f2f2; }
+
+        /* QUESTÕES */
         .section-h { padding: 12px; border-radius: 5px; margin: 25px 0; font-weight: bold; color: white; text-transform: uppercase; text-align: center; }
         .bg-p { background: var(--primary); } 
         .bg-l { background: #e65100; } 
+        .bg-g { background: #28a745; } 
         .bg-e { background: #6a1b9a; }
 
-        .question { margin-bottom: 20px; padding: 20px; border-left: 6px solid #ddd; border-bottom: 1px solid #eee; transition: 0.3s; }
+        .question { margin-bottom: 20px; padding: 20px; border-left: 6px solid #ddd; border-bottom: 1px solid #eee; transition: 0.3s; background: white; }
         .question.correct { border-left-color: var(--success); background: #e9f7ef; }
         .question.wrong { border-left-color: var(--danger); background: #fdf2f2; }
+        .options label { display: block; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; }
+        .exp { display: none; margin-top: 15px; padding: 15px; background: #fffafa; border: 1px dashed #ad3131; border-radius: 6px; font-size: 0.9em; color: #ad3131; }
 
-        .options label { display: block; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; transition: 0.2s; }
-        .options label:hover { background: #f8f9fa; border-color: #bbb; }
-        
-        .btn-check { width: 100%; padding: 25px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1.3em; cursor: pointer; font-weight: bold; margin-top: 30px; }
-        .btn-check:hover { background: #bd4343; }
+        .btn-check { width: 100%; padding: 25px; background: #002855; color: white; border: none; border-radius: 8px; font-size: 1.3em; cursor: pointer; font-weight: bold; margin-top: 30px; }
+        #res { display: none; margin-top: 20px; padding: 20px; border-radius: 8px; text-align: center; font-size: 1.2em; font-weight: bold; border: 3px solid; }
 
-        .exp { display: none; margin-top: 15px; padding: 15px; background: #fff; border: 1px dashed #bbb; border-radius: 6px; font-size: 0.9em; line-height: 1.6; }
-        #res { display: none; margin-top: 20px; padding: 30px; border-radius: 8px; text-align: center; font-size: 1.5em; font-weight: bold; border: 3px solid; }
-        
-        .btn-topo { position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; background-color: #333; color: white; text-decoration: none; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 24px; z-index: 1000; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
         html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
 
+<nav class="menu-principal">
+    <a href="index.html">MENU</a>
+    <a href="simulado.html">FÁCIL</a>
+    <a href="simulado 2.html">MODERADO</a>
+    <a href="simulado 3.html">DIFÍCIL</a>
+    <a href="simulado 4.html">ELITE</a>
+    <a href="simulado 5.html">ELITE 2</a>
+</nav>
 
-
-  <div class="container">
+<div class="container">
     <header>
-        <h1>Simulado Master: 60 Questões Reais</h1>
-        <p><strong>Câmara de Goiânia - Operador de Caracteres</strong></p>
+        <h1 style="color: #ad3131;">💀 DESAFIO MODERADO</h1>
+        <p><strong>Operador de Caracteres | Câmara de Goiânia</strong></p>
     </header>
 
-    <div class="cadastro-box" style="background: #e9ecef; padding: 20px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #ced4da;">
-        <label><b>Nome Completo do Candidato:</b></label>
-        <input type="text" id="nomeUser" placeholder="Ex: Allan Gomes Silva" style="width: 100%; padding: 12px; margin-top: 8px; border-radius: 4px; border: 1px solid #ccc;">
-        
-        <div id="res" style="display: none; margin-top: 20px; padding: 20px; border-radius: 8px; text-align: center; border: 3px solid;"></div>
-        
-        <div id="historico" style="margin-top: 20px; font-size: 0.9em; color: #444; border-top: 1px solid #ccc; padding-top: 10px; display: none;">
-            <b>Seus testes anteriores:</b>
-            <ul id="listaHistorico" style="list-style: none; padding: 0; margin-top: 5px;"></ul>
-        </div>
+    <div class="cadastro-box">
+        <label><b>Nome do Candidato:</b></label>
+        <input type="text" id="nomeUser" placeholder="Seu nome completo">
     </div>
 
+    <div id="res"></div>
+
     <form id="simuladoForm">
-        <div class="section-h bg-p" style="background: #002855; color: white; padding: 10px; text-align: center; margin: 20px 0; border-radius: 5px;">Língua Portuguesa (Peso 2.0)</div>
-        <div id="qs-port"></div>
+        <div class="section-h bg-p">Língua Portuguesa (Peso 2.0)</div>
+        <div id="qs-p"></div>
 
-        <div class="section-h bg-l" style="background: #e65100; color: white; padding: 10px; text-align: center; margin: 20px 0; border-radius: 5px;">Raciocínio Lógico (Peso 1.0)</div>
-        <div id="qs-log"></div>
+        <div class="section-h bg-l">Raciocínio Lógico (Peso 1.0)</div>
+        <div id="qs-l"></div>
 
-        <div class="section-h bg-e" style="background: #6a1b9a; color: white; padding: 10px; text-align: center; margin: 20px 0; border-radius: 5px;">Conhecimentos Específicos (Peso 3.0)</div>
-        <div id="qs-esp"></div>
+        <div class="section-h bg-g">Legislação e Realidade de Goiás (Peso 2.0)</div>
+        <div id="qs-g"></div>
 
-        <button type="button" class="btn-check" onclick="verificar()" style="width: 100%; padding: 25px; background: #002855; color: white; border: none; border-radius: 8px; font-size: 1.3em; cursor: pointer; font-weight: bold; margin-top: 30px;">FINALIZAR SIMULADO E GERAR NOTA</button>
+        <div class="section-h bg-e">Conhecimentos Específicos (Peso 3.0)</div>
+        <div id="qs-e"></div>
+
+        <button type="button" class="btn-check" onclick="verificar()">FINALIZAR SIMULADO</button>
     </form>
+
+    <div class="historico-section" id="historicoSection" style="display:none;">
+        <h2 style="text-align:center;">📊 Meu Histórico de Desempenho</h2>
+        <table class="ranking-table">
+            <thead>
+                <tr>
+                    <th>Data/Hora</th>
+                    <th>Candidato</th>
+                    <th>Nível</th>
+                    <th>Nota Final</th>
+                    <th>Desempenho %</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaCorpo">
+                </tbody>
+        </table>
+    </div>
 </div>
 
 <script>
+    // DEFINA O NÍVEL DESTE ARQUIVO AQUI (Mude em cada arquivo: Fácil, Moderado, Difícil, Elite 1, Elite 2)
+    const NIVEL_ATUAL = "ELITE 1"; 
+
+    // Cole aqui as 60 questões enviadas anteriormente (as do Elite 1, Moderado, etc.)
     const data = [
-        // --- PORTUGUÊS (1-15) ---
-        { id: 1, s: 'p', p: 2, q: "Assinale a alternativa que apresenta ERRO de acentuação:", o: ["Jiboia", "Herói", "Idéia", "Piauí"], a: 2, e: "Ideia perdeu o acento (paroxítona com ditongo aberto 'ei')." },
-        { id: 2, s: 'p', p: 2, q: "A conjunção 'CONQUANTO' indica:", o: ["Causa", "Concessão", "Consequência"], a: 1, e: "Concessão: indica uma oposição que não impede o fato principal." },
-        { id: 3, s: 'p', p: 2, q: "Uso correto da crase:", o: ["Fomos à pé", "Vendeu à prazo", "Entregou à diretora"], a: 2, e: "Crase obrigatória diante de substantivo feminino determinado." },
-        { id: 4, s: 'p', p: 2, q: "Qual palavra é Proparoxítona?", o: ["Pública", "Relógio", "Café"], a: 0, e: "Pública: a tônica é a antepenúltima (todas são acentuadas)." },
-        { id: 5, s: 'p', p: 2, q: "Nexo que indica conclusão:", o: ["Todavia", "Portanto", "Pois (início da frase)"], a: 1, e: "Portanto é uma conjunção conclusiva." },
-        { id: 6, s: 'p', p: 2, q: "Antônimo de Efêmero:", o: ["Breve", "Duradouro", "Fugaz"], a: 1, e: "Efêmero é passageiro; duradouro é o oposto." },
-        { id: 7, s: 'p', p: 2, q: "Plural de Cidadão:", o: ["Cidadões", "Cidadãos", "Cidadães"], a: 1, e: "O plural correto é Cidadãos." },
-        { id: 8, s: 'p', p: 2, q: "Significado de 'Ratificar':", o: ["Corrigir", "Confirmar", "Anular"], a: 1, e: "Ratificar é confirmar; Retificar é corrigir." },
-        { id: 9, s: 'p', p: 2, q: "Acento diferencial correto:", o: ["Eles vêm", "Ele vêm", "Eles vem"], a: 0, e: "Vêm (plural) possui acento para diferenciar de vem (singular)." },
-        { id: 10, s: 'p', p: 2, q: "Indique o hiato:", o: ["Saúde", "Caixa", "Peixe"], a: 0, e: "Sa-ú-de: vogais em sílabas separadas." },
-        { id: 11, s: 'p', p: 2, q: "Voz passiva de 'Allan fez o simulado':", o: ["O simulado foi feito por Allan", "Fizeram o simulado", "Allan fará o simulado"], a: 0, e: "Voz passiva foca no objeto que sofre a ação." },
-        { id: 12, s: 'p', p: 2, q: "Figura de linguagem 'O sol sorriu':", o: ["Metáfora", "Personificação", "Hipérbole"], a: 1, e: "Atribuição de sentimentos humanos a seres inanimados." },
-        { id: 13, s: 'p', p: 2, q: "Coletivo de Mapas:", o: ["Almanaque", "Atlas", "Pinacoteca"], a: 1, e: "Atlas é o coletivo de mapas." },
-        { id: 14, s: 'p', p: 2, q: "Sinônimo de 'Adjacente':", o: ["Longe", "Próximo", "Abaixo"], a: 1, e: "Adjacente é o que está ao lado ou próximo." },
-        { id: 15, s: 'p', p: 2, q: "Indique a oração sem sujeito:", o: ["Nevou em Goiás", "Allan estudou", "Eles saíram"], a: 0, e: "Fenômenos da natureza são verbos impessoais." },
+    // PORTUGUÊS (1-10)
+    { id: 1, s: 'p', p: 2, q: "Regra de 'concluído':", o: ["Oxítona", "Hiato no I tônico", "Ditongo"], a: 1, e: "I tônico formando hiato." },
+    { id: 2, s: 'p', p: 2, q: "Substitua 'Portanto' por:", o: ["Todavia", "Logo", "Porque"], a: 1, e: "Conclusiva." },
+    { id: 3, s: 'p', p: 2, q: "Crase em 'Entregou à diretora':", o: ["Obrigatória", "Proibida", "Facultativa"], a: 0, e: "Prep A + Artigo F." },
+    { id: 4, s: 'p', p: 2, q: "Plural de 'caractere':", o: ["Carateres", "Caractéres", "Caracteres"], a: 2, e: "Regra nominal." },
+    { id: 5, s: 'p', p: 2, q: "Voz passiva de 'Ele fez':", o: ["Fizeram", "Foi feito por ele", "Fará"], a: 1, e: "Auxiliar + Particípio." },
+    { id: 6, s: 'p', p: 2, q: "Conjunção 'porém':", o: ["Adversativa", "Aditiva", "Final"], a: 0, e: "Indica oposição." },
+    { id: 7, s: 'p', p: 2, q: "Acento em 'ideia':", o: ["Mantém", "Perdeu", "Opcional"], a: 1, e: "Novo acordo paroxítonas." },
+    { id: 8, s: 'p', p: 2, q: "Tratamento Presidente Câmara:", o: ["V. Senhoria", "V. Excelência", "V. Eminência"], a: 1, e: "Autoridade legislativa." },
+    { id: 9, s: 'p', p: 2, q: "Antônimo 'efêmero':", o: ["Breve", "Duradouro", "Frágil"], a: 1, e: "Que dura." },
+    { id: 10, s: 'p', p: 2, q: "Regra 'micro-ondas':", o: ["Vogais iguais separam", "Auto une", "Fim hífen"], a: 0, e: "O-O pede hífen." },
 
-        // --- LÓGICA (16-30) ---
-        { id: 16, s: 'l', p: 1, q: "Negação de 'Se estudo, então passo':", o: ["Se não estudo, não passo", "Estudo e não passo", "Não estudo ou passo"], a: 1, e: "Regra do MANÉ: Mantém a 1ª E nega a 2ª." },
-        { id: 17, s: 'l', p: 1, q: "Tautologia é uma proposição:", o: ["Sempre Falsa", "Sempre Verdadeira", "Às vezes Verdadeira"], a: 1, e: "Tautologia é sempre V em todas as situações." },
-        { id: 18, s: 'l', p: 1, q: "Símbolo da Conjunção (E):", o: ["v", "^", "->"], a: 1, e: "^ representa a conjunção." },
-        { id: 19, s: 'l', p: 1, q: "Negação de 'Todos estudam':", o: ["Ninguém estuda", "Pelo menos um não estuda", "Todos não estudam"], a: 1, e: "Negação de 'Todo' é 'Pelo menos um não'." },
-        { id: 20, s: 'l', p: 1, q: "Vera Fischer na condicional (V -> F) resulta em:", o: ["Verdadeiro", "Falso", "Inconclusivo"], a: 1, e: "A única situação falsa na condicional é V seguido de F." },
-        { id: 21, s: 'l', p: 1, q: "Equivalência de P -> Q:", o: ["~Q -> ~P", "~P -> ~Q", "Q -> P"], a: 0, e: "Contrapositiva: Inverte negando ambas." },
-        { id: 22, s: 'l', p: 1, q: "Se P é V e Q é F, então P v Q é:", o: ["Falso", "Verdadeiro", "Indeterminado"], a: 1, e: "No 'OU' (v), basta uma verdade." },
-        { id: 23, s: 'l', p: 1, q: "Quantas linhas tem uma tabela verdade com 3 proposições?", o: ["6", "8", "9"], a: 1, e: "Fórmula 2^n: 2³ = 8." },
-        { id: 24, s: 'l', p: 1, q: "Negação de 'P ^ Q':", o: ["~P ^ ~Q", "~P v ~Q", "~P -> ~Q"], a: 1, e: "Lei de Morgan: Nega ambas e troca E por OU." },
-        { id: 25, s: 'l', p: 1, q: "Um argumento é válido quando:", o: ["A conclusão é sempre V", "Premissas V levam a conclusão V", "Todas premissas são F"], a: 1, e: "Validez: a verdade das premissas deve garantir a verdade da conclusão." },
-        { id: 26, s: 'l', p: 1, q: "Bi-condicional (P <-> Q) é verdade quando:", o: ["Valores são diferentes", "Valores são iguais", "Ambas são F"], a: 1, e: "Se e somente se: V-V ou F-F dá verdadeiro." },
-        { id: 27, s: 'l', p: 1, q: "Negação de 'Algum médico é rico':", o: ["Todo médico é rico", "Nenhum médico é rico", "Algum médico não é rico"], a: 1, e: "Negação de Algum é Nenhum." },
-        { id: 28, s: 'l', p: 1, q: "Proposição 'P v ~P' é uma:", o: ["Contradição", "Contingência", "Tautologia"], a: 2, e: "Sempre será verdadeira (Princípio do Terceiro Excluído)." },
-        { id: 29, s: 'l', p: 1, q: "O que é Silogismo?", o: ["Uma falácia", "Raciocínio com duas premissas e uma conclusão", "Um erro de português"], a: 1, e: "Estrutura clássica de dedução lógica." },
-        { id: 30, s: 'l', p: 1, q: "Contradição é uma proposição:", o: ["Sempre Falsa", "Sempre Verdadeira", "Duvidosa"], a: 0, e: "Contradição resulta em F em todas as linhas da tabela." },
+    // LÓGICA (11-20)
+    { id: 11, s: 'l', p: 1, q: "Negação 'Se chove, molha':", o: ["Se não chove...", "Chove e não molha", "Não chove ou molha"], a: 1, e: "Regra do MANÉ." },
+    { id: 12, s: 'l', p: 1, q: "Silogismo P->Q, Q->R, logo:", o: ["P->R", "R->P", "P v R"], a: 0, e: "Hipotético." },
+    { id: 13, s: 'l', p: 1, q: "Tautologia é sempre:", o: ["Verdade", "Falso", "Variável"], a: 0, e: "100% V." },
+    { id: 14, s: 'l', p: 1, q: "Negação 'Todo operador é técnico':", o: ["Nenhum", "Algum não é técnico", "Todos"], a: 1, e: "Quebra universal." },
+    { id: 15, s: 'l', p: 1, q: "Equivalência P->Q:", o: ["~Q -> ~P", "Q -> P", "~P -> ~Q"], a: 0, e: "Contrapositiva." },
+    { id: 16, s: 'l', p: 1, q: "Tabela verdade de 3 prop.:", o: ["6 linhas", "8 linhas", "16 linhas"], a: 1, e: "2³ = 8." },
+    { id: 17, s: 'l', p: 1, q: "Negação 'P ou Q':", o: ["~P ou ~Q", "~P e ~Q", "P e Q"], a: 1, e: "Morgan." },
+    { id: 18, s: 'l', p: 1, q: "Contradição é sempre:", o: ["V", "F", "Nula"], a: 1, e: "100% F." },
+    { id: 19, s: 'l', p: 1, q: "Contingência é:", o: ["Sempre V", "Sempre F", "V ou F"], a: 2, e: "Mista." },
+    { id: 20, s: 'l', p: 1, q: "P <-> Q é V quando:", o: ["Iguais", "Diferentes", "Sempre"], a: 0, e: "Bicondicional." },
 
-        // --- ESPECÍFICAS (31-60) ---
-        { id: 31, s: 'e', p: 3, q: "Resolução Full HD padrão TV Senado:", o: ["1280x720", "1920x1080", "3840x2160"], a: 1, e: "Full HD (1080p) possui 1920x1080 pixels." },
-        { id: 32, s: 'e', p: 3, q: "Margem 'Title Safe' (80%) serve para:", o: ["Enquadrar rostos", "Garantir que textos não sejam cortados", "Melhorar a cor"], a: 1, e: "Área de segurança para caracteres e títulos." },
-        { id: 33, s: 'e', p: 3, q: "O termo 'Crawl' refere-se a texto que corre:", o: ["Verticalmente", "Horizontalmente", "Estático"], a: 1, e: "Crawl: texto que desliza na horizontal (barra de notícias)." },
-        { id: 34, s: 'e', p: 3, q: "Canal Alpha em arquivos PNG define:", o: ["A cor azul", "A transparência", "O contraste"], a: 1, e: "Alpha permite transparência no gerador de caracteres." },
-        { id: 35, s: 'e', p: 3, q: "Barramento 'DSK' (Downstream Keyer) serve para:", o: ["Mixar áudio", "Inserir logos e caracteres sobre a imagem final", "Mudar a câmera"], a: 1, e: "DSK é a última camada, ideal para gráficos." },
-        { id: 36, s: 'e', p: 3, q: "Safe Area 'Action Safe' corresponde a:", o: ["80%", "90%", "100%"], a: 1, e: "90% garante o enquadramento da ação principal." },
-        { id: 37, s: 'e', p: 3, q: "Proporção de tela (Aspect Ratio) do Full HD:", o: ["4:3", "16:9", "21:9"], a: 1, e: "16:9 é o padrão Widescreen." },
-        { id: 38, s: 'e', p: 3, q: "O que é Chroma Key?", o: ["Ajuste de brilho", "Recorte por cor (fundo verde/azul)", "Transição de áudio"], a: 1, e: "Chroma = Cor; Recorte baseado em uma cor específica." },
-        { id: 39, s: 'e', p: 3, q: "Fonte ideal para TV evitar cintilação:", o: ["Com serifa fina", "Sem serifa (Sans Serif)", "Cursiva"], a: 1, e: "Sans Serif (traços grossos) evita o flicker em telas entrelaçadas." },
-        { id: 40, s: 'e', p: 3, q: "Diferença entre 1080p e 1080i:", o: ["Resolução", "Progressivo vs Entrelaçado", "Número de cores"], a: 1, e: "p = progressive; i = interlaced." },
-        { id: 41, s: 'e', p: 3, q: "O que é Luma Key?", o: ["Recorte baseado em brilho", "Recorte baseado em cor", "Filtro de áudio"], a: 0, e: "Luma = Luminância (brilho)." },
-        { id: 42, s: 'e', p: 3, q: "Margem 'Safe' para libras costuma ser:", o: ["Canto Superior", "Canto Inferior Direito", "Canto Inferior Esquerdo"], a: 1, e: "Padrão de acessibilidade na TV." },
-        { id: 43, s: 'e', p: 3, q: "O recurso 'Roll' é usado para:", o: ["Créditos finais subindo", "Ajuste de cor", "Avisos rápidos"], a: 0, e: "Roll: texto que sobe verticalmente." },
-        { id: 44, s: 'e', p: 3, q: "O que é 'Leading' em tipografia?", o: ["Espaço entre letras", "Espaço entre linhas", "Tamanho da fonte"], a: 1, e: "Leading: entrelinha." },
-        { id: 45, s: 'e', p: 3, q: "O que é 'Kerning'?", o: ["Espaço entre linhas", "Ajuste de espaço entre pares de letras", "Cor da fonte"], a: 1, e: "Ajuste fino entre caracteres específicos." },
-        { id: 46, s: 'e', p: 3, q: "Sinal SDI é usado para:", o: ["Internet", "Vídeo profissional via cabo coaxial", "Energia"], a: 1, e: "Serial Digital Interface." },
-        { id: 47, s: 'e', p: 3, q: "A função 'Lower Third' refere-se a:", o: ["Créditos no terço inferior da tela", "Logo da emissora", "Tela cheia"], a: 0, e: "Tarjas com nomes de entrevistados." },
-        { id: 48, s: 'e', p: 3, q: "Formato SVG no Canva é:", o: ["Vetor (não pixeliza)", "Vídeo", "Áudio"], a: 0, e: "Escalável sem perda de qualidade." },
-        { id: 49, s: 'e', p: 3, q: "Frequência de quadros padrão (FPS) no Brasil (PAL-M/NTSC):", o: ["24 fps", "29.97 / 30 / 60 fps", "50 fps"], a: 1, e: "Padrão de broadcast americano/brasileiro." },
-        { id: 50, s: 'e', p: 3, q: "O que é 'Drop Shadow'?", o: ["Brilho interno", "Sombra projetada para dar contraste", "Contorno"], a: 1, e: "Ajuda na leitura do texto sobre imagens claras." },
-        { id: 51, s: 'e', p: 3, q: "O barramento 'Preview' serve para:", o: ["Mandar ao ar", "Conferir antes de colocar no ar", "Gravar"], a: 1, e: "Visualização prévia do operador." },
-        { id: 52, s: 'e', p: 3, q: "Sistema de cor de telas e monitores:", o: ["CMYK", "RGB", "Pantone"], a: 1, e: "Red, Green, Blue (Cor luz)." },
-        { id: 53, s: 'e', p: 3, q: "Quantos pixels tem o sinal 4K (UHD)?", o: ["1920x1080", "3840x2160", "7680x4320"], a: 1, e: "Quatro vezes a resolução do Full HD." },
-        { id: 54, s: 'e', p: 3, q: "O 'Bug' na TV é:", o: ["Um erro técnico", "A logo fixa da emissora no canto da tela", "Um vírus"], a: 1, e: "Marca d'água permanente." },
-        { id: 55, s: 'e', p: 3, q: "O que é 'Stroke' em caracteres?", o: ["Sombra", "Contorno da letra", "Transparência"], a: 1, e: "Traço que envolve o caractere." },
-        { id: 56, s: 'e', p: 3, q: "Área de segurança para relógio (Clock Safe) evita:", o: ["Cortes na hora", "Brilho excessivo", "Erro de áudio"], a: 0, e: "Garante que o relógio não seja cortado." },
-        { id: 57, s: 'e', p: 3, q: "Um Switcher de vídeo serve para:", o: ["Apenas gravar", "Alternar entre fontes de vídeo (câmeras, GC, VT)", "Editar áudio"], a: 1, e: "Mesa de corte." },
-        { id: 58, s: 'e', p: 3, q: "O que é 'Safe Area'?", o: ["Área para proteção contra vírus", "Margem de segurança para exibição em TVs", "Backup"], a: 1, e: "Action e Title Safe." },
-        { id: 59, s: 'e', p: 3, q: "Pixels quadrados (Square Pixels) são usados em:", o: ["TVs antigas", "Monitores e sistemas HD atuais", "Rádio"], a: 1, e: "Diferente dos pixels retangulares do SD." },
-        { id: 60, s: 'e', p: 3, q: "O sinal 'Fill' no gerador de caracteres fornece:", o: ["Apenas o corte", "A cor e conteúdo do gráfico", "O sincronismo"], a: 1, e: "O conteúdo visual que preenche o recorte (Key)." }
-    ];
+    // LEGISLAÇÃO E GOIÁS (21-30)
+    { id: 21, s: 'g', p: 2, q: "Mudança da capital foi para:", o: ["Interiorizar e modernizar", "Perto do litoral", "Fugir de revoltas"], a: 0, e: "Marcha para o Oeste." },
+    { id: 22, s: 'g', p: 2, q: "Goiânia foi planejada para:", o: ["10 mil hab", "50 mil hab", "500 mil hab"], a: 1, e: "Plano original de Attilio." },
+    { id: 23, s: 'g', p: 2, q: "Lei 11.351/2025 trata da:", o: ["Limpeza Urbana", "Estrutura Administrativa Câmara", "Trânsito"], a: 1, e: "Organização interna." },
+    { id: 24, s: 'g', p: 2, q: "O Regimento Interno é uma:", o: ["Lei Orgânica", "Resolução", "Portaria"], a: 1, e: "Resolução nº 26/1991." },
+    { id: 25, s: 'g', p: 2, q: "Símbolo cultural de Goiânia:", o: ["Cristo Redentor", "Monumento às Três Raças", "Farol da Barra"], a: 1, e: "Praça Cívica." },
+    { id: 26, s: 'g', p: 2, q: "Clima de Goiânia:", o: ["Equatorial", "Tropical de Altitude", "Semiárido"], a: 1, e: "Verão chuvoso/Inverno seco." },
+    { id: 27, s: 'g', p: 2, q: "Quantos vereadores Goiânia terá em 2025?", o: ["35", "37", "33"], a: 1, e: "Aumento conforme população." },
+    { id: 28, s: 'g', p: 2, q: "Patrimônio Mundial em Goiás:", o: ["Goiânia", "Cidade de Goiás (Vila Boa)", "Anápolis"], a: 1, e: "Reconhecimento UNESCO." },
+    { id: 29, s: 'g', p: 2, q: "Competência da Mesa Diretora:", o: ["Julgar crimes", "Dirigir trabalhos da Câmara", "Prender cidadãos"], a: 1, e: "Administração legislativa." },
+    { id: 30, s: 'g', p: 2, q: "Mudança da capital ocorreu na década de:", o: ["1910", "1930", "1950"], a: 1, e: "Era Era Vargas/Pedro Ludovico." },
+
+    // ESPECÍFICAS (31-60)
+    { id: 31, s: 'e', p: 3, q: "Onde o DSK atua?", o: ["Antes M/E", "Última camada", "Só Preview"], a: 1, e: "Downstream Keyer." },
+    { id: 32, s: 'e', p: 3, q: "Área segura títulos:", o: ["100%", "90%", "80%"], a: 2, e: "Title Safe Area." },
+    { id: 33, s: 'e', p: 3, q: "Sinal de Key define:", o: ["Cor", "Transparência", "Brilho"], a: 1, e: "Máscara recorte." },
+    { id: 34, s: 'e', p: 3, q: "Sinal 1080i divide frame em:", o: ["Pixels", "Campos par/ímpar", "Bits"], a: 1, e: "Entrelaçado." },
+    { id: 35, s: 'e', p: 3, q: "Amostragem 4:2:2:", o: ["Reduz som", "Equilíbrio cor/banda", "Só áudio"], a: 1, e: "Broadcast std." },
+    { id: 36, s: 'e', p: 3, q: "Flicker ocorre em:", o: ["Progressivo", "Entrelaçado", "Digital"], a: 1, e: "Vibração linhas." },
+    { id: 37, s: 'e', p: 3, q: "SDI usa conector:", o: ["HDMI", "BNC", "RCA"], a: 1, e: "Trava profissional." },
+    { id: 38, s: 'e', p: 3, q: "PNG-32 bits Alpha:", o: ["1", "8", "24"], a: 1, e: "Alpha gradual." },
+    { id: 39, s: 'e', p: 3, q: "Genlock evita:", o: ["Som baixo", "Pulo frame no corte", "Cor ruim"], a: 1, e: "Sync técnico." },
+    { id: 40, s: 'e', p: 3, q: "Lower Third identifica:", o: ["Programas", "Entrevistados", "Canais"], a: 1, e: "Tarja nomes." },
+    { id: 41, s: 'e', p: 3, q: "4K UHD pixels horizontais:", o: ["1920", "3840", "7680"], a: 1, e: "UHD padrão." },
+    { id: 42, s: 'e', p: 3, q: "Chroma Key recorta:", o: ["Luz", "Cor", "Sombra"], a: 1, e: "Fundo matiz." },
+    { id: 43, s: 'e', p: 3, q: "Luma Key recorta:", o: ["Brilho", "Matiz", "Som"], a: 0, e: "Luminância." },
+    { id: 44, s: 'e', p: 3, q: "Leading tipografia:", o: ["Entrelinhas", "Entre letras", "Tamanho"], a: 0, e: "Vertical space." },
+    { id: 45, s: 'e', p: 3, q: "Kerning tipografia:", o: ["Texto todo", "Par de letras", "Fundo"], a: 1, e: "Espaço caracteres." },
+    { id: 46, s: 'e', p: 3, q: "Sinal Program é o:", o: ["Ar", "Teste", "Gravado"], a: 0, e: "Saída ativa." },
+    { id: 47, s: 'e', p: 3, q: "Sinal Preview serve para:", o: ["Cortar", "Conferir", "Deletar"], a: 1, e: "Ver antes." },
+    { id: 48, s: 'e', p: 3, q: "Aspect Ratio 16:9:", o: ["Quadrado", "Widescreen", "Vertical"], a: 1, e: "Proporção HD." },
+    { id: 49, s: 'e', p: 3, q: "Drop Shadow melhora:", o: ["Cor", "Legibilidade", "Tamanho"], a: 1, e: "Contraste fundo." },
+    { id: 50, s: 'e', p: 3, q: "Crawl corre na:", o: ["Vertical", "Horizontal", "Diagonal"], a: 1, e: "Notícias." },
+    { id: 51, s: 'e', p: 3, q: "SVG vantagem:", o: ["Leve", "Não pixeliza", "Cores"], a: 1, e: "Vetor." },
+    { id: 52, s: 'e', p: 3, q: "FPS Brasil (TV):", o: ["24", "29.97", "50"], a: 1, e: "NTSC/PAL-M." },
+    { id: 53, s: 'e', p: 3, q: "Stroke serve para:", o: ["Sombra", "Contorno", "Brilho"], a: 1, e: "Linha letra." },
+    { id: 54, s: 'e', p: 3, q: "Pixels Anamórficos:", o: ["SD 16:9", "HD 4:3", "4K"], a: 0, e: "SD wide." },
+    { id: 55, s: 'e', p: 3, q: "Frame Buffer:", o: ["Grava", "Armazena frame sync", "Deleta"], a: 1, e: "Memória temp." },
+    { id: 56, s: 'e', p: 3, q: "Bit-depth 10-bit:", o: ["Menos cores", "Mais gradações", "Igual 8"], a: 1, e: "Precisão." },
+    { id: 57, s: 'e', p: 3, q: "Action Safe Area:", o: ["80%", "90%", "100%"], a: 1, e: "Margem ação." },
+    { id: 58, s: 'e', p: 3, q: "Sinal Fill contém:", o: ["Corte", "Cores/Conteúdo", "Tempo"], a: 1, e: "Gráfico visto." },
+    { id: 59, s: 'e', p: 3, q: "Switcher processa:", o: ["Só áudio", "Múltiplas fontes", "1 cam"], a: 1, e: "Mesa corte." },
+    { id: 60, s: 'e', p: 3, q: "Sans Serif recomendada para:", o: ["Evitar flicker", "Beleza", "Imprimir"], a: 0, e: "Padrão digital." }
+];
 
     function build() {
-        data.sort((a,b) => a.id - b.id).forEach(q => {
-            const container = document.getElementById(`qs-${q.s === 'p' ? 'port' : q.s === 'l' ? 'log' : 'esp'}`);
+        data.forEach(q => {
+            const container = document.getElementById(`qs-${q.s}`);
             if(!container) return;
             const div = document.createElement('div');
             div.className = 'question'; div.id = `q${q.id}-b`;
-            div.style = "margin-bottom: 20px; padding: 20px; border-left: 6px solid #ddd; background: white;";
             div.innerHTML = `<p><strong>${q.id}. ${q.q}</strong> <small>(Peso ${q.p})</small></p>
-                <div class="options">${q.o.map((o, i) => `<label style="display:block; margin:5px 0; cursor:pointer;"><input type="radio" name="q${q.id}" value="${i}"> ${o}</label>`).join('')}</div>
-                <div class="exp" id="e${q.id}" style="display:none; font-size:0.85em; color:#555; background:#f9f9f9; padding:8px; border-left:3px solid #333; margin-top:10px;">${q.e}</div>`;
+                <div class="options">${q.o.map((o, i) => `<label><input type="radio" name="q${q.id}" value="${i}"> ${o}</label>`).join('')}</div>
+                <div class="exp" id="e${q.id}"><b>Gabarito Comentado:</b> ${q.e}</div>`;
             container.appendChild(div);
         });
-        exibirHistorico();
+        carregarTabelaHistorico();
     }
 
     function verificar() {
@@ -176,42 +211,48 @@
             document.getElementById(`e${q.id}`).style.display = 'block';
             const b = document.getElementById(`q${q.id}-b`);
             if(sel && parseInt(sel.value) === q.a) { 
-                nota += q.p; 
-                b.style.borderLeftColor = "#28a745"; b.style.background = "#e9f7ef";
-            } else {
-                b.style.borderLeftColor = "#dc3545"; b.style.background = "#fdf2f2";
-            }
+                nota += q.p; b.classList.add('correct'); b.classList.remove('wrong');
+            } else { b.classList.add('wrong'); b.classList.remove('correct'); }
         });
 
         const perc = (nota/total)*100;
         const r = document.getElementById('res');
         r.style.display = 'block';
-        r.style.background = perc >= 80 ? '#d4edda' : '#f8d7da';
+        r.style.background = perc >= 80 ? '#e9f7ef' : '#fdf2f2';
         r.style.borderColor = perc >= 80 ? '#28a745' : '#dc3545';
-        r.innerHTML = `<h3>Resultado para ${nome}</h3><strong>Nota Final: ${nota.toFixed(1)} / ${total.toFixed(1)} (${perc.toFixed(1)}%)</strong><br>${perc >= 80 ? 'EXCELENTE! ESTÁ PREPARADO!' : 'PRECISA REVISAR MAIS!'}`;
+        r.innerHTML = `Resultado para ${nome}: ${nota.toFixed(1)} pontos (${perc.toFixed(1)}%)`;
         
         salvarResultado(nome, nota.toFixed(1), perc.toFixed(1));
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function salvarResultado(nome, nota, perc) {
-        let historico = JSON.parse(localStorage.getItem('simulado_allan')) || [];
-        const novo = { nome, nota, perc, data: new Date().toLocaleString() };
-        historico.unshift(novo);
-        localStorage.setItem('simulado_allan', JSON.stringify(historico.slice(0, 5)));
-        exibirHistorico();
+        let hist = JSON.parse(localStorage.getItem('ranking_simulados_allan')) || [];
+        hist.unshift({ data: new Date().toLocaleString(), nome, nivel: NIVEL_ATUAL, nota, perc });
+        localStorage.setItem('ranking_simulados_allan', JSON.stringify(hist.slice(0, 20))); // Guarda os últimos 20
+        carregarTabelaHistorico();
     }
 
-    function exibirHistorico() {
-        const historico = JSON.parse(localStorage.getItem('simulado_allan')) || [];
-        const lista = document.getElementById('listaHistorico');
-        const box = document.getElementById('historico');
-        if(historico.length > 0) {
-            box.style.display = 'block';
-            lista.innerHTML = historico.map(h => `<li>📅 ${h.data} - <b>${h.perc}%</b> (${h.nota} pts)</li>`).join('');
+    function carregarTabelaHistorico() {
+        let hist = JSON.parse(localStorage.getItem('ranking_simulados_allan')) || [];
+        const corpo = document.getElementById('tabelaCorpo');
+        const section = document.getElementById('historicoSection');
+        
+        if(hist.length > 0) {
+            section.style.display = 'block';
+            corpo.innerHTML = hist.map(h => `
+                <tr>
+                    <td>${h.data}</td>
+                    <td>${h.nome}</td>
+                    <td><b>${h.nivel}</b></td>
+                    <td>${h.nota}</td>
+                    <td style="color:${h.perc >= 80 ? 'green' : 'red'}"><b>${h.perc}%</b></td>
+                </tr>
+            `).join('');
         }
     }
+
     build();
 </script>
-
-
+</body>
+</html>

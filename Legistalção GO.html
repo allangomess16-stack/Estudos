@@ -4,24 +4,23 @@
     <meta charset="utf-8"/>
     <title>ESTUDOS PARA CONCURSO - ALLAN GOMES SILVA</title> 
   
-         <nav class="menu-principal">
-    <a href="index.html">RETORNAR AO MENU</a>
-    <a href="portugues.html">PORTUGUÊS</a>
+    <nav class="menu-principal">
+    <a href="index.HTML">RETORNAR AO MENU</a>
     <a href="raciocinio.html">RACIOCINIO LOGICO</a>
     <a href="Curso Especifico.html">CURSO ESPECÍFICO</a>
-   
-    <a href="simulado.html">SIMULADO FÁCIL</a>
     <a href="simulado 2.html">SIMULADO MODERADO</a>
-     <a href="simulado 3.html">SIMULADO DIFÍCIL</a>
-<a href="simulado 4.html">SIMULADO ELITE</a>
-
-
+    <a href="simulado 3.html">SIMULADO DIFÍCIL</a>
+    <a href="simulado 3.html">SIMULADO ELITE</a>
+    <a href="simulado.html">SIMULADO</a>
+ 
 </nav>
 
-    <style>   
-        /* 1. RESET: Remove espaços padrões do navegador */
-        body { 
-        .menu-principal a {
+   <style>   
+        /* 1. RESET */
+        body 
+        
+        { 
+            .menu-principal a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
@@ -35,6 +34,35 @@
 }
         }
 
+        /* 2. MENU */
+      .menu-principal {
+    background-color: #333;
+    padding: 10px;
+    display: flex; /* Alinha os itens em linha */
+    flex-wrap: wrap; /* Faz os botões pularem linha se faltar espaço */
+    justify-content: center; /* Centraliza o menu */
+    gap: 10px; /* Cria um espaço uniforme entre os botões */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-principal a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #444;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 13px; /* Tamanho ajustado para caber melhor no celular */
+    white-space: nowrap; /* Impede que o texto do botão quebre em duas linhas */
+    display: inline-block;
+}
+
+.menu-principal a:hover {
+    background-color: #bd4343;
+}
         /* 2. FAIXA HERO (A de cima com imagem) */
         .faixa-hero {
             background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), 
@@ -59,7 +87,7 @@
 
         /* 3. FAIXA DE SUBTÍTULO (Vermelha) */
         .faixa-subtitulo {
-            background-color: #1a74db;
+            background-color: #db1a1a;
             color: white;
             padding: 20px;
             text-align: center;
@@ -159,7 +187,7 @@ html {
 
 
     <header class="faixa-hero">
-        <h1>ESTUDOS PARA CONCURSO PORTUGUÊS </h1>
+        <h1>ESTUDOS PARA CONCURSO LEGISLAÇÃO GO </h1>
         <p>Allan Gomes Silva - Foco na Aprovação</p>
     </header>
 
@@ -181,4 +209,3 @@ html {
     </section>
 
     <hr> <h2>CONTEÚDO DAS MATÉRIAS</h2>
-
