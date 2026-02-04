@@ -4,32 +4,44 @@
     <meta charset="utf-8"/>
     <title>ESTUDOS PARA CONCURSO - ALLAN GOMES SILVA</title> 
   
-    <nav class="menu-principal">
-    <a href="index.HTML">RETORNAR AO MENU</a>
+         <nav class="menu-principal">
+    <a href="index.html">RETORNAR AO MENU</a>
+    <a href="portugues.html">PORTUGUÊS</a>
     <a href="raciocinio.html">RACIOCINIO LOGICO</a>
     <a href="Curso Especifico.html">CURSO ESPECÍFICO</a>
     <a href="Legistalção GO.html">LEGISLAÇÃO GO</a>
-    <a href="simulado 2.html">SIMULADO 2</a>
- 
+    <a href="simulado.html">SIMULADO FÁCIL</a>
+    <a href="simulado 2.html">SIMULADO MODERADO</a>
+     <a href="simulado 3.html">SIMULADO DIFÍCIL</a>
+<a href="simulado 4.html">SIMULADO ELITE</a>
+
+
 </nav>
 
     <style>   
         /* 1. RESET: Remove espaços padrões do navegador */
         body { 
-        .menu-principal a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    background-color: #444;
-    transition: 0.3s;
-    /* Adicione as duas linhas abaixo para igualar ao index */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold; 
-}
+         /* 2. MENU */
+        .menu-principal {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            position: sticky; /* O menu 'gruda' no topo ao rolar */
+            top: 0;
+            z-index: 2000;
         }
-
+        .menu-principal a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #444;
+            transition: 0.3s;
+        }
+        .menu-principal a:hover {
+            background-color: #bd4343;
+        }
         /* 2. FAIXA HERO (A de cima com imagem) */
         .faixa-hero {
             background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), 
