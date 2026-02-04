@@ -25,30 +25,34 @@
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f0f2f5;
-        }
-
-        /* 2. MENU DE NAVEGAÇÃO SUPERIOR */
-                /* 2. MENU */
         .menu-principal {
-            background-color: #333;
-            padding: 15px;
-            text-align: center;
-            position: sticky; /* O menu 'gruda' no topo ao rolar */
-            top: 0;
-            z-index: 2000;
-        }
-        .menu-principal a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 5px;
-            background-color: #444;
-            transition: 0.3s;
-        }
-        .menu-principal a:hover {
-            background-color: #bd4343;
-        }
+    background-color: #333;
+    padding: 10px;
+    display: flex; /* Alinha os itens em linha */
+    flex-wrap: wrap; /* Faz os botões pularem linha se faltar espaço */
+    justify-content: center; /* Centraliza o menu */
+    gap: 10px; /* Cria um espaço uniforme entre os botões */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-principal a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #444;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 13px; /* Tamanho ajustado para caber melhor no celular */
+    white-space: nowrap; /* Impede que o texto do botão quebre em duas linhas */
+    display: inline-block;
+}
+
+.menu-principal a:hover {
+    background-color: #bd4343;
+}
 
 
         /* 3. HERO SECTION (IMAGEM PRINCIPAL) */
@@ -173,4 +177,5 @@
 
 </body>
 </html>
+
 
