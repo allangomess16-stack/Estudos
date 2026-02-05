@@ -471,5 +471,268 @@ const bancoDeDadosGeral = [
         o: ["O TCP é mais rápido, mas menos seguro que o UDP.", "O TCP garante a entrega e a ordem dos pacotes (orientado à conexão), enquanto o UDP prioriza a velocidade sem garantir a entrega.", "O UDP é usado apenas para e-mails e o TCP para vídeos.", "Não há diferença técnica, são sinônimos."], 
         a: 1, 
         e: "TCP é usado onde a integridade é vital (ex: sites); UDP é usado onde a velocidade é vital (ex: chamadas de vídeo)." 
-    }
+    },
+
+    // === ELITE: DIREITO ADMINISTRATIVO E ATOS (s: 'g') ===
+    { 
+        id: 124, s: 'g', p: 2, 
+        q: "No que se refere aos Atos Administrativos, o atributo que permite à Administração Pública executar suas decisões diretamente, inclusive com o uso da força, sem necessidade de autorização prévia do Judiciário, é a:", 
+        o: ["Presunção de Legitimidade", "Imperatividade", "Autoexecutoriedade", "Tipicidade"], 
+        a: 2, 
+        e: "A autoexecutoriedade permite que a administração ponha em prática suas decisões (ex: guinchar um carro) sem ordem judicial prévia." 
+    },
+    { 
+        id: 125, s: 'g', p: 2, 
+        q: "A demissão de um servidor público estável da Câmara de Goiânia, após a devida apuração em processo administrativo disciplinar (PAD), é um exemplo do exercício do poder:", 
+        o: ["Poder Regulamentar", "Poder Hierárquico", "Poder Disciplinar", "Poder de Polícia"], 
+        a: 2, 
+        e: "O Poder Disciplinar é o que permite à Administração punir infrações funcionais de seus servidores." 
+    },
+
+    // === ELITE: HARDWARE DE VÍDEO E SWITCHER (s: 'e') ===
+    { 
+        id: 260, s: 'e', p: 3, 
+        q: "Ao operar um switcher de grande porte (como Ross Carbonite ou Blackmagic Constellation), o termo 'Upstream Keyer' (USK) refere-se a uma chave que atua em qual momento do fluxo?", 
+        o: ["Após a transição final do PGM.", "Antes das transições de corte e mix do barramento principal.", "Apenas no sinal de áudio.", "Exclusivamente para o multiviewer."], 
+        a: 1, 
+        e: "O USK (Upstream) é processado antes da transição principal, permitindo criar camadas que 'viajam' junto com o corte da câmera." 
+    },
+    { 
+        id: 261, s: 'e', p: 3, 
+        q: "Em um ambiente broadcast, a função 'Frame Delay' (atraso de quadro) é frequentemente aplicada para corrigir qual problema técnico?", 
+        o: ["Falta de brilho na imagem.", "Sincronização de 'Lip Sync' (atraso entre o áudio e o movimento labial do apresentador).", "Melhorar a resolução do sinal 720p para 1080p.", "Aumentar a vida útil das lâmpadas do estúdio."], 
+        a: 1, 
+        e: "Como o processamento de vídeo é mais pesado que o de áudio, usa-se o delay para alinhar os dois sinais perfeitamente." 
+    },
+    { 
+        id: 262, s: 'e', p: 3, 
+        q: "O que caracteriza a tecnologia de conexão 'Optical Fiber SDI' em comparação ao cabo coaxial BNC tradicional?", 
+        o: ["É limitada a distâncias de no máximo 10 metros.", "Imunidade total a interferências eletromagnéticas e suporte a distâncias de quilômetros.", "Não permite o transporte de áudio embutido.", "É uma tecnologia analógica de alta fidelidade."], 
+        a: 1, 
+        e: "A fibra óptica usa luz para transmitir dados, eliminando interferências elétricas de motores ou geradores no estúdio." 
+    },
+
+    // === ELITE: INFORMÁTICA E EXCEL AVANÇADO (s: 'i') ===
+    { 
+        id: 426, s: 'i', p: 1, 
+        q: "No Microsoft Excel, qual das seguintes fórmulas retornaria o valor 'Aprovado' caso a célula A1 seja maior ou igual a 7, e 'Reprovado' caso seja menor?", 
+        o: ["=SE(A1>=7;'Aprovado';'Reprovado')", "=SE(A1>7;'Reprovado';'Aprovado')", "=CONT.SE(A1;7;'Aprovado')", "=PROCV(A1;7;'Aprovado')"], 
+        a: 0, 
+        e: "A função SE realiza um teste lógico: (condição; valor_se_verdade; valor_se_falso)." 
+    },
+    { 
+        id: 427, s: 'i', p: 1, 
+        q: "O que define um ataque de 'Denial of Service' (DoS) contra um servidor de transmissão da Câmara?", 
+        o: ["Roubo de senhas por meio de e-mails falsos.", "Sobrecarga do servidor com requisições simultâneas para torná-lo indisponível aos usuários legítimos.", "Instalação de um vírus que espiona a webcam.", "Falsificação física do crachá do técnico."], 
+        a: 1, 
+        e: "O ataque de Negação de Serviço visa derrubar sistemas inundando-os com tráfego inútil." 
+    },
+
+    // === ELITE: RACIOCÍNIO LÓGICO E MATEMÁTICA (s: 'l') ===
+    { 
+        id: 76, s: 'l', p: 1, 
+        q: "Em uma urna há 5 cabos SDI azuis e 3 cabos SDI vermelhos. Se retirarmos 2 cabos sucessivamente, sem reposição, qual a probabilidade de ambos serem vermelhos?", 
+        o: ["9/64", "3/28", "6/56", "1/8"], 
+        a: 1, 
+        e: "Probabilidade do 1º ser vermelho (3/8) vezes o 2º ser vermelho (2/7) = 6/56, que simplificado é 3/28." 
+    },
+
+    // === ELITE: PORTUGUÊS (SINTAXE E PONTUAÇÃO) ===
+    { 
+        id: 40, s: 'p', p: 2, 
+        q: "Assinale a opção que apresenta a pontuação e a concordância corretas, de acordo com a norma-padrão da língua portuguesa:", 
+        o: ["Ocorreram, durante a transmissão matutina, diversos problemas técnicos que impediram o sinal de chegar à Brasília.", "Haviam, no plenário da Câmara, cerca de trinta vereadores aguardando o início da sessão solene.", "Tratam-se de mudanças urgentes, as quais os técnicos devem se adaptar imediatamente para garantir o fluxo.", "Informou-se aos operadores de caracteres que, a partir de amanhã, as escalas de plantão serão alteradas."], 
+        a: 3, 
+        e: "A alternativa D está correta. Na A, não se usa crase antes de Brasília (cidade que não admite artigo). Na B, o verbo 'haver' (existir) é impessoal. Na C, o verbo 'tratar-se de' é impessoal." 
+    },
+    { 
+        id: 41, s: 'p', p: 2, 
+        q: "No trecho 'A implantação do sistema digital, conquanto necessária, exigiu alto investimento', a conjunção destacada pode ser substituída, sem alteração de sentido, por:", 
+        o: ["Portanto", "Todavia", "Embora", "Visto que"], 
+        a: 2, 
+        e: "'Conquanto' é uma conjunção concessiva, assim como 'embora'." 
+    },
+
+    // === ELITE: RACIOCÍNIO LÓGICO (LÓGICA SENTENCIAL) ===
+    { 
+        id: 77, s: 'l', p: 1, 
+        q: "Uma proposição equivalente a 'Se o servidor é eficiente, então o cidadão é bem atendido' é:", 
+        o: ["Se o cidadão é bem atendido, então o servidor é eficiente.", "O servidor não é eficiente ou o cidadão é bem atendido.", "O servidor é eficiente e o cidadão não é bem atendido.", "Se o servidor não for eficiente, o cidadão não será bem atendido."], 
+        a: 1, 
+        e: "Equivalência da condicional (P -> Q) pela regra: ~P v Q (Nega a primeira OU mantém a segunda)." 
+    },
+    { 
+        id: 78, s: 'l', p: 1, 
+        q: "Qual a negação lógica da afirmação: 'Todo técnico de vídeo é organizado'?", 
+        o: ["Nenhum técnico de vídeo é organizado.", "Pelo menos um técnico de vídeo não é organizado.", "Todos os organizados são técnicos de vídeo.", "Alguns técnicos de vídeo são organizados."], 
+        a: 1, 
+        e: "A negação de 'Todo' é 'Pelo menos um não'." 
+    },
+
+    // === ELITE: LEGISLAÇÃO E DIREITO ADMINISTRATIVO (s: 'g') ===
+    { 
+        id: 126, s: 'g', p: 2, 
+        q: "Sobre os atos administrativos, o conceito de 'Imperatividade' refere-se à característica que:", 
+        o: ["Permite à administração executar suas decisões sem auxílio do Judiciário.", "Obriga o administrado ao cumprimento do ato, independentemente de sua concordância.", "Garante que o ato foi editado conforme a lei até prova em contrário.", "Exige que o ato esteja previsto em lei para ser válido."], 
+        a: 1, 
+        e: "A imperatividade é o poder do ato administrativo de se impor a terceiros, criando obrigações." 
+    },
+    { 
+        id: 127, s: 'g', p: 2, 
+        q: "A investidura em cargo público na Câmara de Goiânia ocorre com:", 
+        o: ["A nomeação.", "A aprovação no concurso.", "A posse.", "O exercício."], 
+        a: 2, 
+        e: "Conforme o Estatuto do Servidor, a investidura ocorre com a assinatura do termo de posse." 
+    },
+
+    // === ELITE: CONHECIMENTOS ESPECÍFICOS (ÁUDIO E VÍDEO BROADCAST) ===
+    { 
+        id: 263, s: 'e', p: 3, 
+        q: "Ao trabalhar com áudio digital em estúdios de TV, o termo 'Sample Rate' (Taxa de Amostragem) padrão para broadcast é de:", 
+        o: ["44.1 kHz", "48.0 kHz", "96.0 kHz", "192 kHz"], 
+        a: 1, 
+        e: "O padrão broadcast (EBU/AES) para áudio profissional é 48 kHz." 
+    },
+    
+    { 
+        id: 264, s: 'e', p: 3, 
+        q: "Qual a função do protocolo PTP (Precision Time Protocol - IEEE 1588) em infraestruturas de vídeo sobre IP (ST-2110)?", 
+        o: ["Comprimir o sinal de vídeo para 4K.", "Garantir o sincronismo de tempo (clock) extremamente preciso entre todos os dispositivos da rede.", "Proteger o sinal contra ataques de hackers.", "Converter áudio analógico em digital."], 
+        a: 1, 
+        e: "O PTP é o substituto do Genlock analógico em redes IP, garantindo que todos os pacotes de vídeo e áudio estejam em fase." 
+    },
+    { 
+        id: 265, s: 'e', p: 3, 
+        q: "O erro visual conhecido como 'Aliasing' em geradores de caracteres é minimizado através de qual processo técnico?", 
+        o: ["Aumento do brilho da fonte.", "Anti-aliasing (suavização de bordas por meio de interpolação de cores).", "Mudança da fonte Sans Serif para Serif.", "Uso de cabos HDMI banhados a ouro."], 
+        a: 1, 
+        e: "O Anti-aliasing suaviza as bordas 'serrilhadas' das letras, tornando a leitura na TV mais confortável." 
+    },
+    { 
+        id: 266, s: 'e', p: 3, 
+        q: "Em um switcher de vídeo, o recurso 'Clean Feed' refere-se a uma saída que:", 
+        o: ["Não possui sinal de áudio.", "É idêntica ao Program (PGM), mas sem as sobreposições de caracteres (gráficos/tarjas).", "Possui apenas o sinal da câmera 1.", "Serve para limpar as cabeças de gravação."], 
+        a: 1, 
+        e: "O Clean Feed é essencial para gravações que precisam ser editadas posteriormente sem os nomes (GCs) fixos na imagem." 
+    },
+
+    // === ELITE: INFORMÁTICA E REDES (s: 'i') ===
+    { 
+        id: 428, s: 'i', p: 1, 
+        q: "Qual a função de um servidor de 'DNS' (Domain Name System) em uma rede de computadores?", 
+        o: ["Atribuir endereços IP automaticamente.", "Traduzir nomes de domínio (como www.goiania.go.leg.br) em endereços IP numéricos.", "Bloquear o acesso de sites maliciosos.", "Realizar a varredura de vírus em e-mails."], 
+        a: 1, 
+        e: "O DNS é a 'lista telefônica' da internet, resolvendo nomes em IPs para que os roteadores saibam para onde enviar os dados." 
+    },
+    
+    { 
+        id: 429, s: 'i', p: 1, 
+        q: "O que caracteriza a tecnologia de virtualização de servidores, amplamente utilizada em data centers?", 
+        o: ["Aumentar o tamanho físico dos servidores.", "Executar múltiplos sistemas operacionais independentes em um único hardware físico.", "Eliminar a necessidade de cabos de rede.", "Substituir o uso de memórias RAM por HDs externos."], 
+        a: 1, 
+        e: "Virtualização permite otimizar hardware, rodando vários servidores virtuais em uma única máquina física (host)." 
+    },
+    { 
+        id: 430, s: 'i', p: 1, 
+        q: "No Microsoft Windows 10, o que acontece ao pressionar a combinação de teclas 'Win + D'?", 
+        o: ["Abre o Explorador de Arquivos.", "Minimiza todas as janelas e mostra a Área de Trabalho.", "Bloqueia o computador imediatamente.", "Abre o Painel de Controle."], 
+        a: 1, 
+        e: "Win + D é o atalho para 'Show Desktop'." 
+    },
+    // === ELITE: LEGISLAÇÃO MUNICIPAL (LEI ORGÂNICA E REGIMENTO) ===
+    { 
+        id: 501, s: 'g', p: 2, 
+        q: "Segundo a Lei Orgânica de Goiânia, a emenda à referida Lei será discutida e votada em dois turnos, com interstício mínimo de dez dias, considerando-se aprovada se obtiver em ambos o voto de:", 
+        o: ["Maioria absoluta dos membros da Câmara.", "Dois terços dos membros da Câmara.", "Maioria simples dos presentes.", "Três quintos dos membros da Câmara."], 
+        a: 1, 
+        e: "Para alterar a 'Constituição Municipal' (LOM), exige-se o quórum qualificado de 2/3 em dois turnos." 
+    },
+    { 
+        id: 502, s: 'g', p: 2, 
+        q: "Conforme o Regimento Interno da Câmara Municipal de Goiânia, qual o quórum necessário para a abertura de uma Sessão Ordinária?", 
+        o: ["A presença de qualquer número de vereadores.", "A presença da maioria absoluta dos membros (18 vereadores).", "A presença de um terço dos membros da Casa.", "Apenas a presença do Presidente e do Primeiro Secretário."], 
+        a: 2, 
+        e: "O Art. 104 do RI define que as sessões só iniciam com a presença de, no mínimo, 1/3 dos membros." 
+    },
+    { 
+        id: 503, s: 'g', p: 2, 
+        q: "No que tange ao Regime Jurídico Único, o deslocamento do servidor, a pedido ou de ofício, com preenchimento de vaga, no âmbito do mesmo quadro, denomina-se:", 
+        o: ["Redistribuição.", "Remoção.", "Ascensão.", "Readaptação."], 
+        a: 1, 
+        e: "Remoção é o deslocamento do servidor dentro do mesmo quadro. Redistribuição é o deslocamento do cargo." 
+    },
+    { 
+        id: 504, s: 'g', p: 2, 
+        q: "Compete privativamente ao Prefeito Municipal de Goiânia a iniciativa de leis que disponham sobre:", 
+        o: ["Criação de cargos, funções ou empregos públicos na administração direta.", "Homenagens a cidadãos ilustres.", "Denominação de logradouros públicos.", "Criação de comissões parlamentares de inquérito."], 
+        a: 0, 
+        e: "Matérias que geram despesa ou tratam da estrutura do Executivo são de iniciativa exclusiva do Prefeito." 
+    },
+    { 
+        id: 505, s: 'g', p: 2, 
+        q: "Qual comissão permanente da Câmara de Goiânia deve, obrigatoriamente, manifestar-se sobre o aspecto constitucional e legal de todas as proposições?", 
+        o: ["Comissão de Finanças e Orçamento.", "Comissão de Trabalho e Servidor Público.", "Comissão de Constituição, Justiça e Redação (CCJR).", "Comissão de Ética e Decoro Parlamentar."], 
+        a: 2, 
+        e: "A CCJR é o filtro de legalidade da Casa. Sem o parecer dela, o projeto não prossegue conforme a norma." 
+    },
+
+    // === ELITE: INFORMÁTICA (HARDWARE, REDES E SEGURANÇA) ===
+    { 
+        id: 601, s: 'i', p: 1, 
+        q: "Em uma rede local de computadores (LAN), qual dispositivo é responsável por centralizar a conexão e encaminhar os quadros de dados especificamente para a porta do destinatário, baseando-se no endereço MAC?", 
+        o: ["Hub.", "Repetidor.", "Switch (Comutador).", "Modem analógico."], 
+        a: 2, 
+        e: "Diferente do Hub (que replica para todos), o Switch é inteligente e envia os dados apenas para o destino correto." 
+    },
+    { 
+        id: 602, s: 'i', p: 1, 
+        q: "No Microsoft Windows 10, o recurso que permite 'congelar' o estado atual do computador, salvando os dados da RAM no HD/SSD e desligando o hardware completamente, denomina-se:", 
+        o: ["Suspender.", "Reiniciar.", "Hibernar.", "Logoff."], 
+        a: 2, 
+        e: "Hibernação salva tudo no disco rígido, permitindo que a energia seja cortada sem perder o trabalho atual." 
+    },
+    { 
+        id: 603, s: 'i', p: 1, 
+        q: "Qual protocolo de e-mail é utilizado para sincronizar mensagens entre o servidor e múltiplos dispositivos, mantendo as alterações (como lidas ou excluídas) em todos eles?", 
+        o: ["POP3.", "SMTP.", "IMAP.", "HTTP."], 
+        a: 2, 
+        e: "O IMAP mantém as mensagens no servidor e sincroniza o estado entre celular, PC e webmail." 
+    },
+    { 
+        id: 604, s: 'i', p: 1, 
+        q: "Considerando a segurança da informação, a 'Integridade' garante que:", 
+        o: ["A informação esteja disponível sempre que necessário.", "A informação só seja acessada por pessoas autorizadas.", "A informação não tenha sido alterada por pessoas não autorizadas durante o processo.", "A origem da informação possa ser comprovada juridicamente."], 
+        a: 2, 
+        e: "Integridade foca na proteção contra alterações não autorizadas nos dados." 
+    },
+    { 
+        id: 605, s: 'i', p: 1, 
+        q: "O componente físico da placa-mãe que armazena o firmware responsável pelo processo de boot (inicialização) e pelas configurações básicas de hardware é o:", 
+        o: ["Chipset.", "Slot PCI Express.", "Chip da BIOS/UEFI.", "Socket do Processador."], 
+        a: 2, 
+        e: "A BIOS (ou UEFI moderna) é o primeiro software executado ao ligar o computador." 
+    },
+
+    // === ELITE: TERMINOLOGIA E LEIS (s: 'g') ===
+    { 
+        id: 801, s: 'g', p: 2, 
+        q: "Qual a diferença fundamental entre a Maioria Absoluta e a Maioria Simples nas votações da Câmara de Goiânia?", 
+        o: ["Não há diferença, são nomes para o mesmo quórum.", "A Absoluta baseia-se no total de membros da Casa; a Simples baseia-se nos membros presentes.", "A Simples exige 18 votos e a Absoluta exige 24 votos.", "A Absoluta é usada para homenagens e a Simples para leis."], 
+        a: 1, 
+        e: "Maioria Absoluta = 1º número inteiro após a metade do total de vereadores (35). Simples = maioria dos presentes na sessão." 
+    },
+    { 
+        id: 802, s: 'g', p: 2, 
+        q: "O ato pelo qual o Prefeito Municipal manifesta sua concordância com o projeto de lei aprovado pela Câmara denomina-se:", 
+        o: ["Promulgação.", "Publicação.", "Sanção.", "Ratificação."], 
+        a: 2, 
+        e: "Sanção é o ato de concordância do Executivo. Se ele discordar, ele Veta." 
+    },
+    { 
+        id: 803, s: 'g', p: 2, 
+        q: "De acordo com o Estatuto do Servidor de Goiânia (LC 011/92), a investidura em cargo público ocorre com a:", 
+        o: ["Nomeação.", "Posse.", "Entrada em exercício.", "Aprovação final no concurso."], 
+        a: 1, 
+        e: "É na POSSE que o vínculo jurídico se forma e o cidadão se torna servidor." 
+    },
 ];
