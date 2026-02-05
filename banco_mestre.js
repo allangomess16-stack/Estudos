@@ -118,5 +118,358 @@ const bancoDeDadosGeral = [
     { id: 414, s: 'i', p: 1, q: "O que é um 'Firewall' no contexto de segurança de redes?", o: ["Um componente que acelera a internet", "Um sistema que filtra o tráfego de rede para proteger o computador", "Um programa para editar vídeos", "A parte física do roteador"], a: 1, e: "O firewall atua como uma barreira de segurança, autorizando ou bloqueando conexões." },
     { id: 415, s: 'i', p: 1, q: "Qual a função principal de um roteador em uma rede de computadores?", o: ["Processar textos", "Encaminhar pacotes de dados entre redes diferentes", "Armazenar fotos", "Imprimir documentos"], a: 1, e: "O roteador gerencia o tráfego de dados, escolhendo a melhor rota para a informação chegar ao destino." },
 
+// === ELITE: PORTUGUÊS (Sintaxe e Pontuação) ===
+    { id: 26, s: 'p', p: 2, q: "No trecho 'Compete ao Operador, conforme o Regimento, a inserção dos caracteres', as vírgulas isolam:", o: ["Um adjunto adverbial deslocado", "Um aposto explicativo", "Uma oração subordinada adjetiva", "Um vocativo"], a: 0, e: "A expressão 'conforme o Regimento' é um adjunto adverbial de conformidade deslocado." },
+    { id: 27, s: 'p', p: 2, q: "Assinale a alternativa em que a partícula 'SE' exerce função de índice de indeterminação do sujeito:", o: ["Consertou-se o Switcher.", "Aluga-se esta sala.", "Precisa-se de técnicos qualificados.", "O operador cortou-se no rack."], a: 2, e: "Com verbos transitivos indiretos (precisar de), o 'SE' indetermina o sujeito." },
+    { id: 28, s: 'p', p: 2, q: "Qual a figura de linguagem presente em: 'A TV Senado é o olho do cidadão no Congresso'?", o: ["Metonímia", "Hipérbole", "Metáfora", "Eufemismo"], a: 2, e: "Comparação implícita sem o conectivo 'como'." },
 
+    // === ELITE: RACIOCÍNIO LÓGICO (Equivalências e Argumentos) ===
+    { id: 68, s: 'l', p: 1, q: "A proposição 'Se o sinal é SDI, então a imagem é digital' é equivalente a:", o: ["Se a imagem é digital, então o sinal é SDI", "O sinal não é SDI ou a imagem é digital", "Se o sinal não é SDI, então a imagem não é digital", "O sinal é SDI e a imagem não é digital"], a: 1, e: "Equivalência da condicional (P->Q) pela regra da 'Neymar': nega a primeira (P), troca por OU (v) e mantém a segunda (Q)." },
+    { id: 69, s: 'l', p: 1, q: "Qual a negação de 'Se eu estudar, então passarei no concurso'?", o: ["Se eu não estudar, então não passarei", "Eu estudo e não passo no concurso", "Eu não estudo e passo no concurso", "Eu estudo ou não passo no concurso"], a: 1, e: "Negação da condicional: mantém a primeira E nega a segunda (P ^ ~Q)." },
+
+    // === ELITE: LEGISLAÇÃO GOIÂNIA (Regimento e Lei Orgânica) ===
+    { id: 116, s: 'g', p: 2, q: "Sobre o processo legislativo em Goiânia, a iniciativa de leis que disponham sobre o regime jurídico dos servidores municipais é competência exclusiva:", o: ["Da Mesa Diretora", "Do Presidente da Câmara", "Do Prefeito Municipal", "De qualquer Vereador"], a: 2, e: "Matérias sobre servidores e orçamento são de iniciativa privativa do Chefe do Executivo (Prefeito)." },
+    { id: 117, s: 'g', p: 2, q: "O quórum necessário para a aprovação de uma Emenda à Lei Orgânica de Goiânia é de:", o: ["Maioria Simples", "Maioria Absoluta", "Dois terços dos membros", "Três quintos dos membros"], a: 2, e: "Para alterar a Lei Orgânica, exige-se votação em dois turnos com 2/3 dos vereadores." },
+
+    // === ELITE: ESPECÍFICAS (Broadcast, Sincronismo e Compressão) ===
+    { id: 243, s: 'e', p: 3, q: "O sinal de referência Tri-Level Sync é utilizado preferencialmente em sistemas:", o: ["Analógicos SD", "Digitais HD/UHD", "Apenas para áudio IP", "Streaming de baixa latência"], a: 1, e: "O Tri-level sync é o padrão de sincronismo mais preciso para sinais de Alta Definição (HD)." },
+    { id: 244, s: 'e', p: 3, q: "No espaço de cor YCbCr, o componente 'Y' representa:", o: ["A diferença de azul", "A diferença de vermelho", "A Luminância (Brilho)", "A Saturação"], a: 2, e: "Y é a luminância; Cb e Cr são os componentes de crominância (cor)." },
+    { id: 245, s: 'e', p: 3, q: "O que caracteriza a compressão Intraframe (como o ProRes ou DNxHD) em comparação à Interframe (como o H.264)?", o: ["Ocupa muito menos espaço no HD", "Cada quadro é comprimido individualmente, facilitando a edição", "Depende de quadros anteriores para ser lido", "Não possui Canal Alpha"], a: 1, e: "Compressão Intraframe (I-frame only) é ideal para edição porque não exige que o processador calcule quadros vizinhos." },
+    { id: 246, s: 'e', p: 3, q: "Qual a função de um 'Frame Synchronizer' em uma entrada de switcher que não recebe Genlock?", o: ["Melhorar a cor da câmera", "Gravar o sinal em backup", "Alinhar o timing do sinal externo ao relógio interno do switcher", "Converter SDI para HDMI"], a: 2, e: "O sincronizador de quadro cria um buffer para alinhar sinais 'soltos' ao sistema do estúdio." },
+    { id: 247, s: 'e', p: 3, q: "O erro conhecido como 'Color Banding' em degradês de fundo de tela é causado geralmente por:", o: ["Bit-depth baixo (ex: 8-bit)", "Cabo SDI muito longo", "Falta de Genlock", "Resolução 4K"], a: 0, e: "Banding ocorre quando não há tons de cores suficientes para uma transição suave, problema comum em 8-bit." },
+
+    // === ELITE: INFORMÁTICA (Redes e Segurança) ===
+    { id: 416, s: 'i', p: 1, q: "Qual topologia de rede é caracterizada por um nó central que gerencia todas as comunicações, comum em redes Wi-Fi de escritórios?", o: ["Anel (Ring)", "Estrela (Star)", "Barramento (Bus)", "Malha (Mesh)"], a: 1, e: "Na topologia Estrela, todos os dispositivos se conectam a um ponto central (Switch ou AP)." },
+    { id: 417, s: 'i', p: 1, q: "No Windows 10, o que faz o comando 'ping' executado no Prompt de Comando (CMD)?", o: ["Apaga arquivos temporários", "Testa a conectividade e a latência com outro endereço IP", "Formata o pendrive", "Altera a senha do usuário"], a: 1, e: "O ping envia pacotes ICMP para verificar se um destino está alcançável e o tempo de resposta." },
+
+
+// === ELITE: PORTUGUÊS (Sintaxe, Regência e Pontuação Avançada) ===
+    
+       { id: 31, s: 'p', p: 2, 
+        q: "No que se refere à concordância verbal e à regência, assinale a alternativa que obedece rigorosamente à norma culta da língua portuguesa:", 
+        o: ["Fazem dez anos que a Câmara de Goiânia mudou sua sede administrativa.", "Os técnicos de vídeo assistiram o novo tutorial sobre sinais SDI.", "Haviam muitos vereadores presentes na sessão solene de ontem.", "Devem-se buscar soluções urgentes para os problemas de sinal."], 
+        a: 3, 
+        e: "Na voz passiva sintética, o verbo deve concordar com o sujeito (soluções). 'Fazer' indicando tempo e 'Haver' no sentido de existir são impessoais (ficam no singular)." 
+     } ,
+    { 
+        id: 32, s: 'p', p: 2, 
+        q: "Assinale a alternativa em que o sinal indicativo de crase foi empregado CORRETAMENTE:", 
+        o: ["O Operador de Caracteres enviou as tarjas à uma servidora concursada.", "O acesso à rede externa da Câmara será liberado a partir das oito horas.", "A equipe técnica referiu-se àquele equipamento que apresentou defeito.", "As transmissões ao vivo ocorrem de segunda à sexta, sem interrupções."], 
+        a: 2, 
+        e: "A crase é obrigatória na junção da preposição 'a' com o pronome demonstrativo 'aquele'. Não há crase antes de artigo indefinido (uma), verbos (partir) ou entre dias da semana sem artigo (de... a)." 
+    },
+    { 
+        id: 33, s: 'p', p: 2, 
+        q: "Na frase 'A execução do protocolo de Genlock, conquanto seja complexa, garante a estabilidade do vídeo', a conjunção destacada estabelece uma relação de:", 
+        o: ["Conclusão", "Explicação", "Concessão", "Adição"], 
+        a: 2, 
+        e: "'Conquanto' é uma conjunção concessiva, introduzindo uma ideia que se opõe à principal sem anulá-la, semelhante ao 'embora'." 
+    },
+
+    // === ELITE: RACIOCÍNIO LÓGICO (Equivalências e Estruturas) ===
+    { 
+        id: 70, s: 'l', p: 1, 
+        q: "Considere a seguinte proposição condicional: 'Se o backup falhar, então os dados serão perdidos'. De acordo com a lógica sentencial, uma proposição equivalente é:", 
+        o: ["Se os dados forem perdidos, então o backup falhou.", "O backup não falha ou os dados são perdidos.", "O backup falha e os dados não são perdidos.", "Se o backup não falhar, então os dados não serão perdidos."], 
+        a: 1, 
+        e: "Equivalência lógica (P -> Q) pode ser feita pela regra da disjunção: ~P v Q (Nega a primeira OU mantém a segunda)." 
+    },
+    { 
+        id: 71, s: 'l', p: 1, 
+        q: "Qual é a negação lógica da proposição composta: 'Allan é Operador de Caracteres e estuda Inteligência Artificial'?", 
+        o: ["Allan não é Operador de Caracteres e não estuda Inteligência Artificial.", "Se Allan não é Operador de Caracteres, então ele não estuda IA.", "Allan não é Operador de Caracteres ou não estuda Inteligência Artificial.", "Allan estuda IA mas não é Operador de Caracteres."], 
+        a: 2, 
+        e: "Lei de De Morgan para negação do 'E' (^): Nega-se ambas as proposições e troca-se o conectivo 'E' pelo 'OU' (v)." 
+    },
+
+    // === ELITE: LEGISLAÇÃO E REGIMENTO (Poder Legislativo Municipal) ===
+    { 
+        id: 118, s: 'g', p: 2, 
+        q: "De acordo com o Regimento Interno da Câmara Municipal de Goiânia, a Comissão que possui a competência de analisar o mérito administrativo e a constitucionalidade das propostas é a:", 
+        o: ["Comissão de Finanças e Orçamento.", "Comissão de Ética e Decoro Parlamentar.", "Comissão de Constituição, Justiça e Redação.", "Comissão de Direitos Humanos."], 
+        a: 2, 
+        e: "A CCJR é a comissão técnica mais importante, atuando como filtro jurídico para qualquer projeto de lei na Casa." 
+    },
+    { 
+        id: 119, s: 'g', p: 2, 
+        q: "Sobre a Lei Orgânica de Goiânia, em caso de impedimento simultâneo do Prefeito e do Vice-Prefeito, quem deverá assumir o cargo interinamente?", 
+        o: ["O Secretário de Governo.", "O Presidente da Câmara Municipal.", "O Juiz Diretor do Foro da Comarca de Goiânia.", "O Vereador com o maior número de votos na última eleição."], 
+        a: 1, 
+        e: "A linha de sucessão municipal prevê que o Presidente da Câmara assume a prefeitura na ausência do Prefeito e do Vice." 
+    },
+
+    // === ELITE: CONHECIMENTOS ESPECÍFICOS (Sinal Digital e Broadcast) ===
+    { 
+        id: 248, s: 'e', p: 3, 
+        q: "No processamento de sinal SDI, a diferença fundamental entre as normas HD-SDI (1.5G) e 3G-SDI reside em qual parâmetro técnico?", 
+        o: ["O tipo de conector BNC utilizado.", "A profundidade de cor limitada a 8 bits no 3G.", "A largura de banda de dados suportada, permitindo taxas de quadros maiores em 1080p.", "A impossibilidade de transportar áudio embutido no sinal 1.5G."], 
+        a: 2, 
+        e: "O 3G-SDI dobra a taxa de bits do 1.5G, permitindo transportar sinal 1080p a 50 ou 60 quadros por segundo em um único cabo." 
+    },
+    { 
+        id: 249, s: 'e', p: 3, 
+        q: "A técnica de compressão 'Interframe' (como o codec H.264/AVC) economiza espaço de armazenamento baseando-se em qual princípio?", 
+        o: ["Redução drástica da resolução horizontal da imagem.", "Exclusão total do canal alpha de transparência.", "Eliminação da redundância temporal entre quadros sucessivos através de vetores de movimento.", "Conversão obrigatória do sinal para preto e branco antes do processamento."], 
+        a: 2, 
+        e: "Ao contrário da compressão Intraframe (quadro a quadro), a Interframe grava apenas as mudanças entre os quadros, economizando bits." 
+    },
+    { 
+        id: 250, s: 'e', p: 3, 
+        q: "O processo de 'Keying' conhecido como 'Luma Key' realiza o recorte da imagem baseando-se em quais níveis do sinal de vídeo?", 
+        o: ["Apenas no canal de cor verde (Green).", "Nos níveis de luminância (brilho), separando áreas claras de áreas escuras.", "Na diferença de fase do sinal de sincronismo.", "Apenas nas frequências de áudio sincronizadas."], 
+        a: 1, 
+        e: "O Luma Key usa o contraste de brilho (preto/branco) para gerar a transparência, comum para sobrepor textos brancos em fundos escuros." 
+    },
+
+    // === ELITE: INFORMÁTICA (Redes, Segurança e Servidores) ===
+    { 
+        id: 418, s: 'i', p: 1, 
+        q: "Em uma infraestrutura de rede corporativa, qual a função específica de um servidor que executa o serviço de DHCP?", 
+        o: ["Armazenar as páginas de internet acessadas pelos servidores.", "Traduzir nomes de domínios (URLs) em endereços IP numéricos.", "Atribuir endereços IP de forma dinâmica e automática aos computadores da rede.", "Realizar o backup diário dos arquivos da Câmara."], 
+        a: 2, 
+        e: "O DHCP (Dynamic Host Configuration Protocol) gerencia a entrega de IPs para que o administrador não precise configurar cada máquina manualmente." 
+    },
+    { 
+        id: 419, s: 'i', p: 1, 
+        q: "Considerando as ameaças de segurança digital, um 'Ransomware' é classificado como um software malicioso que tem por objetivo:", 
+        o: ["Capturar todas as teclas digitadas pelo usuário para roubar senhas.", "Monitorar o uso da webcam sem autorização.", "Criptografar arquivos do sistema e exigir um resgate financeiro para a liberação.", "Aumentar a velocidade do processador para causar superaquecimento."], 
+        a: 2, 
+        e: "Ransomware é um tipo de sequestro digital de dados através de criptografia forte." 
+    },
+
+// === ELITE: PORTUGUÊS (Continuação) ===
+    { 
+        id: 34, s: 'p', p: 2, 
+        q: "Quanto à sintaxe de concordância e pontuação, assinale a alternativa que apresenta a redação inteiramente correta de acordo com a norma padrão:", 
+        o: ["A maioria dos servidores da TV, optaram por realizar o treinamento em regime de teletrabalho.", "Deveriam haver mais câmeras operando em 4K no plenário da Câmara Municipal.", "Informou-se aos candidatos, durante a prova, que não seriam permitidos aparelhos eletrônicos.", "Tratam-se de questões complexas, cujas as respostas exigem profundo conhecimento técnico."], 
+        a: 2, 
+        e: "A alternativa 'C' apresenta a voz passiva sintética correta. Na 'A', não se separa sujeito de verbo por vírgula. Na 'B', 'haver' (existir) é impessoal. Na 'D', 'tratar-se de' é impessoal e não aceita artigo após o pronome relativo 'cujas'." 
+    },
+    { 
+        id: 35, s: 'p', p: 2, 
+        q: "Assinale a alternativa que preenche corretamente as lacunas: 'O técnico referiu-se ___ novas normas de sinal, visando ___ melhoria da transmissão, embora estivesse atento ___ exigências da diretoria.'", 
+        o: ["as - a - as", "às - à - às", "às - a - às", "as - à - as"], 
+        a: 1, 
+        e: "Regência nominal e verbal: quem se refere, refere-se A (as normas = às); visando (no sentido de objetivar) A (a melhoria = à); atento A (as exigências = às)." 
+    },
+
+    // === ELITE: RACIOCÍNIO LÓGICO (Argumentação e Diagramas) ===
+    { 
+        id: 72, s: 'l', p: 1, 
+        q: "Considere a afirmação: 'Se o servidor é concursado e o sinal está ativo, então a transmissão ocorre'. Uma negação lógica para essa afirmação é:", 
+        o: ["Se o servidor não é concursado ou o sinal não está ativo, então a transmissão não ocorre.", "O servidor é concursado, o sinal está ativo e a transmissão não ocorre.", "O servidor não é concursado e o sinal não está ativo, mas a transmissão ocorre.", "Se a transmissão não ocorre, então o servidor não é concursado ou o sinal está inativo."], 
+        a: 1, 
+        e: "Negação da condicional (P -> Q): mantém-se o antecedente (P) e nega-se o consequente (~Q). Como o antecedente é uma conjunção (P ^ R), ele deve ser mantido integralmente." 
+    },
+
+    // === ELITE: LEGISLAÇÃO GOIÂNIA (Processo Legislativo Especial) ===
+    { 
+        id: 120, s: 'g', p: 2, 
+        q: "Sobre a fiscalização contábil, financeira e orçamentária do Município de Goiânia, é correto afirmar que o controle externo será exercido pela Câmara Municipal, com o auxílio do:", 
+        o: ["Tribunal de Contas do Estado (TCE).", "Tribunal de Contas dos Municípios (TCM).", "Tribunal de Contas da União (TCU).", "Conselho de Contas do Prefeito."], 
+        a: 1, 
+        e: "Em Goiás, a fiscalização dos municípios é auxiliada pelo Tribunal de Contas dos Municípios (TCM-GO)." 
+    },
+
+    // === ELITE: CONHECIMENTOS ESPECÍFICOS (Engenharia de Vídeo e Switcher) ===
+    { 
+        id: 251, s: 'e', p: 3, 
+        q: "No contexto de sinais de vídeo digital SDI, o fenômeno conhecido como 'Jitter' refere-se especificamente a:", 
+        o: ["Uma distorção na colorimetria do sinal devido ao cabo longo.", "Variações indesejadas no tempo de transição dos pulsos digitais em relação a um relógio de referência.", "A perda completa de quadros durante a compressão interframe.", "O ruído sonoro captado por cabos coaxiais mal blindados."], 
+        a: 1, 
+        e: "Jitter é a instabilidade temporal do sinal digital. Se for excessivo, o receptor não consegue reconstruir o sinal de vídeo corretamente." 
+    },
+    
+    { 
+        id: 252, s: 'e', p: 3, 
+        q: "Um sinal de vídeo 1080p a 59.94Hz transportado via 3G-SDI Level A difere do Level B principalmente por:", 
+        o: ["O Level A usar compressão JPEG2000 e o Level B ser sem perdas.", "O Level A transportar o sinal como um fluxo único e o Level B combinar dois fluxos de 1.5G (Dual Link).", "O Level A ser analógico e o Level B ser estritamente digital.", "O Level A não suportar áudio embutido."], 
+        a: 1, 
+        e: "Level A é o mapeamento direto (Direct Mapping) de um sinal 3G. Level B é o mapeamento de dois sinais 1.5G (Dual Link) em um único cabo 3G." 
+    },
+    { 
+        id: 253, s: 'e', p: 3, 
+        q: "Ao configurar um Chroma Key no Switcher, o ajuste de 'Spill Suppression' serve para:", 
+        o: ["Aumentar o brilho do fundo projetado.", "Remover o reflexo da cor do fundo (geralmente verde) que atinge as bordas ou o talento.", "Sincronizar a fase do vídeo com o áudio externo.", "Ajustar o foco automático da lente da câmera."], 
+        a: 1, 
+        e: "O 'Spill' é o vazamento de cor do fundo no objeto principal; o supressor remove tonalidades verdes indesejadas da pele ou roupas." 
+    },
+
+    // === ELITE: INFORMÁTICA (Hardware e Servidores) ===
+    { 
+        id: 420, s: 'i', p: 1, 
+        q: "Em servidores de alto desempenho, a tecnologia RAID 10 (ou 1+0) caracteriza-se por:", 
+        o: ["Priorizar apenas a capacidade total de armazenamento, sem segurança.", "Combinar o espelhamento (Mirroring) do RAID 1 com o fracionamento (Striping) do RAID 0.", "Usar apenas um disco para paridade e os demais para dados.", "Ser uma tecnologia exclusiva para discos rígidos mecânicos (SATA)."], 
+        a: 1, 
+        e: "O RAID 10 oferece alta velocidade e alta redundância, espelhando os dados e depois distribuindo-os entre os pares de discos." 
+    },
+    
+    { 
+        id: 421, s: 'i', p: 1, 
+        q: "Qual a função de um servidor de 'Proxy' em uma rede corporativa como a da Câmara de Goiânia?", 
+        o: ["Gerar endereços IP dinâmicos para os computadores.", "Atuar como intermediário para requisições de clientes solicitando recursos de outros servidores, permitindo cache e filtragem de conteúdo.", "Realizar o backup físico das mídias digitais.", "Monitorar a temperatura física da sala de racks."], 
+        a: 1, 
+        e: "O Proxy centraliza o tráfego web, podendo acelerar o acesso através de cache e aplicar políticas de segurança e bloqueio de sites." 
+    },
+
+    // === ELITE: CONHECIMENTOS ESPECÍFICOS (Engenharia de Sinais e Fluxo) ===
+    { 
+        id: 254, s: 'e', p: 3, 
+        q: "No processamento de cor para televisão, o termo 'Chroma Subsampling' 4:2:2 indica que:", 
+        o: ["A luminância e a crominância têm a mesma resolução horizontal.", "A luminância tem resolução total, enquanto os canais de cor têm metade da resolução horizontal.", "O sinal é composto apenas por canais de cor, sem luminância.", "A imagem é transmitida em preto e branco com metadados de cor."], 
+        a: 1, 
+        e: "No 4:2:2, o primeiro número (4) é a luminância (Y) total. O segundo (2) indica que a cor é amostrada na metade da taxa horizontal, padrão profissional que equilibra qualidade e largura de banda." 
+    },
+    { 
+        id: 255, s: 'e', p: 3, 
+        q: "A função de um 'Waveform Monitor' na central técnica (MCR) é monitorar especificamente:", 
+        o: ["A qualidade do áudio em decibéis.", "Os níveis de luminância e sincronismo do sinal de vídeo.", "A temperatura da CPU do servidor de exibição.", "A latência da rede de streaming."], 
+        a: 1, 
+        e: "O Waveform exibe o sinal de vídeo em forma de onda, permitindo ajustar o branco, o preto e o pedestal dentro dos limites legais (700mV)." 
+    },
+    { 
+        id: 256, s: 'e', p: 3, 
+        q: "Qual o impacto direto de uma taxa de compressão (GOP - Group of Pictures) muito longa em um sinal de transmissão via satélite?", 
+        o: ["Melhora a qualidade das cores em tons pastéis.", "Aumenta a latência da decodificação e dificulta cortes precisos em tempo real.", "Reduz o consumo de energia do transmissor.", "Transforma o sinal progressivo em entrelaçado automaticamente."], 
+        a: 1, 
+        e: "GOPs longos (Long GOP) economizam banda, mas exigem que o decodificador espere mais quadros para reconstruir a imagem, gerando atraso." 
+    },
+
+    // === ELITE: PORTUGUÊS (Pontuação e Semântica) ===
+    { 
+        id: 36, s: 'p', p: 2, 
+        q: "Assinale a alternativa em que a alteração da pontuação altera o sentido original da frase:", 
+        o: ["Allan, o técnico, enviou o sinal. / Allan - o técnico - enviou o sinal.", "Os vereadores que votaram favoravelmente saíram. / Os vereadores, que votaram favoravelmente, saíram.", "O sinal caiu; a transmissão parou. / O sinal caiu. A transmissão parou.", "Não, o switcher não quebrou. / Não: o switcher não quebrou."], 
+        a: 1, 
+        e: "Sem vírgulas, a oração é restritiva (apenas alguns votaram). Com vírgulas, é explicativa (todos votaram favoravelmente)." 
+    },
+
+    // === ELITE: LEGISLAÇÃO (Administração Pública e Ética) ===
+    { 
+        id: 121, s: 'g', p: 2, 
+        q: "Com base no Regime Jurídico Único dos Servidores de Goiânia, a redistribuição é o deslocamento de cargo de provimento efetivo para outro órgão, ocorrendo exclusivamente por:", 
+        o: ["Interesse do servidor para tratamento de saúde.", "Interesse da administração, de ofício, com prévia apreciação do órgão central de pessoal.", "Promoção por tempo de serviço.", "Punição administrativa após processo disciplinar."], 
+        a: 1, 
+        e: "A redistribuição visa o interesse do serviço público e o ajuste de quadros de pessoal entre órgãos." 
+    },
+
+    // === ELITE: INFORMÁTICA (Segurança e Redes Avançadas) ===
+    { 
+        id: 422, s: 'i', p: 1, 
+        q: "No contexto de endereçamento IP, qual a função da 'Máscara de Sub-rede' (Subnet Mask)?", 
+        o: ["Aumentar a velocidade da conexão Wi-Fi.", "Definir qual parte do endereço IP refere-se à rede e qual parte refere-se ao host (dispositivo).", "Esconder o endereço real do computador na internet.", "Atribuir um nome amigável ao site (ex: google.com)."], 
+        a: 1, 
+        e: "A máscara (ex: 255.255.255.0) separa o ID da rede do ID do dispositivo, essencial para o roteamento de dados." 
+    },
+    { 
+        id: 423, s: 'i', p: 1, 
+        q: "A técnica de 'Spoofing' em ataques cibernéticos consiste em:", 
+        o: ["Criptografar o HD para pedir resgate.", "Falsificar a identidade de um endereço IP, e-mail ou DNS para ganhar acesso a uma rede.", "Derrubar um servidor através de excesso de acessos simultâneos.", "Roubar a senha física através de câmeras de segurança."], 
+        a: 1, 
+        e: "Spoofing é uma técnica de falsificação de origem para enganar sistemas de segurança." 
+    },
+
+    // === ELITE: RACIOCÍNIO LÓGICO (Argumentação e Diagramas) ===
+    { 
+        id: 73, s: 'l', p: 1, 
+        q: "Considere as premissas: 'Todo técnico é organizado' e 'Alguns técnicos são concursados'. Pode-se concluir logicamente que:", 
+        o: ["Todo organizado é concursado.", "Algum organizado é concursado.", "Nenhum concursado é organizado.", "Todos os concursados são técnicos."], 
+        a: 1, 
+        e: "Se alguns técnicos são concursados e TODOS os técnicos são organizados, obrigatoriamente esses que são concursados também são organizados." 
+    },
+
+
+    // === ELITE: PORTUGUÊS (CONCORDÂNCIA, REGÊNCIA E PONTUAÇÃO) ===
+    { 
+        id: 37, s: 'p', p: 2, 
+        q: "Assinale a opção que apresenta erro de concordância verbal, conforme a norma culta:", 
+        o: ["Mais de um técnico se cumprimentaram após a transmissão.", "Cerca de cem servidores participaram da sessão na Câmara.", "Fomos nós que instalamos o novo servidor de caracteres.", "Grande parte dos parlamentares votou favoravelmente ao projeto."], 
+        a: 0, 
+        e: "Com a expressão 'mais de um', o verbo fica no singular, a menos que indique reciprocidade ou o numeral seja repetido." 
+    },
+    { 
+        id: 38, s: 'p', p: 2, 
+        q: "No que se refere à regência nominal, qual frase está INCORRETA?", 
+        o: ["O diretor estava ansioso por ver os resultados da transmissão.", "Este equipamento de vídeo é incompatível com o sinal analógico.", "O técnico é muito capacitado de resolver problemas de rede.", "Estamos todos imunes a críticas infundadas sobre o trabalho técnico."], 
+        a: 2, 
+        e: "Quem é capacitado, é capacitado PARA algo ou EM algo, e não 'de' algo." 
+    },
+    { 
+        id: 39, s: 'p', p: 2, 
+        q: "Assinale a frase onde a vírgula é usada para separar um adjunto adverbial deslocado:", 
+        o: ["Allan, verifique o sinal do switcher agora.", "Durante a madrugada, os servidores de rede foram reiniciados.", "O sinal caiu, mas a gravação continuou ativa.", "Compramos câmeras, lentes, tripés e cabos SDI."], 
+        a: 1, 
+        e: "'Durante a madrugada' é uma locução adverbial de tempo deslocada para o início da frase." 
+    },
+
+    // === ELITE: RACIOCÍNIO LÓGICO (TABELAS VERDADE E NEGAÇÕES) ===
+    { 
+        id: 74, s: 'l', p: 1, 
+        q: "A negação da proposição 'Se o técnico é bom, então o sinal não cai' é equivalente a:", 
+        o: ["O técnico é bom e o sinal cai.", "Se o técnico não é bom, então o sinal cai.", "O técnico não é bom ou o sinal não cai.", "Se o sinal cai, então o técnico é bom."], 
+        a: 0, 
+        e: "A negação de P -> Q é P ^ ~Q. Mantém a primeira (técnico bom) e nega a segunda (sinal cai)." 
+    },
+    { 
+        id: 75, s: 'l', p: 1, 
+        q: "Dadas as proposições P (Verdadeira) e Q (Falsa), qual das operações abaixo resulta em VERDADE?", 
+        o: ["P ^ Q", "P -> Q", "~P v Q", "P v Q"], 
+        a: 3, 
+        e: "Na disjunção (v), se ao menos uma for verdadeira, o resultado é verdadeiro." 
+    },
+
+    // === ELITE: LEGISLAÇÃO E GOIÁS (ESTATUTO E HISTÓRIA) ===
+    { 
+        id: 122, s: 'g', p: 2, 
+        q: "Segundo o Estatuto dos Servidores de Goiânia, a 'Posse' deve ocorrer no prazo de quantos dias após a publicação do ato de provimento?", 
+        o: ["5 dias", "15 dias", "30 dias", "45 dias"], 
+        a: 2, 
+        e: "O prazo padrão estabelecido para a posse em cargo público municipal é de 30 dias." 
+    },
+    { 
+        id: 123, s: 'g', p: 2, 
+        q: "O 'Plano Diretor de Goiânia', elaborado na década de 30 por Attilio Corrêa Lima, previa uma cidade para quantos habitantes?", 
+        o: ["15 mil", "50 mil", "100 mil", "500 mil"], 
+        a: 1, 
+        e: "O projeto original de Attilio previa uma capital para 50.000 habitantes." 
+    },
+
+    // === ELITE: CONHECIMENTOS ESPECÍFICOS (STREAMING E BROADCAST IP) ===
+    { 
+        id: 257, s: 'e', p: 3, 
+        q: "O protocolo SRT (Secure Reliable Transport) tem ganhado espaço sobre o RTMP no streaming profissional por qual motivo principal?", 
+        o: ["Ser um protocolo mais antigo e estável.", "Capacidade de corrigir perda de pacotes (ARQ) e oferecer menor latência em redes instáveis.", "Não exigir conexão com a internet para funcionar.", "Transmitir apenas sinais em preto e branco."], 
+        a: 1, 
+        e: "O SRT utiliza recuperação inteligente de pacotes, sendo superior ao RTMP em conexões de longa distância ou instáveis." 
+    },
+    { 
+        id: 258, s: 'e', p: 3, 
+        q: "No contexto de áudio embutido no sinal SDI, quantos canais de áudio (máximo) podem ser transportados simultaneamente na norma HD-SDI?", 
+        o: ["2 canais (Estéreo)", "8 canais", "16 canais", "32 canais"], 
+        a: 2, 
+        e: "A norma SDI permite o transporte de até 16 canais de áudio embutidos (4 grupos de 4 canais)." 
+    },
+    { 
+        id: 259, s: 'e', p: 3, 
+        q: "O que define o 'Dynamic Range' (Alcance Dinâmico) de uma câmera de vídeo profissional?", 
+        o: ["A velocidade do zoom da lente.", "A capacidade de capturar detalhes tanto nas áreas mais claras (highlights) quanto nas mais escuras (shadows).", "A quantidade de pixels totais do sensor.", "O tempo de duração da bateria."], 
+        a: 1, 
+        e: "Câmeras com alto alcance dinâmico evitam que o céu fique 'estourado' ou as sombras fiquem sem detalhe." 
+    },
+
+    // === ELITE: INFORMÁTICA (EXCEL AVANÇADO E REDES) ===
+    { 
+        id: 424, s: 'i', p: 1, 
+        q: "No Microsoft Excel, a função =PROCV(valor_procurado; matriz_tabela; indice; [procurar_intervalo]) realiza qual tarefa?", 
+        o: ["Soma apenas valores positivos de uma lista.", "Procura um valor na primeira coluna à esquerda de uma tabela e retorna um valor na mesma linha de uma coluna especificada.", "Inverte a ordem das linhas e colunas.", "Protege a planilha com uma senha criptografada."], 
+        a: 1, 
+        e: "PROCV significa Procura Vertical, essencial para cruzar dados entre tabelas diferentes." 
+    },
+    { 
+        id: 425, s: 'i', p: 1, 
+        q: "Qual a principal diferença entre os protocolos de transporte TCP e UDP?", 
+        o: ["O TCP é mais rápido, mas menos seguro que o UDP.", "O TCP garante a entrega e a ordem dos pacotes (orientado à conexão), enquanto o UDP prioriza a velocidade sem garantir a entrega.", "O UDP é usado apenas para e-mails e o TCP para vídeos.", "Não há diferença técnica, são sinônimos."], 
+        a: 1, 
+        e: "TCP é usado onde a integridade é vital (ex: sites); UDP é usado onde a velocidade é vital (ex: chamadas de vídeo)." 
+    }
 ];
