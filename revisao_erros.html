@@ -8,68 +8,67 @@
         body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; margin: 0; padding: 20px; line-height: 1.6; }
         .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         h1 { color: #ad3131; border-bottom: 3px solid #ad3131; padding-bottom: 10px; text-align: center; }
-        .tema-box { margin-bottom: 40px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
-        .tema-header { background: #002855; color: white; padding: 15px; font-weight: bold; font-size: 1.2em; }
-        .conteudo { padding: 20px; }
-        .flashcard { background: #fff9f9; border-left: 5px solid #ad3131; padding: 15px; margin: 15px 0; border-radius: 4px; }
-        .vs-container { display: flex; gap: 20px; margin-top: 15px; }
-        .vs-box { flex: 1; background: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #eee; }
-        .vs-title { font-weight: bold; color: #ad3131; display: block; margin-bottom: 10px; text-align: center; border-bottom: 1px solid #ddd; }
-        .btn-voltar { display: block; width: 200px; margin: 30px auto; padding: 15px; background: #333; color: white; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; }
-        .btn-voltar:hover { background: #000; }
-        strong { color: #002855; }
+        
+        /* Estilo dos blocos de aula */
+        .tema-box { margin-bottom: 30px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; animation: fadeIn 0.5s ease; }
+        .tema-header { background: #002855; color: white; padding: 12px 15px; font-weight: bold; font-size: 1.1em; display: flex; justify-content: space-between; }
+        .conteudo { padding: 20px; background: #fff; }
+        
+        /* Estilos internos que você usa nas explicações */
+        .dica { background: #f1f7ff; border-left: 5px solid #002855; padding: 15px; margin: 10px 0; border-radius: 4px; }
+        .alerta { background: #fff1f1; border-left: 5px solid #ad3131; padding: 15px; margin: 10px 0; border-radius: 4px; }
+        .tab-estudo { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .tab-estudo th, .tab-estudo td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        .tab-estudo th { background: #f8f9fa; }
+        .vs-container { display: flex; gap: 15px; flex-wrap: wrap; }
+        
+        .btn-voltar { display: block; width: 220px; margin: 30px auto; padding: 15px; background: #333; color: white; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; }
+        .btn-voltar:hover { background: #ad3131; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>🚀 Mentoria de Erros: Revisão Teórica</h1>
+    <h1>🚀 Minha Mentoria de Erros Completa</h1>
+    <p style="text-align: center; color: #666;">Teoria baseada nas questões do banco de dados</p>
 
-    <div class="tema-box">
-        <div class="tema-header">⚖️ Direito Administrativo: Extinção dos Atos</div>
-        <div class="conteudo">
-            <p>A banca costuma confundir o candidato entre <strong>Anulação</strong> e <strong>Revogação</strong>. Foque no vício do ato:</p>
-            
-            <div class="vs-container">
-                <div class="vs-box">
-                    <span class="vs-title">ANULAÇÃO</span>
-                    <ul>
-                        <li><strong>Motivo:</strong> Ilegalidade (Ato inválido).</li>
-                        <li><strong>Efeito:</strong> <em>Ex Tunc</em> (Retroage).</li>
-                        <li><strong>Quem:</strong> Adm. ou Judiciário.</li>
-                    </ul>
-                </div>
-                <div class="vs-box">
-                    <span class="vs-title">REVOGAÇÃO</span>
-                    <ul>
-                        <li><strong>Motivo:</strong> Conveniência/Oportunidade.</li>
-                        <li><strong>Efeito:</strong> <em>Ex Nunc</em> (Não retroage).</li>
-                        <li><strong>Quem:</strong> Apenas a Administração.</li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-
-    <div class="tema-box">
-        <div class="tema-header">🎥 Específica: Espaços de Cor e Gamut</div>
-        <div class="conteudo">
-            <p>Como Operador Multimídia, entenda que o <strong>Rec. 2020</strong> não é apenas "melhor", ele é uma expansão física do que podemos ver na tela.</p>
-            
-            <div class="flashcard">
-                <strong>Rec. 709 (BT.709):</strong> O padrão do HD. Limitado a 8 bits e um gamut de cores estreito (SDR). É o que a maioria das TVs de hoje ainda exibe.
-            </div>
-
-            <div class="flashcard">
-                <strong>Rec. 2020 (BT.2020):</strong> O padrão do 4K/UHD. Suporta 10 ou 12 bits e HDR. O <em>Gamut</em> (gama de cores) é muito mais amplo, permitindo verdes e vermelhos muito mais intensos.
-            </div>
-            
-        </div>
-    </div>
+    <div id="listaGeralRevisao"></div>
 
     <a href="index.html" class="btn-voltar">⬅ VOLTAR AO SIMULADO</a>
 </div>
+
+<script src="banco_estudos.js"></script> 
+
+<script>
+    function carregarMentoriaCompleta() {
+        const container = document.getElementById('listaGeralRevisao');
+        
+        // Verifica se o objeto bancoExplicações existe
+        if (typeof bancoExplicações !== 'undefined') {
+            // Transforma o objeto em uma lista e gera o HTML para cada um
+            const htmlCompleto = Object.keys(bancoExplicações).map(id => `
+                <div class="tema-box">
+                    <div class="tema-header">
+                        <span>${bancoExplicações[id].titulo}</span>
+                        <small style="opacity: 0.7;">ID: ${id}</small>
+                    </div>
+                    <div class="conteudo">
+                        ${bancoExplicações[id].corpo}
+                    </div>
+                </div>
+            `).join('');
+
+            container.innerHTML = htmlCompleto;
+        } else {
+            container.innerHTML = "<p style='text-align:center; color:red;'>Erro: Banco de explicações não encontrado.</p>";
+        }
+    }
+
+    // Inicia ao carregar a página
+    window.onload = carregarMentoriaCompleta;
+</script>
 
 </body>
 </html>
