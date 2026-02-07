@@ -1017,7 +1017,550 @@ const bancoExplicações = {
             </div>
             <p style='margin-top: 10px;'><b>Negação da Condicional (MANÉ):</b> Mantém a primeira E Nega a segunda (p ^ ~q).</p>
         `
+    },
+    
+    // --- PORTUGUÊS: CONJUNÇÕES ---
+    "701": {
+        titulo: "🔗 Mas vs. Embora: O Duelo das Oposições",
+        corpo: `
+            <p>A banca ama confundir <b>Adversativas</b> com <b>Concessivas</b>. Ambas trazem oposição, mas mudam o verbo:</p>
+            <div class='vs-container' style='display: flex; gap: 10px; margin-top: 10px;'>
+                <div style='flex: 1; background: #fff1f1; padding: 10px; border-radius: 8px; border-left: 4px solid #ad3131;'>
+                    <b>ADVERSATIVAS:</b> (Mas, porém, contudo). Oposição forte. Verbo no <b>Indicativo</b>.<br><i>Ex: Estudei, mas não passei.</i>
+                </div>
+                <div style='flex: 1; background: #f1f7ff; padding: 10px; border-radius: 8px; border-left: 4px solid #002855;'>
+                    <b>CONCESSIVAS:</b> (Embora, ainda que, conquanto). Oposição 'fraquinha'. Verbo no <b>Subjuntivo</b>.<br><i>Ex: Embora tenha estudado, não passei.</i>
+                </div>
+            </div>
+        `
+    },
+
+    // --- INFORMÁTICA: SEGURANÇA ---
+    "605": {
+        titulo: "🛡️ Malware: Quem é quem no ataque?",
+        corpo: `
+            <p>Diferencie os principais códigos maliciosos para a prova da Câmara:</p>
+            <div class='dica'>
+                <b>Worm (Verme):</b> Se multiplica sozinho pela rede. Não precisa de hospedeiro.<br>
+                <b>Ransomware:</b> O sequestrador. Criptografa seus dados e pede resgate (Bitcoin).<br>
+                <b>Spyware (Keylogger):</b> O fofoqueiro. Grava o que você digita para roubar senhas.
+            </div>
+        `
+    },
+
+    // --- ESPECÍFICA: ÁUDIO (OPERADOR MULTIMÍDIA) ---
+    "405": {
+        titulo: "🎤 Nível de Linha vs. Nível de Microfone",
+        corpo: `
+            <p>Erro comum em setups de áudio na TV:</p>
+            <div class='dica'>
+                <b>Mic Level:</b> Sinal muito baixo (milivolts). Precisa de um <b>Pré-amplificador</b>.<br>
+                <b>Line Level:</b> Sinal forte (aprox. 1V). É o padrão de saída de switchers e consoles.<br>
+                <b>CUIDADO:</b> Ligar um sinal de Linha numa entrada de Microfone vai causar <b>Distorção (Clip)</b> grave.
+            </div>
+        `
+    },
+
+    
+    // --- ID 27: PORTUGUÊS (Índice de Indeterminação) ---
+    "27": {
+        titulo: "🕵️ O 'SE' Indeterminador de Sujeito",
+        corpo: `
+            <p>A banca vai tentar te confundir com a Partícula Apassivadora. Olhe o verbo:</p>
+            <div class='vs-container' style='display: flex; gap: 10px; margin-top: 10px;'>
+                <div style='flex: 1; background: #fff1f1; padding: 10px; border-radius: 8px; border-left: 4px solid #ad3131;'>
+                    <b>V.T.D. + SE:</b> Partícula Apassivadora. O sujeito existe e sofre a ação.<br><i>Ex: Alugam-se salas (Salas são alugadas).</i>
+                </div>
+                <div style='flex: 1; background: #f1f7ff; padding: 10px; border-radius: 8px; border-left: 4px solid #002855;'>
+                    <b>V.T.I. + SE:</b> Índice de Indeterminação. Não se sabe quem faz a ação.<br><i>Ex: Precisa-se de técnicos (Quem precisa? Não diz).</i>
+                </div>
+            </div>
+        `
+    },
+
+    // --- ID 231: ESPECÍFICA (Genlock e Glitch) ---
+    "231": {
+        titulo: "🔄 Sincronismo Genlock: O Maestro do Estúdio",
+        corpo: `
+            <p>Se você cortar entre duas câmeras que não estão 'Genlocadas', o switcher terá um 'soluço'.</p>
+            <div class='dica'>
+                <b>O problema:</b> Cada câmera tem seu próprio relógio interno. Sem Genlock, elas mandam o quadro em tempos diferentes.<br>
+                <b>A solução:</b> O Genlock (Generator Lock) envia um sinal de referência para que todas as câmeras comecem a 'desenhar' o quadro exatamente no mesmo microssegundo.
+            </div>
+        `
+    },
+
+    // --- ID 601: INFORMÁTICA (Switch vs Hub) ---
+    "601": {
+        titulo: "🔌 Switch (Inteligente) vs. Hub (Burro)",
+        corpo: `
+            <p>Em redes de computadores, a diferença está na segmentação de dados:</p>
+            <div class='dica'>
+                <b>Hub:</b> Recebe um dado e espalha para todas as portas. Gera colisões e lentidão.<br>
+                <b>Switch:</b> Lê o endereço <b>MAC</b> e entrega o pacote apenas para o computador de destino. É o padrão em redes modernas.
+            </div>
+        `
+    },
+
+    // --- PORTUGUÊS: COORDENADAS VS SUBORDINADAS ---
+    "7001": {
+        titulo: "🔗 Conjunções Adversativas (Coordenadas)",
+        corpo: `
+            <p>Apareceu <b>Todavia, Porém, Contudo, Entretanto ou Mas</b>? É oposição!</p>
+            <div class='dica'>
+                As <b>Coordenadas Adversativas</b> unem frases que têm sentido completo sozinhas, mas que se 'chocam' na ideia. 
+                <br><i>Ex: O sinal está bom (Ideia 1), <b>todavia</b> a gravação falhou (Ideia 2).</i>
+            </div>
+        `
+    },
+
+    "7002": {
+        titulo: "🔍 Adjetivas: Restritiva vs. Explicativa",
+        corpo: `
+            <p>O segredo aqui é a <b>VÍRGULA</b>. Como Operador, pense na vírgula como um botão de 'Informação Extra':</p>
+            <div class='vs-container' style='display: flex; gap: 10px; margin-top: 10px;'>
+                <div style='flex: 1; background: #fff1f1; padding: 10px; border-radius: 8px; border-left: 4px solid #ad3131;'>
+                    <b>COM VÍRGULA:</b> Explicativa. Generaliza. <br><i>Ex: Os técnicos, que são lentos, saíram. (Todos são lentos).</i>
+                </div>
+                <div style='flex: 1; background: #f1f7ff; padding: 10px; border-radius: 8px; border-left: 4px solid #002855;'>
+                    <b>SEM VÍRGULA:</b> Restritiva. Especifica. <br><i>Ex: Os técnicos que são lentos saíram. (Apenas os lentos saíram).</i>
+                </div>
+            </div>
+        `
+    },
+
+    "7003": {
+        titulo: "⚡ Subordinada Adverbial Consecutiva",
+        corpo: `
+            <p>Indica a <b>CONSEQUÊNCIA</b> de um exagero feito na frase anterior.</p>
+            <div class='dica'>
+                Geralmente aparece o 'que' antecedido de um 'intensificador' (Tão, Tanto, Tamanho).
+                <br><b>Fórmula:</b> Tão/Tanto [Causa] + QUE [Consequência].
+                <br><i>Ex: Gritou <b>tanto</b> (Causa) <b>que</b> ficou rouco (Consequência).</i>
+            </div>
+        `
+    },
+
+    // --- HISTÓRIA DE GOIÂNIA ---
+    "4001": {
+        titulo: "🏛️ A Marcha para o Oeste e Goiânia",
+        corpo: `
+            <p>Goiânia não nasceu por acaso; foi um projeto geopolítico de <b>Getúlio Vargas</b> executado por <b>Pedro Ludovico</b>.</p>
+            <div class='dica'>
+                <b>Marcha para o Oeste:</b> O objetivo era levar o progresso para o interior do Brasil, já que a população ficava presa no litoral. Vila Boa (Cidade de Goiás) era encravada na serra e não permitia o crescimento planejado que o estado precisava.
+            </div>
+        `
+    },
+
+    "4002": {
+        titulo: "📐 O Urbanismo de Attilio Corrêa Lima",
+        corpo: `
+            <p>O plano original de 1933 previa uma cidade moderna para 50 mil habitantes.</p>
+            <div class='dica'>
+                <b>O Formato de Leque:</b> As avenidas principais (Araguaia, Goiás e Tocantins) saem da <b>Praça Cívica</b> como raios. Isso é o estilo <i>Art Déco</i> aplicado ao urbanismo: simetria, ordem e modernidade.
+            </div>
+        `
+    },
+
+    // --- RACIOCÍNIO LÓGICO ---
+    "5001": {
+        titulo: "🥊 Negação da Condicional (Regra do MANÉ)",
+        corpo: `
+            <p>Para negar um 'Se... então', você nunca usa outro 'Se'. Você vira um <b>MANÉ</b>:</p>
+            <div class='flashcard' style='background: #fdf2f2; border-left: 5px solid #ad3131; padding: 10px;'>
+                <b>MA</b>ntém a primeira parte + <b>NE</b>ga a segunda parte.
+                <br>Troca o conectivo 'então' pelo <b>'E'</b>.
+                <br><i>Ex: Se chove, eu corro ≡ Chove E eu não corro.</i>
+            </div>
+        `
+    },
+
+    "5002": {
+        titulo: "⚖️ Equivalência da Disjunção Exclusiva (Ou... Ou)",
+        corpo: `
+            <p>O 'Ou exclusivo' significa que apenas UMA das coisas pode ser verdade. Se uma acontece, a outra morre.</p>
+            <div class='dica'>
+                <b>Equivalência:</b> Ou p ou q ≡ <b>Se p, então não q</b>.
+                <br><i>Ex: Ou é dia ou é noite ≡ Se é dia, então NÃO é noite.</i>
+            </div>
+        `
+    },
+
+    // --- ESPECÍFICA: ÁUDIO ---
+    "6002": {
+        titulo: "🎤 Áudio Balançado (XLR): Por que usar?",
+        corpo: `
+            <p>No ambiente da TV Senado, cheio de cabos de energia, o sinal balançado é vida ou morte para o som.</p>
+            <div class='dica'>
+                <b>Como funciona:</b> O cabo envia o som por dois fios internos. Um fio vai normal e o outro vai com a fase 'de cabeça para baixo'. 
+                No final, o equipamento inverte de volta e <b>anula qualquer chiado</b> que o cabo tenha pego no caminho. É por isso que cabos XLR podem ser bem longos sem dar ruído.
+            </div>
+        `
+    },
+    // === NOVAS EXPLICAÇÕES: INFORMÁTICA AVANÇADA ===
+    "424": {
+        titulo: "📊 PROCV: A Busca Vertical do Excel",
+        corpo: `
+            <p>O <b>PROCV</b> é o comando de busca mais famoso das planilhas. Ele 'caça' um valor em uma coluna e te devolve o que está na frente.</p>
+            <div class='dica'>
+                <b>A Lógica:</b> PROCV( <i>o que você busca</i> ; <i>onde buscar</i> ; <i>qual coluna quer o resultado</i> ; 0 )
+                <br>Lembre-se: Ele sempre busca na <b>primeira coluna</b> da esquerda para a direita.
+            </div>
+        `
+    },
+    
+
+    "425": {
+        titulo: "🚢 TCP vs. UDP: O Transporte de Dados",
+        corpo: `
+            <p>Os dados viajam de duas formas na rede da Câmara:</p>
+            <div class='vs-container' style='display: flex; gap: 10px; margin-top: 10px;'>
+                <div style='flex: 1; background: #f1f7ff; padding: 10px; border-radius: 8px; border-left: 4px solid #002855;'>
+                    <b>TCP:</b> Confiável. Ele confia se o dado chegou. Se perder, ele manda de novo. <br><i>Uso: Sites, E-mail.</i>
+                </div>
+                <div style='flex: 1; background: #fff9f1; padding: 10px; border-radius: 8px; border-left: 4px solid #e65100;'>
+                    <b>UDP:</b> Rápido. Não confere nada. <br><i>Uso: <b>Streaming de Vídeo</b>, VoIP. Na TV, usamos UDP para não travar o sinal.</i>
+                </div>
+            </div>
+        `
+    },
+
+    // === NOVAS EXPLICAÇÕES: LEGISLAÇÃO E REGIMENTO ===
+    "503": {
+        titulo: "🔄 Remoção vs. Redistribuição (Estatuto)",
+        corpo: `
+            <p>Não confunda o deslocamento do <b>Servidor</b> com o do <b>Cargo</b>:</p>
+            <ul>
+                <li><b>REmoção:</b> O <u>RE</u>servista (servidor) muda de lugar. O cargo continua onde estava.</li>
+                <li><b>REdistribuição:</b> O <u>Cargo</u> inteiro é movido para outro órgão. O servidor vai junto com a 'vaga'.</li>
+            </ul>
+        `
+    },
+
+    "505": {
+        titulo: "⚖️ CCJR: A Comissão mais Importante",
+        corpo: `
+            <p>Na Câmara de Goiânia, a <b>Comissão de Constituição, Justiça e Redação (CCJR)</b> é o filtro de legalidade.</p>
+            <div class='alerta'>
+                <b>O que ela faz:</b> Analisa se o projeto é constitucional e legal. Se a CCJR der parecer contrário por ilegalidade, o projeto geralmente 'morre' ali, antes de ir ao plenário.
+            </div>
+        `
+    },
+
+    // === NOVAS EXPLICAÇÕES: ESPECÍFICA AUDIOVISUAL ===
+    "254": {
+        titulo: "🎨 Chroma Subsampling 4:2:2",
+        corpo: `
+            <p>Para economizar banda no sinal SDI, a TV 'engana' o olho humano:</p>
+            <div class='dica'>
+                <b>4:</b> Luminância total (Brilho/Detalhe).<br>
+                <b>2:2:</b> Metade da informação de cor.
+                <br>Como o olho vê mais brilho do que cor, o <b>4:2:2</b> é o padrão perfeito para Broadcast (TV Senado/Câmara), pois permite um ótimo Chroma Key sem pesar o sinal.
+            </div>
+        `
+    },
+    
+
+    "245": {
+        titulo: "🎞️ Compressão: Intraframe vs. Interframe",
+        corpo: `
+            <p>O segredo da edição rápida está aqui:</p>
+            <ul>
+                <li><b>Intraframe (ProRes/DNxHD):</b> Cada quadro é uma foto completa. <br><i>Vantagem: Edição leve. Desvantagem: Arquivos gigantes.</i></li>
+                <li><b>Interframe (H.264/H.265):</b> Grava apenas a diferença entre um quadro e outro. <br><i>Vantagem: Arquivos pequenos. Desvantagem: Exige muito processador para 'adivinhar' os quadros.</i></li>
+            </ul>
+        `
+    },
+    // === SEGURANÇA DA INFORMAÇÃO (IDs 407, 414, 419, 423, 427) ===
+    "407": {
+        titulo: "🎣 Phishing: A Pescaria de Dados",
+        corpo: `
+            <p>O <b>Phishing</b> é um golpe de engenharia social. O atacante envia uma isca (e-mail ou site falso) para "fisgar" seus dados.</p>
+            <div class='dica'>
+                <b>Como identificar:</b> Mensagens urgentes, erros de português, links estranhos e pedidos de senha ou dados bancários que a instituição nunca pediria por e-mail.
+            </div>
+        `
+    },
+    "414": {
+        titulo: "🧱 Firewall: A Parede de Fogo",
+        corpo: `
+            <p>O <b>Firewall</b> atua como um filtro entre a rede interna da Câmara e a Internet. Ele decide o que entra e o que sai com base em regras de segurança.</p>
+            <div class='alerta'>
+                <b>Importante:</b> O Firewall NÃO é um antivírus. Ele bloqueia acessos indevidos (portas), mas pode deixar passar um vírus se ele estiver em um arquivo que você autorizou o download.
+            </div>
+        `
+    },
+    
+    "423": {
+        titulo: "🎭 Spoofing: O Ataque de Falsificação",
+        corpo: `
+            <p>No <b>Spoofing</b>, o invasor mascara sua identidade para parecer uma fonte confiável (falsifica o IP, o e-mail ou o DNS).</p>
+            <div class='dica'>
+                Diferença: No <b>Phishing</b> você é enganado pelo conteúdo; no <b>Spoofing</b> o sistema é enganado pela identidade técnica falsificada.
+            </div>
+        `
+    },
+    "427": {
+        titulo: "🚫 Ataque DoS: Negação de Serviço",
+        corpo: `
+            <p>O objetivo do <b>DoS (Denial of Service)</b> não é roubar dados, mas sim <b>derrubar</b> o servidor (ex: o streaming da TV Câmara).</p>
+            <div class='dica'>
+                O atacante inunda o servidor com tantas requisições falsas que ele "trava" e deixa de atender os usuários legítimos. Quando feito por vários computadores ao mesmo tempo, chama-se <b>DDoS</b> (Distribuído).
+            </div>
+        `
+    },
+
+    // === RACIOCÍNIO LÓGICO: PROBABILIDADE E DIAGRAMAS (IDs 73, 76) ===
+    "73": {
+        titulo: "⭕ Diagramas de Venn: Todo e Algum",
+        corpo: `
+            <p>Para questões de premissas, desenhe sempre os círculos:</p>
+            <ul>
+                <li><b>Todo A é B:</b> O círculo A está totalmente dentro do B.</li>
+                <li><b>Algum A é B:</b> Existe uma intersecção (beira) entre os dois.</li>
+                <li><b>Nenhum A é B:</b> Os círculos não se tocam.</li>
+            </ul>
+            <div class='dica'>Pense na questão dos técnicos: Se alguns são concursados e todos são organizados, a parte 'concursada' está presa dentro do círculo maior dos 'organizados'.</div>
+        `
+    },
+    
+    "76": {
+        titulo: "🎲 Probabilidade Sucessiva (Sem Reposição)",
+        corpo: `
+            <p>Quando retiramos objetos sem devolver, o total (espaço amostral) diminui a cada rodada.</p>
+            <div class='dica'>
+                <b>Fórmula:</b> P(A) x P(B|A). <br>
+                1ª retirada: 3/8 (3 vermelhos em 8 totais). <br>
+                2ª retirada: 2/7 (sobraram 2 vermelhos em 7 totais). <br>
+                <b>Multiplicação:</b> 3/8 * 2/7 = 6/56, que simplificado por 2 dá <b>3/28</b>.
+            </div>
+        `
+    },
+
+    // === LEGISLAÇÃO: QUÓRUNS E COMISSÕES (IDs 118, 120, 502, 505) ===
+    "118": {
+        titulo: "⚖️ Comissões Permanentes: CCJR",
+        corpo: `
+            <p>A <b>CCJR (Comissão de Constituição, Justiça e Redação)</b> é a "porta de entrada" dos projetos.</p>
+            <div class='alerta'>
+                Ela analisa se o projeto fere a Constituição ou a Lei Orgânica. É a única comissão que pode "matar" um projeto por ilegalidade antes mesmo de ele ser discutido no mérito (se é bom ou ruim).
+            </div>
+        `
+    },
+    "120": {
+        titulo: "📊 Controle Externo: O Papel do TCM-GO",
+        corpo: `
+            <p>A fiscalização da Câmara é feita pelo Poder Legislativo, mas eles não fazem isso sozinhos.</p>
+            <div class='dica'>
+                Em Goiás, quem auxilia a Câmara na fiscalização das contas do Prefeito é o <b>TCM-GO (Tribunal de Contas dos Municípios)</b>. Fique atento: se a questão falar apenas em TCE, está errada para nível municipal.
+            </div>
+        `
+    },
+    "502": {
+        titulo: "⏱️ Quórum de Abertura de Sessão",
+        corpo: `
+            <p>Para começar os trabalhos na Câmara de Goiânia, é necessário um número mínimo de presentes (Quórum de Presença).</p>
+            <div class='dica'>
+                O Regimento Interno exige a presença de <b>1/3 (um terço)</b> dos membros da Casa para abrir a sessão. Para votar leis, o quórum muda dependendo da matéria (Simples ou Absoluta).
+            </div>
+        `
+    },
+
+    // === ENGENHARIA DE VÍDEO E BROADCAST (IDs 231, 251, 264, 266) ===
+    "231": {
+        titulo: "🔄 Sincronismo Genlock e Tri-Level Sync",
+        corpo: `
+            <p>Sem Genlock, os sinais das câmeras chegam ao switcher em tempos diferentes, causando o famoso 'glitch' (pulo de imagem) no corte.</p>
+            <div class='dica'>
+                <b>Analógico:</b> Usa Blackburst. <br>
+                <b>Digital HD:</b> Usa <b>Tri-Level Sync</b>, que é muito mais preciso para manter o alinhamento dos quadros em alta definição.
+            </div>
+        `
+    },
+    "251": {
+        titulo: "📉 Jitter: O Inimigo do Sinal Digital",
+        corpo: `
+            <p>O <b>Jitter</b> é a variação no tempo de chegada dos pulsos digitais. Se o pulso chega atrasado ou adiantado demais, o receptor não entende se é 0 ou 1.</p>
+            <div class='alerta'>
+                Causas comuns: Cabos muito longos, cabos de má qualidade (não são 75 ohms) ou conectores BNC mal crimpados.
+            </div>
+        `
+    },
+    "264": {
+        titulo: "⏱️ Protocolo PTP (Precision Time Protocol)",
+        corpo: `
+            <p>No mundo do vídeo sobre IP (ST-2110), não usamos mais cabos BNC para sincronismo.</p>
+            <div class='dica'>
+                O <b>PTP (IEEE 1588)</b> é o "Genlock via rede". Ele garante que todos os dispositivos da rede (câmeras, switchers, servidores) tenham o mesmo relógio com precisão de nanossegundos através do cabo de rede.
+            </div>
+        `
+    },
+    "266": {
+        titulo: "🎞️ Clean Feed: A Saída Limpa",
+        corpo: `
+            <p>O <b>Clean Feed</b> é uma saída do switcher idêntica ao Program (PGM), mas sem a camada de caracteres (tarjas/logos).</p>
+            <div class='dica'>
+                <b>Uso Prático:</b> Essencial para enviar o sinal para uma emissora parceira que vai colocar suas próprias tarjas, ou para gravar o programa "limpo" para edição posterior.
+            </div>
+        `
+    },
+
+    // === EXCEL AVANÇADO (IDs 424, 426) ===
+    "424": {
+        titulo: "🔍 PROCV: Onde está o dado?",
+        corpo: `
+            <p>O <b>PROCV</b> busca um valor na vertical e retorna algo que está na mesma linha.</p>
+            <div class='dica'>
+                <b>Fórmula:</b> =PROCV(valor; tabela; coluna; [falso]) <br>
+                Lembre-se: O Excel sempre procura o valor na <b>primeira coluna</b> do intervalo que você selecionou.
+            </div>
+        `
+    },
+    "426": {
+        titulo: "🤔 Função SE (Teste Lógico)",
+        corpo: `
+            <p>A função <b>=SE()</b> faz uma pergunta ao Excel e dá duas respostas possíveis.</p>
+            <div class='dica'>
+                <b>Sintaxe:</b> =SE(pergunta ; resposta_se_sim ; resposta_se_não). <br>
+                <i>Ex: =SE(A1>=7 ; "Aprovado" ; "Reprovado").</i>
+            </div>
+        `
+    },
+    // === PORTUGUÊS: SINTAXE E REGÊNCIA (IDs 26, 28, 35, 38) ===
+    "26": {
+        titulo: "📍 Adjunto Adverbial Deslocado",
+        corpo: `
+            <p>O Adjunto Adverbial indica uma circunstância (tempo, lugar, modo). Quando ele sai do fim da frase e vai para o início ou meio, usamos a vírgula.</p>
+            <div class='dica'>
+                <b>Regra da Câmara:</b> Se o adjunto for 'curto' (até 2 palavras), a vírgula é facultativa. Se for 'longo', é <b>Obrigatória</b>.
+                <br><i>Ex: 'Conforme o Regimento' é uma conformidade deslocada, por isso as vírgulas o isolam.</i>
+            </div>
+        `
+    },
+    "28": {
+        titulo: "🎭 Metáfora vs. Metonímia",
+        corpo: `
+            <p>Não confunda essas duas figuras de linguagem na prova:</p>
+            <div class='vs-container' style='display: flex; gap: 10px; margin-top: 10px;'>
+                <div style='flex: 1; background: #fdf2f2; padding: 10px; border-radius: 8px; border-left: 4px solid #ad3131;'>
+                    <b>METÁFORA:</b> Uma comparação sem o 'como'. <br><i>Ex: 'A TV é o olho do cidadão'. (Afirma que É).</i>
+                </div>
+                <div style='flex: 1; background: #f1f7ff; padding: 10px; border-radius: 8px; border-left: 4px solid #002855;'>
+                    <b>METONÍMIA:</b> Uma substituição lógica. <br><i>Ex: 'A Câmara ouviu as ruas'. (O lugar pelas pessoas).</i>
+                </div>
+            </div>
+        `
+    },
+    "35": {
+        titulo: "🔗 Regência Tríplice (A / À / ÀS)",
+        corpo: `
+            <p>Essa questão testa três regências de uma vez:</p>
+            <ul>
+                <li><b>Referir-se:</b> Exige 'A'. (Referiu-se às normas).</li>
+                <li><b>Visar (Objetivar):</b> Exige 'A'. (Visando à melhoria).</li>
+                <li><b>Atento:</b> Exige 'A'. (Atento às exigências).</li>
+            </ul>
+            <div class='alerta'>Se a palavra seguinte for feminina e aceitar artigo, ocorre a <b>Crase</b>.</div>
+        `
+    },
+
+    // === INFORMÁTICA: HARDWARE E REDES (IDs 420, 422, 429, 605) ===
+    "420": {
+        titulo: "💾 RAID 10: Velocidade + Segurança",
+        corpo: `
+            <p>O RAID 10 (ou 1+0) é o padrão usado em servidores de vídeo da TV por combinar o melhor de dois mundos:</p>
+            <div class='dica'>
+                <b>RAID 0 (Striping):</b> Divide os dados entre discos para ganhar velocidade.<br>
+                <b>RAID 1 (Mirroring):</b> Espelha os dados para ter backup se um disco falhar.<br>
+                <b>RAID 10:</b> Primeiro espelha, depois divide. Você tem a performance do 0 e a segurança do 1.
+            </div>
+        `
+    },
+    
+
+    "422": {
+        titulo: "🔢 Máscara de Sub-rede (Subnet Mask)",
+        corpo: `
+            <p>A máscara de rede serve para o computador saber quem está na mesma sala (rede local) e quem está fora (internet).</p>
+            <div class='dica'>
+                <b>Exemplo 255.255.255.0:</b> Os números 255 'trancam' a rede. O 0 indica onde os aparelhos (hosts) podem mudar. É o que define o tamanho da rede da Câmara.
+            </div>
+        `
+    },
+    "429": {
+        titulo: "☁️ Virtualização: Servidores dentro de Servidores",
+        corpo: `
+            <p>A virtualização (VMWare, Hyper-V) permite que um único computador físico 'potente' rode vários sistemas operacionais ao mesmo tempo.</p>
+            <div class='alerta'>
+                Cada servidor virtual (VM) acha que é um hardware real, mas na verdade eles dividem o mesmo processador e memória. Isso economiza energia e espaço no rack.
+            </div>
+        `
+    },
+
+    // === ESPECÍFICA: BROADCAST E SINAIS (IDs 248, 253, 260, 261) ===
+    "248": {
+        titulo: "📡 Largura de Banda: HD-SDI vs. 3G-SDI",
+        corpo: `
+            <p>A diferença está na 'estrada' de dados dentro do cabo:</p>
+            <ul>
+                <li><b>HD-SDI (1.5G):</b> Suporta até 1080i (entrelaçado) ou 1080p a 30fps.</li>
+                <li><b>3G-SDI (3.0G):</b> Dobra a velocidade. Permite 1080p a 60fps em um único cabo.</li>
+            </ul>
+            <p>Como Operador, lembre-se: Se a sua produção for 60p, o cabo e o switcher <b>devem</b> ser 3G.</p>
+        `
+    },
+    "253": {
+        titulo: "🟢 Spill Suppression (Croma Key)",
+        corpo: `
+            <p>Ao fazer o recorte do fundo verde, a luz do painel rebate no ombro e no cabelo do apresentador. Isso é o <b>Spill</b> (Vazamento).</p>
+            <div class='dica'>
+                O ajuste de <b>Spill Suppression</b> no switcher 'aniquila' esses reflexos esverdeados, trocando-os por um tom neutro ou cinza, deixando o recorte com aspecto profissional.
+            </div>
+        `
+    },
+    "260": {
+        titulo: "🎹 Upstream Keyer (USK) vs. DSK",
+        corpo: `
+            <p>A ordem dos fatores altera o produto no switcher:</p>
+            <ul>
+                <li><b>USK (Upstream):</b> Vem ANTES da transição. Se você cortar para outra câmera, o gráfico 'viaja' junto com o corte.</li>
+                <li><b>DSK (Downstream):</b> Vem DEPOIS de tudo. O gráfico fica 'colado' na tela, não importa qual câmera você corte embaixo.</li>
+            </ul>
+        `
+    },
+    "261": {
+        titulo: "👄 Frame Delay e Lip Sync",
+        corpo: `
+            <p>Vídeo é 'pesado', áudio é 'leve'. O processador de vídeo leva alguns milissegundos a mais para tratar a imagem.</p>
+            <div class='dica'>
+                O <b>Frame Delay</b> atrasa o áudio propositalmente para que ele saia exatamente junto com o movimento da boca do apresentador, garantindo o sincronismo labial.
+            </div>
+        `
+    },
+
+    // === RACIOCÍNIO LÓGICO: PROPOSIÇÕES (IDs 54, 58, 62) ===
+    "54": {
+        titulo: "🏆 Tautologia: A Verdade Absoluta",
+        corpo: `
+            <p>Na lógica, uma <b>Tautologia</b> é uma frase composta que será SEMPRE VERDADEIRA, não importa o que aconteça.</p>
+            <div class='dica'>
+                Ex: 'Ou Allan é técnico, ou Allan não é técnico'. (P v ~P). <br>
+                Não tem erro: uma das duas terá que ser verdade.
+            </div>
+        `
+    },
+    "58": {
+        titulo: "💣 Contradição: O Erro Absoluto",
+        corpo: `
+            <p>É o oposto da tautologia. Uma <b>Contradição</b> é sempre FALSA, independentemente dos valores das partes.</p>
+            <div class='alerta'>
+                Ex: 'Allan é técnico E Allan não é técnico'. (P ^ ~P). <br>
+                É impossível ser as duas coisas ao mesmo tempo. Resultado: Falso.
+            </div>
+        `
     }
+
+
     
 }
     

@@ -158,7 +158,46 @@ const bancoDeDadosGeral = [
         o: ["Ambiguidade.", "Cacofonia.", "Eco.", "Arcaísmo."], 
         a: 1, 
         e: "Cacofonia: 'Vi ela' soa como 'viela'. O correto seria 'A vi'." },
-
+// === PORTUGUÊS (ORAÇÕES COORDENADAS E SUBORDINADAS) ===
+{ 
+  id: 7001, s: 'p', p: 2, 
+  q: "Na frase: 'O edital foi publicado, **todavia** poucos candidatos iniciaram os estudos', a oração destacada é:", 
+  correta: "Coordenada Sindética Adversativa.", 
+  distracoes: [
+    "Coordenada Sindética Conclusiva.",
+    "Subordinada Adverbial Concessiva.",
+    "Coordenada Sindética Explicativa.",
+    "Subordinada Adjetiva Restritiva.",
+    "Coordenada Assindética."
+  ],
+  e: "Todavia, porém, contudo, mas = Adversidade (Oposição)." 
+},
+{ 
+  id: 7002, s: 'p', p: 2, 
+  q: "Assinale a alternativa que contém uma Oração Subordinada Adjetiva Explicativa:", 
+  correta: "O técnico de vídeo, que é muito dedicado, revisou todo o cabeamento.", 
+  distracoes: [
+    "O técnico de vídeo que é dedicado revisou o cabeamento.",
+    "Allan revisou o cabeamento porque é muito dedicado.",
+    "Embora fosse dedicado, o técnico não revisou o cabeamento.",
+    "O técnico revisou o cabeamento e foi para casa descansar.",
+    "Quando o técnico revisou o cabeamento, o sinal voltou."
+  ],
+  e: "A explicativa vem SEMPRE entre vírgulas. Sem vírgula, ela seria restritiva." 
+},
+{ 
+  id: 7003, s: 'p', p: 2, 
+  q: "Em 'Estudei tanto **que** adormeci sobre os livros', a conjunção 'que' introduz uma oração:", 
+  correta: "Subordinada Adverbial Consecutiva.", 
+  distracoes: [
+    "Subordinada Adverbial Causal.",
+    "Subordinada Adverbial Concessiva.",
+    "Subordinada Adverbial Comparativa.",
+    "Coordenada Sindética Aditiva.",
+    "Subordinada Adverbial Condicional."
+  ],
+  e: "Indica uma consequência do fato anterior (estudar muito)." 
+},
 
 
 
@@ -321,6 +360,33 @@ const bancoDeDadosGeral = [
     "João não é médico e Maria é enfermeira."
   ],
   e: "Leis de De Morgan: A negação do 'OU' vira 'E', negando as duas partes." },
+  // === RACIOCÍNIO LÓGICO (ESTRUTURAS E TABELAS) ===
+{ 
+  id: 5001, s: 'l', p: 1, 
+  q: "Qual a negação lógica da proposição composta: 'Se o sinal de vídeo cai, então o técnico reinicia o switcher'?", 
+  correta: "O sinal de vídeo cai e o técnico não reinicia o switcher.", 
+  distracoes: [
+    "Se o sinal de vídeo não cai, então o técnico não reinicia o switcher.",
+    "O sinal de vídeo não cai ou o técnico reinicia o switcher.",
+    "Se o técnico reinicia o switcher, então o sinal de vídeo caiu.",
+    "O sinal de vídeo não cai e o técnico não reinicia o switcher.",
+    "Sempre que o sinal cai, o switcher é reiniciado automaticamente."
+  ],
+  e: "Negação da Condicional (MANÉ): Mantém a 1ª (p) E Nega a 2ª (~q)." 
+},
+{ 
+  id: 5002, s: 'l', p: 1, 
+  q: "Uma proposição logicamente equivalente a 'Ou Allan estuda IA, ou Allan trabalha na TV' é:", 
+  correta: "Se Allan estuda IA, então ele não trabalha na TV.", 
+  distracoes: [
+    "Allan estuda IA e trabalha na TV.",
+    "Se Allan não estuda IA, então ele não trabalha na TV.",
+    "Allan estuda IA se e somente se trabalha na TV.",
+    "Se Allan estuda IA, então ele trabalha na TV.",
+    "Allan não estuda IA e não trabalha na TV."
+  ],
+  e: "A Disjunção Exclusiva (ou...ou) indica que se um acontece, o outro obrigatoriamente não acontece." 
+},
 
 
 
@@ -416,6 +482,36 @@ const bancoDeDadosGeral = [
         o: ["Attilio Corrêa Lima.", "Pedro Ludovico Teixeira.", "Anhanguera.", "Iris Rezende."], 
         a: 1, 
         e: "Pedro Ludovico foi o mentor político; Attilio foi o mentor técnico/urbanista." },
+        // === HISTÓRIA E GEOGRAFIA DE GOIÁS/GOIÂNIA ===
+{ 
+  id: 4001, s: 'g', p: 2, 
+  q: "Goiânia foi construída para substituir a antiga capital, Vila Boa. Qual foi o principal fator político-econômico para essa mudança na década de 1930?", 
+  correta: "A 'Marcha para o Oeste', visando integrar o interior do país e ocupar o território goiano.", 
+  distracoes: [
+    "A descoberta de grandes jazidas de ouro na região do Rio Meia Ponte.",
+    "A destruição total da antiga capital por uma inundação do Rio Vermelho.",
+    "A necessidade de aproximar a capital goiana do novo Porto de Santos.",
+    "Uma exigência da Coroa Portuguesa para manter o controle fiscal das minas.",
+    "A fuga da epidemia de febre amarela que assolava o sudoeste goiano."
+  ],
+  e: "Pedro Ludovico Teixeira seguiu a diretriz de Getúlio Vargas para interiorizar o desenvolvimento do Brasil." 
+},
+{ 
+  id: 4002, s: 'g', p: 2, 
+  q: "O traçado urbanístico original de Goiânia, projetado por Attilio Corrêa Lima, tem como característica marcante:", 
+  correta: "O desenho em formato de 'leque', convergindo para a Praça Cívica.", 
+  distracoes: [
+    "Um sistema de canais inspirado na cidade de Veneza.",
+    "Um formato quadriculado perfeito, sem diagonais, como em Nova York.",
+    "A ausência total de praças para priorizar o tráfego de bondes.",
+    "Um formato circular concêntrico inspirado na cidade de Brasília.",
+    "A construção exclusiva de prédios acima de 20 andares no centro."
+  ],
+  e: "A Praça Cívica é o coração do projeto, onde se concentram os três poderes." 
+},
+
+
+
 // === ELITE: DIREITO ADMINISTRATIVO E ATOS (s: 'g') ===
     { id: 124, s: 'g', p: 2, 
         q: "No que se refere aos Atos Administrativos, o atributo que permite à Administração Pública executar suas decisões diretamente, inclusive com o uso da força, sem necessidade de autorização prévia do Judiciário, é a:", 
@@ -624,6 +720,33 @@ const bancoDeDadosGeral = [
     "Não suportar resoluções acima de Full HD."
   ],
   e: "Rec. 709 é o padrão HD (SDR). Rec. 2020 é o padrão Ultra HD (UHD/HDR) com gamut estendido." },
+// === ESPECÍFICA (CONTEÚDO CÂMARA DE GOIÂNIA - AUDIOVISUAL) ===
+{ 
+  id: 6001, s: 'e', p: 3, 
+  q: "Em uma transmissão digital via SDI, o erro 'Jitter' afeta principalmente:", 
+  correta: "A estabilidade temporal do sinal, podendo causar a perda de sincronismo e 'drop' de quadros.", 
+  distracoes: [
+    "O brilho da imagem, deixando-a mais escura em cabos curtos.",
+    "A cor das roupas dos apresentadores, tendendo ao magenta.",
+    "O volume do áudio, que fica oscilando entre baixo e alto.",
+    "A resolução do vídeo, que cai de 1080p para 480i automaticamente.",
+    "O peso físico dos arquivos gravados no servidor de exibição."
+  ],
+  e: "Jitter é a variação de tempo nos pulsos digitais. É o 'inimigo silencioso' da transmissão SDI." 
+},
+{ 
+  id: 6002, s: 'e', p: 3, 
+  q: "Ao configurar o áudio para TV, a diferença entre sinal BALANÇADO e NÃO-BALANÇADO é:", 
+  correta: "O sinal balançado usa dois condutores de sinal com fases invertidas para cancelar ruídos e interferências.", 
+  distracoes: [
+    "O sinal balançado é apenas para microfones de plástico baratos.",
+    "O sinal não-balançado permite cabos de até 500 metros sem perda.",
+    "O sinal balançado é digital e o não-balançado é estritamente analógico.",
+    "Não há diferença técnica, apenas o formato do conector (P10 vs XLR).",
+    "O sinal balançado consome mais bateria das câmeras DSLRs."
+  ],
+  e: "Sinais balançados (XLR) são essenciais em estúdios para evitar o 'hum' de interferência elétrica." 
+},
 
 
 
