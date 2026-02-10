@@ -198,7 +198,78 @@ const bancoDeDadosGeral = [
   ],
   e: "Indica uma consequência do fato anterior (estudar muito)." 
 },
-
+// === PORTUGUÊS: ACENTUAÇÃO E ORTOGRAFIA (BLOCAGEM ALLAN SILVA) ===
+    { 
+        id: 1201, s: 'p', p: 2, tema: "Acentuação Gráfica",
+        q: "Assinale a alternativa em que TODAS as palavras estão corretamente acentuadas seguindo a regra das proparoxítonas:",
+        o: ["Índice, técnico, automático.", "Câmera, carater, ágil.", "Sinal, rúbrica, público.", "Vídeo, áudio, régua."], 
+        a: 0, 
+        e: "<b>Regra Absoluta:</b> Todas as proparoxítonas (tônica na antepenúltima) são acentuadas. Rúbrica é paroxítona sem acento. Vídeo e Áudio são paroxítonas terminadas em ditongo." 
+    },
+    { 
+        id: 1202, s: 'p', p: 2, tema: "Novo Acordo Ortográfico",
+        q: "Pelo Novo Acordo Ortográfico, qual das palavras abaixo perdeu o acento gráfico corretamente?",
+        o: ["Saúde", "Idéia", "Saída", "Péssimo"], 
+        a: 1, 
+        e: "<b>Ditongos Abertos:</b> Os ditongos 'ei' e 'oi' em palavras PAROXÍTONAS (como Ideia, Assembleia, Jiboia) perderam o acento. Nas oxítonas (Herói, Papéis), o acento permanece." 
+    },
+    { 
+        id: 1203, s: 'p', p: 2, tema: "Acentuação de Hiatos",
+        q: "Assinale a alternativa que apresenta erro de acentuação na regra do hiato:",
+        o: ["País", "Conteúdo", "Juíz", "Baú"], 
+        a: 2, 
+        e: "<b>Regra do I/U:</b> O 'i' tônico de hiato não leva acento se for seguido de 'z' na mesma sílaba (Ju-iz). Já 'Ju-í-zes' leva acento porque o 'i' fica sozinho." 
+    },
+    { 
+        id: 1204, s: 'p', p: 2, tema: "Ortografia (G ou J)",
+        q: "Qual opção preenche corretamente as lacunas: 'O técnico via__ou para a __erência da TV para fazer a massa__em no cabo.'",
+        o: ["j - g - g", "g - j - j", "j - j - g", "g - g - j"], 
+        a: 0, 
+        e: "Viajou (verbo viajar = J). Gerência (substantivo = G). Massagem (terminações em -agem, -igem, -ugem = G)." 
+    },
+    { 
+        id: 1205, s: 'p', p: 2, tema: "Ortografia (S, Z, X ou CH)",
+        q: "Identifique a palavra escrita de forma INCORRETA quanto à grafia oficial:",
+        o: ["Enxame", "Chicote", "Analizar", "Atraso"], 
+        a: 2, 
+        e: "<b>S ou Z:</b> Analisar escreve-se com S, pois deriva de 'análise'. Atraso e Enxame estão corretos." 
+    },
+    { 
+        id: 1206, s: 'p', p: 2, tema: "Acento Diferencial",
+        q: "Assinale a frase que respeita as regras atuais de acento diferencial:",
+        o: ["Eles tem muitos equipamentos.", "Allan vai pôr o switcher no rack.", "Ele pára o carro na vaga.", "O vôo foi cancelado."], 
+        a: 1, 
+        e: "<b>Pôr vs Por:</b> O acento em 'pôr' (verbo) continua para diferenciar da preposição 'por'. O acento em 'têm' (plural) também existe, mas na opção A faltou o acento." 
+    },
+    { 
+        id: 1207, s: 'p', p: 2, tema: "Acentuação Gráfica",
+        q: "As palavras 'automóvel', 'caráter' e 'fácil' são acentuadas porque:",
+        o: ["São oxítonas terminadas em l e r.", "São paroxítonas terminadas em l e r.", "São proparoxítonas.", "São hiatos tônicos."], 
+        a: 1, 
+        e: "Paroxítonas terminadas em R, L, N, X e PS (mnemônico ROUXINOL) recebem acento gráfico." 
+    },
+    { 
+        id: 1208, s: 'p', p: 2, tema: "Novo Acordo Ortográfico",
+        q: "Em qual dessas palavras o hífen foi utilizado CORRETAMENTE após o Novo Acordo?",
+        o: ["Micro-ondas", "Anti-inflamatório", "Auto-escola", "Ambas A e B estão corretas."], 
+        a: 3, 
+        e: "<b>Regra dos Opostos:</b> Letras iguais se separam com hífen (Micro-ondas, Anti-inflamatório). Letras diferentes se unem (Autoescola)." 
+    },
+    { 
+        id: 1209, s: 'p', p: 2, tema: "Oxítonas",
+        q: "Assinale a alternativa que contém apenas oxítonas que devem ser acentuadas:",
+        o: ["Caju, urubu, tatu.", "Parabéns, jacaré, avô.", "Item, hifens, mesa.", "Papel, sinal, feliz."], 
+        a: 1, 
+        e: "Acentuam-se as oxítonas terminadas em A, E, O (seguidas ou não de S), EM e ENS." 
+    },
+    { 
+        id: 1210, s: 'p', p: 2, tema: "Ortografia (Uso do Porquê)",
+        q: "Escolha a grafia correta para: 'Não entendo o _____ do sinal cair, _____ estudei muito.'",
+        o: ["porque - por que", "porquê - porque", "por que - porquê", "por quê - porque"], 
+        a: 1, 
+        e: "<b>Porquê:</b> Substantivado (com artigo 'o'). <b>Porque:</b> Conjunção explicativa/causal." 
+    },
+    
 
 
 

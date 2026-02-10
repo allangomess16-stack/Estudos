@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTUDO DIRECIONADO </title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; }
+        .container { max-width: 850px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h1 { color: #ad3131; text-align: center; border-bottom: 3px solid #ad3131; padding-bottom: 10px; }
+        
+        .config-box { background: #f8f9fa; padding: 20px; border-radius: 8px; border: 2px solid #ddd; margin-bottom: 25px; }
+        .config-group { margin-bottom: 15px; }
+        .config-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #002855; }
+        input[type="number"] { width: 100px; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
+        
+        .grid-filtros { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; background: white; padding: 15px; border-radius: 6px; border: 1px solid #eee; max-height: 250px; overflow-y: auto; }
+        .checkbox-item { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.95em; padding: 8px; border-radius: 4px; transition: 0.2s; border: 1px solid #f0f0f0; }
+        .checkbox-item:hover { background: #f1f7ff; }
+        
+        .btn-gerar { width: 100%; padding: 15px; background: #002855; color: white; border: none; border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; margin-top: 15px; }
+        .btn-gerar:hover { background: #ad3131; }
+
+        .question { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 6px solid #002855; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .materia-tag { font-size: 0.75em; font-weight: bold; color: #fff; background: #ad3131; padding: 3px 8px; border-radius: 3px; text-transform: uppercase; margin-bottom: 10px; display: inline-block; }
+        
+        .options label { display: flex; align-items: center; gap: 10px; padding: 12px; margin: 8px 0; border: 1px solid #eee; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+        .correta { background: #d4edda !important; border-color: #28a745 !important; color: #155724; font-weight: bold; }
+        .errada { background: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+        .explicacao-box { display: none; margin-top: 15px; padding: 15px; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎯 Simulado Direcionado Allan Silva</h1>
+    
+    <div class="config-box" id="configArea">
+        <div class="config-group">
+            <label>Quantas questões deseja realizar?</label>
+            <input type="number" id="numQuestoes" value="5" min="1">
+        </div>
+
+        <div class="config-group">
+            <label>Quais conteúdos deseja estudar hoje?</label>
+            <div id="listaTemas" class="grid-filtros">
+                </div>
+        </div>
+
+        <button class="btn-gerar" onclick="gerarSimulado()">MONTAR MINHA PROVA 🚀</button>
+    </div>
+
+    <div id="areaQuestoes"></div>
+    
+    <div id="areaBotaoConferir" style="display:none; margin-top: 20px;">
+        <button class="btn-gerar" onclick="corrigirSimulado()">CONFERIR RESPOSTAS ✅</button>
+    </div>
+</div>
+
+<script src="banco_mestre.js"></script>
+
+<script>
+    const nomesMat = { p: 'Português', l: 'Lógica', g: 'Goiás/Legislação', i: 'Informática', e: 'Específicas' };
+    let questoesSorteativas = [];
+
+    // Função que preenche a lista de temas/matérias automaticamente
+    function carregarFiltros() {
+        const container = document.getElementById('listaTemas');
+        if (typeof bancoDeDadosGeral === 'undefined') {
+            container.innerHTML = "<b style='color:red;'>Erro: banco_mestre.js não carregado!</b>";
+            return;
+        }
+
+        // Pega todos os temas específicos. Se não tiver tema, usa o nome da matéria.
+        const todosTemas = bancoDeDadosGeral.map(q => q.tema || nomesMat[q.s] || "Geral");
+        const temasUnicos = [...new Set(todosTemas)].sort();
+
+        container.innerHTML = temasUnicos.map(tema => `
+            <label class="checkbox-item">
+                <input type="checkbox" class="tema-check" value="${tema}"> ${tema}
+            </label>
+        `).join('');
+    }
+
+    function gerarSimulado() {
+        const qtd = parseInt(document.getElementById('numQuestoes').value);
+        const checkboxes = document.querySelectorAll('.tema-check:checked');
+        const temasSelecionados = Array.from(checkboxes).map(c => c.value);
+
+        if (temasSelecionados.length === 0) {
+            alert("Selecione pelo menos um tema!");
+            return;
+        }
+
+        // Filtra as questões
+        const filtradas = bancoDeDadosGeral.filter(q => {
+            const temaDaQ = q.tema || nomesMat[q.s] || "Geral";
+            return temasSelecionados.includes(temaDaQ);
+        });
+
+        if (filtradas.length === 0) {
+            alert("Nenhuma questão encontrada.");
+            return;
+        }
+
+        // Embaralha e seleciona a quantidade
+        filtradas.sort(() => 0.5 - Math.random());
+        questoesSorteativas = filtradas.slice(0, qtd);
+
+        renderizarSimulado();
+    }
+
+    function renderizarSimulado() {
+        const area = document.getElementById('areaQuestoes');
+        area.innerHTML = '';
+        document.getElementById('configArea').style.display = 'none';
+        document.getElementById('areaBotaoConferir').style.display = 'block';
+
+        questoesSorteativas.forEach((q, i) => {
+            // Lógica para questões antigas e novas (distracoes)
+            let opcoes = [];
+            if (q.distracoes) {
+                let erradas = [...q.distracoes].sort(() => 0.5 - Math.random()).slice(0, 3);
+                opcoes = [q.correta, ...erradas].sort(() => 0.5 - Math.random());
+                q.respostaCorreta = q.correta;
+            } else {
+                opcoes = [...q.o].sort(() => 0.5 - Math.random());
+                q.respostaCorreta = q.o[q.a];
+            }
+
+            const div = document.createElement('div');
+            div.className = 'question';
+            div.id = `bloco-q${q.id}`;
+            div.innerHTML = `
+                <span class="materia-tag">${q.tema || nomesMat[q.s]}</span>
+                <p><strong>${i + 1}. ${q.q}</strong></p>
+                <div class="options" id="options-q${q.id}">
+                    ${opcoes.map((opt, idx) => `
+                        <label>
+                            <input type="radio" name="pergunta${q.id}" value="${opt}"> 
+                            ${String.fromCharCode(65 + idx)}) ${opt}
+                        </label>
+                    `).join('')}
+                </div>
+                <div class="explicacao-box" id="explicacao-q${q.id}">
+                    <strong>💡 Aula de Mentoria:</strong><br>${q.e || "Consulte o banco de revisões para este tema."}
+                </div>
+            `;
+            area.appendChild(div);
+        });
+        window.scrollTo(0, 0);
+    }
+
+    function corrigirSimulado() {
+        questoesSorteativas.forEach(q => {
+            const selecionado = document.querySelector(`input[name="pergunta${q.id}"]:checked`);
+            const labels = document.querySelectorAll(`#options-q${q.id} label`);
+            const boxExplicacao = document.getElementById(`explicacao-q${q.id}`);
+
+            labels.forEach(label => {
+                const radio = label.querySelector('input');
+                // Se for a correta, fica verde
+                if (radio.value === q.respostaCorreta) {
+                    label.classList.add('correta');
+                }
+                // Se o usuário marcou errado, fica vermelho
+                if (selecionado && radio.checked && radio.value !== q.respostaCorreta) {
+                    label.classList.add('errada');
+                }
+            });
+            boxExplicacao.style.display = 'block';
+        });
+
+        // Troca botão conferir por botão reiniciar
+        document.getElementById('areaBotaoConferir').innerHTML = `
+            <button class="btn-gerar" onclick="location.reload()" style="background:#666">NOVO SIMULADO 🔄</button>
+        `;
+    }
+
+    // Garante que o banco carregue antes de montar o filtro
+    window.addEventListener('load', carregarFiltros);
+</script>
+
+</body>
+</html>
