@@ -1558,13 +1558,197 @@ const bancoExplicações = {
                 É impossível ser as duas coisas ao mesmo tempo. Resultado: Falso.
             </div>
         `
-    }
+    },
+   
+
+    "2001": {
+        titulo: "📐 Regra das Paroxítonas e Ditongos",
+        corpo: `<p>Acentuamos as paroxítonas terminadas em <b>ditongo crescente</b>.</p>
+                <table class='tab-estudo'>
+                    <tr><th>Palavra</th><th>Divisão</th></tr>
+                    <tr><td>Universitário</td><td>U-ni-ver-si-tá-rio</td></tr>
+                    <tr><td>Relatório</td><td>Re-la-tó-rio</td></tr>
+                </table>
+                <div class='dica'><b>Dica:</b> Terminou em "io", "ia", "ie" e é a penúltima forte? Tem acento!</div>`
+    },
+    "2002": {
+        titulo: "🔗 Adição Correlativa: Não só... mas também",
+        corpo: `<p>Estabelece uma relação de <b>SOMA</b> entre duas orações.</p>
+                <div class='alerta'>Equivale ao conectivo "E", mas com maior ênfase na adição das tarefas.</div>`
+    },
+    "2003": {
+        titulo: "📉 Concessão: O 'Conquanto'",
+        corpo: `<p><b>Conquanto</b> é uma conjunção concessiva (oposição que não impede a ação).</p>
+                <div class='dica'><b>Teste:</b> Substitua sempre por <b>EMBORA</b>. Se fizer sentido, é concessiva.</div>`
+    },
+    "2004": {
+        titulo: "🕵️ Conjunção Integrante vs Pronome Relativo",
+        corpo: `<p>A integrante introduz uma oração que completa o sentido do verbo.</p>
+                <div class='dica'><b>Macetes:</b> Substitua a oração por <b>ISSO</b>. "Disse ISSO". Se couber, o 'que' é integrante.</div>`
+    },
+    "2005": {
+        titulo: "⏳ Proporção: À medida que",
+        corpo: `<p>Indica fatos que ocorrem simultaneamente e de forma proporcional.</p>
+                <div class='alerta'>Cuidado: "Ao passo que" também é proporcional. "À medida de" não existe.</div>`
+    },
+    "2006": {
+        titulo: "❓ O 'Pois' Explicativo",
+        corpo: `<p>O <b>Pois</b> antes do verbo justifica uma ordem ou afirmação anterior.</p>
+                <div class='dica'>Se vier após o verbo e entre vírgulas, vira <b>Conclusivo</b> (Portanto).</div>`
+    },
+    "2007": {
+        titulo: "🚩 Vírgula nas Adversativas",
+        corpo: `<p>A vírgula é <b>OBRIGATÓRIA</b> antes de conectivos de oposição (mas, porém, contudo...).</p>`
+    },
+    "2008": {
+        titulo: "Vim, vi e venci: Assíndeto",
+        corpo: `<p>A omissão das conjunções gera uma lista de ações rápidas com valor <b>ADITIVO</b>.</p>`
+    },
+    "2009": {
+        titulo: "🔄 Condição: O 'Caso'",
+        corpo: `<p>O 'Caso' exige o verbo no <b>Subjuntivo</b>. Estabelece uma hipótese.</p>
+                <p><i>Ex: Caso estude (hipótese), passará.</i></p>`
+    },
+    "2010": {
+        titulo: "🆕 Novo Acordo: Ditongos em Paroxítonas",
+        corpo: `<p>Ditongos abertos <b>EI</b> e <b>OI</b> perderam o acento em paroxítonas.</p>
+                <table class='tab-estudo'>
+                    <tr><td>Ideia (Sem acento)</td><td>Herói (Com acento - Oxítona)</td></tr>
+                </table>`
+    },
+
+    // --- RACIOCÍNIO LÓGICO (2011 - 2020) ---
+    "2011": {
+        titulo: "🛡️ Lei de De Morgan: Negar o 'E'",
+        corpo: `<p>Para negar 'P e Q':</p>
+                <ol><li>Nega P</li><li>Nega Q</li><li>Troca o E pelo <b>OU (v)</b></li></ol>`
+    },
+    "2012": {
+        titulo: "👸 Condicional: Vera Fischer",
+        corpo: `<p>A condicional (->) só é <b>FALSA</b> no caso: <b>V -> F</b>.</p>
+                <div class='alerta'>Se a primeira for F, o resultado será sempre V!</div>`
+    },
+    "2013": {
+        titulo: "🚫 Negação do 'Todo'",
+        corpo: `<p>A negação de "Todo" é "<b>Algum... não</b>" (ou 'Existe um que não').</p>
+                <div class='alerta'>Nunca negue 'Todo' com 'Nenhum'!</div>`
+    },
+    "2014": {
+        titulo: "Tabela Verdade do 'OU'",
+        corpo: `<p>A disjunção (v) só é <b>FALSA</b> se as duas proposições forem falsas.</p>`
+    },
+    "2015": {
+        titulo: "🔢 Linhas da Tabela Verdade",
+        corpo: `<p>Use a fórmula <b>2ⁿ</b>. Onde n é o número de proposições simples.</p>
+                <p><i>Ex: 3 proposições = 2³ = 8 linhas.</i></p>`
+    },
+    "2016": {
+        titulo: "🔄 Equivalência Contrapositiva",
+        corpo: `<p>P -> Q é o mesmo que <b>~Q -> ~P</b>.</p>
+                <div class='dica'>Inverte as duas frases e nega ambas.</div>`
+    },
+    "2017": {
+        titulo: "Símbolos Lógicos",
+        corpo: `<p><b>^</b> = Conjunção (E)<br><b>v</b> = Disjunção (OU)</p>`
+    },
+    "2018": {
+        titulo: "🏆 Tautologia",
+        corpo: `<p>É uma proposição cujo resultado final é <b>SEMPRE VERDADEIRO</b> na tabela.</p>`
+    },
+    "2019": {
+        titulo: "🥊 Negação da Condicional (Regra do MANÉ)",
+        corpo: `<p><b>MA</b>ntém a primeira <b>E</b> <b>NE</b>ga a segunda.</p>
+                <div class='alerta'>O 'Se' some e entra o 'E'.</div>`
+    },
+    "2020": {
+        titulo: "⚖️ OU Exclusivo (XOR)",
+        corpo: `<p>Verdadeiro apenas quando as proposições são <b>DIFERENTES</b> (V e F ou F e V).</p>`
+    },
+
+    // --- HISTÓRIA E GEOGRAFIA DE GOIÁS (2021 - 2030) ---
+    "2021": {
+        titulo: "🏙️ Art Déco e Urbanismo",
+        corpo: `<p>Goiânia é um marco do <b>Art Déco</b>. Projetada para ser moderna e funcional.</p>`
+    },
+    "2022": {
+        titulo: "Mudancismo Goiano",
+        corpo: `<p>Movimento que pregava a interiorização para fugir do isolamento de Vila Boa.</p>`
+    },
+    "2023": {
+        titulo: "🌊 Rio Araguaia",
+        corpo: `<p>Divisa natural entre Goiás (Leste) e Mato Grosso (Oeste).</p>`
+    },
+    "2024": {
+        titulo: "Batismo Cultural (1942)",
+        corpo: `<p>Grande evento que consolidou a inauguração de Goiânia para o Brasil.</p>`
+    },
+    "2025": {
+        titulo: "📍 Macrorregião Centro Goiano",
+        corpo: `<p>Goiânia polariza a economia e política no coração geográfico do estado.</p>`
+    },
+    "2026": {
+        titulo: "Pedro Ludovico Teixeira",
+        corpo: `<p>Interventor nomeado por Vargas; o "pai" da nova capital.</p>`
+    },
+    "2027": {
+        titulo: "💰 Ciclo do Ouro",
+        corpo: `<p>Economia do Séc. XVIII baseada na mineração, gerando as cidades coloniais.</p>`
+    },
+    "2028": {
+        titulo: "⛰️ Pouso Alto",
+        corpo: `<p>O ponto culminante de Goiás (1.691m), na Chapada dos Veadeiros.</p>`
+    },
+    "2029": {
+        titulo: "Vila Boa de Goyaz",
+        corpo: `<p>Antigo nome da Cidade de Goiás, capital até 1937.</p>`
+    },
+    "2030": {
+        titulo: "🌦️ Clima Tropical",
+        corpo: `<p>Típico do Cerrado: Verão chuvoso e inverno seco.</p>`
+    },
+
+    // --- ESPECÍFICAS: OPERADOR DE CARACTERES (2031 - 2040) ---
+    "2031": {
+        titulo: "📺 O Gerador de Caracteres (GC)",
+        corpo: `<p>Equipamento ou software que sobrepõe textos e gráficos ao vídeo ao vivo.</p>`
+    },
+    "2032": {
+        titulo: "📐 Aspect Ratio 16:9",
+        corpo: `<p>Padrão do HD e TV Digital. Substituiu o antigo 4:3 (tubo).</p>`
+    },
+    "2033": {
+        titulo: "Title Safe Area",
+        corpo: `<p>Área (80% central) que garante a leitura dos nomes sem cortes nas bordas da TV.</p>`
+    },
+    "2034": {
+        titulo: "👻 Canal Alpha",
+        corpo: `<p>Define a <b>transparência</b>. Permite que o fundo do vídeo apareça através do GC.</p>`
+    },
+    "2035": {
+        titulo: "Identificação Legislativa",
+        corpo: `<p>Padrão: Nome completo + Partido + UF (Unidade Federativa).</p>`
+    },
+    "2036": {
+        titulo: "🔌 Cabo SDI e BNC",
+        corpo: `<p>SDI é o sinal; <b>BNC</b> é o conector de trava por baioneta padrão profissional.</p>`
+    },
+    "2037": {
+        titulo: "Esteira Horizontal: Crawl",
+        corpo: `<p><b>Crawl:</b> Texto corre horizontalmente.<br><b>Roll:</b> Texto sobe verticalmente.</p>`
+    },
+    "2038": {
+        titulo: "Templates de GC",
+        corpo: `<p>Modelos pré-formatados que garantem agilidade e padrão visual na TV.</p>`
+    },
+    "2039": {
+        titulo: "🟢 Chroma Key",
+        corpo: `<p>Isola uma cor (verde/azul) para substituir por outro sinal de vídeo.</p>`
+    },
+    "2040": {
+        titulo: "👁️ Legibilidade no GC",
+        corpo: `<p>O contraste entre a cor da fonte e o fundo (tarja) é o fator mais importante.</p>`
+    },
 
 
     
 }
-    
-
-
-
-

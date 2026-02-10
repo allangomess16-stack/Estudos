@@ -269,7 +269,78 @@ const bancoDeDadosGeral = [
         a: 1, 
         e: "<b>Porquê:</b> Substantivado (com artigo 'o'). <b>Porque:</b> Conjunção explicativa/causal." 
     },
-    
+    // --- LÍNGUA PORTUGUESA ---
+    { 
+        id: 2001, s: 'p', p: 2, tema: "Acentuação Gráfica",
+        q: "Assinale a alternativa em que todas as palavras seguem a mesma regra de acentuação de 'universitário':",
+        o: ["Baú, Piauí, Herói, Saúde", "Relatório, Cenário, Distância, Próprio", "Café, Jiló, Alguém, Armazém", "Lâmpada, Câmera, Técnico, Árvore", "Vírus, Álbuns, Caráter, Fácil"], 
+        a: 1, 
+        e: "<b>Regra:</b> 'Universitário' é uma paroxítona terminada em ditongo crescente. A alternativa B traz apenas palavras que seguem rigorosamente esta mesma terminação." 
+    },
+    { 
+        id: 2002, s: 'p', p: 2, tema: "Conectivos",
+        q: "Em 'Não só estudou, como também trabalhou', a estrutura estabelece ideia de:",
+        o: ["Oposição ou contraste", "Adição ou soma", "Causa e efeito", "Condição necessária", "Finalidade objetiva"], 
+        a: 1, 
+        e: "<b>Explicação:</b> As locuções correlativas 'não só... mas também/como também' possuem valor <b>ADITIVO</b>, somando duas ações realizadas pelo sujeito." 
+    },
+    { 
+        id: 2003, s: 'p', p: 2, tema: "Conectivos",
+        q: "\"Conquanto fizesse sol, não saiu.\" A conjunção sublinhada é classificada como:",
+        o: ["Causal", "Concessiva", "Condicional", "Conformativa", "Consecutiva"], 
+        a: 1, 
+        e: "<b>Explicação:</b> 'Conquanto' é uma conjunção <b>CONCESSIVA</b> (sinônimo de embora). Indica um fato contrário que não impede a ação principal." 
+    },
+    { 
+        id: 2004, s: 'p', p: 2, tema: "Sintaxe",
+        q: "Identifique a frase que apresenta uma Conjunção Integrante:",
+        o: ["O livro que li é excelente.", "Ele disse que viria hoje.", "Corra, que o trem já vem!", "Estudou tanto que passou.", "Quero o carro que estava ali."], 
+        a: 1, 
+        e: "<b>Macete:</b> A conjunção integrante introduz uma oração que pode ser substituída por 'ISSO'. Ele disse <b>ISSO</b> (que viria hoje)." 
+    },
+    { 
+        id: 2005, s: 'p', p: 2, tema: "Conectivos",
+        q: "\"À medida que o tempo passa, aprendemos.\" A locução conjuntiva expressa:",
+        o: ["Tempo exato", "Proporção", "Causa", "Finalidade", "Consequência"], 
+        a: 1, 
+        e: "<b>Explicação:</b> 'À medida que' e 'À proporção que' indicam fatos que se desenvolvem <b>simultaneamente</b> à oração principal." 
+    },
+    { 
+        id: 2006, s: 'p', p: 2, tema: "Conectivos",
+        q: "\"Estude, pois a prova se aproxima.\" A conjunção 'pois' (antes do verbo) é:",
+        o: ["Explicativa", "Conclusiva", "Adversativa", "Aditiva", "Alternativa"], 
+        a: 0, 
+        e: "<b>Explicação:</b> O 'pois' <b>antes</b> do verbo tem valor explicativo. Se estivesse <b>depois</b> do verbo, teria valor conclusivo." 
+    },
+    { 
+        id: 2007, s: 'p', p: 2, tema: "Pontuação",
+        q: "O uso da vírgula antes de conjunções adversativas (mas, porém, contudo) é:",
+        o: ["Facultativo em frases curtas", "Obrigatório para separar orações", "Proibido pelo novo acordo", "Necessário apenas no final do parágrafo", "Dispensável se houver conjunção 'e'"], 
+        a: 1, 
+        e: "<b>Regra:</b> A vírgula é <b>OBRIGATÓRIA</b> antes das conjunções coordenadas adversativas, exceto na conjunção 'mas' quando liga termos da mesma função." 
+    },
+    { 
+        id: 2008, s: 'p', p: 2, tema: "Conectivos",
+        q: "\"Vim, vi e venci.\" As vírgulas indicam omissão de conjunções:",
+        o: ["Alternativas", "Aditivas", "Adversativas", "Explicativas", "Conclusivas"], 
+        a: 1, 
+        e: "<b>Explicação:</b> Trata-se de orações coordenadas assindéticas (sem conectivo) que possuem valor de <b>SOMA</b>." 
+    },
+    { 
+        id: 2009, s: 'p', p: 2, tema: "Conectivos",
+        q: "\"Caso chova, o evento será cancelado.\" A conjunção 'Caso' é:",
+        o: ["Causal", "Condicional", "Concessiva", "Temporal", "Final"], 
+        a: 1, 
+        e: "<b>Explicação:</b> 'Caso' estabelece uma <b>CONDIÇÃO</b> necessária para que ocorra o cancelamento do evento." 
+    },
+    { 
+        id: 2010, s: 'p', p: 2, tema: "Acentuação Gráfica",
+        q: "Qual alternativa apresenta erro de acentuação gráfica?",
+        o: ["Idéia", "Herói", "Baú", "Piauí", "Chapéu"], 
+        a: 0, 
+        e: "<b>Novo Acordo:</b> Os ditongos abertos <b>'EI'</b> e <b>'OI'</b> perderam o acento em palavras PAROXÍTONAS (Idéia -> Ideia)." 
+    },
+
 
 
 
@@ -458,6 +529,77 @@ const bancoDeDadosGeral = [
   ],
   e: "A Disjunção Exclusiva (ou...ou) indica que se um acontece, o outro obrigatoriamente não acontece." 
 },
+// --- RACIOCÍNIO LÓGICO ---
+    { 
+        id: 2011, s: 'r', p: 2, tema: "Negação Lógica",
+        q: "A negação lógica de \"P e Q\" é:",
+        o: ["~P e ~Q", "~P ou ~Q", "~P -> ~Q", "P ou Q", "P -> Q"], 
+        a: 1, 
+        e: "<b>Lei de De Morgan:</b> Para negar o 'E', negamos as duas proposições e trocamos o conectivo por <b>'OU'</b>." 
+    },
+    { 
+        id: 2012, s: 'r', p: 2, tema: "Tabela Verdade",
+        q: "Na condicional (P -> Q), se P=V e Q=F, o resultado é:",
+        o: ["Verdadeiro", "Falso", "Inconclusivo", "Neutro", "Proporcional"], 
+        a: 1, 
+        e: "<b>Mnemônico:</b> Na condicional, o único caso Falso é a <b>Vera Fischer</b> (V -> F = F)." 
+    },
+    { 
+        id: 2013, s: 'r', p: 2, tema: "Quantificadores",
+        q: "Negação de \"Todo médico é atencioso\":",
+        o: ["Nenhum médico é atencioso", "Algum médico não é atencioso", "Todos os médicos são rudes", "Algum médico é atencioso", "Se é médico, é atencioso"], 
+        a: 1, 
+        e: "<b>Regra:</b> A negação de 'Todo A é B' é 'Algum A <b>NÃO</b> é B'." 
+    },
+    { 
+        id: 2014, s: 'r', p: 2, tema: "Tabela Verdade",
+        q: "A disjunção inclusiva (v) é falsa quando:",
+        o: ["P é V", "Q é V", "Ambas são falsas", "Ambas são verdadeiras", "Uma é diferente da outra"], 
+        a: 2, 
+        e: "<b>Regra do OU:</b> O conectivo OU só é <b>FALSO</b> se ambas as proposições forem Falsas simultaneamente." 
+    },
+    { 
+        id: 2015, s: 'r', p: 2, tema: "Tabela Verdade",
+        q: "Tabela verdade para 3 proposições simples possui:",
+        o: ["4 linhas", "6 linhas", "8 linhas", "12 linhas", "16 linhas"], 
+        a: 2, 
+        e: "<b>Fórmula:</b> O número de linhas é dado por 2^n, onde n é o número de proposições. <b>2³ = 8</b>." 
+    },
+    { 
+        id: 2016, s: 'r', p: 2, tema: "Equivalência Lógica",
+        q: "Equivalência de P -> Q:",
+        o: ["Q -> P", "~Q -> ~P", "P e ~Q", "~P e Q", "P ou Q"], 
+        a: 1, 
+        e: "<b>Contrapositiva:</b> A principal equivalência da condicional é inverter a ordem negando ambas." 
+    },
+    { 
+        id: 2017, s: 'r', p: 2, tema: "Lógica Proposicional",
+        q: "O símbolo '^' representa qual conectivo?",
+        o: ["Disjunção", "Conjunção", "Condicional", "Bicondicional", "Negação"], 
+        a: 1, 
+        e: "<b>Simbologia:</b> ^ (Conjunção/E), v (Disjunção/OU), -> (Condicional/Se...então)." 
+    },
+    { 
+        id: 2018, s: 'r', p: 2, tema: "Tautologia",
+        q: "Uma Tautologia é uma proposição que:",
+        o: ["É sempre falsa", "É sempre verdadeira", "Depende do contexto", "Possui 50% de verdade", "É impossível de calcular"], 
+        a: 1, 
+        e: "<b>Definição:</b> Tautologia ocorre quando o resultado da tabela verdade é <b>SEMPRE V</b>, independente dos valores das simples." 
+    },
+    { 
+        id: 2019, s: 'r', p: 2, tema: "Negação Lógica",
+        q: "Negação da Condicional (P -> Q):",
+        o: ["~P -> ~Q", "P e ~Q", "~P ou Q", "Q -> P", "~P e ~Q"], 
+        a: 1, 
+        e: "<b>Regra do MANÉ:</b> Mantém a primeira (P) <b>E</b> nega a segunda (~Q)." 
+    },
+    { 
+        id: 2020, s: 'r', p: 2, tema: "Tabela Verdade",
+        q: "O 'OU Exclusivo' (v sublinhado) é verdadeiro quando:",
+        o: ["Ambas são iguais", "Ambas são diferentes", "Ambas são verdadeiras", "Ambas são falsas", "P é necessariamente falsa"], 
+        a: 1, 
+        e: "<b>Regra do XOR:</b> O OU Exclusivo exige que as proposições tenham valores <b>DIFERENTES</b> para resultar em Verdade." 
+    },
 
 
 
@@ -610,7 +752,77 @@ const bancoDeDadosGeral = [
   correta: "Finalidade", 
   distracoes: ["Motivo", "Objeto", "Mérito", "Conveniência"],
   e: "Competência, Finalidade e Forma são sempre vinculados. Motivo e Objeto podem ser discricionários." },
-
+// --- HISTÓRIA E GEOGRAFIA DE GOIÁS ---
+    { 
+        id: 2021, s: 'g', p: 2, tema: "História de GO",
+        q: "O urbanista Attílio Corrêa Lima projetou Goiânia inspirado no:",
+        o: ["Barroco Mineiro", "Art Déco", "Modernismo de Brasília", "Neoclássico Europeu", "Colonial Português"], 
+        a: 1, 
+        e: "<b>Curiosidade:</b> Goiânia possui um dos maiores acervos de arquitetura <b>Art Déco</b> do mundo, estilo predominante na década de 30." 
+    },
+    { 
+        id: 2022, s: 'g', p: 2, tema: "História de GO",
+        q: "O movimento pró-mudança da capital chamava-se:",
+        o: ["Entradismo", "Mudancismo", "Coronelismo", "Bandeirantismo", "Revolucionários"], 
+        a: 1, 
+        e: "<b>História:</b> O 'Mudancismo' era o grupo político que defendia a construção de uma nova capital para modernizar o estado." 
+    },
+    { 
+        id: 2023, s: 'g', p: 2, tema: "Geografia de GO",
+        q: "Rio que faz divisa natural entre GO e MT:",
+        o: ["Rio Paranaíba", "Rio Araguaia", "Rio Meia Ponte", "Rio Tocantins", "Rio Vermelho"], 
+        a: 1, 
+        e: "<b>Mapa:</b> O <b>Rio Araguaia</b> marca a divisa oeste de Goiás com o Mato Grosso, sendo vital para o turismo goiano." 
+    },
+    { 
+        id: 2024, s: 'g', p: 2, tema: "História de GO",
+        q: "Data do Batismo Cultural de Goiânia:",
+        o: ["1933", "1942", "1937", "1950", "1960"], 
+        a: 1, 
+        e: "<b>Data Chave:</b> Embora fundada em 33, o <b>Batismo Cultural</b> (inauguração oficial) ocorreu apenas em 1942." 
+    },
+    { 
+        id: 2025, s: 'g', p: 2, tema: "Geografia de GO",
+        q: "Goiânia está em qual macrorregião?",
+        o: ["Sul Goiano", "Centro Goiano", "Entorno do DF", "Norte Goiano", "Sudoeste"], 
+        a: 1, 
+        e: "<b>Regionalização:</b> A capital está inserida na Região <b>Centro Goiano</b>, o núcleo administrativo e populacional do estado." 
+    },
+    { 
+        id: 2026, s: 'g', p: 2, tema: "História de GO",
+        q: "O interventor federal que fundou Goiânia foi:",
+        o: ["Mauro Borges", "Pedro Ludovico Teixeira", "Getúlio Vargas", "Iris Rezende", "Maguito Vilela"], 
+        a: 1, 
+        e: "<b>Personagem:</b> <b>Pedro Ludovico</b> foi o grande idealizador e líder político da transferência da capital." 
+    },
+    { 
+        id: 2027, s: 'g', p: 2, tema: "História de GO",
+        q: "Base econômica do século XVIII em GO:",
+        o: ["Soja", "Ouro", "Gado", "Indústria", "Café"], 
+        a: 1, 
+        e: "<b>Ciclos:</b> O primeiro grande ciclo econômico goiano foi a <b>Mineração de Ouro</b>, que fundou cidades como Vila Boa (Goiás)." 
+    },
+    { 
+        id: 2028, s: 'g', p: 2, tema: "Geografia de GO",
+        q: "Ponto mais alto de Goiás:",
+        o: ["Pico da Bandeira", "Pouso Alto", "Serra Dourada", "Morro do Alemão", "Chapada dos Guimarães"], 
+        a: 1, 
+        e: "<b>Relevo:</b> O <b>Pouso Alto</b>, na Chapada dos Veadeiros (Alto Paraíso), é o cume do estado com 1.691m." 
+    },
+    { 
+        id: 2029, s: 'g', p: 2, tema: "História de GO",
+        q: "Vila Boa é o antigo nome de:",
+        o: ["Goiânia", "Cidade de Goiás", "Anápolis", "Pirenópolis", "Caldas Novas"], 
+        a: 1, 
+        e: "<b>História:</b> Fundada pelo Anhanguera, a Vila Boa de Goyaz foi a capital por mais de 200 anos." 
+    },
+    { 
+        id: 2030, s: 'g', p: 2, tema: "Geografia de GO",
+        q: "Clima predominante em GO:",
+        o: ["Equatorial", "Tropical de Altitude/Savana", "Semiárido", "Subtropical", "Temperado"], 
+        a: 1, 
+        e: "<b>Climatologia:</b> O clima predominante é o <b>Tropical</b>, caracterizado por duas estações bem definidas (seca e chuvosa)." 
+    },
 
 
 
@@ -818,7 +1030,77 @@ const bancoDeDadosGeral = [
   ],
   e: "Sinais balançados (XLR) são essenciais em estúdios para evitar o 'hum' de interferência elétrica." 
 },
-
+// --- CONHECIMENTOS ESPECÍFICOS (OPERADOR DE CARACTERES) ---
+    { 
+        id: 2031, s: 'e', p: 3, tema: "Equipamentos de TV",
+        q: "Sigla GC em TV significa:",
+        o: ["Grade Curricular", "Gerador de Caracteres", "Guia de Cores", "Gravação de Canal", "Grupo de Controle"], 
+        a: 1, 
+        e: "<b>Técnico:</b> O GC é o software/equipamento responsável por gerar as tarjas de nomes e informações no vídeo." 
+    },
+    { 
+        id: 2032, s: 'e', p: 3, tema: "Vídeo e Formatos",
+        q: "Aspect Ratio padrão HD:",
+        o: ["4:3", "16:9", "21:9", "1:1", "16:10"], 
+        a: 1, 
+        e: "<b>Padrão:</b> O formato widescreen (TV Digital) utiliza a proporção <b>16 por 9</b>." 
+    },
+    { 
+        id: 2033, s: 'e', p: 3, tema: "Composição Visual",
+        q: "Safe Area serve para:",
+        o: ["Esfriar o processador", "Evitar corte de textos na borda", "Guardar backups", "Definir a cor do fundo", "Bloquear usuários"], 
+        a: 1, 
+        e: "<b>Produção:</b> A <b>Safe Area</b> garante que os caracteres não fiquem cortados em diferentes modelos de TV." 
+    },
+    { 
+        id: 2034, s: 'e', p: 3, tema: "Vídeo e Formatos",
+        q: "Canal Alpha representa:",
+        o: ["Cor Vermelha", "Transparência", "Brilho", "Saturação", "Contraste"], 
+        a: 1, 
+        e: "<b>Técnico:</b> Em computação gráfica, o canal <b>Alpha</b> define o nível de transparência de uma imagem ou caractere." 
+    },
+    { 
+        id: 2035, s: 'e', p: 3, tema: "Produção Legislativa",
+        q: "GC legislativo padrão identifica:",
+        o: ["Nome e Endereço", "Nome, Partido e Cargo", "Salário do Deputado", "Tempo de mandato", "CPF do orador"], 
+        a: 1, 
+        e: "<b>Padrão TV Senado:</b> A identificação clássica em sessões solenes é composta pelo Nome completo, Partido e Unidade Federativa/Cargo." 
+    },
+    { 
+        id: 2036, s: 'e', p: 3, tema: "Equipamentos de TV",
+        q: "Conector de vídeo profissional SDI:",
+        o: ["RCA", "BNC", "HDMI", "P10", "VGA"], 
+        a: 1, 
+        e: "<b>Conectores:</b> O conector <b>BNC</b> é o padrão utilizado para cabos SDI (Serial Digital Interface) em estúdios de TV." 
+    },
+    { 
+        id: 2037, s: 'e', p: 3, tema: "Terminologia TV",
+        q: "Texto Crawling corre na:",
+        o: ["Vertical de baixo para cima", "Horizontal da direita para esquerda", "Diagonal", "Somente no centro", "De cima para baixo"], 
+        a: 1, 
+        e: "<b>Técnico:</b> <b>Crawl</b> é o texto que corre horizontalmente (geralmente notícias), enquanto <b>Roll</b> corre na vertical (créditos)." 
+    },
+    { 
+        id: 2038, s: 'e', p: 3, tema: "Produção de GC",
+        q: "Template é um:",
+        o: ["Erro de sistema", "Modelo pré-formatado", "Hardware de captura", "Manual impresso", "Cabo de rede"], 
+        a: 1, 
+        e: "<b>Produtividade:</b> O uso de <b>Templates</b> garante a agilidade e o padrão visual da identidade da emissora." 
+    },
+    { 
+        id: 2039, s: 'e', p: 3, tema: "Terminologia TV",
+        q: "Chroma Key substitui:",
+        o: ["O áudio", "Uma cor por imagem/cenário", "A lente da câmera", "O brilho da luz", "A resolução do vídeo"], 
+        a: 1, 
+        e: "<b>Efeito:</b> Técnica de sobreposição onde se isola uma cor (verde ou azul) para inserir cenários virtuais." 
+    },
+    { 
+        id: 2040, s: 'e', p: 3, tema: "Composição Visual",
+        q: "Essencial para leitura de GC:",
+        o: ["Fonte com serifa pequena", "Alto contraste entre letra e fundo", "Usar todas as cores do arco-íris", "Colocar o texto em cima do rosto", "Usar transparência de 90% na letra"], 
+        a: 1, 
+        e: "<b>Diretriz:</b> Para garantir a <b>Legibilidade</b>, é obrigatório o uso de alto contraste e fontes limpas (geralmente sem serifa)." 
+    },
 
 
 
