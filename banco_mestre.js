@@ -251,8 +251,8 @@ const bancoDeDadosGeral = [
     { 
         id: 1208, s: 'p', p: 2, tema: "Novo Acordo Ortográfico",
         q: "Em qual dessas palavras o hífen foi utilizado CORRETAMENTE após o Novo Acordo?",
-        o: ["Micro-ondas", "Anti-inflamatório", "Auto-escola", "Ambas A e B estão corretas."], 
-        a: 3, 
+        o: ["Micro-ondas", "Anti inflamatório", "Auto-escola", "Autoimune."], 
+        a: 0, 
         e: "<b>Regra dos Opostos:</b> Letras iguais se separam com hífen (Micro-ondas, Anti-inflamatório). Letras diferentes se unem (Autoescola)." 
     },
     { 
