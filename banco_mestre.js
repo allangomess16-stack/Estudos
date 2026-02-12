@@ -1456,49 +1456,74 @@ const bancoDeDadosGeral = [
     
   
     // --- LÍNGUA PORTUGUESA (1-8) ---
+   
     { 
         id: 3001, s: 'p', p: 2, tema: "ALEGO - Português",
-        q: `<div class="texto-base">
+        q: `<div style="background:#f1f3f5; padding:15px; border-left:4px solid #002855; margin-bottom:15px; font-style:italic; font-size:0.95em;">
             "O empresário Danilo Bastos comprou cenários e guarda-roupa para uma peça sobre Lucrécia Bórgia. Contratou Nestor de Holanda para escrever o texto e deixou claro:<br>
             - O primeiro ato termina com Alexandre VI coroando Lucrécia rainha da Itália.<br>
             Nestor se admirou:<br>
             - Lucrécia nunca foi rainha da Itália.<br>
             Danilo não quis saber:<br>
-            - Ah, se nunca foi, vai ser. Gastei mais de um milhão nos cenários e no guarda-roupa. Não posso perder esse dinheiro."
-            <span class="ref-texto">(Livro dos Erros - Mário Goulart)</span>
+            - Ah, se nunca foi, vai ser. Gastei mais de um milhão nos cenários e no guarda-roupa. Não posso perder esse dinheiro."<br>
+            <span style="display:block; text-align:right; font-size:0.8em; margin-top:5px;">(Livro dos Erros - Mário Goulart)</span>
             </div>
             Sobre o texto acima, assinale a opção que mostra uma observação INADEQUADA sobre o emprego de nomes próprios:`,
-        o: ["'Danilo Bastos' aparece identificado por 'empresário' por, presumivelmente, não ser conhecido.", "'Danilo Bastos' aparece com nome e sobrenome por ser personagem de alguma formalidade.", "'Lucrécia Bórgia' e 'Alexandre VI' não aparecem identificados por serem bem conhecidos.", "Tanto 'Danilo Bastos' como 'Lucrécia Bórgia' podem ser identificados pelo prenome ou sobrenome.", "'Nestor de Holanda' é identificado por 'Nestor' na continuidade."], 
+        o: [
+            "'Danilo Bastos' aparece identificado por 'empresário' por, presumivelmente, não ser conhecido por boa parte dos leitores.",
+            "'Danilo Bastos' aparece com nome e sobrenome por ser personagem de alguma formalidade.",
+            "'Lucrécia Bórgia' e 'Alexandre VI' não aparecem identificados por serem, segundo o autor, bem conhecidos.",
+            "Tanto 'Danilo Bastos' como 'Lucrécia Bórgia' podem ser identificados, na continuidade, pelo prenome ou sobrenome.",
+            "'Nestor de Holanda' é identificado por 'Nestor' na continuidade do texto, por já ter sido citado antes."
+        ], 
         a: 1, 
-        e: "<b>Interpretação:</b> A opção B é inadequada. O uso de nome completo na primeira citação é uma norma jornalística de apresentação, não um sinal de 'cerimônia' ou formalidade excessiva." 
+        e: "<b>Interpretação:</b> A opção B é inadequada. O uso de nome completo na primeira citação é uma norma jornalística de apresentação para situar o leitor, não um sinal de 'cerimônia' ou formalidade excessiva." 
     },
     { 
         id: 3002, s: 'p', p: 2, tema: "ALEGO - Português",
-        q: "No trecho 'deixou claro', o termo 'claro' é um adjetivo com função de advérbio. Assinale a opção onde ocorre o mesmo processo:",
-        o: ["O vendeiro foi direito ao grupo.", "Tudo ali prosperava forte em grosso.", "Ele deve estar ensopado de suor.", "Via-se uma miserável estrebaria.", "Um octogenário seco, que parecia mumificado."], 
+        q: `No segmento do texto "e deixou claro", o termo "claro" é um adjetivo que funciona como advérbio (= claramente). Assinale a opção em que ocorre o mesmo processo.`,
+        o: [
+            "O vendeiro foi direito ao grupo.",
+            "Tudo ali prosperava forte em grosso.",
+            "Ele deve estar ensopado de suor.",
+            "Via-se uma miserável estrebaria.",
+            "Um octogenário seco, que parecia mumificado."
+        ], 
         a: 0, 
-        e: "<b>Morfologia:</b> Em 'foi direito', o adjetivo 'direito' modifica o verbo 'ir', significando 'diretamente' (modo), assim como 'claro' modifica 'deixou'." 
+        e: "<b>Morfologia:</b> Em 'foi direito', o adjetivo 'direito' modifica o verbo 'ir', significando 'diretamente' (advérbio de modo), assim como 'claro' modifica 'deixou'." 
     },
     { 
         id: 3003, s: 'p', p: 2, tema: "ALEGO - Português",
-        q: "Sobre o uso do gerúndio, assinale a única frase incorreta retirada de 'O Cortiço':",
-        o: ["Você quer encarregar-se disto? ... parando ambos à espera do bonde.", "...era vista com frequência ... empinando muito a barriga.", "...que muitas vezes lhe arrancara lágrimas ... declamando no teatro.", "O rapaz não respondeu à carta, e, daí a meses, desaparecendo Pombinha ... essa quase morre.", "A cadeia continuava ... o cortiço estava preparando uma nova prostituta."], 
+        q: `Assinale a opção que apresenta a única frase, retirada do romance O Cortiço, de Aluísio Azevedo, que se mostra gramaticalmente incorreta quanto ao emprego do gerúndio.`,
+        o: [
+            "Você quer encarregar-se disto? ... parando ambos à espera do bonde.",
+            "...era vista com frequência ... empinando muito a barriga para a frente.",
+            "...que muitas vezes lhe arrancara, a ele, sinceras lágrimas ... declamando no teatro.",
+            "O rapaz não respondeu à carta, e, daí a meses, desaparecendo Pombinha ... essa quase morre.",
+            "A cadeia continuava ... o cortiço estava preparando uma nova prostituta."
+        ], 
         a: 3, 
-        e: "<b>Sintaxe:</b> O gerúndio 'desaparecendo' cria uma oração reduzida que soa desconexa temporalmente ('daí a meses') em relação ao desfecho da frase." 
+        e: "<b>Sintaxe:</b> O gerúndio 'desaparecendo' cria uma oração reduzida que soa desconexa temporalmente ('daí a meses') em relação ao desfecho da frase, indicando uma ação posterior e não simultânea." 
     },
     { 
         id: 3004, s: 'p', p: 2, tema: "ALEGO - Português",
-        q: "No texto da questão 1, 'o texto' retoma 'peça' (hipocorístico/sinônimo). O mesmo tipo de retomada ocorre em:",
-        o: ["O armário do quarto era pesado ... transportar a peça.", "A obra era bastante volumosa ... a leitura do romance.", "Atrás da porta estava uma eletrola ... notava a sua presença.", "O enfermo deixava o remédio ... tomar o medicamento.", "Havia muitos indígenas ... interesse dos povos originários."], 
+        q: `No texto, o termo "peça" é retomado por "o texto". Esse tipo de retomada, por meio de um termo de significação mais ampla (hiperônimo), ocorre também em:`,
+        o: [
+            "O armário do quarto era pesado ... transportar a peça.",
+            "A obra era bastante volumosa ... a leitura do romance.",
+            "Atrás da porta estava uma eletrola ... notava a sua presença.",
+            "O enfermo deixava o remédio ... tomar o medicamento.",
+            "Havia muitos indígenas ... interesse dos povos originários."
+        ], 
         a: 3, 
-        e: "<b>Coesão:</b> 'Medicamento' é um hiperônimo (termo mais geral) usado para retomar 'Remédio', evitando repetição." 
+        e: "<b>Coesão:</b> 'Medicamento' é um hiperônimo (termo mais geral/classe) usado para retomar 'Remédio' (termo específico), evitando repetição." 
     },
     { 
         id: 3005, s: 'p', p: 2, tema: "ALEGO - Português",
-        q: `<div class="texto-base">
+        q: `<div style="background:#f1f3f5; padding:15px; border-left:4px solid #002855; margin-bottom:15px; font-style:italic; font-size:0.95em;">
             "O bispo de Botucatu encomendou pinturas religiosas a Cândido Portinari. Na entrega das obras, o bispo começou a fazer observações, criticando isto e aquilo. Portinari logo o interrompeu:<br>
-            - O senhor, na sua profissão é bispo. Eu, na minha, sou papa."
-            <span class="ref-texto">(Livro dos Erros - Mário Goulart)</span>
+            - O senhor, na sua profissão é bispo. Eu, na minha, sou papa."<br>
+            <span style="display:block; text-align:right; font-size:0.8em; margin-top:5px;">(Livro dos Erros - Mário Goulart)</span>
             </div>
             O texto acima apresenta qual modo de organização discursiva?`,
         o: ["Dissertativo-argumentativo.", "Dissertativo-expositivo.", "Narrativo.", "Descritivo.", "Injuntivo."], 
@@ -1507,338 +1532,533 @@ const bancoDeDadosGeral = [
     },
     { 
         id: 3006, s: 'p', p: 2, tema: "ALEGO - Português",
-        q: "Ainda sobre o texto do Bispo e Portinari (Questão 3005), assinale a correta:",
-        o: ["Há uma crítica indireta ao bispo no primeiro período.", "As pinturas foram designadas 'obras' para valorizá-las.", "Os pronomes 'isto e aquilo' não têm antecedentes.", "As palavras 'bispo' e 'papa' estão em sentido figurado.", "As comparações mostram a superioridade de ambos em seus campos."], 
+        q: `Sobre a significação do texto do Bispo e Portinari (citado na questão anterior), assinale a afirmativa correta:`,
+        o: [
+            "Há uma crítica indireta ao bispo de Botucatu no primeiro período.",
+            "As pinturas foram designadas 'obras' para valorizá-las.",
+            "Os pronomes 'isto e aquilo' não têm antecedentes.",
+            "As palavras 'bispo' e 'papa' estão em sentido figurado.",
+            "As comparações mostram a superioridade de ambos em seus respectivos campos."
+        ], 
         a: 4, 
-        e: "<b>Interpretação:</b> A resposta de Portinari ('Eu, na minha, sou papa') estabelece que, assim como o bispo manda na igreja, o pintor é a autoridade máxima em sua arte." 
+        e: "<b>Interpretação:</b> A resposta de Portinari ('Eu, na minha, sou papa') estabelece que, assim como o bispo manda na igreja, o pintor é a autoridade máxima em sua arte, igualando ou superando a hierarquia." 
     },
     { 
         id: 3007, s: 'p', p: 2, tema: "ALEGO - Português",
-        q: "Assinale a frase em que a substituição do verbo 'pôr' por outro mais específico é ADEQUADA:",
-        o: ["Pois já puseram internet (uniram).", "O menino se pôs debaixo da mesa (enfiou).", "O médico pôs uma pomada (aconselhou).", "Que ponhamos os livros em ordem (situemos).", "Tinha que pôr mais açúcar (juntar)."], 
+        q: `Assinale a frase em que a substituição do verbo "pôr" pelo verbo indicado entre parênteses é ADEQUADA:`,
+        o: [
+            "Pois já puseram internet (uniram).",
+            "O menino se pôs debaixo da mesa (enfiou).",
+            "O médico pôs uma pomada (aconselhou).",
+            "Que ponhamos os livros em ordem (situemos).",
+            "Tinha que pôr mais açúcar (juntar)."
+        ], 
         a: 1, 
-        e: "<b>Semântica:</b> 'Enfiou-se' ou 'Meteu-se' debaixo da mesa são sinônimos coloquiais válidos para 'se pôs' neste contexto." 
+        e: "<b>Semântica:</b> 'Enfiou-se' ou 'Meteu-se' debaixo da mesa são sinônimos coloquiais válidos para 'se pôs' neste contexto de entrar em local apertado." 
     },
     { 
         id: 3008, s: 'p', p: 2, tema: "ALEGO - Português",
-        q: `<div class="texto-base">"Gosto de ir aos cemitérios, admirar os túmulos dos que venceram na vida". (Eno Teodoro Wanke)</div>
-            Sobre a frase acima, assinale a correta:`,
-        o: ["A norma culta recomenda 'nos cemitérios'.", "A vírgula mostra que são duas ações distintas.", "O sujeito de 'gostar' não é identificável.", "O substantivo 'túmulos' tem artigo definido pois está determinado.", "O sufixo 'tério' significa 'morte'."], 
+        q: `<div style="background:#f1f3f5; padding:15px; border-left:4px solid #002855; margin-bottom:15px; font-style:italic; font-size:0.95em;">
+            "Gosto de ir aos cemitérios, admirar os túmulos dos que venceram na vida". (Eno Teodoro Wanke)
+            </div>
+            Sobre a frase acima, assinale a afirmativa correta:`,
+        o: [
+            "A norma culta recomenda 'nos cemitérios'.",
+            "A vírgula mostra que são duas ações distintas (ir e admirar).",
+            "O sujeito de 'gostar' não é identificável.",
+            "O substantivo 'túmulos' tem artigo definido pois está determinado ('dos que venceram').",
+            "O sufixo 'tério' significa 'morte'."
+        ], 
         a: 3, 
-        e: "<b>Sintaxe:</b> O artigo 'os' em 'os túmulos' é obrigatório porque o termo é seguido de uma restrição: 'dos que venceram na vida'." 
+        e: "<b>Sintaxe:</b> O artigo 'os' em 'os túmulos' é obrigatório porque o termo é seguido de uma restrição determinativa: 'dos que venceram na vida'." 
     },
 
-    // --- RACIOCÍNIO LÓGICO (9-11) ---
+    // =================================================================================
+    // RACIOCÍNIO LÓGICO (Questões 9 a 11)
+    // =================================================================================
     { 
         id: 3009, s: 'r', p: 2, tema: "ALEGO - Raciocínio Lógico",
-        q: "Considere verdadeiras: O carro é preto; A moto não é branca; A bicicleta é vermelha. É correto concluir que:",
-        o: ["Se carro preto e moto não branca, bike não vermelha.", "Se carro não preto ou moto não branca, bike não vermelha.", "Se bike não vermelha ou carro preto, moto branca.", "Se bike não vermelha e carro preto, então moto branca.", "Se moto não branca, carro não preto."], 
+        q: `Considere como verdadeiras as seguintes sentenças:<br>
+            I. O carro é preto.<br>
+            II. A moto não é branca.<br>
+            III. A bicicleta é vermelha.<br>
+            É correto concluir que:`,
+        o: [
+            "Se o carro é preto e a moto não é branca, então a bicicleta não é vermelha.",
+            "Se o carro não é preto ou a moto não é branca, então a bicicleta não é vermelha.",
+            "Se a bicicleta não é vermelha ou o carro é preto, então a moto é branca.",
+            "Se a bicicleta não é vermelha e o carro é preto, então a moto é branca.",
+            "Se a moto não é branca, então o carro não é preto."
+        ], 
         a: 3, 
-        e: "<b>Lógica:</b> Testando a opção D: Se Bike Não Vermelha (F) E Carro Preto (V), então... O antecedente (F e V) é Falso. Na condicional, se o 'Se' é Falso, a frase inteira é Verdadeira." 
+        e: "<b>Lógica:</b> Vamos analisar a opção D: 'Se a bicicleta não é vermelha (F) e o carro é preto (V)...'. O antecedente (F e V) resulta em FALSO. Em uma condicional, se o 'Se' é Falso, a proposição inteira é automaticamente VERDADEIRA." 
     },
     { 
         id: 3010, s: 'r', p: 2, tema: "ALEGO - Raciocínio Lógico",
-        q: "Equivalência de: 'Se a bola é branca e a caixa não é azul, então a ficha é vermelha'.",
-        o: ["Se a bola não é branca e a caixa é azul, ficha não é vermelha.", "Se a ficha é vermelha, bola é branca...", "A bola não é branca ou a caixa é azul ou a ficha é vermelha.", "A bola não é branca ou a caixa não é azul ou a ficha é vermelha.", "Bola branca e caixa azul."], 
+        q: `Uma sentença logicamente equivalente a: "Se a bola é branca e a caixa não é azul, então a ficha é vermelha" é:`,
+        o: [
+            "Se a bola não é branca e a caixa é azul, então a ficha não é vermelha.",
+            "Se a ficha é vermelha, então a bola é branca e a caixa não é azul.",
+            "A bola não é branca ou a caixa é azul ou a ficha é vermelha.",
+            "A bola não é branca ou a caixa não é azul ou a ficha é vermelha.",
+            "A bola não é branca e a caixa é azul e a ficha é vermelha."
+        ], 
         a: 2, 
-        e: "<b>Equivalência:</b> Regra da Disjunção (~P v Q). Negamos o antecedente (Bola Branca E Caixa ~Azul) que vira (Bola ~Branca OU Caixa Azul) e mantemos o consequente (Ficha Vermelha)." 
+        e: "<b>Equivalência:</b> Aplicando a regra da Disjunção (~P v Q). Negamos o antecedente (Bola Branca E Caixa ~Azul) pela Lei de De Morgan, resultando em (Bola ~Branca OU Caixa Azul). Mantemos o consequente (Ficha Vermelha)." 
     },
     { 
         id: 3011, s: 'r', p: 2, tema: "ALEGO - Raciocínio Lógico",
-        q: "Na sequência (5, 4, -1, -5, -4, ...), onde cada termo a partir do 3º é a diferença dos anteriores, qual o 2025º termo?",
+        q: `Considere a sequência (5, 4, -1, -5, -4, ...), onde cada termo, a partir do terceiro, é a diferença entre o penúltimo e o último termo. O 2025º termo dessa sequência é:`,
         o: ["-5", "-4", "-1", "1", "4"], 
         a: 2, 
-        e: "<b>Sequências:</b> A sequência repete a cada 6 números (5, 4, -1, -5, -4, 1). Dividindo 2025 por 6, o resto é 3. O 3º termo é -1." 
+        e: "<b>Sequências:</b> A sequência completa é cíclica: 5, 4, -1, -5, -4, 1... (repete a cada 6 números). Dividindo 2025 por 6, obtemos resto 3. Logo, o termo procurado é o 3º da sequência, que é -1." 
     },
 
-    // --- INFORMÁTICA (12-14) ---
+    // =================================================================================
+    // INFORMÁTICA (Questões 12 a 14)
+    // =================================================================================
     { 
         id: 3012, s: 'i', p: 1, tema: "ALEGO - Informática",
-        q: "No Windows 10, caminho para configurar mouse para canhoto e plano de energia alto desempenho:",
-        o: ["Painel de Controle -> Hardware...", "Configurações -> Dispositivos -> Mouse -> Botão principal e Configurações -> Sistema -> Tela.", "Configurações -> Dispositivos -> Mouse -> Botão principal e Configurações -> Sistema -> Energia.", "Configurações -> Facilidade de Acesso...", "Painel de Controle -> Facilidade..."], 
+        q: `Assinale a opção que indica o caminho completo no Windows 10 (versão português) para acessar, em uma única janela, a configuração para usuários canhotos do mouse e o plano de energia para alto desempenho:`,
+        o: [
+            "Painel de Controle -> Hardware e Sons -> Mouse e Painel de Controle -> Hardware e Sons -> Opções de Energia.",
+            "Configurações (Windows + I) -> Dispositivos -> Mouse -> Escolher o botão principal e Configurações -> Sistema -> Tela.",
+            "Configurações (Windows + I) -> Dispositivos -> Mouse -> Escolher o botão principal e Configurações -> Sistema -> Energia e suspensão -> Configurações de energia adicionais.",
+            "Configurações (Windows + I) -> Facilidade de Acesso -> Mouse -> Usar teclado numérico e Configurações -> Sistema -> Sobre.",
+            "Painel de Controle -> Facilidade de Acesso -> Central de Facilidade de Acesso e Configurações -> Atualização e Segurança -> Recuperação."
+        ], 
         a: 2, 
-        e: "<b>Windows 10:</b> O mouse fica em 'Dispositivos' e as opções de energia avançadas ficam em 'Sistema > Energia e Suspensão'." 
+        e: "<b>Windows 10:</b> As configurações de mouse (botão primário) ficam em 'Dispositivos'. As opções de energia avançadas são acessadas via 'Sistema > Energia e Suspensão' e depois no link para configurações adicionais." 
     },
     { 
         id: 3013, s: 'i', p: 1, tema: "ALEGO - Informática",
-        q: "Para criar tabela comparativa com cálculos automáticos e gráficos na ALEGO, o formato ideal é:",
-        o: [".XLSX", ".PPTX", ".DOCX", ".ACCDB", ".PNG"], 
+        q: `Para criar uma tabela comparativa na ALE-GO com valores orçados e executados, permitindo cálculos automáticos (percentuais e variações) e geração de gráficos, o tipo de arquivo mais adequado é:`,
+        o: [
+            "Uma planilha eletrônica (formato .XLSX).",
+            "Uma apresentação de slides (formato .PPTX).",
+            "Um documento de texto (formato .DOCX).",
+            "Um banco de dados (formato .ACCDB).",
+            "Um arquivo de imagem (formato .PNG)."
+        ], 
         a: 0, 
-        e: "<b>Excel:</b> O formato .XLSX (Planilha) é o padrão para manipulação de dados numéricos, fórmulas e gráficos." 
+        e: "<b>Excel:</b> O formato .XLSX é o padrão nativo para planilhas eletrônicas, ideal para manipulação de dados numéricos, fórmulas e visualização gráfica." 
     },
     { 
         id: 3014, s: 'i', p: 1, tema: "ALEGO - Informática",
-        q: "Anúncio diz: 'SEU COMPUTADOR PODE ESTAR INFECTADO! CLIQUE AQUI!'. Essa prática é:",
+        q: `Ao acessar um site de notícias, um Assessor Legislativo vê o anúncio: "SEU COMPUTADOR PODE ESTAR INFECTADO! CLIQUE AQUI PARA VERIFICAR AGORA!". Essa prática maliciosa, que usa falsos alertas para enganar o usuário, é conhecida como:`,
         o: ["Phishing.", "Spam.", "Ransomware.", "Backdoor.", "Scareware."], 
         a: 4, 
-        e: "<b>Segurança:</b> Scareware é o software malicioso que usa o medo (scare) e falsos alertas para enganar o usuário." 
+        e: "<b>Segurança:</b> O termo correto é <b>Scareware</b> (software do medo). Ele simula um problema de segurança para induzir o usuário a baixar malware ou comprar serviços falsos." 
     },
 
-    // --- HISTÓRIA E GEOGRAFIA DE GOIÁS (15-17) ---
+    // =================================================================================
+    // HISTÓRIA E GEOGRAFIA DE GOIÁS (Questões 15 a 17)
+    // =================================================================================
     { 
         id: 3015, s: 'g', p: 2, tema: "ALEGO - História GO",
-        q: `<div class="texto-base">
-            "O ambiente de sadia renovação, gerado no país pela vitória da Revolução de 30, não ficou, felizmente, restrito aos Estados mais adiantados. A transformação operou-se também em Goiás [...] A nossa atitude decorre tanto do desejo de darmos a este grande Estado o ritmo de evolução que lhe é próprio..."
-            <span class="ref-texto">(Pedro Ludovico Teixeira, 1934)</span>
+        q: `<div style="background:#f1f3f5; padding:15px; border-left:4px solid #002855; margin-bottom:15px; font-style:italic; font-size:0.95em;">
+            "O ambiente de sadia renovação, gerado no país pela vitória da Revolução de 30, não ficou, felizmente, restrito aos Estados mais adiantados. A transformação operou-se também em Goiás [...] A nossa atitude decorre tanto do desejo de darmos a este grande Estado o ritmo de evolução que lhe é próprio..."<br>
+            <span style="display:block; text-align:right; font-size:0.8em; margin-top:5px;">(Pedro Ludovico Teixeira, 1934)</span>
             </div>
-            Com base na leitura do texto, assinale a opção que indica corretamente os motivos pelos quais Pedro Ludovico propôs a mudança da capital:`,
-        o: ["Favorecer oligarquias.", "Vantagens pessoais.", "Aproximar do litoral.", "Romper com antigas estruturas e modernizar.", "Crescimento populacional via ferrovia."], 
+            Com base na leitura do texto e nos conhecimentos sobre o período, assinale a opção que indica corretamente os motivos pelos quais Pedro Ludovico propôs a mudança da capital:`,
+        o: [
+            "Favorecer as oligarquias rurais do interior.",
+            "Vantagens pessoais e gastos excessivos.",
+            "Aproximar a capital do litoral brasileiro.",
+            "Romper com as antigas estruturas políticas (Coronelismo) e modernizar o estado.",
+            "Utilizar a estrutura ferroviária já existente."
+        ], 
         a: 3, 
-        e: "<b>Mudancismo:</b> O objetivo central era político e econômico: quebrar a influência dos Coronéis da antiga capital e integrar Goiás à modernidade." 
+        e: "<b>Mudancismo:</b> O objetivo central era político: enfraquecer as oligarquias da Cidade de Goiás (Vila Boa) e alinhar o estado ao projeto modernizador de Getúlio Vargas (Marcha para o Oeste)." 
     },
     { 
         id: 3016, s: 'g', p: 2, tema: "ALEGO - Geografia GO",
-        q: `<div class="texto-base">
+        q: `<div style="background:#f1f3f5; padding:15px; border-left:4px solid #002855; margin-bottom:15px; font-style:italic; font-size:0.95em;">
             "As cidades mais populosas do Estado, Goiânia e Aparecida de Goiânia, seguem crescendo, mas a um ritmo mais lento que o estadual: enquanto a população de Goiás cresceu exato 1% entre 2024 e 2025, a de Goiânia e Aparecida aumentaram, respectivamente, 0,58% e 0,92%..."
-            <span class="ref-texto">(Adaptado de Agência Assembleia de Notícias)</span>
             </div>
-            Goiânia cresce menos que a média do estado. Isso pode ser explicado por:`,
-        o: ["Baixo custo habitacional em Goiânia.", "Proximidade de Valparaíso com DF.", "Aumento de áreas rurais em Aparecida.", "Industrialização de Caldas Novas.", "Oferta de empregos em Catalão atraindo pessoas."], 
+            O texto aponta que Goiânia cresce menos que a média do estado. Isso pode ser explicado principalmente por:`,
+        o: [
+            "Baixo custo habitacional em Goiânia.",
+            "Proximidade de Valparaíso com o Distrito Federal.",
+            "Aumento de áreas rurais em Aparecida.",
+            "Industrialização de Caldas Novas.",
+            "Oferta de empregos e desenvolvimento econômico em cidades do interior (Descentralização)."
+        ], 
         a: 4, 
-        e: "<b>Demografia:</b> O texto cita crescimento alto em cidades do interior como Catalão (1,61%), explicado pela descentralização econômica (mineração/indústria)." 
+        e: "<b>Demografia:</b> Ocorre uma desconcentração econômica. Polos regionais como Rio Verde (Agro), Catalão (Mineração) e Anápolis (Indústria) atraem a população que antes migrava apenas para a capital." 
     },
     { 
         id: 3017, s: 'g', p: 2, tema: "ALEGO - Geografia GO",
-        q: "Comparando fotos de Goiânia 1960 e 2025 (não exibidas). Analise: (I) Urbanização pressiona saneamento/dengue. (II) Impermeabilização causa alagamentos. (III) Aumento de infraestrutura resolveu desafios de mobilidade.",
-        o: ["V-V-F", "V-F-V", "F-F-V", "F-V-F", "V-V-V"], 
+        q: `Comparando fotos de Goiânia de 1960 e 2025 (descritas no enunciado original), analise as afirmativas sobre os impactos da urbanização:<br>
+            I. O crescimento urbano desordenado pressiona os serviços de saneamento e favorece doenças como a dengue.<br>
+            II. A impermeabilização do solo pelo asfalto agrava problemas de alagamentos e enchentes.<br>
+            III. O aumento da infraestrutura viária resolveu definitivamente os desafios de mobilidade urbana.<br>
+            Está correto o que se afirma em:`,
+        o: ["I e II, apenas.", "I e III, apenas.", "II e III, apenas.", "I, apenas.", "I, II e III."], 
         a: 0, 
-        e: "<b>Urbanização:</b> Itens I e II são consequências clássicas. O item III é Falso porque a mobilidade não foi resolvida, pelo contrário, o aumento da frota de veículos sobrecarrega as vias." 
+        e: "<b>Urbanização:</b> Itens I e II são consequências clássicas e verdadeiras. O item III é Falso, pois a mobilidade urbana (trânsito) continua sendo um dos maiores desafios da capital, não foi resolvido." 
     },
 
-    // --- LEGISLAÇÃO E DIREITO (18-26) ---
+    // =================================================================================
+    // LEGISLAÇÃO E DIREITO (Questões 18 a 26)
+    // =================================================================================
     { 
         id: 3018, s: 'd', p: 2, tema: "ALEGO - Regulamento",
-        q: "O retorno ao serviço do servidor em disponibilidade é denominado:",
+        q: `O retorno à atividade de servidor em disponibilidade far-se-á mediante aproveitamento obrigatório em cargo de atribuições e vencimentos compatíveis com o anteriormente ocupado. Esse retorno é tecnicamente denominado:`,
         o: ["Readaptação.", "Aproveitamento.", "Reversão.", "Recondução.", "Promoção."], 
         a: 1, 
-        e: "<b>Provimento:</b> O servidor que estava 'parado' (disponível) é <b>Aproveitado</b> quando surge vaga." 
+        e: "<b>Provimento:</b> Conforme o Estatuto, quem está em disponibilidade deve ser <b>APROVEITADO</b> quando surge vaga compatível." 
     },
     { 
         id: 3019, s: 'd', p: 2, tema: "ALEGO - Regulamento",
-        q: "São deveres do servidor: (I) Assiduidade, (II) Pontualidade, (III) Urbanidade, (IV) Discrição.",
-        o: ["I e II.", "III e IV.", "I, II e III.", "II, III e IV.", "I, II, III e IV."], 
+        q: `São deveres fundamentais do servidor da ALEGO, conforme seu regulamento administrativo:<br>
+            I. Assiduidade.<br>
+            II. Pontualidade.<br>
+            III. Urbanidade.<br>
+            IV. Discrição.<br>
+            Estão corretos:`,
+        o: ["I e II, apenas.", "III e IV, apenas.", "I, II e III, apenas.", "II, III e IV, apenas.", "Todos os itens (I, II, III e IV)."], 
         a: 4, 
-        e: "<b>Deveres:</b> Todos os itens listados são obrigações funcionais básicas de qualquer servidor público." 
+        e: "<b>Deveres:</b> Todos os itens citados são deveres funcionais expressos no regulamento administrativo e no estatuto dos servidores." 
     },
     { 
         id: 3020, s: 'd', p: 2, tema: "ALEGO - Regulamento",
-        q: "Sobre aperfeiçoamento: (V/F) Dever de diligenciar aperfeiçoamento. (V/F) Dever de frequentar cursos designados. (V/F) ALEGO promoverá cursos pela Escola do Legislativo.",
-        o: ["V-V-V", "V-F-F", "F-V-F", "F-V-V", "V-V-F"], 
+        q: `Sobre o aperfeiçoamento profissional na ALEGO, analise:<br>
+            ( ) É dever do servidor diligenciar seu constante aperfeiçoamento.<br>
+            ( ) É dever frequentar cursos de treinamento e especialização designados.<br>
+            ( ) A ALEGO promoverá cursos através da Escola do Legislativo.<br>
+            A sequência correta (V/F) é:`,
+        o: ["V - V - V", "V - F - F", "F - V - F", "F - V - V", "V - V - F"], 
         a: 0, 
-        e: "<b>Capacitação:</b> O regulamento incentiva e obriga a qualificação contínua do servidor." 
+        e: "<b>Capacitação:</b> O aperfeiçoamento é tratado como direito e dever, sendo promovido institucionalmente pela Escola do Legislativo." 
     },
     { 
         id: 3021, s: 'd', p: 2, tema: "ALEGO - Constitucional",
-        q: "O Brasil buscará a integração econômica, política, social e cultural dos povos da:",
-        o: ["América Latina.", "Sul Global.", "América do Sul.", "América do Sul (social/política).", "América."], 
+        q: `Segundo o Art. 4º da Constituição Federal, a República Federativa do Brasil buscará a integração econômica, política, social e cultural dos povos da:`,
+        o: ["América Latina.", "Sul Global.", "América do Sul.", "Comunidade dos Países de Língua Portuguesa.", "América."], 
         a: 0, 
-        e: "<b>Art. 4º CF:</b> A República buscará a integração dos povos da <b>América Latina</b>, visando à formação de uma comunidade latino-americana de nações." 
+        e: "<b>Constituição:</b> O texto literal do parágrafo único do Art. 4º cita a integração dos povos da <b>América Latina</b>." 
     },
     { 
-        id: 3022, s: 'd', p: 2, tema: "ALEGO - Constitucional",
-        q: "André, 21 anos, quer ser Deputado Estadual SEM filiação partidária. Ele pode?",
-        o: ["Pode (sem idade mínima).", "Não (idade 30).", "Não (idade 30 condição).", "Pode (candidatura avulsa).", "Não (filiação partidária é condição)."], 
+        id: 3022, s: 'd', p: 2, tema: "ALEGO - Eleitoral",
+        q: `André, brasileiro nato, com 21 anos completos, deseja candidatar-se ao cargo de Deputado Estadual, mas não possui filiação partidária. Diante disso, é correto afirmar que:`,
+        o: [
+            "Pode candidatar-se, pois não há exigência de idade mínima.",
+            "Não pode, pois a idade mínima é 30 anos.",
+            "Não pode, pois a idade mínima é 30 anos e exige filiação.",
+            "Pode candidatar-se, pois a candidatura avulsa é permitida.",
+            "Não pode candidatar-se, pois a filiação partidária é condição de elegibilidade."
+        ], 
         a: 4, 
-        e: "<b>Elegibilidade:</b> A idade de 21 anos está correta para Deputado, mas a <b>Filiação Partidária</b> é obrigatória no Brasil." 
+        e: "<b>Elegibilidade:</b> A idade de 21 anos é suficiente para Deputado Estadual, mas a Constituição veda a candidatura avulsa. A <b>filiação partidária</b> é obrigatória." 
     },
     { 
         id: 3023, s: 'd', p: 2, tema: "ALEGO - Constitucional",
-        q: "Sobre Legislativo: ( ) Câmara compõe-se de representantes dos Estados. ( ) Número de Deps proporcional à população (min 10 max 70). ( ) Renovação 4/4 anos.",
-        o: ["F-V-F", "V-F-V", "F-F-F", "F-F-V", "V-V-F"], 
+        q: `Sobre o Poder Legislativo, assinale a afirmativa correta:<br>
+            ( ) A Câmara dos Deputados compõe-se de representantes dos Estados e do DF.<br>
+            ( ) O número total de Deputados é proporcional à população, não podendo ser inferior a 8 nem superior a 70.<br>
+            ( ) A representação de cada Estado será renovada de quatro em quatro anos, alternadamente, por um e dois terços.<br>
+            A classificação correta (V ou F) é:`,
+        o: ["F - V - F", "V - F - V", "F - F - F", "F - F - V", "V - V - F"], 
         a: 2, 
-        e: "<b>Poder Legislativo:</b> Todas Falsas. Câmara representa o POVO (Senado representa Estados). Mínimo é 8 (não 10). Renovação alternada é do Senado." 
+        e: "<b>Legislativo:</b> Todas Falsas. 1ª: Câmara representa o POVO (Senado representa Estados). 2ª: Mínimo é 8, Máximo é 70. 3ª: A renovação alternada (1/3 e 2/3) refere-se ao SENADO, não à Câmara." 
     },
     { 
-        id: 3024, s: 'd', p: 2, tema: "ALEGO - Dir. Adm.",
-        q: "Lei 14.133. Sobre o recebimento definitivo de obras:",
-        o: ["Exclui resp. civil.", "Testes por conta do Governo.", "Não exime projetista de responsabilidade.", "Prazos em lei específica.", "Rejeição se desacordo."], 
+        id: 3024, s: 'd', p: 2, tema: "ALEGO - Dir. Administrativo",
+        q: `De acordo com a Lei nº 14.133/2021 (Nova Lei de Licitações), sobre o recebimento de obras e serviços: O recebimento definitivo pela Administração:`,
+        o: [
+            "Exclui a responsabilidade civil pelo trabalho.",
+            "Implica a realização de testes de qualidade por conta do Governo.",
+            "Não exime o consultor ou projetista da responsabilidade técnica.",
+            "Deve ocorrer em prazos definidos em lei específica.",
+            "Permite a rejeição parcial apenas se houver desacordo técnico."
+        ], 
         a: 2, 
-        e: "<b>Contratos:</b> O recebimento definitivo pela Administração NÃO isenta o engenheiro/projetista de responsabilidade pela solidez e segurança da obra." 
+        e: "<b>Contratos:</b> O recebimento definitivo atesta a execução, mas NÃO isenta o responsável técnico (engenheiro/projetista) da responsabilidade pela solidez e segurança da obra nos prazos legais." 
     },
     { 
         id: 3025, s: 'd', p: 2, tema: "ALEGO - LGPD",
-        q: "São fundamentos da proteção de dados, EXCETO:",
-        o: ["Livre iniciativa e defesa do Poder Público.", "Desenvolvimento econômico.", "Cidadania.", "Livre personalidade.", "Autodeterminação informativa."], 
+        q: `A disciplina da proteção de dados pessoais tem como fundamentos, EXCETO:`,
+        o: ["Livre iniciativa e defesa do Poder Público.", "Desenvolvimento econômico e tecnológico.", "Inviolabilidade da intimidade, da honra e da imagem.", "Livre desenvolvimento da personalidade.", "Autodeterminação informativa."], 
         a: 0, 
-        e: "<b>LGPD:</b> O fundamento é a defesa do Consumidor e da Concorrência, não a 'defesa do Poder Público'." 
+        e: "<b>LGPD:</b> A lei protege a livre iniciativa e a livre concorrência, mas não cita a 'defesa do Poder Público' como fundamento. O foco é a proteção do titular dos dados." 
     },
     { 
         id: 3026, s: 'd', p: 2, tema: "ALEGO - Improbidade",
-        q: "Servidor comete improbidade (dano ao erário) e morre. O herdeiro:",
-        o: ["Paga dano e multa.", "Responde por ato doloso.", "Repara o dano até o limite da herança.", "Responde por enriquecimento.", "Responde por prejuízo."], 
+        q: `Caso um servidor cometa ato de improbidade administrativa que cause lesão ao patrimônio público e venha a falecer, a obrigação de reparar o dano:`,
+        o: [
+            "Extingue-se com a morte do agente.",
+            "Transfere-se aos herdeiros, que respondem integralmente com seus bens.",
+            "Transfere-se aos herdeiros, até o limite do valor da herança.",
+            "Limita-se aos bens adquiridos ilicitamente.",
+            "É convertida em multa civil aplicada ao espólio."
+        ], 
         a: 2, 
-        e: "<b>Lei 8.429:</b> A obrigação de reparar o dano estende-se aos sucessores, mas apenas até o <b>limite do valor da herança</b>." 
+        e: "<b>Lei 8.429:</b> O sucessor daquele que causar lesão ao patrimônio público está sujeito às cominações da lei <b>até o limite do valor da herança</b>." 
     },
 
-    // --- CONHECIMENTOS ESPECÍFICOS: TÉCNICO DE SOM (27-50) ---
+    // =================================================================================
+    // CONHECIMENTOS ESPECÍFICOS: TÉCNICO DE SOM (Questões 27 a 50)
+    // =================================================================================
     { 
         id: 3027, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Microfone condensador na mesa analógica sem sinal. Cabo ok. Causa mais provável:",
-        o: ["Impedância.", "Ganho alto.", "Falta de Phantom Power.", "Cabo balanceado.", "Compressão."], 
+        q: `Um técnico conecta um microfone condensador a uma entrada de microfone de uma mesa de som analógica, mas não observa sinal no medidor, embora o cabo esteja testado e funcionando. A causa mais provável é:`,
+        o: ["Impedância incompatível.", "Ganho de entrada muito alto.", "Ausência de alimentação phantom power (+48V).", "Uso de cabo balanceado.", "Falta de compressão dinâmica."], 
         a: 2, 
-        e: "<b>Microfones:</b> Condensadores precisam de +48V para polarizar a placa e alimentar o pré interno." 
+        e: "<b>Microfones:</b> Microfones condensadores possuem circuito ativo e exigem alimentação elétrica externa (+48V) para funcionar." 
     },
     { 
         id: 3028, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Relacione: (1) Pré-amp, (2) EQ, (3) Power Amp. () Eleva linha p/ caixa. () Mic p/ linha. () Frequências.",
-        o: ["3-1-2", "2-1-3", "1-3-2", "3-2-1", "1-2-3"], 
+        q: `Relacione os equipamentos às suas funções na cadeia de sinal:<br>
+            (1) Pré-amplificador<br>
+            (2) Equalizador<br>
+            (3) Amplificador de Potência<br><br>
+            ( ) Eleva o sinal de linha para nível de caixa acústica.<br>
+            ( ) Eleva o sinal de microfone para nível de linha.<br>
+            ( ) Altera o equilíbrio de frequências do sinal.<br>
+            A sequência correta é:`,
+        o: ["3 - 1 - 2", "2 - 1 - 3", "1 - 3 - 2", "3 - 2 - 1", "1 - 2 - 3"], 
         a: 0, 
-        e: "<b>Fluxo:</b> Amplificador (3) move a caixa. Pré (1) levanta o mic. EQ (2) ajusta frequência." 
+        e: "<b>Fluxo de Sinal:</b> O Power Amp (3) dá força para a caixa. O Pré (1) levanta o sinal fraco do mic. O EQ (2) ajusta o timbre." 
     },
     { 
         id: 3029, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Uso de microfone Shotgun em diálogos é adequado porque:",
-        o: ["Elimina som ambiente.", "Substitui tratamento.", "Só digital.", "Captação direcional (foco frontal).", "Independe da distância."], 
+        q: `O uso de um microfone do tipo "Shotgun" para captação de diálogos em vídeo é adequado principalmente porque:`,
+        o: [
+            "Elimina completamente o som ambiente.",
+            "Substitui o tratamento acústico da sala.",
+            "É um microfone exclusivamente digital.",
+            "Possui alta direcionalidade, isolando a fonte sonora frontal.",
+            "Sua resposta de frequência independe da distância."
+        ], 
         a: 3, 
-        e: "<b>Shotgun:</b> É altamente direcional (super/hipercardióide + tubo de interferência), isolando a fala à frente." 
+        e: "<b>Direcionalidade:</b> O Shotgun usa um tubo de interferência para cancelar sons laterais, tornando-se altamente direcional para captar à distância." 
     },
     { 
         id: 3030, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Volume do retorno diminui quando abaixa o P.A. O técnico deve:",
-        o: ["Aumentar ganho.", "Mudar Auxiliar para Pre-Fader.", "Inserir compressor.", "Usar Subgrupo.", "Tirar Mute."], 
+        q: `Durante a mixagem de monitor (retorno) para os músicos, o técnico percebe que ao abaixar o fader principal (P.A.), o volume nos monitores também diminui. Para corrigir isso e tornar a via de monitor independente, ele deve:`,
+        o: ["Aumentar o ganho do pré-amplificador.", "Configurar o envio Auxiliar como Pre-Fader.", "Inserir um compressor no canal.", "Utilizar uma saída de subgrupo.", "Desativar o botão de Mute."], 
         a: 1, 
-        e: "<b>Monitoração:</b> O Auxiliar deve ser <b>Pre-Fader</b> para que a mixagem do músico não mude quando o técnico mexe no P.A." 
+        e: "<b>Monitoração:</b> O envio <b>Pre-Fader</b> retira o sinal antes do fader de volume, garantindo que a mixagem do palco não seja afetada pela mixagem da casa." 
     },
     { 
         id: 3031, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Sobre microfones: (I) Dinâmicos não pedem alimentação. (II) Condensadores são mais sensíveis. (III) Fitas são imunes a pressão alta.",
-        o: ["II e III apenas.", "I e III apenas.", "II apenas.", "I, II e III.", "I e II apenas."], 
+        q: `Sobre as características técnicas dos microfones, analise:<br>
+            I. Microfones dinâmicos não necessitam de alimentação externa.<br>
+            II. Microfones condensadores apresentam, em geral, maior sensibilidade que os dinâmicos.<br>
+            III. Microfones de fita (ribbon) são imunes a variações de pressão sonora elevadas.<br>
+            Está correto o que se afirma em:`,
+        o: ["II e III, apenas.", "I e III, apenas.", "II, apenas.", "I, II e III.", "I e II, apenas."], 
         a: 4, 
-        e: "<b>Microfones:</b> Fitas (Ribbon) são extremamente frágeis e sensíveis a sopros e SPL alto." 
+        e: "<b>Microfones:</b> A afirmativa III está errada. Microfones de fita são extremamente frágeis e podem ser destruídos por sopros ou SPL muito alto." 
     },
     { 
         id: 3032, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "No padrão Supercardióide, onde fica o ponto de maior rejeição (ponto nulo) para posicionar o monitor?",
-        o: ["Exatamente atrás (180º).", "Nas diagonais traseiras (125º).", "Nas laterais (90º).", "Exatamente na frente.", "Qualquer lugar."], 
+        q: `No padrão polar Supercardióide, onde fica o ponto de maior rejeição (ponto nulo) para posicionar o monitor de chão e evitar microfonia?`,
+        o: ["Exatamente atrás (180º).", "Nas diagonais traseiras (aprox. 125º).", "Nas laterais (90º).", "Exatamente na frente (0º).", "Em qualquer lugar."], 
         a: 1, 
-        e: "<b>Polares:</b> Supercardióides têm um lóbulo traseiro que capta som a 180º. O ponto cego é nas diagonais (125º)." 
+        e: "<b>Polares:</b> Diferente do Cardióide (nulo a 180º), o Supercardióide tem um lóbulo de captação traseiro. Seu ponto de rejeição máxima desloca-se para as diagonais." 
     },
     { 
         id: 3033, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Formato WAV é usado profissionalmente porque:",
-        o: ["Compressão ajustável.", "Reduz tamanho.", "Armazena sem compressão (lossless).", "Exclusivo internet.", "Converte auto."], 
+        q: `Considerando os formatos de áudio digital, o formato WAV é amplamente utilizado em sistemas de gravação profissional porque:`,
+        o: [
+            "Permite compressão com perdas ajustável.",
+            "Reduz significativamente o tamanho do arquivo.",
+            "Armazena áudio sem compressão de dados (lossless), preservando a integridade do sinal.",
+            "É exclusivo para transmissão via internet.",
+            "Converte automaticamente para taxas de amostragem menores."
+        ], 
         a: 2, 
-        e: "<b>Formatos:</b> WAV/AIFF são PCM linear (sem perdas), padrão para captação e edição." 
+        e: "<b>Formatos:</b> WAV é PCM linear não comprimido. Ele guarda cada bit de informação captada, essencial para edição e processamento de alta qualidade." 
     },
     { 
         id: 3034, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Sobre Áudio sobre IP (AoIP): (I) Latência não importa buffer. (II) Sem sincronismo. (III) Dante usa Ethernet.",
-        o: ["II.", "III.", "II e III.", "I e III.", "I, II, III."], 
+        q: `Sobre sistemas de áudio sobre IP (AoIP), analise:<br>
+            I. A latência não é influenciada pelo tamanho do buffer de rede.<br>
+            II. O AoIP elimina a necessidade de sincronismo de relógio.<br>
+            III. Protocolos como Dante utilizam infraestrutura de rede Ethernet padrão.<br>
+            Está correto o que se afirma em:`,
+        o: ["II, apenas.", "III, apenas.", "II e III, apenas.", "I e III, apenas.", "I, II e III."], 
         a: 1, 
-        e: "<b>Redes:</b> Apenas III correta. Latência depende do buffer e Sincronismo (PTP) é vital." 
+        e: "<b>Redes:</b> Apenas III. Latência depende do buffer e o sincronismo (PTP) é crítico. Dante roda em redes Gigabit padrão." 
     },
     { 
         id: 3035, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Ligar a saída de potência de um amplificador diretamente na entrada de microfone de uma mesa resulta em:",
-        o: ["Sinal limpo.", "Necessidade de ganho.", "Casamento de impedância.", "Dano físico aos circuitos (queima).", "Conversão automática."], 
+        q: `Ao analisar um diagrama onde a saída de potência (speaker out) de um amplificador é conectada diretamente a uma entrada de microfone (XLR) de uma mesa de som, o técnico conclui que:`,
+        o: [
+            "Há um loop de impedância aceitável.",
+            "O sistema está configurado em mono.",
+            "Não há erro, pois ambos usam conectores compatíveis.",
+            "Existe uma conexão incorreta gravíssima que danificará os circuitos da mesa.",
+            "Os cabos devem ser substituídos por Speakon."
+        ], 
         a: 3, 
-        e: "<b>Segurança:</b> A voltagem de saída de um power amp é alta demais para pré-amplificadores, causando danos irreversíveis." 
+        e: "<b>Segurança:</b> A voltagem de saída de um amplificador (dezenas de Volts) é letal para a entrada de microfone (milivolts), causando queima imediata." 
     },
     { 
         id: 3036, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Distorção em gravação digital mesmo abaixo de 0dBFS. Causa:",
-        o: ["Clip analógico.", "Aliasing.", "Cabo.", "Ruído térmico.", "Picos Intersample."], 
+        q: `Um sinal de áudio digital apresenta distorção audível na reprodução, mesmo com os medidores de pico indicando níveis abaixo de 0 dBFS. A causa técnica mais provável é:`,
+        o: ["Clipping analógico na entrada.", "Aliasing por taxa insuficiente.", "Falha no cabo.", "Ruído térmico.", "Saturação por picos intersample (entre amostras)."], 
         a: 4, 
-        e: "<b>Digital:</b> Picos entre amostras (intersample) podem exceder o teto analógico na reconstrução, mesmo que os samples digitais não mostrem." 
+        e: "<b>Áudio Digital:</b> Picos <b>Intersample</b> ocorrem quando a reconstrução analógica da onda ultrapassa o limite, mesmo que os pontos digitais (samples) estejam dentro da escala." 
     },
     { 
         id: 3037, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Relacione: (1) Comp, (2) Gate, (3) Reverb. () Ambiência. () Reduz dinâmica. () Corta ruído.",
-        o: ["3-1-2", "1-2-3", "2-3-1", "2-1-3", "3-2-1"], 
+        q: `Relacione os processadores às suas funções:<br>
+            (1) Compressor<br>
+            (2) Gate<br>
+            (3) Reverb<br><br>
+            ( ) Simula ambiência acústica.<br>
+            ( ) Reduz a faixa dinâmica atenuando picos.<br>
+            ( ) Corta o sinal quando o nível cai abaixo de um limiar.<br>
+            A sequência correta é:`,
+        o: ["3 - 1 - 2", "1 - 2 - 3", "2 - 3 - 1", "2 - 1 - 3", "3 - 2 - 1"], 
         a: 0, 
-        e: "<b>Processamento:</b> Reverb=Espaço(3), Comp=Dinâmica(1), Gate=Limpeza(2)." 
+        e: "<b>Processamento:</b> Reverb cria espaço (3). Compressor controla dinâmica (1). Gate limpa ruído/vazamento (2)." 
     },
     { 
         id: 3038, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Medições: dB SPL (ar), dBFS (digital), VU (médio), Pico (clip).",
-        o: ["V-V-F-V", "F-F-V-V", "V-F-V-V", "V-F-F-V", "F-V-V-F"], 
+        q: `Sobre medições em áudio, assinale a alternativa INCORRETA (ou adaptada para correta conforme gabarito oficial da questão original):<br>
+            Analise: 0 dBFS é o limite máximo em sistemas digitais?`,
+        o: [
+            "dBFS mede pressão sonora no ar.",
+            "dB SPL é usado em DAWs.",
+            "0 dBFS é o teto absoluto no domínio digital, acima do qual ocorre clipping.",
+            "VU meters indicam picos instantâneos.",
+            "Peak meters indicam volume médio (Loudness)."
+        ], 
         a: 2, 
-        e: "<b>Escalas:</b> Todas V, exceto a segunda: dBFS é DIGITAL, não analógico." 
+        e: "<b>Medição:</b> A escala Digital (FS - Full Scale) tem o 0 como topo. Valores positivos não existem matematicamente sem distorção." 
     },
     { 
         id: 3039, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Ruído 'Hum' (grave) que muda ao tocar no chassi. Solução:",
-        o: ["Cabos não balanceados.", "Mesmo ponto de aterramento.", "Reduzir ganho.", "Compressor.", "Impedância."], 
+        q: `Um ruído constante de baixa frequência (hum) é ouvido no sistema e seu nível se altera ao tocar no chassi metálico de um equipamento. Isso indica a necessidade de:`,
+        o: ["Trocar por cabos não balanceados.", "Verificar e unificar o aterramento dos equipamentos.", "Reduzir o ganho de entrada.", "Inserir um compressor.", "Aumentar a impedância."], 
         a: 1, 
-        e: "<b>Ground Loop:</b> Diferença de potencial entre terras causa hum. Unificar o terra resolve." 
+        e: "<b>Ground Loop:</b> O 'Hum' de 60Hz geralmente é causado por diferença de potencial entre os terras de equipamentos diferentes." 
     },
     { 
         id: 3040, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Cabos Balanceados (XLR) preferidos por:",
-        o: ["Frequência.", "Digital.", "Voltagem.", "Estéreo.", "Eliminar ruídos (fase/CMRR)."], 
+        q: `A razão técnica fundamental para utilizar cabos balanceados (XLR) em conexões de áudio profissionais longas é:`,
+        o: [
+            "Aumentar a resposta de frequência acima de 20kHz.",
+            "Converter sinal analógico em digital.",
+            "Amplificar a voltagem do sinal em +4dB.",
+            "Separar o áudio em estéreo.",
+            "Eliminar ruídos eletromagnéticos induzidos através da inversão de fase e Rejeição em Modo Comum (CMRR)."
+        ], 
         a: 4, 
-        e: "<b>Balanceamento:</b> A inversão de fase cancela o ruído induzido no cabo." 
+        e: "<b>Balanceamento:</b> O sistema envia o sinal em duas fases opostas. O ruído entra igual nas duas. No destino, a inversão de fase cancela o ruído." 
     },
     { 
         id: 3041, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Manutenção: ( ) Limpa contato. ( ) Enrolar cotovelo. ( ) WD-40. ( ) Sílica gel.",
-        o: ["V-F-F-V", "F-V-F-F", "V-V-F-V", "F-F-V-F", "V-F-F-F"], 
+        q: `Sobre manutenção preventiva de equipamentos:<br>
+            ( ) Deve-se usar limpa-contatos específico em potenciômetros.<br>
+            ( ) Enrolar cabos no cotovelo ajuda a preservar a malha.<br>
+            ( ) O uso de óleo desengripante (WD-40) é recomendado para faders.<br>
+            A sequência correta (V/F) é:`,
+        o: ["V - F - F", "F - V - F", "V - V - V", "F - F - V", "V - F - V"], 
         a: 0, 
-        e: "<b>Cuidado:</b> Enrolar no cotovelo quebra a malha (F). WD-40 estraga contatos (F)." 
+        e: "<b>Manutenção:</b> Enrolar no cotovelo torce e quebra o cabo. WD-40 é isolante e junta poeira, destruindo faders." 
     },
     { 
         id: 3042, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Filtro HPF em 30Hz não muda som perceptível. Por que?",
-        o: ["Ouvido > 5kHz.", "Filtro aumenta.", "Sensibilidade humana/energia musical baixa < 30Hz.", "Comp onda.", "Pressão."], 
+        q: `Ao aplicar um filtro passa-altas (High-Pass Filter) em 30 Hz numa mixagem musical, o impacto sonoro percebido permanece praticamente inalterado. Isso ocorre porque:`,
+        o: ["O ouvido humano só ouve acima de 5kHz.", "O filtro aumenta o ganho.", "A energia musical útil e a sensibilidade auditiva abaixo de 30Hz são baixas.", "Sons graves não se propagam no ar.", "O filtro estava desligado."], 
         a: 2, 
-        e: "<b>Espectro:</b> Subgraves extremos (<30Hz) são pouco audíveis e consomem energia (rumble)." 
+        e: "<b>Espectro:</b> Subgraves extremos consomem energia do sistema mas são pouco percebidos musicalmente." 
     },
     { 
         id: 3043, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Diretividade: (I) Agudos direcionais. (II) Fontes grandes controlam graves. (III) Graves linha reta.",
-        o: ["I.", "II.", "III.", "I e II.", "II e III."], 
+        q: `Sobre a física do som e diretividade:<br>
+            I. Frequências altas (agudos) tendem a ser mais direcionais.<br>
+            II. Frequências baixas (graves) tendem a ser omnidirecionais.<br>
+            Estão corretas:`,
+        o: ["I, apenas.", "II, apenas.", "Nenhuma.", "I e II.", "Apenas se for ao ar livre."], 
         a: 3, 
-        e: "<b>Física:</b> Graves são omnidirecionais e contornam obstáculos (não linha reta)." 
+        e: "<b>Acústica:</b> Agudos têm onda curta e não contornam obstáculos (são como feixes). Graves têm onda longa e se espalham (difração)." 
     },
     { 
         id: 3044, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Relacione fenômenos: (1) Comp Onda, (2) Atenuação, (3) Velocidade, (4) Difração.",
-        o: ["1-3-2-4", "2-4-1-3", "4-1-3-2", "3-2-4-1", "2-1-4-3"], 
-        a: 1, 
-        e: "<b>Acústica:</b> Queda nível = Atenuação (2); Contorna = Difração (4); Fase/Cancelamento = Comp Onda (1); Delay = Velocidade (3)." 
+        q: `Relacione os fenômenos:<br>
+            (1) Atenuação com a distância<br>
+            (2) Difração<br>
+            (3) Atraso de tempo (Delay)<br><br>
+            ( ) Som grave contorna obstáculos.<br>
+            ( ) Perda de energia sonora ao se afastar da fonte.<br>
+            ( ) Diferença de chegada do som devido à velocidade de propagação.<br>
+            A sequência é:`,
+        o: ["2 - 1 - 3", "1 - 2 - 3", "3 - 2 - 1", "1 - 3 - 2", "2 - 3 - 1"], 
+        a: 0, 
+        e: "<b>Fenômenos:</b> Difração contorna (2). Atenuação é perda de nível (1). Delay é tempo (3)." 
     },
     { 
         id: 3045, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Mídias (Fita K7, CD, Cartão SD). (I) K7 linear. (II) CD magnético. (III) SD e CD acesso aleatório.",
-        o: ["I.", "I e II.", "II e III.", "I, II, III.", "I e III."], 
+        q: `Sobre mídias de armazenamento:<br>
+            I. A fita cassete é um meio de acesso linear.<br>
+            II. O CD é uma mídia magnética.<br>
+            III. Cartões SD permitem acesso aleatório aos arquivos.<br>
+            Estão corretas:`,
+        o: ["I, apenas.", "I e II.", "II e III.", "I, II e III.", "I e III, apenas."], 
         a: 4, 
-        e: "<b>Mídias:</b> CD é óptico, não magnético. K7 é linear (tem que rebobinar). SD/CD vão direto à faixa." 
+        e: "<b>Mídias:</b> CD é mídia <b>Óptica</b> (laser), não magnética. Fita é linear (precisa rebobinar). SD é aleatório (vai direto ao ponto)." 
     },
     { 
         id: 3046, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Loudness integrado no streaming serve para:",
-        o: ["Padronizar percepção de volume.", "Substituir pico.", "Duração.", "Eliminar comp.", "Resolução."], 
+        q: `No contexto de streaming e broadcast, a medição de "Loudness Integrado" (LUFS) serve principalmente para:`,
+        o: ["Padronizar a percepção de volume médio entre diferentes programas.", "Substituir o limitador de picos.", "Aumentar a resolução de bits.", "Eliminar a necessidade de compressão.", "Medir apenas o ruído de fundo."], 
         a: 0, 
-        e: "<b>LUFS:</b> Garante que todas as músicas toquem no mesmo volume médio para o ouvinte." 
+        e: "<b>Normas:</b> O Loudness (LUFS) mede o volume como o ouvido humano percebe ao longo do tempo, garantindo consistência na transmissão." 
     },
     { 
         id: 3047, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Edição Não-Linear (DAW):",
-        o: ["II.", "I e II.", "I apenas.", "II e III.", "III."], 
+        q: `Sobre Edição Não-Linear em DAWs (Digital Audio Workstations), é correto afirmar que:`,
+        o: [
+            "Altera o arquivo de áudio original permanentemente no disco.",
+            "É destrutiva por natureza.",
+            "Baseia-se em referências (ponteiros) e não altera o arquivo original (Não-Destrutiva).",
+            "Exige o uso de fita magnética.",
+            "Não permite o recurso de desfazer (Undo)."
+        ], 
         a: 2, 
-        e: "<b>DAW:</b> É não-destrutiva (I). Usa referências e não altera o arquivo original no disco." 
+        e: "<b>Edição Digital:</b> A DAW cria um 'mapa' de cortes sem mexer no arquivo fonte (Source File), permitindo experimentação sem riscos." 
     },
     { 
         id: 3048, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Ferramentas DAW: (1) Normalização, (2) Comp, (3) EQ, (4) Limiter.",
-        o: ["1-4-2-3", "2-3-4-2", "3-2-4-1", "3-1-4-2", "2-1-4-3"], 
-        a: 3, 
-        e: "<b>Tools:</b> Espectro=EQ(3); Pico alvo=Norm(1); Teto=Limiter(4); Dinâmica=Comp(2)." 
+        q: `Relacione a ferramenta à função:<br>
+            (1) Normalização<br>
+            (2) Compressor<br>
+            (3) Equalizador<br>
+            (4) Limiter<br><br>
+            ( ) Ajusta o ganho para atingir um pico alvo.<br>
+            ( ) Define um teto máximo que o sinal não pode ultrapassar.<br>
+            ( ) Reduz a faixa dinâmica.<br>
+            ( ) Altera o conteúdo espectral (frequências).<br>
+            A sequência é:`,
+        o: ["1 - 4 - 2 - 3", "2 - 3 - 4 - 2", "3 - 2 - 4 - 1", "3 - 1 - 4 - 2", "2 - 1 - 4 - 3"], 
+        a: 0, 
+        e: "<b>Ferramentas:</b> Norm=Pico Alvo (1); Limiter=Teto (4); Comp=Dinâmica (2); EQ=Espectro (3)." 
     },
     { 
         id: 3049, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Conversão: ( ) Norm Pico = Compressão? ( ) Lossy p/ Lossless recupera? ( ) Downsample precisa Low-Pass?",
-        o: ["V-F-V", "F-F-V", "F-V-V", "V-F-F", "F-F-F"], 
+        q: `Sobre conversão e processamento:<br>
+            ( ) A normalização de pico altera a microdinâmica do sinal.<br>
+            ( ) Converter um arquivo MP3 para WAV recupera a qualidade perdida.<br>
+            ( ) O downsampling (redução de taxa) exige filtragem low-pass prévia.<br>
+            A sequência correta (V/F) é:`,
+        o: ["V - F - V", "F - F - V", "F - V - V", "V - F - F", "F - F - F"], 
         a: 1, 
-        e: "<b>Processamento:</b> Norm não comprime. MP3 p/ WAV não recupera qualidade perdida. Filtro Low-Pass é obrigatório para evitar aliasing." 
+        e: "<b>Processamento:</b> Normalizar é só volume (ganho), não comprime (F). MP3 perde dados pra sempre (F). Filtragem é vital no downsampling para evitar aliasing (V)." 
     },
     { 
         id: 3050, s: 'e', p: 3, tema: "ALEGO - Téc. Som",
-        q: "Converter 96kHz para 48kHz (mantendo bits) causa:",
-        o: ["Ruído térmico.", "Faixa dinâmica.", "Compressão.", "Normalização.", "Redução da resolução temporal."], 
+        q: `Converter um arquivo de áudio de 96 kHz para 48 kHz (mantendo a profundidade de bits) resulta tecnicamente em:`,
+        o: ["Aumento do ruído térmico.", "Aumento da faixa dinâmica.", "Compressão de dados.", "Normalização.", "Redução da resolução temporal e da largura de banda."], 
         a: 4, 
-        e: "<b>Sample Rate:</b> Define a resolução no tempo (frequência). Baixar a taxa reduz a largura de banda e a precisão temporal." 
-    },
+        e: "<b>Teorema de Nyquist:</b> Reduzir a taxa de amostragem diminui a quantidade de 'fotos' por segundo, reduzindo a precisão no tempo e a frequência máxima reproduzível." 
+    }
+
 
 
     
