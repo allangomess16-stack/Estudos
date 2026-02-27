@@ -32,12 +32,49 @@
             .tabela-sintaxe th { background: #f4f4f4; padding: 10px; border: 1px solid #ddd; }
             .tabela-sintaxe td { border: 1px solid #ddd; padding: 12px; text-align: center; position: relative; }
             
-            .vtd { color: #002855; font-weight: bold; cursor: help; }
-            .vti { color: #e65100; font-weight: bold; cursor: help; }
-            .vtd:hover::after { content: " ➔ Sem Preposição"; position: absolute; background: #333; color: white; padding: 5px; border-radius: 4px; top: -10px; left: 50%; transform: translateX(-50%); font-size: 11px; white-space: nowrap; }
-            .vti:hover::after {  content: " ➔ Exige Preposição (a, de, em, por...)"; position: absolute;  background: #333;  color: white;  padding: 5px;  border-radius: 4px;  top: -10px; left: 50%;  transform: translateX(-50%); font-size: 11px;   white-space: nowrap;  z-index: 10;
+
+
+/* A Mágica do Tooltip: Puxa o texto dinâmico do HTML */
+[data-tooltip]:hover::after {
+    content: attr(data-tooltip); /* Isso aqui pega o texto que você digitou lá no HTML! */
+    position: absolute;
+    background: #002855;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    bottom: 120%; /* Fica acima da palavra */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    white-space: normal; /* Permite quebrar linha para textos longos */
+    width: 250px; /* Largura da caixinha */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.4;
 }
 
+/* Setinha apontando para baixo */
+[data-tooltip]:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #002855 transparent transparent transparent;
+    z-index: 999;
+}
+
+.termo-hover { 
+    color: #ad3131; 
+    font-weight: bold; 
+    cursor: help; 
+    position: relative; 
+    border-bottom: 2px dotted #ad3131; 
+}
 /* Estilo para os novos tipos de verbos */
                             .vi { color: #2d5a27; font-weight: bold; cursor: help; } /* Verde para Intransitivo */
                             .vl { color: #8e24aa; font-weight: bold; cursor: help; } /* Roxo para Ligação */
@@ -67,7 +104,7 @@
 
        <h2 style="color:#002855; border-left: 5px solid #002855; padding-left: 10px;">📚 LÍNGUA PORTUGUESA</h2>
 <details class="card-portugues">
-    <summary>📂 SINTAXE E CONECTIVOS</summary>
+    <summary>📂 TUDO DE PORTGUES</summary>
     <div class="conteudo-card" style="background: #163661; border-radius: 8px;">
 
         <details style="margin-bottom: 15px; border: 1px solid #002855;">
@@ -75,7 +112,7 @@
             <div class="conteudo" style="background: rgb(197, 51, 51); padding: 15px;">
                 
                 <details style="margin-bottom: 10px;">
-                    <summary style="background: #eee; color: #333; border: 1px solid #ccc;">🎯 Transitividade Verbal (Passe o mouse)</summary>
+                    <summary style="background: #eee; color: #333; border: 1px solid #ccc;">🎯 Transitividade Verbal </summary>
                     <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
                         <table class="tabela-sintaxe">
                             <thead>
@@ -84,25 +121,25 @@
                                
                                 <tr>
                                     <td><b>Configurar</b></td>
-                                    <td class="vtd" data-tooltip="V. TRANSITIVO DIRETO: Não exige preposição. Pergunta-se: 'Configurou o quê?'. Resposta: O Switcher (Objeto Direto).">V. Transitivo Direto</td>
+                                    <td class="vtd" data-tooltip=" Não exige preposição. Pergunta-se: 'Configurou o quê?'. Resposta: O Switcher (Objeto Direto).">V. Transitivo Direto</td>
                                     <td>Allan configurou <span class="complemento">o switcher</span>.</td>
                                 </tr>
                                 
                                 <tr>
                                     <td><b>Precisar</b></td>
-                                    <td class="vti" data-tooltip="V. TRANSITIVO INDIRETO: Exige preposição obrigatória. Quem precisa, precisa DE algo. Resposta: DE manutenção.">V. Transitivo Indireto</td>
+                                    <td class="vti" data-tooltip="Exige preposição obrigatória. Quem precisa, precisa DE algo. Resposta: DE manutenção.">V. Transitivo Indireto</td>
                                     <td>A câmera precisa <span class="complemento">de manutenção</span>.</td>
                                 </tr>
                                
                                 <tr>
                                     <td><b>Assistir</b></td>
-                                    <td class="vti" data-tooltip="V. TRANSITIVO INDIRETO (Ver): No sentido de presenciar, exige a preposição 'A'. Por isso ocorre a crase: Assistir à (A+A) sessão.">V. Transitivo Indireto</td>
+                                    <td class="vti" data-tooltip="(Ver): No sentido de presenciar, exige a preposição 'A'. Por isso ocorre a crase: Assistir à (A+A) sessão.">V. Transitivo Indireto</td>
                                     <td>O público assiste <span class="complemento">à sessão</span>.</td>
                                 </tr>
                                
                                 <tr>
                                     <td><b>Revisar</b></td>
-                                    <td class="vtd" data-tooltip="V. TRANSITIVO DIRETO: Quem revisa, revisa alguma coisa. Não aceita preposição 'de' ou 'a' antes do objeto.">V. Transitivo Direto</td>
+                                    <td class="vtd" data-tooltip=" Quem revisa, revisa alguma coisa. Não aceita preposição 'de' ou 'a' antes do objeto.">V. Transitivo Direto</td>
                                     <td>Nós revisamos <span class="complemento">as tarjas</span>.</td>
                                 </tr> </tbody></table>
                        
@@ -115,24 +152,327 @@
                     <summary style="background: #eee; color: #333; border: 1px solid #ccc;">📊 Termos da Oração (Análise Completa)</summary>
                     <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
                         <table class="tabela-sintaxe">
-                            <thead>
-                                <tr style="background: #f4f4f4;"><th>Divisão</th><th>Termos</th><th>Exemplo</th></tr>
-                            </thead>
+    <thead>
+        <tr style="background: #f4f4f4;">
+            <th>Divisão</th>
+            <th>Termo </th>
+            <th>Exemplo Prático</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2" style="background: #f9f9f9;"><b>Essenciais</b><br><small style="color:#666;">A base da frase</small></td>
+            <td><span class="termo-hover" data-tooltip="SUJEITO: É de quem ou do que se fala na oração. O verbo sempre concorda com ele. DICA: Pergunte 'Quem?' ou 'O que?' antes do verbo.">Sujeito</span></td>
+            <td><b>O sinal</b> oscilou.</td>
+        </tr>
+        <tr>
+            <td><span class="termo-hover" data-tooltip="PREDICADO: É a declaração que se faz sobre o sujeito. TUDO na frase que não é o sujeito (incluindo o verbo) faz parte do predicado.">Predicado</span></td>
+            <td>Allan <b>revisou a aula</b>.</td>
+        </tr>
 
-                            <tbody>
+        <tr>
+            <td rowspan="3" style="background: #f9f9f9;"><b>Integrantes</b><br><small style="color:#666;">Completam o sentido</small></td>
+            <td><span class="termo-hover" data-tooltip="OBJETOS (Direto/Indireto): Completam o sentido de um VERBO. O Direto não tem preposição ('editou o texto'). O Indireto exige preposição ('precisa DE foco').">Objetos (Dir/Ind)</span></td>
+            <td>Preciso <b>de foco</b>.</td>
+        </tr>
+        <tr>
+            <td><span class="termo-hover" data-tooltip="COMPLEMENTO NOMINAL: Completa o sentido de um NOME (Substantivo abstrato, Adjetivo ou Advérbio). DICA DE OURO: Sempre possui preposição. Ex: Fé (em quê?) na aprovação.">Comp. Nominal</span></td>
+            <td>Fé <b>na aprovação</b>.</td>
+        </tr>
+        <tr>
+            <td><span class="termo-hover" data-tooltip="AGENTE DA PASSIVA: É quem pratica a ação quando a frase está na Voz Passiva. É sempre introduzido pelas preposições 'por' ou 'de'.">Agente da Passiva</span></td>
+            <td>A tarja foi feita <b>por Allan</b>.</td>
+        </tr>
 
-                                <tr><td rowspan="2" style="background: #f9f9f9;"><b>Essenciais</b></td><td>Sujeito</td><td><b>O sinal</b> oscilou.</td></tr>
-                                <tr><td>Predicado</td><td>Allan <b>revisou a aula</b>.</td></tr>
-                                <tr><td rowspan="3" style="background: #f9f9f9;"><b>Integrantes</b></td><td>Objetos (Dir/Ind)</td><td>Preciso <b>de foco</b>.</td></tr>
-                                <tr><td>Comp. Nominal</td><td>Fé <b>na aprovação</b>.</td></tr>
-                                <tr><td>Agente Passiva</td><td>Feito <b>por Allan</b>.</td></tr>
-                                <tr><td rowspan="3" style="background: #f9f9f9;"><b>Acessórios</b></td><td>Adj. Adnominal</td><td>O <b>seu</b> sinal caiu.</td></tr>
-                                <tr><td>Adj. Adverbial</td><td>Chegou <b>ontem</b>.</td></tr>
-                                <tr><td>Aposto</td><td>Brasília, <b>DF</b>...</td></tr>
-                                <tr><td style="background: #f9f9f9;"><b>Indep.</b></td><td>Vocativo</td><td><b>Allan</b>, estude!</td></tr>
+        <tr>
+            <td rowspan="3" style="background: #f9f9f9;"><b>Acessórios</b><br><small style="color:#666;">Enfeitam e detalham</small></td>
+            <td><span class="termo-hover" data-tooltip="ADJUNTO ADNOMINAL: Palavras que 'colam' no substantivo para caracterizá-lo (Artigos, Adjetivos, Pronomes, Numerais). Pode ser retirado sem matar a frase.">Adj. Adnominal</span></td>
+            <td>O <b>seu</b> sinal caiu.</td>
+        </tr>
+        <tr>
+            <td><span class="termo-hover" data-tooltip="ADJUNTO ADVERBIAL: Modifica o verbo, adjetivo ou advérbio para indicar uma circunstância (Tempo, Lugar, Modo, Causa, Intensidade). Pode mudar de lugar na frase.">Adj. Adverbial</span></td>
+            <td>Chegou <b>ontem</b>.</td>
+        </tr>
+        <tr>
+            <td><span class="termo-hover" data-tooltip="APOSTO: É um termo que explica, resume ou especifica um nome anterior. Geralmente aparece entre vírgulas. Ex: Allan, OPERADOR DA TV, chegou.">Aposto</span></td>
+            <td>Brasília, <b>DF</b>, é quente.</td>
+        </tr>
 
-                            </tbody> </table></div>
+        <tr>
+            <td style="background: #f9f9f9;"><b>Indep.</b><br><small style="color:#666;">Totalmente isolado</small></td>
+            <td><span class="termo-hover" data-tooltip="VOCATIVO: É um chamamento, invocação ou apelo. NÃO faz parte do sujeito nem do predicado. DICA: É obrigatório separá-lo por vírgula.">Vocativo</span></td>
+            <td><b>Allan</b>, estude!</td>
+        </tr>
+    </tbody>
+</table></div>
                 </details>
+
+
+                <details style="margin-bottom: 10px;">
+    <summary style="background: #eee; color: #333; border: 1px solid #ccc;">👤Sujeito (Como identificar)</summary>
+    <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Tipo</th>
+                    <th>Característica (Passe o mouse)</th>
+                    <th>Exemplo Prático</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold;">Simples</td>
+                    <td><span class="termo-hover" data-tooltip="SUJEITO SIMPLES: Possui apenas UM núcleo (a palavra principal, geralmente um substantivo ou pronome). Não importa se a palavra está no plural ou singular, se for só um núcleo, é simples.">Apenas 1 núcleo</span></td>
+                    <td><b>A câmera</b> principal pifou.<br><i>(Núcleo: câmera)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold;">Composto</td>
+                    <td><span class="termo-hover" data-tooltip="SUJEITO COMPOSTO: Possui DOIS ou MAIS núcleos. A ação é praticada por mais de um elemento expresso diretamente na frase.">2 ou mais núcleos</span></td>
+                    <td><b>Allan e o diretor</b> revisaram o áudio.<br><i>(Núcleos: Allan, diretor)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold;">Oculto (Desinencial)</td>
+                    <td><span class="termo-hover" data-tooltip="SUJEITO OCULTO (ou Elíptico): Não está escrito na frase, mas é facilmente identificado pela terminação do verbo. (Eu, tu, ele, nós, vós).">Identificável pelo verbo</span></td>
+                    <td>Cheguei cedo ao estúdio.<br><i>(Sujeito oculto: <b>Eu</b>)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold;">Indeterminado</td>
+                    <td><span class="termo-hover" data-tooltip="SUJEITO INDETERMINADO: Alguém fez a ação, mas não sabemos ou não queremos revelar quem. Ocorre em 2 casos: 1º) Verbo na 3ª pessoa do Plural sem referente anterior. 2º) Verbo Transitivo Indireto + SE.">Não se sabe quem fez</span></td>
+                    <td><b>Quebraram</b> o cabo SDI. <br><b>Precisa-se</b> de operadores.</td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold;">Inexistente (O.S.S)</td>
+                    <td><span class="termo-hover" data-tooltip="ORAÇÃO SEM SUJEITO: Ninguém pratica a ação. Ocorre apenas com os Verbos Impessoais: Fenômenos da natureza (Chover, nevar), verbo HAVER (sentido de existir), FAZER/HAVER (indicando tempo).">Verbos Impessoais</span></td>
+                    <td><b>Havia</b> muitos cabos ali.<br><b>Choveu</b> muito ontem.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (A Pegadinha da Banca):</strong> O verbo <b>HAVER</b> no sentido de "existir" é impessoal e não tem sujeito. Portanto, ele <b>NUNCA</b> vai para o plural! <br>
+            ❌ <i>"Haviam" muitos técnicos no estúdio.</i> <br>
+            ✅ <i>"Havia" muitos técnicos no estúdio.</i>
+        </div>
+    </div>
+</details>
+
+
+
+<details style="margin-bottom: 10px;">
+    <summary style="background: #eee; color: #333; border: 1px solid #ccc;">⚙️ Predicado (Ação vs Estado)</summary>
+    <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Tipo</th>
+                    <th>Núcleo(s) (Passe o mouse)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Verbal</td>
+                    <td><span class="termo-hover" data-tooltip="PREDICADO VERBAL: Indica AÇÃO. O núcleo (palavra mais importante) é o próprio VERBO (transitivo ou intransitivo). Não possui característica/estado (predicativo).">1 Verbo de Ação</span></td>
+                    <td>Allan <b>configurou</b> a mesa de som.<br><i>(Núcleo: configurou)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #8e24aa;">Nominal</td>
+                    <td><span class="termo-hover" data-tooltip="PREDICADO NOMINAL: Indica ESTADO ou QUALIDADE. O núcleo é o NOME (adjetivo/substantivo), chamado de Predicativo do Sujeito. É sempre ligado por um Verbo de Ligação (ser, estar, parecer...).">1 Nome (Estado)</span></td>
+                    <td>O áudio <b>estava perfeito</b>.<br><i>(Núcleo: perfeito)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #c53030;">Verbo-Nominal</td>
+                    <td><span class="termo-hover" data-tooltip="PREDICADO VERBO-NOMINAL: É a fusão dos dois! Indica uma AÇÃO que ocorre enquanto o sujeito está em um determinado ESTADO. Possui DOIS núcleos: um verbo e um nome.">1 Verbo + 1 Nome</span></td>
+                    <td>Os técnicos <b>trabalharam cansados</b>.<br><i>(Núcleos: trabalharam, cansados)</i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (A Pegadinha do Verbo Mutante):</strong> 
+            A banca vai tentar te enganar usando verbos que costumam ser de ação, mas que no contexto viram estado (Verbo de Ligação). Olhe a diferença:<br><br>
+            🚶‍♂️ <i>"O diretor <b>anda</b> rápido pelo estúdio."</i> ➔ Ele caminha (Ação) = <b>Predicado Verbal</b>.<br>
+            😟 <i>"O diretor <b>anda</b> preocupado com o sinal."</i> ➔ Ele está (Estado) = <b>Predicado Nominal</b>.
+        </div>
+    </div>
+</details>
+
+
+<details style="margin-bottom: 10px;">
+    <summary style="background: #eee; color: #333; border: 1px solid #ccc;">🎯 Complementos Verbais (Objeto Direto e Indireto)</summary>
+    <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Tipo</th>
+                    <th>Ligação com o Verbo (Passe o mouse)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Objeto Direto</td>
+                    <td><span class="termo-hover" data-tooltip="OBJETO DIRETO: Completa o sentido do verbo de forma DIRETA, ou seja, SEM preposição obrigatória. DICA: Faça a pergunta 'o quê?' ou 'quem?' logo após o verbo.">Sem Preposição</span></td>
+                    <td>O operador ajustou <b>os microfones</b>.<br><i>(Ajustou o quê? os microfones)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #e65100;">Objeto Indireto</td>
+                    <td><span class="termo-hover" data-tooltip="OBJETO INDIRETO: Completa o sentido do verbo de forma INDIRETA, precisando de uma ponte (PREPOSIÇÃO) obrigatória (a, de, em, para, com...). DICA: Pergunte 'de quê?', 'para quem?', 'a quem?'.">Com Preposição</span></td>
+                    <td>A equipe confia <b>no técnico</b>.<br><i>(Confia em quem? no técnico)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #ad3131;">O. D. Preposicionado</td>
+                    <td><span class="termo-hover" data-tooltip="OBJETO DIRETO PREPOSICIONADO: Pegadinha de prova! O verbo NÃO exige preposição, mas ela aparece por estilo, clareza ou regra (antes de nomes como 'Deus' ou pronomes como 'mim/ti').">Preposição Falsa (Estilo)</span></td>
+                    <td>O chefe elogiou <b>a mim</b>.<br><i>(Elogiar é VTD, a preposição 'a' entrou só por causa do pronome 'mim')</i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (O Segredo dos Pronomes):</strong> 
+            As bancas não perguntam só com palavras normais, elas adoram substituir o objeto por um pronome curto. Decore esta regra de ouro e não erre mais:<br><br>
+            🎯 <b>O, A, OS, AS:</b> Nascem para ser <b>OBJETO DIRETO</b>.<br>
+            <i>Ex: O diretor chamou o técnico ➔ O diretor chamou-<b>o</b>.</i><br><br>
+            🔗 <b>LHE, LHES:</b> Nascem para ser <b>OBJETO INDIRETO</b> (equivale a "a ele / para ele").<br>
+            <i>Ex: Entreguei o roteiro ao diretor ➔ Entreguei-<b>lhe</b> o roteiro.</i>
+        </div>
+    </div>
+</details>
+
+<details style="margin-bottom: 10px;">
+    <summary style="background: #eee; color: #333; border: 1px solid #ccc;">🧩 Complemento Nominal (O Eterno Confundido)</summary>
+    <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
+        <p style="margin-bottom: 15px; color: #555;">O Complemento Nominal completa o sentido de um <b>NOME</b> (nunca de um verbo) e <b>SEMPRE</b> exige preposição. Ele pode ligar-se a três tipos de palavras:</p>
+        
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Completa um...</th>
+                    <th>Característica (Passe o rato)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Substantivo Abstrato</td>
+                    <td><span class="termo-hover" data-tooltip="SUBSTANTIVO ABSTRATO: Nomes que derivam de verbos (ações) ou indicam sentimentos. O Complemento Nominal tem valor PASSIVO, ou seja, ele SOFRE a ação do nome.">Sentimento ou Ação (Passivo)</span></td>
+                    <td>A leitura <b>do guião</b> foi rápida.<br><i>(O guião foi lido = sofre a ação)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Adjetivo</td>
+                    <td><span class="termo-hover" data-tooltip="ADJETIVO: Se a palavra com preposição estiver a completar o sentido de um Adjetivo (qualidade/estado), é 100% de certeza que é Complemento Nominal. O Adjunto Adnominal nunca faz isso!">Estado ou Qualidade</span></td>
+                    <td>O técnico estava ansioso <b>pela emissão</b>.<br><i>(Ansioso = Adjetivo)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #6a1b9a;">Advérbio</td>
+                    <td><span class="termo-hover" data-tooltip="ADVÉRBIO: Quase sempre são palavras terminadas em '-mente'. Tal como nos adjetivos, se completa um advérbio, é sempre Complemento Nominal.">Circunstância (-mente)</span></td>
+                    <td>Tudo ocorreu favoravelmente <b>à equipa</b>.<br><i>(Favoravelmente = Advérbio)</i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (O Combate: Comp. Nominal vs. Adjunto Adnominal):</strong> 
+            A banca vai dar-lhe um Substantivo Abstrato + Preposição e perguntar o que é. Use a <b>Regra da Voz Ativa vs. Passiva</b>:<br><br>
+            ⚔️ <i>"A crítica <b>do diretor</b>..."</i> ➔ O diretor FAZ a crítica (Ativo) = <b>Adjunto Adnominal</b>.<br>
+            🛡️ <i>"A crítica <b>ao diretor</b>..."</i> ➔ O diretor SOFRE a crítica (Passivo) = <b>Complemento Nominal</b>.<br><br>
+            <b>Resumo de Sobrevivência:</b> Age = Adjunto. Sofre = Complemento.
+        </div>
+    </div>
+</details>
+
+<details style="margin-bottom: 10px;">
+    <summary style="background: #eee; color: #333; border: 1px solid #ccc;">🎭 Agente da Passiva (O Verdadeiro Ator)</summary>
+    <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
+        <p style="margin-bottom: 15px; color: #555;">Ocorre apenas em orações na <b>Voz Passiva</b>. Enquanto o Sujeito fica "parado" sofrendo a ação, o Agente da Passiva é quem <b>realmente executa a ação</b>. Ele é sempre introduzido pelas preposições <b>POR</b> (pelo, pela) ou <b>DE</b>.</p>
+        
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Estrutura</th>
+                    <th>Como funciona (Passe o mouse)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">Na Voz Ativa<br><small>(O padrão)</small></td>
+                    <td><span class="termo-hover" data-tooltip="VOZ ATIVA: O Sujeito age. O verbo é ativo e recai sobre o Objeto Direto. Aqui, NÃO existe Agente da Passiva, pois o próprio sujeito já é o agente da ação.">O Sujeito é quem age</span></td>
+                    <td><b>A equipe</b> <i>(Sujeito)</i> gravou a sessão.<br><i>(Quem gravou? A equipe.)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f1f7ff; font-weight: bold; color: #002855;">Na Voz Passiva<br><small>(Com a prep. POR)</small></td>
+                    <td><span class="termo-hover" data-tooltip="VOZ PASSIVA: O antigo Objeto Direto vira o Sujeito Paciente (sofre a ação). E o antigo Sujeito vira o AGENTE DA PASSIVA (quem faz a ação), puxando a preposição 'por/pelo'.">O Agente vai para o final</span></td>
+                    <td>A sessão <i>(Sujeito)</i> foi gravada <b>pela equipe</b>.<br><i>(Quem gravou? A equipe = Agente da Passiva)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #6a1b9a;">A Pegadinha<br><small>(Com a prep. DE)</small></td>
+                    <td><span class="termo-hover" data-tooltip="PREPOSIÇÃO 'DE': É raro no dia a dia, mas a banca adora! Geralmente aparece com verbos como 'cercar', 'rodear', 'acompanhar', 'encher'. O termo introduzido por 'de' é quem executa a ação.">Agente escondido com 'DE'</span></td>
+                    <td>O estúdio estava cercado <b>de cabos</b>.<br><i>(Os cabos cercavam o estúdio = Agente da Passiva)</i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (A Prova Real do Agente da Passiva):</strong> 
+            A banca vai sublinhar um termo com "por/pelo" e perguntar se é Agente da Passiva, Adjunto Adverbial ou Complemento Nominal. Como ter certeza absoluta?<br><br>
+            🔄 <b>Faça a inversão para a Voz Ativa!</b> Se o termo sublinhado virar o <b>Sujeito</b> da frase invertida, ele é 100% Agente da Passiva.<br><br>
+            <i>"O microfone foi testado <b>por Allan</b>."</i> ➔ Inverta: <i>"<b>Allan</b> testou o microfone."</i><br>
+            Bateu? Allan virou sujeito? Então "por Allan" é Agente da Passiva!
+        </div>
+    </div>
+</details>
+
+<details style="margin-bottom: 10px;">
+    <summary style="background: #eee; color: #333; border: 1px solid #ccc;">📍 Adjunto Adverbial (A Circunstância da Ação)</summary>
+    <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
+        <p style="margin-bottom: 15px; color: #555;">O Adjunto Adverbial é um termo acessório que modifica um <b>Verbo</b>, um <b>Adjetivo</b> ou outro <b>Advérbio</b>. Ele funciona como o "jornalista" da frase, respondendo às perguntas: <i>Quando? Onde? Como? Por quê?</i></p>
+        
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Circunstância</th>
+                    <th>Como identificar (Passe o mouse)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Tempo</td>
+                    <td><span class="termo-hover" data-tooltip="TEMPO: Responde à pergunta 'Quando?'. Pode ser uma palavra única (ontem, hoje, sempre) ou uma locução (à noite, de manhã, às 14h).">Responde: Quando?</span></td>
+                    <td>A gravação começou <b>às 14h</b>.<br><i>(Quando começou? às 14h)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Lugar</td>
+                    <td><span class="termo-hover" data-tooltip="LUGAR: Indica o espaço físico onde a ação se desenrola. Responde à pergunta 'Onde?'. Ex: aqui, ali, na Câmara, no estúdio.">Responde: Onde?</span></td>
+                    <td>O microfone estava <b>no estúdio</b>.<br><i>(Estava onde? no estúdio)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #6a1b9a;">Modo</td>
+                    <td><span class="termo-hover" data-tooltip="MODO: Mostra a maneira como a ação foi executada. Responde à pergunta 'Como?'. DICA: Grande parte das palavras terminadas em '-MENTE' são de modo (rapidamente, calmamente).">Responde: Como?</span></td>
+                    <td>Allan editou a tarja <b>cuidadosamente</b>.<br><i>(Como ele editou? com cuidado)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #ad3131;">Causa</td>
+                    <td><span class="termo-hover" data-tooltip="CAUSA: Indica o motivo, a origem de algo ter acontecido. Responde à pergunta 'Por que motivo?'. Cuidado para não confundir com a Finalidade (para quê?).">Responde: Por que motivo?</span></td>
+                    <td>O sinal caiu <b>por causa da chuva</b>.<br><i>(Motivo da queda? a chuva)</i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (A Regra de Ouro do Adjunto Adverbial):</strong> 
+            A banca adora duas pegadinhas com o Adjunto Adverbial:<br><br>
+            🚫 <b>1. Invariabilidade:</b> Ele NUNCA vai para o plural nem para o feminino! Se a palavra variar, ela é Adjetivo.<br>
+            <i>A técnica falou <b>direto</b> (Adverbial - Modo)</i> vs <i>A técnica é <b>direta</b> (Adjetivo - Predicativo).</i><br><br>
+            🔀 <b>2. A Vírgula do Deslocamento:</b> O lugar natural dele é no final da frase. Se ele for para o início ou para o meio:<br>
+            • Curto (1 ou 2 palavras): Vírgula <i>facultativa</i>. (Ex: Ontem<b>(,)</b> choveu muito).<br>
+            • Longo (3 ou mais palavras): Vírgula <b>OBRIGATÓRIA</b>. (Ex: Durante a sessão da tarde<b>,</b> choveu muito).
+        </div>
+    </div>
+</details>
+
+
 
                 <details style="margin-bottom: 10px;">
                     <summary style="background: #eee; color: #333; border: 1px solid #ccc;">📍 Adjunto Adverbial Deslocado</summary>
@@ -185,7 +525,97 @@
                             <tr><td><b>Explicativa</b></td><td>COM vírgula</td><td>Generaliza (todos).</td><td>Todos os jogadores estavam cansados e todos saíram.</td> <td><b>Os jogadores</b>, que estavam cansados, <b>saíram.</b></td>           </tr>
                         </table>
                     </div></details>
+<details style="margin-bottom: 10px;">
+    <summary style="background: #eee; color: #333; border: 1px solid #ccc;">🏷️ Aposto (O Esclarecedor de Termos)</summary>
+    <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
+        <p style="margin-bottom: 15px; color: #555;">O <b>Aposto</b> é um termo acessório que se anexa a um nome (substantivo ou pronome) com a função de <b>explicar, especificar, resumir ou enumerar</b>. Na prática, o aposto e o termo a que ele se refere são "a mesma coisa" (têm equivalência semântica).</p>
+        
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Tipo</th>
+                    <th>Característica (Passe o rato)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Explicativo</td>
+                    <td><span class="termo-hover" data-tooltip="APOSTO EXPLICATIVO: É o mais cobrado! Acrescenta uma informação extra sobre o termo anterior. É OBRIGATORIAMENTE separado por pontuação (vírgulas, travessões ou parênteses). Pode ser retirado sem prejudicar a estrutura da frase.">Sempre isolado por pontuação</span></td>
+                    <td>Allan, <b>operador de som</b>, chegou.<br><i>(Allan = operador de som)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Especificativo</td>
+                    <td><span class="termo-hover" data-tooltip="APOSTO ESPECIFICATIVO: Individualiza um substantivo genérico (como cidade, mês, rua, profissão). A regra de ouro: NUNCA TEM VÍRGULAS. Liga-se diretamente ao nome ou por meio de preposição.">NUNCA tem vírgula</span></td>
+                    <td>A cidade <b>de Goiânia</b> é quente.<br><i>(Especifica qual é a cidade)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #6a1b9a;">Enumerativo</td>
+                    <td><span class="termo-hover" data-tooltip="APOSTO ENUMERATIVO: Desdobra um termo anterior numa lista ou sequência. Geralmente é introduzido por dois-pontos (:) ou travessão.">Lista os elementos (:)</span></td>
+                    <td>Faltam dois cabos<b>: o XLR e o SDI</b>.<br><i>(Lista quais são os cabos)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #ad3131;">Resumitivo</td>
+                    <td><span class="termo-hover" data-tooltip="APOSTO RESUMITIVO (ou Recapitulativo): Faz o inverso do enumerativo. Pega numa lista de coisas e resume tudo numa única palavra. Geralmente usa pronomes indefinidos como: tudo, nada, ninguém, todos.">Resume tudo (Pronome)</span></td>
+                    <td>Cabos, mesas e luzes, <b>tudo</b> falhou.<br><i>(Tudo = resume os 3 itens)</i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (Aposto vs. Vocativo):</strong> 
+            A banca adora colocar uma palavra entre vírgulas para o confundir.<br><br>
+            🗣️ <b>VOCATIVO:</b> É um <b>chamamento</b>. Você está a "chamar" ou a falar DIRETAMENTE com a pessoa. Não tem relação sintática com os outros termos.<br>
+            <i>Ex: "<b>Allan</b>, traz o guião!" (O emissor está a chamar o Allan).</i><br><br>
+            🏷️ <b>APOSTO EXPLICATIVO:</b> É uma <b>explicação</b>. Você está a falar SOBRE a pessoa ou coisa, e não COM ela.<br>
+            <i>Ex: "O diretor chamou Allan, <b>o técnico</b>." (Explica quem é o Allan).</i>
+        </div>
+    </div>
+</details>
 
+<details style="margin-bottom: 10px;">
+    <summary style="background: #eee; color: #333; border: 1px solid #ccc;">🗣️ Vocativo (O Chamamento Direto)</summary>
+    <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
+        <p style="margin-bottom: 15px; color: #555;">O <b>Vocativo</b> serve para chamar, invocar ou interpelar o ouvinte. É um termo <b>Independente</b> (não pertence ao sujeito nem ao predicado) e a sua regra número um é absoluta: <b>É SEMPRE ISOLADO POR PONTUAÇÃO</b> (geralmente vírgula).</p>
+        
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Posição na Frase</th>
+                    <th>Característica (Passe o mouse)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #002855;">No Início</td>
+                    <td><span class="termo-hover" data-tooltip="INÍCIO DA FRASE: Quando o chamamento abre a oração, a vírgula vem logo após o termo. Prepara o interlocutor para a mensagem que virá a seguir.">Vírgula logo após</span></td>
+                    <td><b>Diretor</b>, o áudio está clipando!<br><i>(Chamando o diretor)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">No Meio</td>
+                    <td><span class="termo-hover" data-tooltip="MEIO DA FRASE: Quando o vocativo interrompe a oração, ele deve ficar 'espremido' entre duas vírgulas, exatamente como um aposto explicativo.">Isolado entre vírgulas</span></td>
+                    <td>Aumente o ganho, <b>Allan</b>, por favor.<br><i>(Interrompeu para chamar o Allan)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #ad3131;">No Final</td>
+                    <td><span class="termo-hover" data-tooltip="FINAL DA FRASE: A mensagem é dita primeiro e o chamamento vem no encerramento. A vírgula aparece imediatamente antes do termo.">Vírgula imediatamente antes</span></td>
+                    <td>Vamos começar a gravação, <b>equipe</b>.<br><i>(Mensagem antes, chamamento depois)</i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (O Poder da Vírgula: Sujeito vs. Vocativo):</strong> 
+            A banca vai colocar duas frases quase idênticas e perguntar a função sintática do nome próprio. Uma simples vírgula muda TUDO:<br><br>
+            🚶‍♂️ <i>"<b>Allan</b> cortou o microfone."</i> ➔ Allan é de quem se fala. Ele praticou a ação.<br>
+            Função: <b>SUJEITO</b>.<br><br>
+            🗣️ <i>"<b>Allan</b>, corte o microfone!"</i> ➔ Estou a falar COM o Allan (dando uma ordem). Quem vai cortar é "você" (Sujeito Oculto).<br>
+            Função: <b>VOCATIVO</b>.<br><br>
+            <b>Resumo:</b> Sem vírgula = Você fala DELE (Sujeito). Com vírgula = Você fala COM ELE (Vocativo).
+        </div>
+    </div>
+</details>
             </div> </details>
 
 
@@ -374,9 +804,8 @@
             <summary style="background: #003a7a; font-size: 0.9em;">🔗 PREPOSIÇÃO</summary>
             <div class="conteudo" style="background: white; padding: 15px;">
 
-                 <details style="margin-bottom: 10px; border: 1px solid #ddd;">
-                    <summary style="background: #f8f9fa; color: #333; font-weight: bold;">📍 PREPOSIÇÃO</summary>
-                    <div class="conteudo" style="padding: 10px;">
+               
+                
 
      <h2 class="wp-block-heading">O que é preposição?</h2>
 <p>As preposições são um grupo de palavras invariáveis que têm a função de relacionar dois termos de uma mesma oração, subordinando um ao outro.</p>
@@ -427,11 +856,157 @@
 <p>Já as preposições por contração acontecem quando há a junção entre termos e, neste caso, ocorre a redução da preposição. Confira alguns exemplos para entender melhor:</p>
 <ul class="wp-block-list"><li>a + a = à;</li><li>a + aquele = àquele;</li><li>de + o = do;</li><li>de + isto = disto;</li><li>de + aqui = daqui;</li><li>em + esse = nesse;</li><li>em + aquele = naquele.</li></ul>
 </div></details>
-</div></details>
-</div></details>
-                    
 
-                 
+
+
+
+ <details style="border: 1px solid #002855; margin-bottom: 15px;">
+            <summary style="background: #003a7a; font-size: 0.9em;">🔗 ARTIGO</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Classificação</th>
+                    <th>Como funciona (Passe o mouse)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Definidos<br><small>(o, a, os, as)</small></td>
+                    <td><span class="termo-hover" data-tooltip="ARTIGO DEFINIDO: Determina o substantivo de forma precisa, específica e particular. Indica que quem fala e quem ouve já sabem exatamente de qual elemento estão falando.">Especifica um ser</span></td>
+                    <td>Pegue <b>o</b> microfone.<br><i>(O principal, aquele que já conhecemos)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #e65100;">Indefinidos<br><small>(um, uma, uns, umas)</small></td>
+                    <td><span class="termo-hover" data-tooltip="ARTIGO INDEFINIDO: Determina o substantivo de forma vaga, imprecisa ou genérica. É apenas um elemento qualquer no meio de vários, sem destaque inicial.">Generaliza um ser</span></td>
+                    <td>Pegue <b>um</b> microfone.<br><i>(Qualquer um da gaveta serve, tanto faz)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #6a1b9a;">Substantivação<br><small>(O Poder Mágico)</small></td>
+                    <td><span class="termo-hover" data-tooltip="PALAVRA SUBSTANTIVADA: O artigo tem o 'poder mágico' de transformar QUALQUER palavra (um verbo, um advérbio, um adjetivo) num substantivo, bastando ser colocado antes dela.">Transforma classes de palavras</span></td>
+                    <td><b>O</b> não você já tem.<br><i>(A palavra 'não' era advérbio, virou substantivo)</i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (O Triplo Disfarce da letra 'A'):</strong> 
+            A pegadinha mais clássica de concursos é sublinhar a letra "A" isolada na frase e perguntar o que ela é. Use esta regra para desmascará-la na hora:<br><br>
+            🏷️ <b>1. ARTIGO:</b> Vem <b>antes de um nome feminino</b> para acompanhá-lo.<br>
+            <i>Ex: <b>A</b> câmera gravou perfeitamente. (A = Artigo / Câmera = Substantivo)</i><br><br>
+            🔗 <b>2. PREPOSIÇÃO:</b> É uma ponte exigida pelo verbo/nome anterior e <b>NÃO vai para o plural</b>.<br>
+            <i>Ex: O técnico referiu-se <b>a</b> câmeras antigas. (Referir-se exige 'A'. Note que câmera está no plural e o 'a' continuou no singular).</i><br><br>
+            👤 <b>3. PRONOME PESSOAL:</b> Ele <b>substitui</b> um nome que já foi dito e vem ligado a um verbo.<br>
+            <i>Ex: O diretor viu a imagem e apagou-<b>a</b>. (O 'a' substitui a palavra 'imagem'. É Objeto Direto).</i>
+        </div>
+    </div>
+</details>
+
+
+
+ <details style="border: 1px solid #002855; margin-bottom: 15px;">
+            <summary style="background: #003a7a; font-size: 0.9em;">🔗 SUBSTANTIVO</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Classificação</th>
+                    <th>Como funciona (Passe o mouse)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Comum vs. Próprio</td>
+                    <td><span class="termo-hover" data-tooltip="COMUM: Nomeia os seres de uma espécie de forma genérica (ex: cidade, técnico). PRÓPRIO: Nomeia um ser específico dentro da espécie, sempre com letra maiúscula (ex: Goiânia, Allan).">Genérico vs. Específico</span></td>
+                    <td>O <b>técnico</b> <i>(comum)</i> chamou <b>Allan</b> <i>(próprio)</i>.</td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Concreto</td>
+                    <td><span class="termo-hover" data-tooltip="CONCRETO: Nomeia seres que têm existência própria e independente. Não precisam de outro ser para existir. ATENÇÃO: Podem ser do mundo real ou do mundo imaginário/fantástico!">Existência Independente</span></td>
+                    <td>A <b>câmera</b> e o <b>cabo</b> funcionam.<br><i>(Existem por si mesmos)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #c53030;">Abstrato<br><small>(Sentimento/Estado)</small></td>
+                    <td><span class="termo-hover" data-tooltip="ABSTRATO (Sentimentos e Qualidades): Nomeia coisas que DEPENDEM de um ser vivo para existir. A tristeza não existe voando por aí; alguém precisa estar triste para ela existir.">Depende de alguém</span></td>
+                    <td>A <b>tensão</b> no estúdio era grande.<br><i>(Alguém precisa sentir a tensão)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #8e24aa;">Abstrato<br><small>(Derivado de Ação)</small></td>
+                    <td><span class="termo-hover" data-tooltip="ABSTRATO (Ações): CUIDADO AQUI! Substantivos que derivam de verbos e representam uma AÇÃO são classificados como abstratos. Ex: do verbo gravar nasce a 'gravação'.">Ação transformada em nome</span></td>
+                    <td>A <b>edição</b> do vídeo atrasou.<br><i>(Ato de editar = Abstrato)</i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (O Maior Mito do Concreto vs. Abstrato):</strong> 
+            A professora da escola primária provavelmente ensinou que "Concreto é o que podemos tocar e Abstrato é o que não podemos tocar". <b>Esqueça isso para o concurso!</b> A banca usa esse mito para derrubar os candidatos.<br><br>
+            👻 <b>Deus, Anjo, Fada, Saci, Fantasma:</b> São todos substantivos <b>CONCRETOS</b>. Por quê? Porque na nossa mente eles possuem uma forma e uma existência independente. Eles não precisam "estar dentro" de alguém para existir.<br><br>
+            ⚔️ <b>O Beijo, O Abraço, O Voo:</b> São todos substantivos <b>ASTRATOS</b>. Por quê? Porque são AÇÕES. O abraço não existe no vácuo; são necessárias duas pessoas executando a ação para ele ocorrer. O voo depende do pássaro. A leitura depende do leitor.
+        </div>
+    </div>
+</details>
+
+ <details style="border: 1px solid #002855; margin-bottom: 15px;">
+            <summary style="background: #003a7a; font-size: 0.9em;">🏃‍♂️ VERBO(O Motor da Oração)</summary>
+    <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
+        <p style="margin-bottom: 15px; color: #555;">O <b>Verbo</b> é a palavra que expressa ação, estado, mudança de estado ou fenômeno da natureza, situando isso no tempo (passado, presente, futuro). Na Análise Sintática, ele é o núcleo do predicado verbal e o grande "chefe" da oração. <b>Importante:</b> O número de verbos define o número de orações em um período!</p>
+        
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Classificação/Tipo</th>
+                    <th>Como funciona (Passe o mouse)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Ação<br><small>(Nocional)</small></td>
+                    <td><span class="termo-hover" data-tooltip="VERBO DE AÇÃO (Nocional): Traz uma informação nova e indica movimento, atividade física ou mental. São os verbos Transitivos e Intransitivos. Eles são o núcleo do Predicado Verbal.">Indica Movimento/Atividade</span></td>
+                    <td>O operador <b>cortou</b> o sinal.<br><i>(Ato físico de cortar)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Estado<br><small>(Verbo de Ligação)</small></td>
+                    <td><span class="termo-hover" data-tooltip="VERBO DE LIGAÇÃO (Não Nocional): Não indica ação! Ele é apenas uma 'ponte' vazia que liga o Sujeito a uma característica (Predicativo do Sujeito). Principais: Ser, Estar, Parecer, Ficar, Tornar, Andar (estado).">Ponte para uma Característica</span></td>
+                    <td>A transmissão <b>ficou</b> escura.<br><i>(O foco não é o verbo, é o adjetivo 'escura')</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #6a1b9a;">Formas Nominais<br><small>(Sem tempo/pessoa)</small></td>
+                    <td><span class="termo-hover" data-tooltip="FORMAS NOMINAIS: São verbos congelados, que não indicam tempo nem pessoa sozinhos. São três: INFINITIVO (-ar, -er, -ir), GERÚNDIO (-ndo) e PARTICÍPIO (-ado, -ido). Parecem nomes.">Verbos 'Congelados'</span></td>
+                    <td><b>Gravar</b> é a nossa missão.<br><i>(Gravar = Infinitivo com valor de substantivo)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #ad3131;">Locução Verbal<br><small>(Auxiliar + Principal)</small></td>
+                    <td><span class="termo-hover" data-tooltip="LOCUÇÃO VERBAL: Dois ou mais verbos juntos com valor de UM SÓ. O primeiro é o Auxiliar (é ele quem flexiona no tempo/pessoa). O último é o Principal (fica congelado numa Forma Nominal) e carrega o sentido da frase.">2 verbos = 1 ação (1 oração)</span></td>
+                    <td>Nós <b>estamos gravando</b> agora.<br><i>(Auxiliar flexionou / Principal no Gerúndio)</i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (O Terror das Bancas: Ver vs. Vir):</strong> 
+            A maior armadilha de morfologia em concursos está no <b>Futuro do Subjuntivo</b> destes dois verbos irregulares. Você usa isso quando quer indicar uma condição no futuro (acompanhado do "Se" ou "Quando"). Decore a troca para não perder esse ponto garantido:<br><br>
+            👁️ <b>Verbo VER (visão):</b><br>
+            ❌ <i>"Se eu <b>ver</b> o erro na tarja, eu te aviso."</i> (Errado!)<br>
+            ✅ <i>"Se eu <b>VIR</b> o erro na tarja, eu te aviso."</i> (Correto!)<br><br>
+            🚶‍♂️ <b>Verbo VIR (deslocamento):</b><br>
+            ❌ <i>"Se ele <b>vir</b> ao estúdio amanhã, faremos o teste."</i> (Errado!)<br>
+            ✅ <i>"Se ele <b>VIER</b> ao estúdio amanhã, faremos o teste."</i> (Correto!)
+        </div>
+    </div>
+</details>
+
+
+    </div></details>
+
+
+
+
+
+     
     
      <h2 style="color:#6a1b9a; margin-top: 30px; border-left: 5px solid #67437e; padding-left: 10px;">🧠 RACIOCÍNIO LÓGICO</h2>
     <details class="card-logica">
