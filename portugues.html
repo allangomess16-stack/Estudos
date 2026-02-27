@@ -178,6 +178,67 @@ html {
     background-color: #bd4343; /* Cor de destaque ao passar o mouse */
 }
 
+.card-conteudo {
+    background: white;
+    border-left: 5px solid #1adb3a; /* Cor da sua faixa */
+    margin: 20px auto;
+    padding: 20px;
+    width: 85%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+/* Container que permite ver as duas tabelas grandes lado a lado */
+.secao-comparativa {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Cria o scroll lateral se não couber */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 95%;
+    scrollbar-width: thin; /* Deixa a barra de rolagem mais discreta */
+}
+
+/* Garante que cada bloco de imagem tenha um tamanho mínimo para leitura */
+.bloco-estudo {
+    flex: 0 0 600px; /* Não deixa a imagem ficar menor que 600px */
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.bloco-estudo img {
+    width: 100%; /* A imagem ocupa os 600px do bloco */
+    height: auto;
+    margin: 0;
+    border: none;
+}
+
+
+
+.bloco-pequeno img  {
+    width: 200%; /* A imagem ocupa os 600px do bloco */
+    height: auto;
+    margin: 0;
+    border: none;
+}
+.subtitulo-bloco {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    border-bottom: 2px solid #1adb3a;
+    padding-bottom: 5px;
+}
+
+
+.item-estudo img {
+    width: 100%;
+    margin: 0; /* Remove o margin automático que você tinha */
+}
     </style>
 </head>
 
@@ -217,14 +278,46 @@ html {
    
  
 <h2>Aqui estara os principais conteudos dos estudos</h2>
-<p class="titulo-imagem">CONJUNÇÕES COORDENATIVAS</p>
-<img src="conjunções/conjunções coordenativas.PNG"/>
+<p class="titulo-imagem">SÍNTESE DAS ORAÇÕES SUBORDINADAS</p>
 
-<p class="titulo-imagem">CONJUNÇÕES SUBORDINATIVAS</p>
-<img src="conjunções/conjunções subordinativas.PNG"/>
+<div class="secao-comparativa">
+    
+    <div class="bloco-pequeno">
+        <span class="subtitulo-bloco">📋 Classificação Geral</span>
+        <img src="interpretação/conjunções/conjunções coordenativas.PNG" />
+    </div>
+
+    <div class="bloco-estudo">
+        <span class="subtitulo-bloco">💡 Dicas de Identificação</span>
+        <img src="interpretação/conjunções/dicas orações coordenadas.PNG" />
+    </div>
+
+</div>
+
+
+
+<p class="titulo-imagem">SÍNTESE DAS ORAÇÕES SUBORDINADAS</p>
+
+<div class="secao-comparativa">
+    
+    <div class="bloco-pequeno">
+        <span class="subtitulo-bloco">📋 Classificação Geral</span>
+        <img src="conjunções/conjunções subordinativas.PNG" />
+    </div>
+
+    <div class="bloco-estudo">
+        <span class="subtitulo-bloco">💡 Dicas de Identificação</span>
+        <img src="interpretação/conjunções/Orações Subordinadas Adverbiais.PNG" />
+    </div>
+
+</div>
+
+
+  
 
 <p class="titulo-imagem">ACENTUAÇÃO GRAFICA</p>
 <img src="interpretação/Acentuação/Acentos e Sinais Gráficos.PNG"/>
+
 
 <p class=" titulo-imagem">NOVO ACORDO ORTOGRÁFICO (NAO)</p>
 <img src="interpretação/Acentuação/Alterações do Novo Acordo Ortográfico (NAO).PNG"/>
@@ -233,7 +326,20 @@ html {
 <img src="interpretação/Acentuação/Regras Gerais de acentuação.PNG"/>
 
 <p class="titulo-imagem">USO DO HÍFEN</p>
-<img src="interpretação/Acentuação/Uso do Hífen (Regras do NAO).PNG"/>
+<div class="secao-comparativa">
+    
+    <div class="bloco-estudo">
+        <span class="subtitulo-bloco">📋 Classificação Geral</span>
+        <img src="interpretação/Acentuação/Uso do Hífen (Regras do NAO).PNG"/>
+    </div>
+
+    <div class="bloco-estudo">
+        <span class="subtitulo-bloco">💡 Dicas de Identificação</span>
+        <img src="interpretação/conjunções/dicas do hifen.PNG" />
+    </div>
+
+</div>
+
 
 <p class="titulo-imagem">DICAS DO USO DE EMBORA X SOBRETUDO</p>
 <img src="interpretação/conjunções/dicas de sobretudo e embora.PNG"/>

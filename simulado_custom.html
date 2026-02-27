@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESTUDO DIRECIONADO </title>
     <style>
+
+         .menu-principal { background-color: #333; padding: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; position: sticky; top: 0; z-index: 1000; }
+        .menu-principal a { color: white; text-decoration: none; padding: 10px 15px; border-radius: 5px; background-color: #444; transition: 0.3s; font-weight: bold; font-size: 13px; white-space: nowrap; }
+        .menu-principal a:hover { background-color: #bd4343; }
+        
         body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; }
         .container { max-width: 850px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         h1 { color: #ad3131; text-align: center; border-bottom: 3px solid #ad3131; padding-bottom: 10px; }
@@ -31,7 +36,10 @@
     </style>
 </head>
 <body>
-
+<nav class="menu-principal">
+    <a href="index.html">VOLTAR AO MENU</a>
+   
+</nav>
 <div class="container">
     <h1>🎯 Simulado Direcionado Allan Silva</h1>
     
@@ -60,7 +68,7 @@
 <script src="banco_mestre.js"></script>
 
 <script>
-    const nomesMat = { p: 'Português', l: 'Lógica', g: 'Goiás/Legislação', i: 'Informática', e: 'Específicas' };
+    const nomesMat = { p: 'Português', l: 'Lógica', g: 'Goiás/Legislação', i: 'Informática', e: 'Específicas', d: 'Deveres e etica na Camara Municipal' };
     let questoesSorteativas = [];
 
     // Função que preenche a lista de temas/matérias automaticamente

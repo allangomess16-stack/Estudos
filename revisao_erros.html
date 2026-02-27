@@ -42,32 +42,78 @@
 <script src="banco_estudos.js"></script> 
 
 <script>
-    function carregarMentoriaCompleta() {
+    function carregarRevisao() {
         const container = document.getElementById('listaGeralRevisao');
         
-        // Verifica se o objeto bancoExplicações existe
-        if (typeof bancoExplicações !== 'undefined') {
-            // Transforma o objeto em uma lista e gera o HTML para cada um
-            const htmlCompleto = Object.keys(bancoExplicações).map(id => `
-                <div class="tema-box">
-                    <div class="tema-header">
-                        <span>${bancoExplicações[id].titulo}</span>
-                        <small style="opacity: 0.7;">ID: ${id}</small>
-                    </div>
-                    <div class="conteudo">
-                        ${bancoExplicações[id].corpo}
-                    </div>
-                </div>
-            `).join('');
+        // 1. Tenta pegar a lista de erros salva pelo simulado
+        // O comando JSON.parse transforma o texto salvo de volta em lista
+        const errosRecentes = JSON.parse(localStorage.getItem('erros_simulado_alego')) || [];
+        
+        console.log("Erros encontrados:", errosRecentes); // Para você testar no F12 se precisar
 
-            container.innerHTML = htmlCompleto;
+        // 2. Lógica de Decisão: Mostra Erros ou Mostra Tudo?
+        if (errosRecentes.length > 0) {
+            
+            // --- MODO: REVISÃO INTELIGENTE (Só o que errou) ---
+            document.querySelector('h1').innerHTML = "🚨 Mentoria: Seus Erros Recentes";
+            document.querySelector('p').innerHTML = `Você errou <b>${errosRecentes.length}</b> questões. Foque nestes tópicos agora:`;
+            
+            // Mapeia APENAS os itens da lista de erros
+            const htmlErros = errosRecentes.map(erro => {
+                // Tenta achar a aula no banco pelo ID. Se não tiver, usa um texto padrão.
+                const aula = bancoExplicações[erro.id] || { 
+                    titulo: "Gabarito Rápido", 
+                    corpo: `<p>A resposta correta era a opção <b>${erro.corretaLetra}</b>.</p>` 
+                };
+
+                return `
+                <div class="tema-box" style="border-left: 6px solid #c53030;">
+                    <div class="tema-header" style="background: #c53030;">
+                        <span>⚠️ ${aula.titulo}</span>
+                        <small>Questão ${erro.id}</small>
+                    </div>
+                    
+                    <div style="background: #fff5f5; padding: 15px; border-bottom: 1px solid #eee;">
+                        <div style="font-weight:bold; color:#333; margin-bottom:10px;">${erro.q}</div>
+                        <div style="color: #c53030;">❌ Você marcou: <b>${erro.userLetra}</b></div>
+                        <div style="color: #2d5a27;">✅ Gabarito: <b>${erro.corretaLetra}) ${erro.corretaTexto || ''}</b></div>
+                    </div>
+
+                    <div class="conteudo">
+                        ${aula.corpo}
+                    </div>
+                </div>`;
+            }).join('');
+
+            container.innerHTML = htmlErros;
+
         } else {
-            container.innerHTML = "<p style='text-align:center; color:red;'>Erro: Banco de explicações não encontrado.</p>";
+            
+            // --- MODO: ENCICLOPÉDIA (Mostra tudo se não tiver erros salvos) ---
+            document.querySelector('h1').innerHTML = "📚 Biblioteca de Estudos Completa";
+            document.querySelector('p').innerHTML = "Exibindo todo o conteúdo do banco de dados.";
+
+            if (typeof bancoExplicações !== 'undefined') {
+                const htmlCompleto = Object.keys(bancoExplicações).map(id => `
+                    <div class="tema-box">
+                        <div class="tema-header">
+                            <span>${bancoExplicações[id].titulo}</span>
+                            <small style="opacity: 0.7;">ID: ${id}</small>
+                        </div>
+                        <div class="conteudo">
+                            ${bancoExplicações[id].corpo}
+                        </div>
+                    </div>
+                `).join('');
+                container.innerHTML = htmlCompleto;
+            } else {
+                container.innerHTML = "<p>Erro: Banco de dados não encontrado.</p>";
+            }
         }
     }
 
-    // Inicia ao carregar a página
-    window.onload = carregarMentoriaCompleta;
+    // Inicia a função assim que a tela abre
+    window.onload = carregarRevisao;
 </script>
 
 </body>

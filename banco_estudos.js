@@ -1753,411 +1753,265 @@ const bancoExplicações = {
 
     //concurso assembleia legislativa go
    
-    // --- LÍNGUA PORTUGUESA (3001-3008) ---
+
+    // =================================================================================
+    // 📚 LÍNGUA PORTUGUESA (Interpretação e Gramática de Alto Nível)
+    // =================================================================================
     "3001": {
-        titulo: "📰 Interpretação: Nomes e Formalidade",
+        titulo: "📰 Gêneros Textuais: Referenciação Jornalística",
         corpo: `
-            <p>Em textos jornalísticos ou informativos, citar o nome completo na primeira aparição é uma regra de clareza (o "Lead"), e não um sinal de cerimônia ou formalidade.</p>
+            <p>Muitos candidatos marcam que usar "Nome + Sobrenome" é formalidade. <b>Isso é um erro técnico.</b></p>
             <div class='dica'>
-                <b>Regra de Ouro do Texto Informativo:</b>
-                <ul>
-                    <li>1ª vez: Nome Completo + Cargo (Ex: O técnico de som Allan Silva).</li>
-                    <li>2ª vez em diante: Apenas o Sobrenome ou Prenome (Ex: Silva disse que...).</li>
-                </ul>
-            </div>`
+                <b>A Regra do Jornalismo (Lead):</b><br>
+                Ao apresentar uma pessoa pela primeira vez no texto, devemos dar a "ficha completa" (Nome + Sobrenome + Cargo) para situar o leitor.
+                <br><i>Ex: "O técnico de som Allan Silva ajustou a mesa."</i>
+            </div>
+            <p>Nas citações seguintes, usamos apenas o prenome ("Allan") ou o sobrenome ("Silva") para evitar repetição (Coesão Textual).</p>`
     },
     "3002": {
-        titulo: "🎭 Adjetivo com Função de Advérbio",
+        titulo: "🎭 Morfologia: Adjetivo Adverbializado",
         corpo: `
-            <p>Alguns adjetivos, quando ligados a verbos, perdem a flexão e indicam <b>MODO</b>.</p>
+            <p>Como regra geral, Adjetivos variam (bonito/bonita). Advérbios NÃO variam (ontem/hoje).</p>
+            <p>Quando um adjetivo modifica um <b>verbo</b>, ele "veste a camisa" de advérbio e para de variar.</p>
             <table class='tab-estudo'>
-                <tr><th>Frase</th><th>Classificação</th><th>Sentido</th></tr>
-                <tr><td>"Ele fala <b>claro</b>."</td><td>Advérbio</td><td>Claramente</td></tr>
-                <tr><td>"A cerveja desce <b>redondo</b>."</td><td>Advérbio</td><td>Redondamente</td></tr>
-                <tr><td>"Foi <b>direito</b> ao ponto."</td><td>Advérbio</td><td>Diretamente</td></tr>
+                <tr><th>Frase</th><th>Análise</th><th>Teste do "-MENTE"</th></tr>
+                <tr><td>"Ele fala <b>claro</b>"</td><td>Modo de falar</td><td>Fala <i>Claramente</i></td></tr>
+                <tr><td>"A cerveja desce <b>redondo</b>"</td><td>Modo de descer</td><td>Desce <i>Redondamente</i></td></tr>
+                <tr><td>"Foi <b>direito</b> ao ponto"</td><td>Modo de ir</td><td>Foi <i>Diretamente</i></td></tr>
             </table>`
     },
     "3003": {
-        titulo: "⏳ O Perigo do Gerúndio",
+        titulo: "⏳ Sintaxe: O Erro do Gerúndio de Posterioridade",
         corpo: `
-            <p>O gerúndio (terminação -ndo) indica uma ação contínua ou simultânea. O erro na frase ocorre porque o gerúndio foi usado para uma ação que aconteceu <b>meses depois</b>, quebrando a lógica temporal.</p>
+            <p>O gerúndio (-ndo) indica ação contínua ou simultânea. Usá-lo para algo que acontece <b>depois</b> é erro clássico.</p>
             <div class='alerta'>
-                <b>Gerúndio Errado (Posterioridade):</b> "O ladrão fugiu, <i>sendo</i> preso dias depois." (Errado, pois não foi ao mesmo tempo).<br>
-                <b>Correto:</b> "O ladrão fugiu <i>e foi</i> preso dias depois."
-            </div>`
-    },
-    "3004": {
-        titulo: "🔗 Coesão por Hiperônimo",
-        corpo: `
-            <p>Para não repetir palavras, usamos termos mais gerais (Hiperônimos).</p>
-            <ul>
-                <li><b>Peça</b> (Específico) → Substituído por <b>Texto</b> (Geral).</li>
-                <li><b>Remédio</b> (Específico) → Substituído por <b>Medicamento</b> (Geral).</li>
-            </ul>
-            <p>Isso mantém o texto elegante e fluido.</p>`
-    },
-    "3005": {
-        titulo: "📖 Tipologia Narrativa",
-        corpo: `
-            <p>O texto tem os 5 elementos da narração (PENTE):</p>
-            <ul>
-                <li><b>P</b>ersonagens (Bispo e Portinari).</li>
-                <li><b>E</b>nredo (A encomenda e a crítica).</li>
-                <li><b>N</b>arrador.</li>
-                <li><b>T</b>empo (Passado).</li>
-                <li><b>E</b>spaço.</li>
-            </ul>`
+                ❌ <b>Errado:</b> "O ladrão fugiu, <i>sendo</i> preso dias depois." (Não foi ao mesmo tempo).<br>
+                ✅ <b>Certo:</b> "O ladrão fugiu <i>e foi</i> preso dias depois."
+            </div>
+            <p>Na questão: Pombinha não desapareceu enquanto o rapaz lia a carta. Foi uma consequência futura ("daí a meses").</p>`
     },
     "3006": {
-        titulo: "🧠 Interpretação de Texto",
+        titulo: "🧠 Interpretação: Analogia de Autoridade",
         corpo: `
-            <p>A resposta de Portinari ("Eu, na minha, sou papa") é uma figura de linguagem para estabelecer <b>autoridade</b>.</p>
-            <div class='dica'>Ele quis dizer: "No seu território (Igreja), você manda. No meu (Arte), eu sou a autoridade máxima, assim como o Papa é na Igreja".</div>`
+            <p>Portinari usa uma figura de linguagem para desarmar a crítica do Bispo.</p>
+            <ul>
+                <li><b>O Bispo:</b> Autoridade máxima na Igreja.</li>
+                <li><b>O Papa:</b> Autoridade suprema (acima do Bispo).</li>
+            </ul>
+            <p>Ao dizer "Na minha [arte], sou Papa", ele diz: <i>"Aqui nas tintas quem manda sou eu, e minha autoridade é absoluta, maior que a sua."</i></p>`
     },
     "3007": {
-        titulo: "🗣️ Vocabulário e Regência",
+        titulo: "🗣️ Semântica e Regência do verbo 'Pôr'",
         corpo: `
-            <p>O verbo "Pôr" tem múltiplos sentidos. Na frase "O menino se pôs debaixo da mesa", o sentido é de colocar-se, enfiar-se.</p>
-            <p>As outras opções mudam o sentido original (ex: "Pôr pomada" é aplicar, não aconselhar).</p>`
+            <p>O verbo "Pôr" muda drasticamente de sentido dependendo da preposição ou contexto.</p>
+            <table class='tab-estudo'>
+                <tr><th>Expressão</th><th>Sentido Real</th><th>Sinônimo</th></tr>
+                <tr><td>Pôr a mesa</td><td>Arrumar</td><td>Organizar</td></tr>
+                <tr><td>Pôr o casaco</td><td>Vestir</td><td>Trajar</td></tr>
+                <tr><td><b>Pôr-se (em algum lugar)</b></td><td>Entrar/Ocupar</td><td><b>Enfiar-se / Meter-se</b></td></tr>
+            </table>
+            <p>A opção "enfiar-se debaixo da mesa" é a única que mantém o sentido físico de entrar em local apertado.</p>`
     },
     "3008": {
-        titulo: "🎯 Artigo Definido e Determinação",
+        titulo: "🎯 Sintaxe: Artigo Definido e Determinação",
         corpo: `
-            <p>Por que usamos "OS túmulos" e não apenas "túmulos"?</p>
-            <p>Porque o termo seguinte ("dos que venceram na vida") <b>restringe</b> o sentido. Não são quaisquer túmulos, é um grupo específico. Logo, o artigo definido é obrigatório.</p>`
+            <p>O uso do artigo "O/A/OS/AS" serve para <b>especificar</b>. Se eu digo "Gosto de túmulos", gosto de qualquer um. Se digo "Gosto <b>DOS</b> túmulos", estou falando de um grupo específico.</p>
+            <div class='dica'>
+                Na frase, o termo "túmulos" vem seguido de uma restrição: <i>"...dos que venceram na vida"</i>.
+                <br>Como o substantivo está determinado/restrito, o artigo definido é obrigatório.
+            </div>`
     },
 
-    // --- RACIOCÍNIO LÓGICO (3009-3011) ---
+    // =================================================================================
+    // 🧠 RACIOCÍNIO LÓGICO (Métodos Rápidos)
+    // =================================================================================
     "3009": {
-        titulo: "🧩 Lógica Proposicional (Vera Fischer)",
+        titulo: "🧩 Lógica: O Segredo da Condicional (Se... então)",
         corpo: `
-            <p>Temos as premissas verdadeiras: Carro = Preto (V), Moto = ~Branca (V), Bike = Vermelha (V).</p>
-            <p>Vamos testar a opção correta: <i>"Se bike ~vermelha e carro preto, então moto branca."</i></p>
-            <div class='dica'>
-                Antecedente: Bike ~vermelha (F) E Carro preto (V) = <b>FALSO</b>.<br>
-                Na condicional (Se... então), se a primeira parte é Falsa, a frase inteira é <b>VERDADEIRA</b> (não importa o final).
+            <p>A questão dá as verdades: <b>Carro=Preto(V), Moto=~Branca(V), Bike=Vermelha(V)</b>.</p>
+            <p>Analisando a alternativa correta (D): <br><i>"Se a bicicleta NÃO é vermelha e o carro é preto, então..."</i></p>
+            <div class='alerta'>
+                <b>O Pulo do Gato:</b><br>
+                Bike NÃO vermelha é <b>FALSO</b>. <br>
+                Na tabela verdade do "Se... então", se a primeira parte (antecedente) é FALSA, a frase inteira é automaticamente <b>VERDADEIRA</b>.
+                <br><i>(F -> V = V) e (F -> F = V).</i>
             </div>`
     },
     "3010": {
-        titulo: "🔄 Equivalência Lógica (NE-Y-MA)",
+        titulo: "🔄 Equivalência Lógica: A Regra do NE-Y-MA",
         corpo: `
-            <p>Para transformar "Se P, então Q" em uma disjunção (OU):</p>
-            <div class='alerta'>
-                <b>NE</b>ga a primeira <b>Y</b> (ou) <b>MA</b>ntém a segunda.
+            <p>Como transformar "Se P, então Q" em uma frase com "OU"?</p>
+            <div class='dica'>
+                <b>Fórmula:</b> ~P v Q (Nega a primeira OU Mantém a segunda).
             </div>
-            <p>Original: Bola Branca (P) -> Ficha Vermelha (Q).<br>
-            Equivalência: Bola <b>NÃO</b> Branca (~P) <b>OU</b> Ficha Vermelha (Q).</p>`
+            <ol>
+                <li><b>Original:</b> (Bola Branca E Caixa ~Azul) → Ficha Vermelha.</li>
+                <li><b>Nega a 1ª (Morgan):</b> Bola ~Branca <b>OU</b> Caixa Azul.</li>
+                <li><b>Troca o conectivo:</b> Coloca o <b>OU</b> principal.</li>
+                <li><b>Mantém a 2ª:</b> Ficha Vermelha.</li>
+            </ol>
+            <p><b>Resultado:</b> Bola ~Branca OU Caixa Azul OU Ficha Vermelha.</p>`
     },
     "3011": {
-        titulo: "🔢 Sequências Cíclicas",
+        titulo: "🔢 Sequências Cíclicas: O Resto da Divisão",
         corpo: `
-            <p>A sequência é: 5, 4, -1, -5, -4, 1... (Repete a cada 6 números).</p>
-            <p><b>Conta:</b> 2025 ÷ 6.<br>
-            Resto = 3.</p>
-            <p>Logo, o termo procurado é o 3º da fila, que é <b>-1</b>.</p>`
-    },
-
-    // --- INFORMÁTICA (3012-3014) ---
-    "3012": {
-        titulo: "⚙️ Configurações do Windows 10",
-        corpo: `
-            <p>A Microsoft moveu quase tudo do Painel de Controle para o menu <b>Configurações (Win+I)</b>.</p>
-            <ul>
-                <li><b>Mouse:</b> Fica em "Dispositivos".</li>
-                <li><b>Energia:</b> Fica em "Sistema" > "Energia e Suspensão".</li>
-            </ul>`
-    },
-    "3013": {
-        titulo: "📊 Extensões de Arquivos",
-        corpo: `
-            <table class='tab-estudo'>
-                <tr><th>Extensão</th><th>Software</th><th>Função</th></tr>
-                <tr><td><b>.XLSX</b></td><td>Excel</td><td>Planilhas, Cálculos, Gráficos.</td></tr>
-                <tr><td>.DOCX</td><td>Word</td><td>Textos.</td></tr>
-                <tr><td>.PPTX</td><td>PowerPoint</td><td>Apresentações.</td></tr>
-            </table>`
-    },
-    "3014": {
-        titulo: "👻 Malware: Scareware",
-        corpo: `
-            <p>O nome vem de <i>Scare</i> (Susto/Medo). É aquele pop-up que grita: "SEU PC ESTÁ INFECTADO!".</p>
-            <div class='dica'>O objetivo não é infectar de imediato, mas <b>enganar</b> o usuário pelo medo para que ele compre um antivírus falso ou clique onde não deve.</div>`
-    },
-
-    // --- HISTÓRIA E GEOGRAFIA (3015-3017) ---
-    "3015": {
-        titulo: "🏛️ A Marcha para o Oeste (Mudancismo)",
-        corpo: `
-            <p>A mudança da capital da Cidade de Goiás (Vila Boa) para Goiânia teve viés político:</p>
-            <ul>
-                <li>Enfraquecer a oligarquia dos Caiado (Coronelismo).</li>
-                <li>Seguir a estratégia de Vargas de ocupar o interior do Brasil.</li>
-                <li>Modernização e saneamento.</li>
-            </ul>`
-    },
-    "3016": {
-        titulo: "🗺️ Descentralização Econômica",
-        corpo: `
-            <p>Por que Goiânia cresce menos que antes? Porque o interior enriqueceu.</p>
-            <p>Cidades como <b>Rio Verde</b> (Agroindústria), <b>Catalão</b> (Montadoras/Mineração) e <b>Anápolis</b> (DAIA) atraem a mão de obra que antes iria para a capital.</p>`
-    },
-    "3017": {
-        titulo: "🏙️ Problemas Urbanos",
-        corpo: `
-            <p>O crescimento rápido de Goiânia gerou:</p>
-            <ul>
-                <li><b>Impermeabilização:</b> Asfalto demais impede a água de entrar no solo = Enchentes.</li>
-                <li><b>Ilhas de Calor:</b> A cidade fica muito mais quente que a zona rural.</li>
-                <li><b>Mobilidade:</b> O transporte coletivo não acompanhou o crescimento (ao contrário do que dizia a opção errada).</li>
-            </ul>`
-    },
-
-    // --- LEGISLAÇÃO E DIREITO (3018-3026) ---
-    "3018": {
-        titulo: "🔄 Formas de Provimento: Aproveitamento",
-        corpo: `
-            <p>O servidor estável cujo cargo foi extinto fica em <b>Disponibilidade</b> (recebendo em casa). Quando surge uma vaga compatível, ele sofre <b>Aproveitamento</b>.</p>
-            <div class='dica'>Macete: Quem está disponível deve ser aproveitado!</div>`
-    },
-    "3019": {
-        titulo: "📜 Deveres do Servidor (ALEGO)",
-        corpo: `
-            <p>Além de trabalhar, o servidor deve ter:</p>
-            <ul>
-                <li><b>Urbanidade:</b> Tratar todos com respeito e educação.</li>
-                <li><b>Discrição:</b> Não sair espalhando fofoca ou dados internos.</li>
-                <li><b>Assiduidade/Pontualidade:</b> Básico de qualquer emprego.</li>
-            </ul>`
-    },
-    "3020": {
-        titulo: "🎓 Escola do Legislativo",
-        corpo: `
-            <p>A capacitação não é apenas um "bônus", é um <b>dever</b> do servidor e uma obrigação da ALEGO fornecer os meios através da Escola do Legislativo.</p>`
-    },
-    "3021": {
-        titulo: "🌎 Princípios Internacionais (Art. 4º CF)",
-        corpo: `
-            <p>A Constituição Federal é clara: O Brasil buscará a formação de uma comunidade latino-americana de nações.</p>
-            <div class='alerta'>Foco na <b>América Latina</b>, não apenas América do Sul ou Mercosul.</div>`
-    },
-    "3022": {
-        titulo: "🗳️ Elegibilidade e Partidos",
-        corpo: `
-            <p>Para ser eleito no Brasil, você precisa cumprir a regra do "AlisTa Partiu":</p>
-            <ol>
-                <li>Alistamento Eleitoral.</li>
-                <li><b>Filiação Partidária</b> (Não existe candidatura avulsa!).</li>
-                <li>Idade mínima (21 para Deputado).</li>
-            </ol>`
-    },
-    "3023": {
-        titulo: "🏛️ Congresso Nacional",
-        corpo: `
-            <table class='tab-estudo'>
-                <tr><th>Casa</th><th>Representa</th><th>Renovação</th></tr>
-                <tr><td>Câmara dos Deputados</td><td>O POVO</td><td>Total a cada 4 anos.</td></tr>
-                <tr><td>Senado Federal</td><td>Os ESTADOS</td><td>Alternada (1/3 e 2/3).</td></tr>
-            </table>`
-    },
-    "3024": {
-        titulo: "🏗️ Responsabilidade em Obras Públicas",
-        corpo: `
-            <p>O fato de a Administração Pública "aceitar" (Recebimento Definitivo) uma obra não livra o engenheiro/projetista de culpa se o prédio cair depois.</p>
-            <p>A responsabilidade técnica pela solidez e segurança dura 5 anos (Código Civil).</p>`
-    },
-    "3025": {
-        titulo: "🛡️ Fundamentos da LGPD",
-        corpo: `
-            <p>A LGPD existe para proteger o <b>Cidadão</b> (Titular), não o Estado.</p>
-            <p>Fundamentos reais: Respeito à privacidade, Autodeterminação informativa, Liberdade de expressão, Inviolabilidade da intimidade.</p>`
-    },
-    "3026": {
-        titulo: "💰 Herança e Improbidade",
-        corpo: `
-            <p>Se o servidor corrupto morre, a dívida passa para o filho? <b>Sim, mas...</b></p>
-            <div class='dica'>
-                ...apenas até o limite do valor da herança transferida. O filho nunca paga a dívida do pai com o seu próprio dinheiro.
+            <p>Não tente calcular até 2025! Ache o padrão de repetição (o carimbo).</p>
+            <p><b>Sequência:</b> 5, 4, -1, -5, -4, 1, <b>5, 4...</b> (Repetiu!).</p>
+            <p>O ciclo tem <b>6 números</b>. Agora divida a posição desejada pelo tamanho do ciclo:</p>
+            <div class='alerta'>
+                <b>Conta:</b> 2025 ÷ 6.<br>
+                O que importa é o <b>RESTO</b>, que é <b>3</b>.<br>
+                Isso significa que o 2025º termo é igual ao 3º termo da fila: <b>-1</b>.
             </div>`
     },
 
-    // --- CONHECIMENTOS ESPECÍFICOS: SOM (3027-3050) ---
+    // =================================================================================
+    // 💻 INFORMÁTICA (Foco em Windows e Segurança)
+    // =================================================================================
+    "3012": {
+        titulo: "⚙️ Windows 10: O Fim do Painel de Controle",
+        corpo: `
+            <p>A Microsoft está migrando tudo para o menu "Configurações" (Aquele da engrenagem ⚙️).</p>
+            <table class='tab-estudo'>
+                <tr><th>Recurso</th><th>Onde fica agora?</th></tr>
+                <tr><td>Mouse (Botão Primário)</td><td>Configurações > <b>Dispositivos</b></td></tr>
+                <tr><td>Energia (Desempenho)</td><td>Configurações > <b>Sistema</b> > Energia e Suspensão</td></tr>
+                <tr><td>Desinstalar Programas</td><td>Configurações > <b>Aplicativos</b></td></tr>
+            </table>`
+    },
+    "3014": {
+        titulo: "👻 Scareware: O Golpe do Medo",
+        corpo: `
+            <p>Sabe aquele pop-up que pisca vermelho gritando <i>"SEU PC ESTÁ INFECTADO COM 38 VÍRUS!"</i>?</p>
+            <div class='dica'>
+                Isso é <b>Scareware</b> (Scare = Susto).<br>
+                <b>O objetivo:</b> Te deixar em pânico para você clicar e baixar um suposto "antivírus" que, na verdade, é o verdadeiro malware (Trojan ou Ransomware).
+            </div>
+            <p><b>Solução:</b> Feche a aba imediatamente (Alt+F4). Nunca clique.</p>`
+    },
+
+    // =================================================================================
+    // ⚖️ LEGISLAÇÃO (Administrativo e Constitucional)
+    // =================================================================================
+    "3018": {
+        titulo: "🔄 Estatuto: Disponibilidade e Aproveitamento",
+        corpo: `
+            <p>Imagine o servidor como um jogador de futebol.</p>
+            <ul>
+                <li>Se o time (cargo) dele acaba, ele não é demitido. Ele vai para o "banco de reservas" (<b>Disponibilidade</b>), recebendo salário proporcional.</li>
+                <li>Quando surge uma vaga em outro time compatível, o técnico chama ele de volta. O nome desse retorno é <b>APROVEITAMENTO</b>.</li>
+            </ul>
+            <div class='alerta'>Macete: Quem está disponível, deve ser aproveitado!</div>`
+    },
+    "3021": {
+        titulo: "🌎 Art. 4º CF: Integração Regional",
+        corpo: `
+            <p>A Constituição Federal é específica sobre quem são nossos parceiros prioritários.</p>
+            <p>O parágrafo único diz: "A República buscará a integração econômica, política, social e cultural dos povos da <b>AMÉRICA LATINA</b>".</p>
+            <p><i>Cuidado: Não é só América do Sul, nem Mercosul. O escopo é Latino-Americano.</i></p>`
+    },
+    "3024": {
+        titulo: "🏗️ Obras: O Recebimento Definitivo",
+        corpo: `
+            <p>Quando a Prefeitura assina o "Recebimento Definitivo" de um viaduto, ela está dizendo: "Ok, a obra está visivelmente pronta".</p>
+            <div class='alerta'>
+                <b>Isso isenta a empreiteira? NÃO!</b><br>
+                Pelo Código Civil, o construtor responde pela <b>solidez e segurança</b> da obra por 5 anos. Se o viaduto cair 3 anos depois, a culpa é do engenheiro, mesmo que a prefeitura tenha aceitado a obra.
+            </div>`
+    },
+
+    // =================================================================================
+    // 🎚️ ESPECÍFICA: TÉCNICO DE SOM (Aulas Práticas de Estúdio)
+    // =================================================================================
     "3027": {
-        titulo: "⚡ Phantom Power (+48V)",
+        titulo: "⚡ Phantom Power (+48V): A Vida do Condensador",
         corpo: `
-            <p>Microfones condensadores possuem placas carregadas eletricamente e circuitos ativos. Eles não funcionam sem energia.</p>
-            <div class='alerta'>O Phantom Power envia +48V pelos pinos 2 e 3 do cabo XLR em relação ao pino 1. Sem isso, o mic fica mudo.</div>`
-    },
-    "3028": {
-        titulo: "🎛️ Fluxo de Sinal (Signal Flow)",
-        corpo: `
-            <p>A ordem correta da cadeia de áudio analógica:</p>
-            <ol>
-                <li><b>Microfone:</b> Capta o som (nível muito baixo).</li>
-                <li><b>Pré-Amplificador (1):</b> Eleva o nível de mic para nível de linha.</li>
-                <li><b>Processamento (2):</b> EQ, Compressor, Efeitos.</li>
-                <li><b>Power Amp (3):</b> Eleva o nível de linha para nível de caixa (Speaker Level).</li>
-            </ol>`
-    },
-    "3029": {
-        titulo: "🎤 Microfone Shotgun",
-        corpo: `
-            <p>O Shotgun usa um <b>Tubo de Interferência</b>. O som que entra pelas laterais do tubo se cancela por diferença de fase.</p>
-            <p>Resultado: Ele isola a voz à frente e rejeita o ruído lateral/traseiro. Ideal para TV e Cinema.</p>`
+            <p>Por que o microfone dinâmico funciona sem pilha e o condensador não?</p>
+            <div class='dica'>
+                <b>Dinâmico (Bobina):</b> Funciona como um dínamo de bicicleta. O som empurra a membrana, que gera sua própria energia (eletromagnética).<br>
+                <b>Condensador (Capacitor):</b> Funciona como uma bateria que precisa ser carregada. Ele tem duas placas que precisam de eletricidade para criar um campo estático.
+            </div>
+            <p>O <b>Phantom Power</b> envia 48 volts contínuos pelo próprio cabo de áudio para "acordar" o microfone.</p>`
     },
     "3030": {
-        titulo: "🎚️ Auxiliar Pre vs. Post Fader",
+        titulo: "🎚️ Auxiliar Pre-Fader: A Regra de Ouro do Monitor",
         corpo: `
-            <table class='tab-estudo'>
-                <tr><th>Tipo</th><th>Comportamento</th><th>Uso</th></tr>
-                <tr><td><b>POST-Fader</b></td><td>Se mexer no fader principal, muda o auxiliar.</td><td>Efeitos (Reverb).</td></tr>
-                <tr><td><b>PRE-Fader</b></td><td>Independente do fader principal.</td><td><b>Monitores de Palco.</b></td></tr>
-            </table>
-            <div class='dica'>Para retorno, sempre use PRE-Fader. O músico não quer que o volume dele mude só porque você mixou para o público.</div>`
-    },
-    "3031": {
-        titulo: "🎀 Microfones de Fita (Ribbon)",
-        corpo: `
-            <p>Fitas são os microfones mais frágeis que existem. Uma fita de alumínio de 2 microns pode rasgar com um simples sopro ou com Phantom Power mal aplicado.</p>
-            <p>Dizer que eles são "imunes a pressão alta" é o erro da questão.</p>`
+            <p>Imagine que você está mixando o show. Você acha a guitarra alta e abaixa o fader principal (P.A.).</p>
+            <p><b>O Problema:</b> Se o auxiliar do guitarrista for POST-Fader, o volume dele no palco também abaixa. Ele vai reclamar!</p>
+            <div class='alerta'>
+                <b>A Solução: PRE-Fader.</b><br>
+                O sinal para o palco é desviado ANTES de chegar no seu fader. Você pode mexer à vontade no som do público, que o som do músico permanece intacto.
+            </div>`
     },
     "3032": {
-        titulo: "📐 Pontos Nulos (Polar Patterns)",
+        titulo: "📐 Padrões Polares: Onde colocar o Monitor?",
         corpo: `
-            <p>Onde colocar o monitor para não dar microfonia?</p>
-            <ul>
-                <li>Cardióide: Atrás (180º).</li>
-                <li><b>Supercardióide:</b> Nas diagonais (125º). <b>Cuidado:</b> Ele capta atrás!</li>
-                <li>Bidirecional (Fig-8): Nas laterais (90º).</li>
-            </ul>`
-    },
-    "3033": {
-        titulo: "💾 Formato WAV/AIFF (PCM Linear)",
-        corpo: `
-            <p>Profissionais usam WAV porque ele é <b>Lossless</b> (sem perdas) e <b>Uncompressed</b> (sem compressão).</p>
-            <p>Cada bit captado pelo conversor é salvo. MP3 joga fora dados para economizar espaço (Psicoacústica).</p>`
-    },
-    "3034": {
-        titulo: "🌐 Áudio Sobre IP (Dante/AES67)",
-        corpo: `
-            <p><b>Mito:</b> "Não precisa de sincronismo". <br>
-            <b>Verdade:</b> Precisa MUITO. Usa-se o protocolo PTP (Precision Time Protocol) para que todos os relógios da rede batam juntos no nível do nanossegundo.</p>
-            <p>Dante usa cabos CAT5e/CAT6 e switches comuns, facilitando a instalação na ALEGO.</p>`
+            <p>Para evitar microfonia, o monitor deve ficar na "bunda" do microfone (ponto cego). Mas cuidado:</p>
+            <table class='tab-estudo'>
+                <tr><th>Tipo</th><th>Desenho</th><th>Ponto Cego (Monitor)</th></tr>
+                <tr><td>Cardióide</td><td>Coração</td><td><b>180º (Exatamente atrás)</b></td></tr>
+                <tr><td>Supercardióide</td><td>Coração c/ rabinho</td><td><b>125º (Nas diagonais)</b></td></tr>
+            </table>
+            <p>O Supercardióide capta um pouco atrás (o rabinho). Se você puser o monitor reto atrás dele, vai apitar!</p>`
     },
     "3035": {
-        titulo: "🔥 Níveis de Sinal (Cuidado!)",
+        titulo: "🔥 O Perigo da Voltagem: Amp na Mesa",
         corpo: `
-            <p>Nunca ligue a saída de caixa de um amplificador na entrada de uma mesa.</p>
+            <p>Essa é a receita para queimar uma mesa de som em 1 segundo.</p>
             <ul>
-                <li>Entrada de Mic: Espera milivolts (0.001V).</li>
-                <li>Saída de Amp: Pode entregar 50V, 70V ou mais.</li>
+                <li><b>Entrada de Mic (XLR):</b> Feita para receber sussurros elétricos (0.002 Volts).</li>
+                <li><b>Saída de Power Amp:</b> Feita para empurrar alto-falantes pesados (50 a 100 Volts).</li>
             </ul>
-            <div class='alerta'>Resultado: Fumaça mágica e mesa queimada na hora.</div>`
+            <div class='alerta'>
+                Ligar a saída do amp na entrada da mesa é como ligar seu celular direto num poste de alta tensão. Os op-amps da entrada derretem na hora.
+            </div>`
     },
     "3036": {
-        titulo: "📈 Intersample Peaks",
+        titulo: "📈 Intersample Peaks: O Fantasma Digital",
         corpo: `
-            <p>No áudio digital, você pode ter dois samples seguidos em -0.1dB. Quando o conversor D/A desenha a onda analógica entre eles, a curva pode passar de 0dB.</p>
-            <p>Isso gera distorção no som final, mesmo que o medidor digital não mostre vermelho. Use True Peak Meters.</p>`
-    },
-    "3037": {
-        titulo: "🎛️ Processadores Dinâmicos e de Tempo",
-        corpo: `
-            <ul>
-                <li><b>Compressor:</b> Reduz a diferença entre o som mais baixo e o mais alto (Controla dinâmica).</li>
-                <li><b>Gate:</b> "Portão". Fecha o som quando o volume é baixo (Limpa ruído/vazamento).</li>
-                <li><b>Reverb:</b> Cria a ilusão de espaço acústico (Tempo).</li>
-            </ul>`
-    },
-    "3038": {
-        titulo: "📊 dBFS vs. dBVU",
-        corpo: `
-            <p><b>dBFS (Full Scale):</b> Escala digital. O 0 é o teto absoluto. Acima disso é erro matemático (clip).</p>
-            <p><b>VU Meter:</b> Medidor mecânico lento. Mostra a média (RMS), parecido com a audição humana.</p>`
+            <p>Seu medidor digital mostra -0.1 dB. Parece seguro, né? <b>Nem sempre.</b></p>
+            <p>Imagine dois pontos digitais altos lado a lado. Quando o conversor desenha a onda analógica suave entre eles, o arco da onda pode passar de 0 dB.</p>
+            <p>Isso é o <b>Pico Intersample</b> (Entre Amostras). Ele causa distorção nos equipamentos analógicos lá na frente, mesmo que o arquivo digital pareça "dentro do limite".</p>`
     },
     "3039": {
-        titulo: "🔌 Ground Loop (O terrível 'HUM')",
+        titulo: "🔌 Ground Loop: O Zumbido de 60Hz",
         corpo: `
-            <p>Aquele ruído grave (60Hz) que some quando você toca no equipamento é problema de aterramento.</p>
-            <div class='dica'>Solução: Ligar todos os equipamentos na mesma fase/terra ou usar "Ground Lift" em Direct Boxes (DI).</div>`
+            <p>Sabe aquele "HUUUUUM" grave que some quando você põe a mão na mesa?</p>
+            <div class='dica'>
+                <b>A Causa:</b> A mesa está numa tomada (Terra A) e o cubo da guitarra noutra (Terra B). Se houver diferença de voltagem entre os terras, a eletricidade viaja pelo cabo de áudio procurando equilíbrio.
+            </div>
+            <p><b>A Solução:</b> Usar um <b>Direct Box (DI)</b> com a chave "Ground Lift". Isso corta a malha do cabo, interrompendo a estrada da eletricidade suja, mas deixando o som passar.</p>`
     },
     "3040": {
-        titulo: "🛡️ CMRR (Common Mode Rejection Ratio)",
+        titulo: "🛡️ Cabo Balanceado (XLR): A Mágica do Cancelamento",
         corpo: `
-            <p>A mágica do cabo balanceado:</p>
-            <p>O pino 2 leva o sinal (+). O pino 3 leva o sinal invertido (-).</p>
-            <p>O ruído entra igual nos dois (+). Na entrada da mesa, o pino 3 é desinvertido. O áudio soma e o ruído (agora oposto) se cancela.</p>`
-    },
-    "3041": {
-        titulo: "🛠️ Manutenção Preventiva",
-        corpo: `
-            <p><b>WD-40:</b> É óleo! Vai juntar poeira e destruir o fader. Use Limpa-Contatos secativo.</p>
-            <p><b>Enrolar no cotovelo:</b> Torce os filamentos de cobre internos e quebra o cabo por dentro. Use a técnica "Over-Under".</p>`
-    },
-    "3042": {
-        titulo: "🎚️ Filtro Passa-Altas (HPF)",
-        corpo: `
-            <p>Cortar abaixo de 30Hz ou 40Hz geralmente não afeta a música porque:</p>
+            <p>Como um cabo de 100 metros não pega ruído de rádio?</p>
             <ol>
-                <li>Poucos instrumentos têm fundamental ali.</li>
-                <li>O ouvido humano precisa de MUITO volume para ouvir essas frequências (Curvas de Fletcher-Munson).</li>
-            </ol>
-            <p>Isso limpa a energia do amplificador.</p>`
-    },
-    "3043": {
-        titulo: "🔊 Diretividade e Difração",
-        corpo: `
-            <p><b>Graves (Onda longa):</b> Contornam obstáculos (Difração) e são omnidirecionais.</p>
-            <p><b>Agudos (Onda curta):</b> Batem e voltam (Reflexão) e saem em linha reta (Direcionais).</p>`
-    },
-    "3044": {
-        titulo: "📏 Lei do Inverso do Quadrado",
-        corpo: `
-            <p>Cada vez que você dobra a distância da fonte sonora, você perde 6dB de pressão sonora (em campo livre).</p>
-            <p>Isso é a <b>Atenuação</b> geométrica.</p>`
-    },
-    "3045": {
-        titulo: "💿 Mídias de Armazenamento",
-        corpo: `
-            <ul>
-                <li><b>Fita K7:</b> Magnética e Linear (tem que rebobinar para achar a música).</li>
-                <li><b>CD:</b> Óptico (Laser) e Acesso Aleatório (pula faixa).</li>
-                <li><b>Cartão SD:</b> Memória Flash e Acesso Aleatório.</li>
-            </ul>`
-    },
-    "3046": {
-        titulo: "🔊 LUFS (Loudness Units Full Scale)",
-        corpo: `
-            <p>Antigamente, olhávamos o Pico. Hoje, com o streaming (Spotify, YouTube), olhamos o <b>Loudness Integrado</b>.</p>
-            <p>Ele mede a "energia média" da música inteira. Se você mixar muito alto, o Spotify abaixa seu volume automaticamente (Normalização).</p>`
-    },
-    "3047": {
-        titulo: "💻 Edição Não-Destrutiva",
-        corpo: `
-            <p>Numa DAW (Pro Tools, Reaper), quando você corta um clipe e deleta, o arquivo WAV no disco rígido continua intacto.</p>
-            <p>A edição é apenas um conjunto de instruções virtuais. Por isso o "Undo" (Desfazer) é ilimitado.</p>`
-    },
-    "3048": {
-        titulo: "🎛️ Ferramentas de Mixagem",
-        corpo: `
-            <ul>
-                <li><b>Normalizar:</b> Apenas sobe o volume até o pico bater no teto. Não muda o som.</li>
-                <li><b>Limiter:</b> Um compressor agressivo (ratio infinito) que impede o som de passar de um teto.</li>
-                <li><b>EQ:</b> Altera o timbre (frequências).</li>
-            </ul>`
+                <li>O cabo leva dois sinais iguais: um <b>Normal (+)</b> e um <b>Invertido (-)</b>.</li>
+                <li>O ruído entra no cabo e suja os dois iguais (Fase +).</li>
+                <li>Ao chegar na mesa, o sistema <b>desinverte</b> o sinal negativo.</li>
+                <li><b>O Truque:</b> O áudio (agora alinhado) dobra de força. O ruído (agora invertido contra ele mesmo) se anula matematicamente (+1 com -1 = 0).</li>
+            </ol>`
     },
     "3049": {
-        titulo: "📉 Conversão Lossy (MP3)",
+        titulo: "📉 Downsampling e Aliasing",
         corpo: `
-            <p>Converter um MP3 (com perdas) de volta para WAV não traz a qualidade de volta. A informação foi jogada fora.</p>
-            <p><b>Downsampling:</b> Ao baixar de 96k para 48k, é OBRIGATÓRIO usar um filtro Low-Pass para evitar que frequências altas virem ruído grave (Aliasing).</p>`
+            <p>Imagine uma roda de carro girando tão rápido que parece rodar para trás. Isso é <b>Aliasing</b>.</p>
+            <p>No áudio, se você converter 96kHz para 48kHz sem cuidado, as frequências super altas (acima de 24kHz) "dobram" para trás e viram ruídos graves estranhos.</p>
+            <div class='alerta'>
+                Para evitar isso, usamos o <b>Filtro Low-Pass</b> (Anti-Aliasing). Ele corta fora tudo o que é agudo demais antes de reduzir a taxa, protegendo a pureza do som.
+            </div>`
     },
     "3050": {
-        titulo: "⏱️ Taxa de Amostragem (Sample Rate)",
+        titulo: "⏱️ Sample Rate vs. Bit Depth",
         corpo: `
-            <p>A Sample Rate define a resolução no <b>TEMPO</b> (eixo horizontal).</p>
-            <ul>
-                <li>Mais samples = Mais agudos captados e melhor resposta a transientes.</li>
-                <li>Menos samples = Menor resolução temporal e largura de banda limitada (Teorema de Nyquist).</li>
-            </ul>`
-    },
+            <p>Não confunda as duas medidas do áudio digital:</p>
+            <table class='tab-estudo'>
+                <tr><th>Medida</th><th>Eixo</th><th>O que define?</th></tr>
+                <tr><td><b>Bit Depth</b> (24 bits)</td><td>Vertical (Amplitude)</td><td>Faixa Dinâmica (Relação Sinal/Ruído).</td></tr>
+                <tr><td><b>Sample Rate</b> (48 kHz)</td><td>Horizontal (Tempo)</td><td>Frequência máxima (Agudos) e precisão de tempo.</td></tr>
+            </table>
+            <p>Reduzir o Sample Rate diminui a "largura da estrada", cortando os agudos mais finos.</p>`
+    }
+
 }
