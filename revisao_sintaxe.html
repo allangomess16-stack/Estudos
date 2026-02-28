@@ -91,7 +91,75 @@
             .valor { display: block; font-size: 1.5em; font-weight: 900; color: #ad3131; }
 
             .btn-topo { position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #000; color: white; text-decoration: none; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
-        </style> </head> <body>
+       /* ======================================================== */
+/* 📱 AJUSTES PARA CELULAR (Design Responsivo)              */
+/* ======================================================== */
+@media (max-width: 768px) {
+    /* Ajusta as margens gerais para ganhar espaço na tela */
+    body { padding: 10px; }
+    .container { padding: 15px; margin: 0; border-radius: 8px; }
+
+    /* Força a tabela a virar blocos empilhados (Cards) */
+    .tabela-sintaxe, 
+    .tabela-sintaxe thead, 
+    .tabela-sintaxe tbody, 
+    .tabela-sintaxe th, 
+    .tabela-sintaxe td, 
+    .tabela-sintaxe tr { 
+        display: block; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Esconde o cabeçalho original da tabela no celular */
+    .tabela-sintaxe thead tr { 
+        display: none;
+    }
+
+    /* Cada linha da tabela vira um Card isolado */
+    .tabela-sintaxe tr { 
+        border: 2px solid #ddd; 
+        margin-bottom: 15px;
+        border-radius: 8px;
+        background: #fff;
+        overflow: hidden;
+    }
+
+    /* Ajusta as células dentro do Card */
+    .tabela-sintaxe td { 
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding: 12px;
+        text-align: left; /* Alinha tudo à esquerda para facilitar a leitura */
+    }
+
+    .tabela-sintaxe td:last-child {
+        border-bottom: none;
+    }
+
+    /* 🎯 AJUSTE DO TOOLTIP (Caixinha de explicação) PARA O TOQUE */
+    [data-tooltip]:hover::after,
+    [data-tooltip]:active::after,
+    [data-tooltip]:focus::after {
+        width: 85vw; /* Usa 85% da largura da tela do celular */
+        max-width: 300px; /* Mas não passa de 300px */
+        font-size: 13px; /* Aumenta a fonte da explicação para leitura */
+        left: 50%; 
+        transform: translateX(-50%);
+        white-space: normal; /* Garante que o texto quebre a linha */
+        z-index: 9999;
+    }
+
+    /* Ajusta a Dica de Ouro */
+    .dica-ouro {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+}
+       
+       
+       </style> </head> <body>
 
     <nav class="menu-principal">
         <a href="index.html">MENU</a>
@@ -104,7 +172,7 @@
 
        <h2 style="color:#002855; border-left: 5px solid #002855; padding-left: 10px;">📚 LÍNGUA PORTUGUESA</h2>
 <details class="card-portugues">
-    <summary>📂 TUDO DE PORTGUES</summary>
+    <summary>📂 PORTUGUES</summary>
     <div class="conteudo-card" style="background: #163661; border-radius: 8px;">
 
         <details style="margin-bottom: 15px; border: 1px solid #002855;">
@@ -950,7 +1018,7 @@
 </details>
 
  <details style="border: 1px solid #002855; margin-bottom: 15px;">
-            <summary style="background: #003a7a; font-size: 0.9em;">🏃‍♂️ VERBO(O Motor da Oração)</summary>
+            <summary style="background: #003a7a; font-size: 0.9em;">🏃‍♂️ VERBO</summary>
     <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
         <p style="margin-bottom: 15px; color: #555;">O <b>Verbo</b> é a palavra que expressa ação, estado, mudança de estado ou fenômeno da natureza, situando isso no tempo (passado, presente, futuro). Na Análise Sintática, ele é o núcleo do predicado verbal e o grande "chefe" da oração. <b>Importante:</b> O número de verbos define o número de orações em um período!</p>
         
@@ -1000,7 +1068,214 @@
 </details>
 
 
+
+<details style="border: 1px solid #002855; margin-bottom: 15px;">
+            <summary style="background: #003a7a; font-size: 0.9em;">🔄 PRONOME</summary>
+    <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
+        <p style="margin-bottom: 15px; color: #555;">O <b>Pronome</b> é a palavra que <b>substitui</b> um substantivo (Pronome Substantivo) ou <b>acompanha</b> um substantivo (Pronome Adjetivo). Ele é o grande responsável pela coesão do texto, costurando as ideias para que você não precise repetir a mesma palavra várias vezes.</p>
+        
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Classificação</th>
+                    <th>Como funciona (Passe o mouse)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Pessoais<br><small>(Retos e Oblíquos)</small></td>
+                    <td><span class="termo-hover" data-tooltip="PRONOMES PESSOAIS: Representam as pessoas do discurso. Os do Caso Reto (Eu, tu, ele, nós, vós, eles) funcionam como SUJEITO. Os do Caso Oblíquo (me, te, se, o, a, lhe, nos, vos) funcionam como COMPLEMENTO (Objetos).">Reto = Sujeito / Oblíquo = Objeto</span></td>
+                    <td><b>Ele</b> <i>(Reto)</i> entregou-<b>lhe</b> <i>(Oblíquo)</i> o roteiro.</td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #e65100;">Demonstrativos<br><small>(Este, Esse, Aquele)</small></td>
+                    <td><span class="termo-hover" data-tooltip="PRONOMES DEMONSTRATIVOS: Situam algo no tempo, espaço ou no texto. 'ESTE': Perto de quem fala / Presente / Vai ser dito. 'ESSE': Perto de quem ouve / Passado recente / Já foi dito. 'AQUELE': Longe dos dois / Passado distante.">Mostra a posição (Tempo/Espaço/Texto)</span></td>
+                    <td>Passe-me <b>esse</b> cabo que está aí com você.</td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #6a1b9a;">Relativos<br><small>(Que, Qual, Cujo, Onde)</small></td>
+                    <td><span class="termo-hover" data-tooltip="PRONOMES RELATIVOS: O terror das provas! Eles retomam uma palavra que ficou para trás para não repeti-la e iniciam uma nova oração. O 'Que' é universal. O 'Onde' SÓ pode ser usado para lugar físico.">Retoma o termo anterior</span></td>
+                    <td>A câmera <b>que</b> falhou já foi trocada.<br><i>('Que' substitui a palavra câmera)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Possessivos<br><small>(Meu, Seu, Nosso)</small></td>
+                    <td><span class="termo-hover" data-tooltip="PRONOMES POSSESSIVOS: Indicam uma relação de posse em relação às pessoas do discurso. CUIDADO: O uso do 'seu/sua' pode gerar ambiguidade (duplo sentido) na frase, exigindo a troca por 'dele/dela'.">Indica relação de posse</span></td>
+                    <td>Allan configurou a <b>sua</b> mesa de áudio.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dicas de Elite (As 3 Regras de Ouro dos Pronomes):</strong><br><br>
+            🚨 <b>1. A Lei do "MIM":</b> "Mim" não conjuga verbo, pois é pronome oblíquo (sofre a ação). Quem conjuga verbo é o "Eu" (Reto).<br>
+            ❌ <i>"Traz o microfone para <b>mim</b> testar."</i><br>
+            ✅ <i>"Traz o microfone para <b>EU</b> testar."</i> (Eu testo).<br><br>
+            
+            🚨 <b>2. O Pronome "CUJO" (Posse):</b> Ele fica entre dois substantivos e indica posse. Ele concorda com o que vem <b>DEPOIS</b> dele, e NUNCA aceita artigo (o/a) depois dele!<br>
+            ❌ <i>"O diretor cujo <b>o</b> programa foi cancelado..."</i><br>
+            ✅ <i>"O diretor <b>cujo</b> programa foi cancelado..."</i> (Programa do diretor).<br><br>
+            
+            🚨 <b>3. Onde vs. Aonde:</b><br>
+            📍 <b>Onde:</b> Lugar fixo (verbo estar, ficar). Ex: <i>"<b>Onde</b> está o cabo?"</i><br>
+            ➡️ <b>Aonde:</b> Indica movimento (verbo ir, chegar). Equivale a "Para onde". Ex: <i>"<b>Aonde</b> você vai com essa câmera?"</i>
+        </div>
+    </div>
+</details>
+
+
+<details style="border: 1px solid #002855; margin-bottom: 15px;">
+            <summary style="background: #003a7a; font-size: 0.9em;">🅰️ CRASE</summary>
+    <div class="conteudo" style="background: white; border-radius: 4px; padding: 10px;">
+        <p style="margin-bottom: 15px; color: #555;">A <b>Crase</b> não é um acento, é um fenômeno de <b>fusão</b> (Preposição "A" exigida pelo termo anterior + Artigo "A" exigido pelo termo seguinte). O acento grave ( ` ) é apenas o sinal que mostra que a batida aconteceu. Se tirar um dos dois carros, não tem batida (não tem crase).</p>
+        
+        <table class="tabela-sintaxe">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>Regra</th>
+                    <th>Como funciona (Passe o mouse)</th>
+                    <th>Exemplo Prático na TV</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">Proibida<br><small>(Morte Súbita)</small></td>
+                    <td><span class="termo-hover" data-tooltip="PROIBIDO: Nunca use crase antes de palavras MASCULINAS, antes de VERBOS e antes da maioria dos PRONOMES (ele, ela, mim, ti, quem). Exceção: Dona, Senhora e Senhorita aceitam crase.">Antes de Masculino, Verbo e Pronome</span></td>
+                    <td>O cabo foi vendido <b>a prazo</b>.<br><i>(Prazo é masculino. Zero crase.)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f1f7ff; font-weight: bold; color: #002855;">Obrigatória<br><small>(A+A)</small></td>
+                    <td><span class="termo-hover" data-tooltip="OBRIGATÓRIO: Ocorre quando o verbo pede preposição 'a' (ir a, referir-se a) e a palavra seguinte é feminina e aceita o artigo 'a'. Também é obrigatória em locuções femininas (à noite, às pressas, à medida que).">Regra Geral e Locuções Femininas</span></td>
+                    <td>Allan referiu-se <b>à edição</b>.<br><i>(Quem se refere, se refere A. A edição aceita A. A+A= À)</i></td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Facultativa<br><small>(Você escolhe)</small></td>
+                    <td><span class="termo-hover" data-tooltip="FACULTATIVO (Decore os 3 casos): 1. Até (Fui até a/à mesa). 2. Pronome Possessivo Feminino (Refiro-me a/à minha mãe). 3. Nome Próprio Feminino (Entreguei a/à Maria).">Até, Minha, Maria (Mulher posseira até a morte)</span></td>
+                    <td>Enviei o áudio <b>a / à</b> sua assistente.</td>
+                </tr>
+                <tr>
+                    <td style="background: #f9f9f9; font-weight: bold; color: #6a1b9a;">Casos Especiais<br><small>(Aquele / Casa)</small></td>
+                    <td><span class="termo-hover" data-tooltip="ESPECIAIS: 'Aquele(s), Aquela(s), Aquilo' levam crase se o verbo pedir preposição A (Refiro-me àquele cabo). 'Casa' só tem crase se estiver especificada (Fui à casa DO DIRETOR). 'Terra' só tem crase se for planeta ou especificada.">Pronome Aquele / Palavra Casa/Terra</span></td>
+                    <td>Vamos voltar <b>àquela</b> emissora.<br><i>(Voltar A + Aquela)</i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="dica-ouro">
+            <strong>💡 Dica de Elite (O Teste Infalível do "AO"):</strong> 
+            Na hora da prova, bateu o desespero se a palavra feminina leva crase ou não? Faça isso:<br><br>
+            🔄 <b>Troque a palavra feminina por uma MASCULINA.</b><br>
+            Se ao trocar aparecer a palavra <b>"AO"</b>, a crase é OBRIGATÓRIA na feminina.<br><br>
+            <i>"Fui ___ redação."</i> ➔ Troque por 'estúdio' (masculino).<br>
+            Fica: <i>"Fui <b>AO</b> estúdio."</i> ➔ Bateu o 'AO'? Então é crase!<br>
+            Resultado: <i>"Fui <b>à</b> redação."</i><br><br>
+            <i>"Visitei ___ redação."</i> ➔ Troque por 'estúdio'.<br>
+            Fica: <i>"Visitei <b>O</b> estúdio."</i> (Não deu AO, deu só O).<br>
+            Resultado: <i>"Visitei <b>a</b> redação."</i> (Sem crase, é só Objeto Direto).
+        </div>
+    </div>
+</details>
+
+<details style="margin-bottom: 15px; border: 1px solid #002855;">
+    <summary style="background: #003a7a; font-size: 1.05em;">🤝 CONCORDÂNCIA </summary>
+    <div class="conteudo-card" style="background: #f4f7fa; padding: 15px;">
+        
+        <p style="margin-bottom: 15px; color: #555;">A Concordância é a regra de ouro que obriga as palavras a "entrarem em acordo" (em gênero e número). Abra as subpastas abaixo para dominar os dois universos:</p>
+
+        <details style="margin-bottom: 10px; border: 1px solid #002855; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #163661; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">🗣️ 1. CONCORDÂNCIA VERBAL (O Verbo e o Sujeito)</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Regra / Caso</th>
+                            <th>Como funciona (Passe o mouse)</th>
+                            <th>Exemplo Prático na TV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Sujeito Composto<br><small>(Antes ou Depois)</small></td>
+                            <td><span class="termo-hover" data-tooltip="ANTES DO VERBO: O plural é obrigatório (Allan e o diretor chegaram). DEPOIS DO VERBO: O verbo pode ir para o plural (concordando com todos) ou ficar no singular (concordando só com o mais próximo). Ambas estão corretas!">Plural ou Mais Próximo</span></td>
+                            <td><b>Chegaram</b> o diretor e o técnico.<br><b>Chegou</b> o diretor e o técnico.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">Verbos Impessoais<br><small>(Haver e Fazer)</small></td>
+                            <td><span class="termo-hover" data-tooltip="HAVER (sentido de existir) e FAZER (tempo decorrido): Não possuem sujeito! Portanto, são blindados contra o plural. Ficam sempre e obrigatoriamente na 3ª pessoa do SINGULAR.">Sempre no SINGULAR</span></td>
+                            <td><b>Fazia</b> dez anos que ele operava.<br><b>Havia</b> muitos cabos ali.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">A maioria de...<br><small>(Expressões Partitivas)</small></td>
+                            <td><span class="termo-hover" data-tooltip="EXPRESSÕES PARTITIVAS: 'A maioria de', 'grande parte de', 'a metade de' seguidas de plural. A banca aceita as duas formas: singular (concordando com 'maioria') ou plural (concordando com o termo seguinte).">Singular ou Plural (Ambos)</span></td>
+                            <td>A maioria dos técnicos <b>aprovou</b>.<br>A maioria dos técnicos <b>aprovaram</b>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #002855; background: #f1f7ff;">
+                    <strong>💡 Dica de Elite Verbal (A Guerra da Partícula "SE"):</strong><br><br>
+                    🛠️ <b>Apassivadora (VTD + SE):</b> O verbo NÃO pede preposição. A palavra seguinte é o Sujeito. O verbo VAI para o plural!<br>
+                    ✅ <i>Vende-se <b>câmera</b>. / Vendem-se <b>câmeras</b>.</i><br><br>
+                    ⚠️ <b>Indeterminação (VTI + SE):</b> O verbo PEDE preposição. O sujeito é indeterminado. O verbo NÃO VAI para o plural em hipótese alguma!<br>
+                    ✅ <i>Precisa-se <b>de técnicos</b>. (Singular obrigatório!)</i><br>
+                    ❌ <i>Precisam-se de técnicos. (Erro fatal!)</i>
+                </div>
+            </div>
+        </details>
+
+        <details style="margin-bottom: 10px; border: 1px solid #2d5a27; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #3e7a36; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">🏷️ 2. CONCORDÂNCIA NOMINAL (O Nome como Rei)</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Palavras-Chave</th>
+                            <th>Como funciona (Passe o mouse)</th>
+                            <th>Exemplo Prático na TV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Anexo / Mesmo / Obrigado</td>
+                            <td><span class="termo-hover" data-tooltip="VARIÁVEIS: São adjetivos ou pronomes. Concordam em gênero (masc/fem) e número (sing/plural) com quem estão modificando. Mulheres dizem 'Obrigada'. 'Em anexo' (com preposição) é invariável.">Concordam (Variam)</span></td>
+                            <td>As fotos vão <b>anexas</b>.<br>A diretora disse: "Muito <b>obrigada</b>".</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">Menos / Alerta / Pseudo</td>
+                            <td><span class="termo-hover" data-tooltip="INVARIÁVEIS: Nunca mudam. A palavra 'menas' não existe na língua portuguesa, seja qual for a situação! 'Alerta' só varia se for usado como substantivo ('os alertas soaram').">NÃO mudam (Nunca)</span></td>
+                            <td>Havia <b>menos</b> câmeras ligadas.<br>As produtoras ficaram <b>alerta</b>.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #6a1b9a;">É Proibido / É Necessário</td>
+                            <td><span class="termo-hover" data-tooltip="COM OU SEM ARTIGO: Se o substantivo vier 'pelado' (sem artigo), a expressão fica no masculino singular (É proibido entrada). Se vier com determinante (A entrada), a expressão concorda (É proibidA A entrada).">Depende do Artigo (O/A)</span></td>
+                            <td>É <b>proibido</b> 🚫 entrada.<br>É <b>proibida</b> ✅ <b>a</b> entrada.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #2d5a27; background: #f1f8f1;">
+                    <strong>💡 Dica de Elite Nominal (O Camaleão "MEIO"):</strong><br><br>
+                    A palavra "MEIO" tem dupla identidade e derruba muita gente em provas:<br><br>
+                    📏 <b>Quando significa METADE (Numeral/Adjetivo):</b> Varia normalmente.<br>
+                    ✅ <i>Bebi <b>meia</b> garrafa de água. (Metade da garrafa)</i><br><br>
+                    🎭 <b>Quando significa UM POUCO (Advérbio):</b> NUNCA varia! Não existe "meia cansada".<br>
+                    ❌ <i>A apresentadora estava <b>meia</b> nervosa.</i><br>
+                    ✅ <i>A apresentadora estava <b>MEIO</b> nervosa. (Um pouco nervosa)</i>
+                </div>
+            </div>
+        </details>
+
+    </div>
+</details>
+
+
+
     </div></details>
+
+
+
 
 
 
@@ -1009,116 +1284,492 @@
      
     
      <h2 style="color:#6a1b9a; margin-top: 30px; border-left: 5px solid #67437e; padding-left: 10px;">🧠 RACIOCÍNIO LÓGICO</h2>
-    <details class="card-logica">
-        <summary>📂 TABELA VERDADE E REGRAS DA CONDICIONAL</summary>
-        <div class="conteudo-card" style="background: #d495dd;">
-            
-            <details style="margin-bottom: 10px; border: 1px solid #6a1b9a;">
-                <summary style="background: #8e24aa;">📊 RESUMO DOS CONECTIVOS</summary>
-                <div class="conteudo" style="padding: 15px; background: white;">
-                    <table class="tabela-verdade">
-                        <thead><tr><th>Símbolo</th><th>Nome</th><th>Regra Prática</th></tr></thead>
-                        <tbody>
-                            <tr><td>^</td><td>Conjunção (E)</td><td>Tudo <b>V</b> dá V.</td></tr>
-                            <tr><td>v</td><td>Disjunção (OU)</td><td>Tudo <b>F</b> dá F.</td></tr>
-                            <tr><td>→</td><td>Condicional</td><td><b>V → F</b> dá Falsa (Vera Fischer).</td></tr>
-                            <tr><td>↔</td><td>Bicondicional</td><td>Iguais dá V / Diferentes dá F.</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </details>
-
-            <details style="border: 1px solid #6a1b9a;">
-                <summary style="background: #8e24aa;">🎯 TUDO SOBRE A CONDICIONAL (P → Q)</summary>
-                <div class="conteudo" style="padding: 15px; background: white;">
-                    <div class="dica-ouro" style="border-left-color: #6a1b9a;">
-                        <strong>1. Negação (Regra do MANÉ):</strong> Mantém a 1ª <b>E</b> Nega a 2ª. <br>
-                        <i>Ex: "Se Allan estuda, ele passa" ➔ "Allan estuda <b>e</b> não passa".</i>
-                    </div>
-                    <div class="dica-ouro" style="border-left-color: #8e24aa; background: #f1f7ff;">
-                        <strong>2. Equivalência (Regra do NEYMAR):</strong> Nega a 1ª <b>OU</b> Mantém a 2ª. <br>
-                        <i>Ex: "Se estudo, passo" ➔ "Não estudo <b>ou</b> passo".</i>
-                    </div>
-                    <div class="dica-ouro" style="border-left-color: #8e24aa; background: #f1f7ff;">
-                         <strong>2. Equivalência (Regra da CONTRAPOSITIVA):</strong> Inverte as posições e Nega ambas, mantendo o <b>SE... ENTÃO</b>. <br>
-                        <i>Ex: "Se estudo, passo" ➔ "Se <b>NÃO</b> passo, então <b>NÃO</b> estudei".</i>
-                    </div></div></details>
-
-
-
-            <details style="border: 1px solid #6a1b9a;">
-                   <summary style="background: #8e24aa;">🎯 MODO PONENS E TOLLENS</summary>
-                <div class="conteudo" style="padding: 15px; background: white;">
-                    <div class="dica-ouro" style="border-left-color: #6a1b9a;">
-                        <div class="dica-ouro" style="border-left-color: #2d5a27; background: #e8f5e9;">
-            <strong>1. MODUS PONENS (Afirma o Antecedente):</strong> Se eu confirmo a 1ª parte, a 2ª parte é <b>OBRIGATORIAMENTE</b> verdadeira. <br>
-            <i>Ex: "Se Allan configura, o sinal sobe" + "Allan configurou" ➔ <b>Logo, o sinal subiu.</b></i>
-        </div>
-
-        <div class="dica-ouro" style="border-left-color: #ad3131; background: #fdf2f2;">
-            <strong>2. MODUS TOLLENS (Nega o Consequente):</strong> Se a 2ª parte é falsa, a 1ª parte <b>OBRIGATORIAMENTE</b> também é falsa. <br>
-            <i>Ex: "Se estudo, passo" + "Não passei" ➔ <b>Logo, não estudei.</b></i>
-        </div>
-
-        <div class="dica-ouro" style="border-left-color: #ffc107; background: #fff3cd;">
-            <strong>⚠️ CUIDADO (O que NÃO pode):</strong> <br>
-            • Negar a 1ª parte não garante nada sobre a 2ª. <br>
-            • Afirmar a 2ª parte não garante nada sobre a 1ª.
-        </div></div></details>
+<details class="card-logica" style="margin-bottom: 15px; border: 1px solid #6a1b9a;">
+    <summary style="background: #6a1b9a; font-size: 1.05em; color: white;">🧠 LÓGICA PROPOSICIONAL (A Matemática das Palavras)</summary>
+    <div class="conteudo-card" style="background: #fdfaef; padding: 15px;">
         
+        <p style="margin-bottom: 15px; color: #555;">No Raciocínio Lógico, não nos importa se a frase faz sentido no mundo real. O que importa é a <b>estrutura</b> e o <b>conectivo</b> usado. Abra as pastas para dominar as regras do jogo:</p>
 
-</div> </details>
+        <details style="margin-bottom: 10px; border: 1px solid #6a1b9a; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #8e24aa; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">📊 1. CONECTIVOS E TABELA-VERDADE</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Conectivo</th>
+                            <th>Regra Prática (Passe o mouse)</th>
+                            <th>Mnemônico / Atalho</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #002855;">E <br><small>Conjunção ( ^ )</small></td>
+                            <td><span class="termo-hover" data-tooltip="CONJUNÇÃO (E): É um conectivo exigente. Só será VERDADEIRO se TODAS as partes forem verdadeiras. Basta um único Falso para a frase inteira virar Falsa.">Exigente (Tudo V = V)</span></td>
+                            <td>Se tem <b>F</b>, dá <b>F</b>.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">OU <br><small>Disjunção ( v )</small></td>
+                            <td><span class="termo-hover" data-tooltip="DISJUNÇÃO INCLUSIVA (OU): É o conectivo 'bonzinho'. Basta que UMA única parte seja Verdadeira para a frase inteira ser Verdadeira. Só será Falsa se tudo for Falso.">Bonzinho (Basta um V = V)</span></td>
+                            <td>Se tem <b>V</b>, dá <b>V</b>.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">SE... ENTÃO <br><small>Condicional ( → )</small></td>
+                            <td><span class="termo-hover" data-tooltip="CONDICIONAL (SE...ENTÃO): É o que mais cai! Só existe UM caso em que ela é Falsa: Quando a primeira parte é Verdadeira e a segunda é Falsa (V → F). Nos outros casos, é sempre Verdadeira.">Falsa só em V → F</span></td>
+                            <td><b>V</b>era <b>F</b>ischer = <b>F</b>alsa</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #6a1b9a;">OU... OU <br><small>Disjunção Exclusiva ( ⊻ )</small></td>
+                            <td><span class="termo-hover" data-tooltip="DISJUNÇÃO EXCLUSIVA (OU... OU): Traz a ideia de atrito. Ou você faz um, ou faz outro. Se os dois forem iguais (V e V, ou F e F), a frase é Falsa. Só é Verdade quando são diferentes.">Sinais Iguais = F</span></td>
+                            <td>Rivais (Diferentes) = <b>V</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #6a1b9a; background: #f3e5f5;">
+                    <strong>💡 Dica de Elite (O Pulo do Gato na Condicional):</strong><br><br>
+                    Na condicional (Se P, então Q), a banca gosta de te dar proposições onde a primeira parte é obviamente FALSA e pergunta se a frase toda é V ou F. <br>
+                    <i>Ex: "Se 2+2=5, então a terra é plana."</i><br><br>
+                    Não perca tempo lendo o resto! Se o <b>"SE"</b> (antecedente) for <b>FALSO</b>, a condicional inteira já nasce <b>VERDADEIRA</b> automaticamente, pois a única forma de dar falso seria se a primeira fosse verdadeira (Vera Fischer).
+                </div>
+            </div>
+        </details>
+
+        <details style="margin-bottom: 10px; border: 1px solid #002855; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #163661; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">🚫 2. NEGAÇÕES LÓGICAS (O Inverso)</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Para negar o...</th>
+                            <th>Regra Matadora (Passe o mouse)</th>
+                            <th>Exemplo Prático</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #002855;">E / OU<br><small>(Leis de De Morgan)</small></td>
+                            <td><span class="termo-hover" data-tooltip="DE MORGAN: Para negar o 'E', troque-o pelo 'OU' e negue as duas frases. Para negar o 'OU', troque-o pelo 'E' e negue as duas frases. O cruzamento é perfeito!">Troca o conectivo e Nega Tudo</span></td>
+                            <td>O sinal caiu <b>e</b> a luz piscou.<br><i>Negação:</i> O sinal <b>não</b> caiu <b>OU</b> a luz <b>não</b> piscou.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">SE... ENTÃO<br><small>(A Regra do MANÉ)</small></td>
+                            <td><span class="termo-hover" data-tooltip="NEGAR O SE...ENTÃO: Atenção! A negação de um 'Se...Então' NUNCA é outro 'Se...Então'. Você troca o conectivo para 'E', MANTÉM a primeira parte do jeito que está, e NEGA a segunda.">MANÉ: MAntém a 1ª (E) NEga a 2ª</span></td>
+                            <td><b>Se</b> chove, <b>então</b> molha.<br><i>Negação:</i> Chove <b>E</b> não molha.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">TODO<br><small>(Quantificador Universal)</small></td>
+                            <td><span class="termo-hover" data-tooltip="NEGAR O TODO: Você precisa provar que quem falou está mentindo. Se alguém diz 'Todo goiano gosta de pequi', basta você achar UM ÚNICO goiano que não goste. O macete é o PEA + NÃO.">PEA + NÃO (Pelo menos um / Existe um / Algum)</span></td>
+                            <td><b>Todo</b> cabo está quebrado.<br><i>Negação:</i> <b>Algum</b> cabo <b>não</b> está quebrado.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #ad3131; background: #fdf2f2;">
+                    <strong>💡 Dica de Elite (A Pegadinha do "Todo vs Nenhum"):</strong><br><br>
+                    O maior erro dos candidatos é tentar negar o TODO usando o NENHUM (ou vice-versa). O examinador SEMPRE coloca essa opção na letra A para você cair.<br><br>
+                    ❌ <i>Todo político é honesto. -> Negação: Nenhum político é honesto. (ERRADO!)</i><br>
+                    ✅ <i>Todo político é honesto. -> Negação: <b>Pelo menos um</b> político <b>NÃO</b> é honesto. (CERTO!)</i>
+                </div>
+            </div>
+        </details>
+
+        <details style="margin-bottom: 10px; border: 1px solid #2d5a27; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #3e7a36; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">🔄 3. EQUIVALÊNCIAS LÓGICAS (Dizer a mesma coisa)</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                <p style="margin-bottom: 15px; color: #555;">Equivalência é dizer a MESMA coisa, com as mesmas verdades, mas usando palavras e conectivos diferentes. A banca cobra quase exclusivamente as duas equivalências do <b>SE... ENTÃO</b>:</p>
+
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Nome da Regra</th>
+                            <th>Como funciona (Passe o mouse)</th>
+                            <th>Exemplo Prático</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Contrapositiva<br><small>(Volta Negando)</small></td>
+                            <td><span class="termo-hover" data-tooltip="CONTRAPOSITIVA: É a equivalência mais famosa. Você mantém o 'Se...Então', pega a frase de trás, traz para a frente negando, e joga a frase da frente para trás, também negando.">Inverte tudo e Nega tudo</span></td>
+                            <td>Se estudo, passo.<br><i>Equivale a:</i> Se <b>não</b> passo, <b>não</b> estudo.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">Silogismo Disjuntivo<br><small>(A Regra do NEYMAR)</small></td>
+                            <td><span class="termo-hover" data-tooltip="NEYMAR: Usada para transformar o 'Se...Então' num 'OU'. Você NEga a primeira parte, troca o 'Se...Então' pelo conectivo 'OU' (Y), e MAntém a segunda parte igual. (NE Y MA).">NEga a 1ª (OU) MAntém a 2ª</span></td>
+                            <td>Se chove, fico em casa.<br><i>Equivale a:</i> <b>Não</b> chove <b>OU</b> fico em casa.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #2d5a27; background: #f1f8f1;">
+                    <strong>💡 O Algoritmo de Resolução de Prova:</strong><br><br>
+                    Se a questão pedir: <i>"Assinale a alternativa que apresenta uma frase LOGICAMENTE EQUIVALENTE a: Se A, então B"</i>. Siga estes passos sem pestanejar:<br><br>
+                    <b>Passo 1:</b> Procure nas respostas a frase invertida e negada (Contrapositiva). <i>Se não B, então não A</i>. Achou? Marque e vá para o abraço.<br>
+                    <b>Passo 2:</b> Não tem Contrapositiva nas opções? Então o examinador usou o Neymar. Procure a opção com o conectivo "OU" onde a primeira parte está negada e a segunda mantida.
+                </div>
+            </div>
+        </details>
+
+
+        <details style="margin-bottom: 10px; border: 1px solid #4a148c; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #5e35b1; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">🌍 4. QUANTIFICADORES LÓGICOS (Todo, Algum, Nenhum)</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                
+                <p style="margin-bottom: 15px; color: #555;">Os <b>Quantificadores</b> determinam a quantidade de elementos de um conjunto que satisfazem uma condição. Dividem-se em <b>Universais</b> (100% ou 0% dos casos) e <b>Existenciais/Particulares</b> (pelo menos 1 caso). A regra principal em provas é saber como negá-los.</p>
+
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Quantificador</th>
+                            <th>Regra de Negação (Passe o rato)</th>
+                            <th>Exemplo Prático na TV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #002855;">TODO<br><small>(Universal Afirmativo)</small></td>
+                            <td><span class="termo-hover" data-tooltip="NEGAR O TODO: Para provar que 'Todo A é B' é mentira, basta encontrar UM ÚNICO 'A' que NÃO seja 'B'. Use o macete PEA + NÃO (Pelo menos um, Existe um, Algum).">Usa-se o PEA + NÃO</span></td>
+                            <td><b>Todo</b> operador é rápido.<br><i>Negação:</i> <b>Algum</b> operador <b>não</b> é rápido.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">NENHUM<br><small>(Universal Negativo)</small></td>
+                            <td><span class="termo-hover" data-tooltip="NEGAR O NENHUM: Se alguém diz que 'Nenhum A é B', para desmentir essa pessoa, basta encontrar UM ÚNICO que seja. Troque pelo PEA (sem o 'não', pois a frase original já é negativa).">Usa-se o PEA (Afirmativo)</span></td>
+                            <td><b>Nenhum</b> cabo está com defeito.<br><i>Negação:</i> <b>Existe um</b> cabo com defeito.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #f1f7ff; font-weight: bold; color: #2d5a27;">ALGUM / EXISTE<br><small>(Existencial Afirmativo)</small></td>
+                            <td><span class="termo-hover" data-tooltip="NEGAR O ALGUM: Se eu afirmo que 'Algum A é B', para negar isso, tenho de garantir que absolutamente ZERO elementos sejam. O oposto de 'Algum é' é 'Nenhum é' (ou 'Todo... não é').">Usa-se NENHUM (ou Todo...não)</span></td>
+                            <td><b>Algum</b> microfone falhou.<br><i>Negação:</i> <b>Nenhum</b> microfone falhou.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #5e35b1; background: #ede7f6;">
+                    <strong>💡 Dica de Elite (A Lei de Ferro dos Quantificadores):</strong><br><br>
+                    A regra mais testada em concursos sobre este tema é muito simples, mas a pressão da prova faz milhares de candidatos caírem na armadilha:<br><br>
+                    🚨 <b>NUNCA se nega um Universal com outro Universal!</b><br>
+                    Ou seja, o oposto de <b>TODO</b> nunca será <b>NENHUM</b>, e o oposto de <b>NENHUM</b> nunca será <b>TODO</b>. Se a banca colocar "Nenhum" como negação de "Todo" (geralmente colocam na alternativa A de propósito), risque imediatamente a opção!<br><br>
+                    <b>Resumo Salva-Vidas:</b><br>
+                    Universal nega-se com Existencial (Todo ➔ Algum...não).<br>
+                    Existencial nega-se com Universal (Algum ➔ Nenhum).
+                </div>
+            </div>
+        </details>
+
+
+
+
+
+
+
+
+
+
+    </div>
+</details>
+        
+    
+
 
 
     
-    <h2 style="color:#ad3131; margin-top: 30px; border-left: 5px solid #ad3131; padding-left: 10px;">⚖️ LEGISLAÇÃO MUNICIPAL</h2>
-    <details class="card-legislacao">
-        <summary>📂 CONTEÚDOS DE LEGISLAÇÃO </summary>
-        <div class="conteudo-card" style="background: #eb7575; border-radius: 8px;">
+    <h2 style="color:#ad3131; margin-top: 30px; border-left: 5px solid #ad3131; padding-left: 10px;">⚖️ LEGISLAÇÃO E DIREITO</h2>
 
-            <details style="margin-bottom: 15px; border: 1px solid #ad3131;">
-                <summary style="background: #bd1a1a; font-size: 0.9em;">📜 LEI ORGÂNICA (LOM) - REGRAS DE OURO</summary>
-                <div class="conteudo" style="background: white; padding: 15px;">
-                    <div class="grid-prazos">
-                        <div class="box-prazo"><small>Emenda à LOM</small><span class="valor">2 Turnos</span></div>
-                        <div class="box-prazo"><small>Interstício (Mínimo)</small><span class="valor">10 Dias</span></div>
-                        <div class="box-prazo"><small>Votos Necessários</small><span class="valor">2/3</span></div>
-                        <div class="box-prazo"><small>Posse Vereador</small><span class="valor">15 Dias</span></div>
-                    </div>
-                    <div class="dica-ouro"><b>🚨 Foco:</b> A LOM é a 'Constituição' do município. Nenhuma lei pode contrariá-la.</div>
-                </div></details>
+<details class="card-legislacao" style="margin-bottom: 15px; border: 1px solid #ad3131;">
+    <summary style="background: #ad3131; font-size: 1.05em; color: white;">⚖️ DIREITO E LEGISLAÇÃO (O Jogo das Regras)</summary>
+    <div class="conteudo-card" style="background: #fdf2f2; padding: 15px;">
+        
+        <p style="margin-bottom: 15px; color: #555;">No Direito, a regra geral é importante, mas a banca cobra a <b>EXCEÇÃO</b>. Abra as subpastas abaixo para dominar as leis do seu edital (ALEGO):</p>
 
-            <details style="border: 1px solid #ad3131;">
-                <summary style="background: #bd1a1a; font-size: 0.9em;">🏛️ REGIMENTO INTERNO E SERVIDORES</summary>
-                <div class="conteudo" style="background: white; padding: 15px;">
-                    <ul>
-                        <li><b>Redistribuição:</b> Deslocamento do CARGO (Interesse da ADM).</li>
-                        <li><b>Remoção:</b> Deslocamento do SERVIDOR (Mesmo quadro).</li>
-                        <li><b>CCJR:</b> Comissão de Constituição e Justiça (Parecer de legalidade).</li>
-                        <li><b>Estabilidade:</b> 3 anos de efetivo exercício + Avaliação.</li>
-                    </ul>
-                </div></details> </div> </details>
+        <details style="margin-bottom: 10px; border: 1px solid #ad3131; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #bd1a1a; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">📜 1. ESTATUTO E REGIMENTO (Servidores ALEGO)</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Conceito / Dever</th>
+                            <th>Como funciona (Passe o mouse)</th>
+                            <th>Exemplo Prático na ALEGO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Disponibilidade ➔ Aproveitamento</td>
+                            <td><span class="termo-hover" data-tooltip="APROVEITAMENTO: É o retorno à atividade do servidor que estava em 'Disponibilidade' (banco de reservas). Ele deve voltar para um cargo de atribuições e vencimentos compatíveis com o anterior.">Retorno do 'Banco de Reservas'</span></td>
+                            <td>O cargo foi extinto. O técnico ficou disponível, mas foi <b>aproveitado</b> noutro setor.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">Deveres Fundamentais</td>
+                            <td><span class="termo-hover" data-tooltip="DEVERES: O servidor não faz só o que quer. Regras básicas do estatuto incluem: Assiduidade (não faltar), Pontualidade (não atrasar), Urbanidade (tratar todos com educação) e Discrição (não vazar informações sigilosas).">Assiduidade, Pontualidade, Urbanidade e Discrição</span></td>
+                            <td>O operador de som mantém <b>discrição</b> sobre o que ouve nos microfones.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Capacitação Profissional</td>
+                            <td><span class="termo-hover" data-tooltip="APERFEIÇOAMENTO: Não é apenas um direito, é um DEVER do servidor diligenciar seu constante aperfeiçoamento. A ALEGO promove isso por meio da Escola do Legislativo.">É um DEVER do Servidor</span></td>
+                            <td>Allan tem o dever de frequentar cursos da <b>Escola do Legislativo</b>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #bd1a1a; background: #fdf2f2;">
+                    <strong>💡 Dica de Elite (Os 4 'R's do Provimento):</strong><br><br>
+                    As bancas SEMPRE tentam confundir como o servidor volta ao trabalho. Decore os gatilhos:<br>
+                    🔄 <b>Reversão:</b> Retorno do <b>Velhinho</b> (Aposentado).<br>
+                    ⚖️ <b>Reintegração:</b> Retorno do <b>Injustiçado</b> (Demissão anulada pela justiça). Recebe tudo retroativo!<br>
+                    ♿ <b>Readaptação:</b> Retorno do <b>Doente/Acidentado</b> (Sofreu limitação física/mental e vai para cargo compatível).<br>
+                    ✅ <b>Recondução:</b> Retorno do <b>Reprovado</b> (Não passou no estágio probatório de outro cargo e volta para o antigo).
+                </div>
+            </div>
+        </details>
 
-    <h2 style="color:#2d5a27; margin-top: 30px; border-left: 5px solid #2d5a27; padding-left: 10px;">⏳ HISTÓRIA E GEOGRAFIA</h2>
-    <details class="card-historia">
-        <summary>📂 CONTEÚDOS DE HISTÓRIA </summary>
-        <div class="conteudo-card" style="background: #518856; border-radius: 8px;">
-            
-            <details style="border: 1px solid #2d5a27;">
-                <summary style="background: #2d5a27; font-size: 0.9em;">⏳ Linha do Tempo e Urbanismo</summary>
-                <div class="conteudo" style="background: white; padding: 15px;">
-                    <div class="timeline">
-                        <div class="event"><span class="date">1727:</span> <b>Ciclo do Ouro.</b> Anhanguera funda o Arraial de Sant'Anna.</div>
-                        <div class="event"><span class="date">1933:</span> <b>Fundação de Goiânia.</b> Mudança da capital de Vila Boa para o plano novo.</div>
-                        <div class="event"><span class="date">Art Déco:</span> Estilo arquitetônico de Attilio Corrêa Lima.</div>
-                    </div>
-                    <div class="dica-ouro" style="background:#f1f7ef; border-color:#2d5a27;">
-                        <b>Marcha para o Oeste:</b> Projeto de Getúlio Vargas para interiorizar o desenvolvimento (Pedro Ludovico foi o braço direito).
-                    </div></div> </details></div></details>
+        <details style="margin-bottom: 10px; border: 1px solid #002855; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #163661; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">🏛️ 2. DIREITO CONSTITUCIONAL E ELEITORAL</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Tópico CF/88</th>
+                            <th>Como funciona (Passe o mouse)</th>
+                            <th>A Pegadinha da Prova</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Art. 4º - Integração</td>
+                            <td><span class="termo-hover" data-tooltip="INTEGRAÇÃO: A República Federativa do Brasil buscará a integração econômica, política, social e cultural dos povos da AMÉRICA LATINA. A banca vai tentar colocar 'América do Sul', 'Mercosul' ou 'Mundo'. É falso!">Integração da América Latina</span></td>
+                            <td>❌ Sul Global.<br>✅ Povos da <b>América Latina</b>.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">Poder Legislativo<br><small>(Câmara vs Senado)</small></td>
+                            <td><span class="termo-hover" data-tooltip="CÂMARA DOS DEPUTADOS: Representa o POVO (Sistema Proporcional à população - min 8, max 70). SENADO FEDERAL: Representa os ESTADOS e DF (Sistema Majoritário - 3 por estado). A renovação do Senado é de 4 em 4 anos, alternando 1/3 e 2/3.">Câmara = Povo / Senado = Estados</span></td>
+                            <td>A banca diz que a Câmara renova 1/3 e 2/3. <b>FALSO!</b> Isso é o Senado.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Elegibilidade<br><small>(Deputado Estadual)</small></td>
+                            <td><span class="termo-hover" data-tooltip="FILIAÇÃO E IDADE: No Brasil NÃO existe candidatura avulsa (sem partido). A filiação partidária é condição ABSOLUTA de elegibilidade. A idade mínima para Deputado (Estadual/Federal) é de 21 anos.">Idade: 21 Anos / Filiação Obrigatória</span></td>
+                            <td>Ter 21 anos não basta. Tem que ter <b>partido político</b>!</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #002855; background: #f1f7ff;">
+                    <strong>💡 Dica de Elite (O Telefone do TSE - Idades Mínimas):</strong><br><br>
+                    Para nunca mais esquecer as idades mínimas exigidas para cargos políticos, decore o número de telefone <b>3530-2118</b>:<br>
+                    📞 <b>35 anos:</b> Presidente, Vice-Presidente e Senador.<br>
+                    📞 <b>30 anos:</b> Governador e Vice-Governador.<br>
+                    📞 <b>21 anos:</b> Deputados (Federal, Estadual, Distrital), Prefeito, Vice-Prefeito e Juiz de Paz.<br>
+                    📞 <b>18 anos:</b> Vereador.
+                </div>
+            </div>
+        </details>
+
+        <details style="margin-bottom: 10px; border: 1px solid #2d5a27; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #3e7a36; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">🏗️ 3. NOVA LEI DE LICITAÇÕES (Lei 14.133/21)</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                <p style="margin-bottom: 15px; color: #555;">Focando na sua questão de prova: A fase de <b>Recebimento do Objeto</b> (quando a obra ou serviço é entregue ao Governo).</p>
+
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Tipo de Recebimento</th>
+                            <th>Como funciona (Passe o mouse)</th>
+                            <th>Garantia da Obra</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #2d5a27;">Provisório</td>
+                            <td><span class="termo-hover" data-tooltip="RECEBIMENTO PROVISÓRIO: Feito pelo responsável pelo acompanhamento e fiscalização do contrato (o fiscal). Ele recebe a obra 'visualmente' para depois fazer a verificação técnica.">Feito pelo Fiscal do Contrato</span></td>
+                            <td>Ainda está em fase de teste e verificação.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">Definitivo</td>
+                            <td><span class="termo-hover" data-tooltip="RECEBIMENTO DEFINITIVO: Feito por servidor ou comissão designada, após o prazo de observação ou vistoria técnica que comprove a adequação exata ao contrato.">Feito por Comissão após vistoria</span></td>
+                            <td>A obra foi oficialmente aceita pela Administração.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #2d5a27; background: #f1f8f1;">
+                    <strong>💡 Dica de Elite (A Pegadinha da Responsabilidade):</strong><br><br>
+                    A banca diz: <i>"Como o Governo assinou o Recebimento Definitivo, a empreiteira e o engenheiro não têm mais responsabilidade pela obra."</i><br><br>
+                    🚫 <b>MENTIRA! É FALSO!</b><br>
+                    O Recebimento Definitivo <b>NÃO EXIME</b> o responsável técnico ou a empresa da responsabilidade civil pela solidez e segurança da obra. Pelo Código Civil, o construtor continua responsável pela obra por <b>5 anos</b> (garantia legal), mesmo depois da prefeitura ter recebido e cortado a fita de inauguração!
+                </div>
+            </div>
+        </details>
+
+        <details style="margin-bottom: 10px; border: 1px solid #6a1b9a; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #8e24aa; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">🛡️ 4. LGPD E IMPROBIDADE ADMINISTRATIVA</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Legislação</th>
+                            <th>Como funciona (Passe o mouse)</th>
+                            <th>Foco da Pegadinha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #6a1b9a;">LGPD<br><small>(Lei 13.709/18)</small></td>
+                            <td><span class="termo-hover" data-tooltip="FUNDAMENTOS DA LGPD: O objetivo da lei é proteger os direitos fundamentais de liberdade e de privacidade, e o livre desenvolvimento da personalidade da pessoa natural (cidadão titular dos dados).">Foco no Cidadão (Titular dos Dados)</span></td>
+                            <td>A lei protege o cidadão. Ela <b>NÃO</b> tem como fundamento a 'defesa do Poder Público'.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #ad3131;">Improbidade<br><small>(Lei 8.429/92)</small></td>
+                            <td><span class="termo-hover" data-tooltip="MORTE DO AGENTE CORRUPTO: A Constituição diz que nenhuma pena passará da pessoa do condenado. PORÉM, a obrigação de REPARAR O DANO (devolver o que roubou do erário) passa para os sucessores/herdeiros.">Herdeiros pagam o prejuízo!</span></td>
+                            <td>Eles pagam até o <b>limite do valor da herança</b>. O patrimônio pessoal do herdeiro fica intacto.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #6a1b9a; background: #f3e5f5;">
+                    <strong>💡 Dica de Elite (A Fronteira da Herança na Improbidade):</strong><br><br>
+                    Imagine que um político desviou R$ 1 Milhão dos cofres públicos. Ele morre e deixa uma herança de R$ 400 Mil para o filho.<br><br>
+                    💸 <b>O filho vai ter que pagar R$ 1 Milhão?</b><br>
+                    NÃO! Ele perde os R$ 400 Mil da herança para devolver ao Governo (porque esse dinheiro já era sujo/indevido). Os outros R$ 600 Mil de prejuízo o Estado perde, porque o filho não pode pagar com o seu próprio dinheiro ganho com suor.<br><br>
+                    <i>Regra Absoluta: A responsabilidade patrimonial transfere-se <b>ATÉ O LIMITE DO VALOR DA HERANÇA</b>.</i>
+                </div>
+            </div>
+        </details>
+
+    </div>
+</details>
 
 
-                    
 
+
+  <h2 style="color:#e65100; margin-top: 30px; border-left: 5px solid #e65100; padding-left: 10px;">🗺️ HISTÓRIA E GEOGRAFIA DE GOIÁS</h2>
+
+<details class="card-histgeo" style="margin-bottom: 15px; border: 1px solid #e65100;">
+    <summary style="background: #e65100; font-size: 1.05em; color: white;">🗺️ REALIDADE GOIANA (O Coração do Brasil)</summary>
+    <div class="conteudo-card" style="background: #fff8e1; padding: 15px;">
+        
+        <p style="margin-bottom: 15px; color: #555;">Para gabaritar essa matéria, você precisa entender como Goiás deixou de ser um estado isolado no tempo do ouro para se tornar uma potência do agronegócio e a "caixa d'água" do país. Abra as pastas:</p>
+
+        
+        <details style="margin-bottom: 10px; border: 1px solid #b71c1c; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #c62828; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">⏳ 1. HISTÓRIA: DO OURO A GOIÂNIA</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Período / Evento</th>
+                            <th>O que você precisa saber (Passe o mouse)</th>
+                            <th>Foco da Pegadinha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #b71c1c;">O Ciclo do Ouro<br><small>(Séc. XVIII)</small></td>
+                            <td><span class="termo-hover" data-tooltip="ANHANGUERA: A exploração começou com o Bandeirante Bartolomeu Bueno da Silva (o Anhanguera). Após o fim do ouro, o estado entrou em declínio econômico e isolamento, sobrevivendo de uma pecuária e agricultura de subsistência por mais de um século.">Pós-ouro: Isolamento e Pecuária</span></td>
+                            <td>A banca diz que após o ouro Goiás se industrializou. <b>Falso!</b> Houve isolamento e ruralização.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #e65100;">Mudança da Capital<br><small>(1933 - Pedro Ludovico)</small></td>
+                            <td><span class="termo-hover" data-tooltip="GOIÂNIA: Com a Revolução de 1930, Getúlio Vargas nomeou Pedro Ludovico Teixeira como interventor. Para quebrar o poder das oligarquias antigas (Coronéis de Goiás Velho) e integrar o estado à 'Marcha para o Oeste', Goiânia foi construída (inaugurada oficialmente em 1942).">Quebra da Oligarquia (Coronelismo)</span></td>
+                            <td>O motivo não foi apenas geográfico, mas <b>político</b> (tirar o poder da elite velha).</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #002855;">Impacto de Brasília<br><small>(Anos 60 - JK)</small></td>
+                            <td><span class="termo-hover" data-tooltip="A NOVA CAPITAL FEDERAL: A construção de Brasília acelerou absurdamente a infraestrutura de Goiás (estradas, energia, migração). Criou o 'Eixo Goiânia-Brasília', que hoje é a região mais densamente povoada e rica do estado.">Aceleração da Infraestrutura</span></td>
+                            <td>A banca tenta dizer que Brasília 'esvaziou' a economia goiana. É o <b>inverso</b>: impulsionou!</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #b71c1c; background: #ffebee;">
+                    <strong>💡 Dica de Elite (A Revolução de 1930):</strong><br><br>
+                    Não estude Goiânia como uma simples "cidade planejada". A banca cobra o contexto de <b>Getúlio Vargas</b>. A criação de Goiânia faz parte da política nacional chamada <b>"Marcha para o Oeste"</b>, que visava povoar o centro do Brasil, desenvolver a agricultura e afastar o país da dependência exclusiva do litoral.
+                </div>
+            </div>
+        </details>
+
+        
+        <details style="margin-bottom: 10px; border: 1px solid #2e7d32; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #388e3c; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">🌿 2. GEOGRAFIA E BIOMA CERRADO</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Característica</th>
+                            <th>Como funciona (Passe o mouse)</th>
+                            <th>Como cai na Prova</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #e65100;">Clima<br><small>(Tropical Sazonal)</small></td>
+                            <td><span class="termo-hover" data-tooltip="TROPICAL SEMIÚMIDO: Goiás tem apenas DUAS estações muito bem definidas. Um verão quente e chuvoso (outubro a abril) e um inverno ameno e extremamente seco (maio a setembro).">2 Estações: Verão Chuvoso / Inverno Seco</span></td>
+                            <td>A banca fala em 'chuvas bem distribuídas o ano todo'. <b>Falso!</b></td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #2e7d32;">Vegetação<br><small>(A Floresta Invertida)</small></td>
+                            <td><span class="termo-hover" data-tooltip="CERRADO: Árvores de pequeno/médio porte, casca grossa e caules tortuosos. Por que 'Floresta Invertida'? Porque a maior parte da árvore (raízes profundas) está DEBAIXO da terra, buscando água nos lençóis freáticos durante a seca.">Raízes Profundas / Casca Grossa</span></td>
+                            <td>Os caules são tortos devido à acidez do solo e presença de alumínio (não por falta d'água).</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #5d4037;">Solo<br><small>(Ácido e Latossolo)</small></td>
+                            <td><span class="termo-hover" data-tooltip="CALAGEM: O solo de Goiás é naturalmente ácido e pobre em nutrientes. Para o Agronegócio (Soja) explodir no estado a partir dos anos 1970/80, foi necessário aplicar a técnica da CALAGEM (jogar calcário no solo para corrigir a acidez).">Corrigido pela técnica de Calagem</span></td>
+                            <td>Solo goiano era ruim para o plantio até a chegada da tecnologia agrícola (Embrapa).</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="dica-ouro" style="border-left-color: #2e7d32; background: #e8f5e9;">
+                    <strong>💡 Dica de Elite (A Caixa D'Água do Brasil):</strong><br><br>
+                    O relevo predominante em Goiás é o <b>Planalto Central</b> (áreas altas e planas, as "chapadões"). Por estar no "teto" do Brasil, nascem aqui as nascentes que alimentam três das maiores bacias hidrográficas do continente:<br>
+                    💧 Bacia do <b>Tocantins-Araguaia</b>.<br>
+                    💧 Bacia do <b>São Francisco</b>.<br>
+                    💧 Bacia do <b>Paraná</b>.<br>
+                    Por isso o Cerrado é conhecido mundialmente como o "Berço das Águas".
+                </div>
+            </div>
+        </details>
+
+        <details style="margin-bottom: 10px; border: 1px solid #0277bd; border-radius: 6px; overflow: hidden;">
+            <summary style="background: #0288d1; color: white; padding: 12px; font-weight: bold; font-size: 0.9em; cursor: pointer;">🚜 3. ECONOMIA E POLOS REGIONAIS</summary>
+            <div class="conteudo" style="background: white; padding: 15px;">
+                <p style="margin-bottom: 15px; color: #555;">Goiás hoje não vive apenas de gado e soja. O estado tem uma economia diversificada e altamente industrializada em alguns polos.</p>
+
+                <table class="tabela-sintaxe">
+                    <thead>
+                        <tr style="background: #f4f4f4;">
+                            <th>Polo Econômico</th>
+                            <th>O que produz (Passe o mouse)</th>
+                            <th>Importância Nacional</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #2e7d32;">Agronegócio e Agroindústria</td>
+                            <td><span class="termo-hover" data-tooltip="SOJA, MILHO E CARNE: Goiás é um dos líderes nacionais. A região Sudoeste (Rio Verde, Jataí) é o grande motor do agronegócio. Destaque também para o setor sucroalcooleiro (Cana-de-açúcar) na região sul.">Região Sudoeste (Rio Verde/Jataí)</span></td>
+                            <td>Maior responsável pelas exportações e PIB do estado.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #fdf2f2; font-weight: bold; color: #0288d1;">DAIA<br><small>(Distrito Agroindustrial de Anápolis)</small></td>
+                            <td><span class="termo-hover" data-tooltip="FÁRMACOS E AUTOMÓVEIS: Anápolis é o coração logístico e industrial de Goiás. É o segundo maior polo farmoquímico do Brasil (medicamentos genéricos) e possui forte montagem automobilística (Caoa/Hyundai).">Medicamentos e Montadoras (Anápolis)</span></td>
+                            <td>Localização estratégica ('Trevo' logístico do Brasil).</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #f9f9f9; font-weight: bold; color: #5d4037;">Mineração Moderna</td>
+                            <td><span class="termo-hover" data-tooltip="NÍQUEL, COBRE E OURO: A mineração moderna não é como no tempo dos bandeirantes. Hoje é altamente tecnológica. Destaque para o Norte Goiano (Niquelândia, Alto Horizonte, Minaçu - amianto).">Norte Goiano (Níquel/Cobre)</span></td>
+                            <td>Niquelândia e Barro Alto são referências mundiais de extração.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+    </div>
+</details>
     </div>
 
 <a href="#" class="btn-topo">▲</a>
