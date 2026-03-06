@@ -22,40 +22,32 @@ const bancoDeDadosGeral = [
     { id: 17, s: 'p', p: 2, q: "Qual a classe gramatical da palavra destacada em: 'Allan estuda **muito**'?", o: ["Substantivo", "Adjetivo", "Advébio de intensidade", "Preposição"], a: 2, e: "Muito está intensificando a ação de estudar, logo é um advérbio." },
     { id: 18, s: 'p', p: 2, q: "Assinale a frase com erro de concordância nominal:", o: ["A entrada é proibida.", "É proibido entrada.", "Água é bom.", "A água é bom."], a: 3, e: "O correto seria 'A água é boa', pois o artigo 'A' força a concordância." },
     { id: 19, s: 'p', p: 2, q: "Qual o feminino de 'Poeta'?", o: ["Poetiza", "Poetisa", "Poeta", "Poetina"], a: 1, e: "O feminino de poeta é poetisa (com S)." },
-    { id: 20, s: 'p', p: 2, q: "Escolha a opção que completa corretamente a lacuna: 'Ele não veio _____ estava chovendo'.", o: ["por que", "porquê", "porque", "por quê"], a: 2, e: "Usa-se 'porque' junto e sem acento como conjunção explicativa." },
-
-    // === ELITE: PORTUGUÊS (Sintaxe e Pontuação) ===
+    { id: 20, s: 'p', p: 2, q: "Escolha a opção que completa corretamente a lacuna: 'Ele não veio _____ estava chovendo'.", o: ["por que", "porquê", "porque", "por quê"], a: 2, e: "Usa-se 'porque' junto e sem acento como conjunção explicativa." }, 
     { id: 26, s: 'p', p: 2, q: "No trecho 'Compete ao Operador, conforme o Regimento, a inserção dos caracteres', as vírgulas isolam:", o: ["Um adjunto adverbial deslocado", "Um aposto explicativo", "Uma oração subordinada adjetiva", "Um vocativo"], a: 0, e: "A expressão 'conforme o Regimento' é um adjunto adverbial de conformidade deslocado." },
     { id: 27, s: 'p', p: 2, q: "Assinale a alternativa em que a partícula 'SE' exerce função de índice de indeterminação do sujeito:", o: ["Consertou-se o Switcher.", "Aluga-se esta sala.", "Precisa-se de técnicos qualificados.", "O operador cortou-se no rack."], a: 2, e: "Com verbos transitivos indiretos (precisar de), o 'SE' indetermina o sujeito." },
     { id: 28, s: 'p', p: 2, q: "Qual a figura de linguagem presente em: 'A TV Senado é o olho do cidadão no Congresso'?", o: ["Metonímia", "Hipérbole", "Metáfora", "Eufemismo"], a: 2, e: "Comparação implícita sem o conectivo 'como'." },
-    {
-        id: 1101, s: 'p', p: 2,
-        q: "No período: 'O operador inseriu os caracteres, **entretanto** o sinal de vídeo apresentou instabilidade', a conjunção em destaque estabelece relação de:",
-        o: ["Conclusão", "Adversidade", "Explicação", "Adição"],
-        a: 1,
-        e: "<b>O Pilar da Adversidade:</b> Imagine um trilho de trem. A ideia A (inseriu caracteres) vai para um lado. O 'entretanto' é o desvio que joga o sentido para o lado OPOSTO (erro no sinal). <br><b>Dica de Ouro:</b> Substitua mentalmente por 'MAS'. Se couber o 'MAS', a resposta é Adversidade."
-    },
-    {
-        id: 1102, s: 'p', p: 2,
-        q: "Assinale a alternativa em que a regência do verbo ASSISTIR está em conformidade com a norma culta, no sentido de presenciar:",
-        o: ["O técnico assistiu o tutorial ontem.", "Allan assistiu ao debate dos vereadores.", "Todos assistiram o filme na TV Senado.", "Assistimos uma palestra sobre IA."],
-        a: 1,
-        e: "<b>Regra do V-T-I:</b> No sentido de VER/PRESENCIAR, o verbo assistir é 'exigente': ele obriga o uso da preposição 'A'. <br><b>Exemplo Prático:</b> Quem assiste (vê), assiste A alguma coisa. Por isso: assistiu AO (A + O) debate."
-    },
-    {
-        id: 1103, s: 'p', p: 2,
-        q: "Na frase 'Faz três anos que a sede foi inaugurada', o uso do verbo 'Fazer' no singular justifica-se porque:",
-        o: ["O sujeito é simples.", "É um verbo impessoal indicando tempo decorrido.", "Concorda com o objeto direto.", "O sujeito é oculto."],
-        a: 1,
-        e: "<b>O Verbo Solitário:</b> Verbos que indicam tempo (como fazer e haver) não têm 'dono' (sujeito). <br><b>Analogia:</b> O tempo não tem plural. Você nunca diz 'fazem 3 anos', assim como não diz 'choveram canivetes' (em sentido literal). Fica sempre no singular, como se estivesse 'congelado'."
-    },
-    {
-        id: 1104, s: 'p', p: 2,
-        q: "Escolha a opção onde o uso da crase é OBRIGATÓRIO:",
-        o: ["O diretor entregou o relatório a secretária.", "Fui a Goiânia conhecer a Câmara.", "Allan começou a estudar cedo.", "Entreguei o manual a ele."],
-        a: 0,
-        e: "<b>O Teste do 'AO':</b> A crase é o casamento do 'A' (preposição) com o 'A' (artigo). <br><b>Dica:</b> Troque a palavra feminina por uma masculina. Se 'secretária' virar 'secretário', o 'A' vira 'AO'. <br><b>Resultado:</b> 'Entregou o relatório AO secretário'. Se deu AO, tem crase no À!"
-    },
+    { id: 31, s: 'p', p: 2, q: "No que se refere à concordância verbal e à regência, assinale a alternativa que obedece rigorosamente à norma culta da língua portuguesa:", o: ["Fazem dez anos que a Câmara de Goiânia mudou sua sede administrativa.", "Os técnicos de vídeo assistiram o novo tutorial sobre sinais SDI.", "Haviam muitos vereadores presentes na sessão solene de ontem.", "Devem-se buscar soluções urgentes para os problemas de sinal."],a: 3, e: "Na voz passiva sintética, o verbo deve concordar com o sujeito (soluções). 'Fazer' indicando tempo e 'Haver' no sentido de existir são impessoais (ficam no singular)."},
+    {id: 32, s: 'p', p: 2,q: "Assinale a alternativa em que o sinal indicativo de crase foi empregado CORRETAMENTE:", o: ["O Operador de Caracteres enviou as tarjas à uma servidora concursada.", "O acesso à rede externa da Câmara será liberado a partir das oito horas.", "A equipe técnica referiu-se àquele equipamento que apresentou defeito.", "As transmissões ao vivo ocorrem de segunda à sexta, sem interrupções."],a: 2, e: "A crase é obrigatória na junção da preposição 'a' com o pronome demonstrativo 'aquele'. Não há crase antes de artigo indefinido (uma), verbos (partir) ou entre dias da semana sem artigo (de... a)."},
+    { id: 33, s: 'p', p: 2,q: "Na frase 'A execução do protocolo de Genlock, conquanto seja complexa, garante a estabilidade do vídeo', a conjunção destacada estabelece uma relação de:",o: ["Conclusão", "Explicação", "Concessão", "Adição"], a: 2,e: "'Conquanto' é uma conjunção concessiva, introduzindo uma ideia que se opõe à principal sem anulá-la, semelhante ao 'embora'."},
+    {id: 34, s: 'p', p: 2,q: "Quanto à sintaxe de concordância e pontuação, assinale a alternativa que apresenta a redação inteiramente correta de acordo com a norma padrão:",o: ["A maioria dos servidores da TV, optaram por realizar o treinamento em regime de teletrabalho.", "Deveriam haver mais câmeras operando em 4K no plenário da Câmara Municipal.", "Informou-se aos candidatos, durante a prova, que não seriam permitidos aparelhos eletrônicos.", "Tratam-se de questões complexas, cujas as respostas exigem profundo conhecimento técnico."], a: 2, e: "A alternativa 'C' apresenta a voz passiva sintética correta. Na 'A', não se separa sujeito de verbo por vírgula. Na 'B', 'haver' (existir) é impessoal. Na D', 'tratar-se de' é impessoal e não aceita artigo após o pronome relativo 'cujas'."},
+    {id: 35, s: 'p', p: 2, q: "Assinale a alternativa que preenche corretamente as lacunas: 'O técnico referiu-se ___ novas normas de sinal, visando ___ melhoria da transmissão, embora estivesse atento ___ exigências da diretoria.'", o: ["as - a - as", "às - à - às", "às - a - às", "as - à - as"],a: 1, e: "Regência nominal e verbal: quem se refere, refere-se A (as normas = às); visando (no sentido de objetivar) A (a melhoria = à); atento A (as exigências = às)."}, 
+    {id: 36, s: 'p', p: 2, q: "Assinale a alternativa em que a alteração da pontuação altera o sentido original da frase:", o: ["Allan, o técnico, enviou o sinal. / Allan - o técnico - enviou o sinal.", "Os vereadores que votaram favoravelmente saíram. / Os vereadores, que votaram favoravelmente, saíram.", "O sinal caiu; a transmissão parou. / O sinal caiu. A transmissão parou.", "Não, o switcher não quebrou. / Não: o switcher não quebrou."], a: 1, e: "Sem vírgulas, a oração é restritiva (apenas alguns votaram). Com vírgulas, é explicativa (todos votaram favoravelmente)." },
+    { id: 37, s: 'p', p: 2,q: "Assinale a opção que apresenta erro de concordância verbal, conforme a norma culta:",o: ["Mais de um técnico se cumprimentaram após a transmissão.", "Cerca de cem servidores participaram da sessão na Câmara.", "Fomos nós que instalamos o novo servidor de caracteres.", "Grande parte dos parlamentares votou favoravelmente ao projeto."],a: 0,  e: "Com a expressão 'mais de um', o verbo fica no singular, a menos que indique reciprocidade ou o numeral seja repetido." },
+    { id: 38, s: 'p', p: 2, q: "No que se refere à regência nominal, qual frase está INCORRETA?", o: ["O diretor estava ansioso por ver os resultados da transmissão.", "Este equipamento de vídeo é incompatível com o sinal analógico.", "O técnico é muito capacitado de resolver problemas de rede.", "Estamos todos imunes a críticas infundadas sobre o trabalho técnico."], a: 2, e: "Quem é capacitado, é capacitado PARA algo ou EM algo, e não 'de' algo."},
+    {  id: 39, s: 'p', p: 2, q: "Assinale a frase onde a vírgula é usada para separar um adjunto adverbial deslocado:", o: ["Allan, verifique o sinal do switcher agora.", "Durante a madrugada, os servidores de rede foram reiniciados.", "O sinal caiu, mas a gravação continuou ativa.", "Compramos câmeras, lentes, tripés e cabos SDI."],a: 1, e: "'Durante a madrugada' é uma locução adverbial de tempo deslocada para o início da frase."},
+    { id: 40, s: 'p',  p: 2, q: "Assinale a opção que apresenta a pontuação e a concordância corretas, de acordo com a norma-padrão da língua portuguesa:",
+    o: [
+        "Ocorreram, durante a transmissão matutina, diversos problemas técnicos que impediram o sinal de chegar à Brasília.", 
+        "Haviam, no plenário da Câmara, cerca de trinta vereadores aguardando o início da sessão solene.", 
+        "Tratam-se de mudanças urgentes, as quais os técnicos devem se adaptar imediatamente para garantir o fluxo.", 
+        "Informou-se aos operadores de caracteres que, a partir de amanhã, as escalas de plantão serão alteradas." ], 
+    a: 3,e: "A alternativa 'D' (índice 3) está correta. Nas demais: em 'A', não há crase antes de Brasília (volto DE Brasília); em 'B', o verbo 'haver' (existir) é impessoal e deve ficar no singular (Havia); em 'C', o verbo 'tratar-se de' não admite plural (Trata-se de)."},
+     {id: 41, s: 'p', p: 2, q: "No trecho 'A implantação do sistema digital, conquanto necessária, exigiu alto investimento', a conjunção destacada pode ser substituída, sem alteração de sentido, por:",o: ["Portanto", "Todavia", "Embora", "Visto que"],a: 2, e: "'Conquanto' é uma conjunção concessiva, assim como 'embora'."},
+    
+     {id: 1101, s: 'p', p: 2, q: "No período: 'O operador inseriu os caracteres, **entretanto** o sinal de vídeo apresentou instabilidade', a conjunção em destaque estabelece relação de:",o: ["Conclusão", "Adversidade", "Explicação", "Adição"], a: 1,e: "<b>O Pilar da Adversidade:</b> Imagine um trilho de trem. A ideia A (inseriu caracteres) vai para um lado. O 'entretanto' é o desvio que joga o sentido para o lado OPOSTO (erro no sinal). <br><b>Dica de Ouro:</b> Substitua mentalmente por 'MAS'. Se couber o 'MAS', a resposta é Adversidade."},
+    { id: 1102, s: 'p', p: 2,q: "Assinale a alternativa em que a regência do verbo ASSISTIR está em conformidade com a norma culta, no sentido de presenciar:", o: ["O técnico assistiu o tutorial ontem.", "Allan assistiu ao debate dos vereadores.", "Todos assistiram o filme na TV Senado.", "Assistimos uma palestra sobre IA."], a: 1, e: "<b>Regra do V-T-I:</b> No sentido de VER/PRESENCIAR, o verbo assistir é 'exigente': ele obriga o uso da preposição 'A'. <br><b>Exemplo Prático:</b> Quem assiste (vê), assiste A alguma coisa. Por isso: assistiu AO (A + O) debate."},
+    { id: 1103, s: 'p', p: 2, q: "Na frase 'Faz três anos que a sede foi inaugurada', o uso do verbo 'Fazer' no singular justifica-se porque:",o: ["O sujeito é simples.", "É um verbo impessoal indicando tempo decorrido.", "Concorda com o objeto direto.", "O sujeito é oculto."], a: 1, e: "<b>O Verbo Solitário:</b> Verbos que indicam tempo (como fazer e haver) não têm 'dono' (sujeito). <br><b>Analogia:</b> O tempo não tem plural. Você nunca diz 'fazem 3 anos', assim como não diz 'choveram canivetes' (em sentido literal). Fica sempre no singular, como se estivesse 'congelado'." },
+    {id: 1104, s: 'p', p: 2, q: "Escolha a opção onde o uso da crase é OBRIGATÓRIO:", o: ["O diretor entregou o relatório a secretária.", "Fui a Goiânia conhecer a Câmara.", "Allan começou a estudar cedo.", "Entreguei o manual a ele."], a: 0,e: "<b>O Teste do 'AO':</b> A crase é o casamento do 'A' (preposição) com o 'A' (artigo). <br><b>Dica:</b> Troque a palavra feminina por uma masculina. Se 'secretária' virar 'secretário', o 'A' vira 'AO'. <br><b>Resultado:</b> 'Entregou o relatório AO secretário'. Se deu AO, tem crase no À!" },
     {
         id: 1105, s: 'p', p: 2,
         q: "O termo 'conquanto', recorrente em textos legislativos, possui valor de:",
@@ -63,96 +55,7 @@ const bancoDeDadosGeral = [
         a: 2,
         e: "<b>O Pilar da Concessão:</b> Concessão é uma 'permissão contrária'. É como se você dissesse: 'Eu deixo essa ideia passar, mesmo que ela atrapalhe'. <br><b>Exemplo:</b> Conquanto (embora) estivesse chovendo, Allan foi trabalhar. A chuva tentou impedir, mas ele foi."
     },
-    // === ELITE: PORTUGUÊS (Sintaxe, Regência e Pontuação Avançada) ===
-    {
-        id: 31, s: 'p', p: 2,
-        q: "No que se refere à concordância verbal e à regência, assinale a alternativa que obedece rigorosamente à norma culta da língua portuguesa:",
-        o: ["Fazem dez anos que a Câmara de Goiânia mudou sua sede administrativa.", "Os técnicos de vídeo assistiram o novo tutorial sobre sinais SDI.", "Haviam muitos vereadores presentes na sessão solene de ontem.", "Devem-se buscar soluções urgentes para os problemas de sinal."],
-        a: 3,
-        e: "Na voz passiva sintética, o verbo deve concordar com o sujeito (soluções). 'Fazer' indicando tempo e 'Haver' no sentido de existir são impessoais (ficam no singular)."
-    },
-    {
-        id: 32, s: 'p', p: 2,
-        q: "Assinale a alternativa em que o sinal indicativo de crase foi empregado CORRETAMENTE:",
-        o: ["O Operador de Caracteres enviou as tarjas à uma servidora concursada.", "O acesso à rede externa da Câmara será liberado a partir das oito horas.", "A equipe técnica referiu-se àquele equipamento que apresentou defeito.", "As transmissões ao vivo ocorrem de segunda à sexta, sem interrupções."],
-        a: 2,
-        e: "A crase é obrigatória na junção da preposição 'a' com o pronome demonstrativo 'aquele'. Não há crase antes de artigo indefinido (uma), verbos (partir) ou entre dias da semana sem artigo (de... a)."
-    },
-    {
-        id: 33, s: 'p', p: 2,
-        q: "Na frase 'A execução do protocolo de Genlock, conquanto seja complexa, garante a estabilidade do vídeo', a conjunção destacada estabelece uma relação de:",
-        o: ["Conclusão", "Explicação", "Concessão", "Adição"],
-        a: 2,
-        e: "'Conquanto' é uma conjunção concessiva, introduzindo uma ideia que se opõe à principal sem anulá-la, semelhante ao 'embora'."
-    },
-    // === ELITE: PORTUGUÊS (Continuação) ===
-    {
-        id: 34, s: 'p', p: 2,
-        q: "Quanto à sintaxe de concordância e pontuação, assinale a alternativa que apresenta a redação inteiramente correta de acordo com a norma padrão:",
-        o: ["A maioria dos servidores da TV, optaram por realizar o treinamento em regime de teletrabalho.", "Deveriam haver mais câmeras operando em 4K no plenário da Câmara Municipal.", "Informou-se aos candidatos, durante a prova, que não seriam permitidos aparelhos eletrônicos.", "Tratam-se de questões complexas, cujas as respostas exigem profundo conhecimento técnico."],
-        a: 2,
-        e: "A alternativa 'C' apresenta a voz passiva sintética correta. Na 'A', não se separa sujeito de verbo por vírgula. Na 'B', 'haver' (existir) é impessoal. Na D', 'tratar-se de' é impessoal e não aceita artigo após o pronome relativo 'cujas'."
-    },
-    {
-        id: 35, s: 'p', p: 2,
-        q: "Assinale a alternativa que preenche corretamente as lacunas: 'O técnico referiu-se ___ novas normas de sinal, visando ___ melhoria da transmissão, embora estivesse atento ___ exigências da diretoria.'",
-        o: ["as - a - as", "às - à - às", "às - a - às", "as - à - as"],
-        a: 1,
-        e: "Regência nominal e verbal: quem se refere, refere-se A (as normas = às); visando (no sentido de objetivar) A (a melhoria = à); atento A (as exigências = às)."
-    },
-    // === ELITE: PORTUGUÊS (Pontuação e Semântica) ===
-    {
-        id: 36, s: 'p', p: 2,
-        q: "Assinale a alternativa em que a alteração da pontuação altera o sentido original da frase:",
-        o: ["Allan, o técnico, enviou o sinal. / Allan - o técnico - enviou o sinal.", "Os vereadores que votaram favoravelmente saíram. / Os vereadores, que votaram favoravelmente, saíram.", "O sinal caiu; a transmissão parou. / O sinal caiu. A transmissão parou.", "Não, o switcher não quebrou. / Não: o switcher não quebrou."],
-        a: 1,
-        e: "Sem vírgulas, a oração é restritiva (apenas alguns votaram). Com vírgulas, é explicativa (todos votaram favoravelmente)."
-    },
-    // === ELITE: PORTUGUÊS (CONCORDÂNCIA, REGÊNCIA E PONTUAÇÃO) ===
-    {
-        id: 37, s: 'p', p: 2,
-        q: "Assinale a opção que apresenta erro de concordância verbal, conforme a norma culta:",
-        o: ["Mais de um técnico se cumprimentaram após a transmissão.", "Cerca de cem servidores participaram da sessão na Câmara.", "Fomos nós que instalamos o novo servidor de caracteres.", "Grande parte dos parlamentares votou favoravelmente ao projeto."],
-        a: 0,
-        e: "Com a expressão 'mais de um', o verbo fica no singular, a menos que indique reciprocidade ou o numeral seja repetido."
-    },
-    {
-        id: 38, s: 'p', p: 2,
-        q: "No que se refere à regência nominal, qual frase está INCORRETA?",
-        o: ["O diretor estava ansioso por ver os resultados da transmissão.", "Este equipamento de vídeo é incompatível com o sinal analógico.", "O técnico é muito capacitado de resolver problemas de rede.", "Estamos todos imunes a críticas infundadas sobre o trabalho técnico."],
-        a: 2,
-        e: "Quem é capacitado, é capacitado PARA algo ou EM algo, e não 'de' algo."
-    },
-    {
-        id: 39, s: 'p', p: 2,
-        q: "Assinale a frase onde a vírgula é usada para separar um adjunto adverbial deslocado:",
-        o: ["Allan, verifique o sinal do switcher agora.", "Durante a madrugada, os servidores de rede foram reiniciados.", "O sinal caiu, mas a gravação continuou ativa.", "Compramos câmeras, lentes, tripés e cabos SDI."],
-        a: 1,
-        e: "'Durante a madrugada' é uma locução adverbial de tempo deslocada para o início da frase."
-    },
-    // === ELITE: PORTUGUÊS (SINTAXE E PONTUAÇÃO) ===
-    {
-    id: 40, 
-    s: 'p', 
-    p: 2,
-    q: "Assinale a opção que apresenta a pontuação e a concordância corretas, de acordo com a norma-padrão da língua portuguesa:",
-    o: [
-        "Ocorreram, durante a transmissão matutina, diversos problemas técnicos que impediram o sinal de chegar à Brasília.", 
-        "Haviam, no plenário da Câmara, cerca de trinta vereadores aguardando o início da sessão solene.", 
-        "Tratam-se de mudanças urgentes, as quais os técnicos devem se adaptar imediatamente para garantir o fluxo.", 
-        "Informou-se aos operadores de caracteres que, a partir de amanhã, as escalas de plantão serão alteradas."
-    ],
-    a: 3,
-    e: "A alternativa 'D' (índice 3) está correta. Nas demais: em 'A', não há crase antes de Brasília (volto DE Brasília); em 'B', o verbo 'haver' (existir) é impessoal e deve ficar no singular (Havia); em 'C', o verbo 'tratar-se de' não admite plural (Trata-se de)."
-},
-    {
-        id: 41, s: 'p', p: 2,
-        q: "No trecho 'A implantação do sistema digital, conquanto necessária, exigiu alto investimento', a conjunção destacada pode ser substituída, sem alteração de sentido, por:",
-        o: ["Portanto", "Todavia", "Embora", "Visto que"],
-        a: 2,
-        e: "'Conquanto' é uma conjunção concessiva, assim como 'embora'."
-    },
-    // === ELITE: FIGURAS DE LINGUAGEM (s: 'p') ===
+   
     {
         id: 901, s: 'p', p: 2,
         q: "Na frase 'A Câmara Municipal de Goiânia ouviu o clamor das ruas', qual figura de linguagem foi utilizada para indicar a opinião da população?",
@@ -191,21 +94,21 @@ const bancoDeDadosGeral = [
     },
     // === BLOCO ELITE: PORTUGUÊS (SINTAXE E FIGURAS) ===
     {
-        id: 3001, s: 'p', p: 2,
+        id: 3301, s: 'p', p: 2,
         q: "Na frase 'O técnico de vídeo entregou os cabos ao coordenador', os termos destacados exercem, respectivamente, a função de:",
         o: ["Objeto Indireto e Sujeito.", "Objeto Direto e Objeto Indireto.", "Complemento Nominal e Adjunto.", "Sujeito e Predicativo."],
         a: 1,
         e: "O verbo 'entregar' é VTDI (quem entrega, entrega ALGO a ALGUÉM). 'Os cabos' (OD) e 'ao coordenador' (OI)."
     },
     {
-        id: 3002, s: 'p', p: 2,
+        id: 3302, s: 'p', p: 2,
         q: "Qual figura de linguagem está presente em: 'A TV Câmara é um farol que ilumina as decisões políticas de Goiânia'?",
         o: ["Metonímia.", "Metáfora.", "Pleonasmo.", "Cacofonia."],
         a: 1,
         e: "Metáfora: comparação implícita entre a TV e um farol sem o conectivo 'como'."
     },
     {
-        id: 3003, s: 'p', p: 2,
+        id: 3303, s: 'p', p: 2,
         q: "Identifique o vício de linguagem na frase: 'Eu vi ela entrando na sala de edição agora pouco'.",
         o: ["Ambiguidade.", "Cacofonia.", "Eco.", "Arcaísmo."],
         a: 1,
@@ -940,7 +843,7 @@ const bancoDeDadosGeral = [
     // RACIOCÍNIO LÓGICO (Questões 9 a 11)
     // =================================================================================
     {
-        id: 3009, s: 'l', p: 2, tema: "ALEGO - Raciocínio Lógico",
+        id: 3109, s: 'l', p: 2, tema: "ALEGO - Raciocínio Lógico",
         q: `Considere como verdadeiras as seguintes sentenças:<br>
             I. O carro é preto.<br>
             II. A moto não é branca.<br>
@@ -1413,28 +1316,7 @@ const bancoDeDadosGeral = [
     },
 
 
-    //Direito Constitucional e LGPD concurso assembleia legislativa go
-    {
-        id: 3009, s: 'g', p: 2, tema: "Legislação Camara Municipal",
-        q: "Segundo a Constituição Federal, a casa é asilo inviolável do indivíduo. Assinale a situação em que o ingresso nela SEM consentimento do morador, durante a NOITE, é permitido:",
-        o: ["Para cumprimento de determinação judicial.", "Para prestar socorro.", "Para realização de busca e apreensão.", "Para instalação de escutas telefônicas.", "Em nenhuma hipótese é permitido à noite."],
-        a: 1,
-        e: "<b>Regra de Ouro:</b> O ingresso SEM consentimento à NOITE só é permitido em 3 casos: <b>Flagrante delito, Desastre ou para Prestar Socorro</b>. Determinação judicial só pode ser cumprida durante o DIA."
-    },
-    {
-        id: 3010, s: 'g', p: 2, tema: "Legislação Camara Municipal",
-        q: "A Lei Geral de Proteção de Dados (LGPD) define como 'Dado Pessoal Sensível' aquele que se refere a:",
-        o: ["Número de telefone e endereço residencial.", "Histórico de compras em sites de e-commerce.", "Origem racial ou étnica e convicção religiosa.", "Nome completo e data de nascimento.", "Preferências de lazer e viagens."],
-        a: 2,
-        e: "<b>LGPD:</b> Dados sensíveis são aqueles que podem gerar discriminação. Exemplos: <b>origem racial, convicção religiosa, opinião política, saúde ou vida sexual</b>."
-    },
-    {
-        id: 3011, s: 'g', p: 2, tema: "Legislação Camara Municipal",
-        q: "Compete privativamente à Assembleia Legislativa do Estado de Goiás:",
-        o: ["Sancionar leis federais.", "Eleger sua Mesa Diretora.", "Processar o Presidente da República.", "Declarar guerra a outros estados.", "Legislar sobre direito civil."],
-        a: 1,
-        e: "<b>Autonomia:</b> Cada casa legislativa (Câmara ou Assembleia) possui autonomia administrativa para <b>eleger sua própria Mesa</b> e elaborar seu Regimento Interno."
-    },
+   
     {
         id: 3012, s: 'g', p: 2, tema: "Legislação Camara Municipal",
         q: "O princípio da Administração Pública que exige que o agente público atue sem favoritismos ou perseguições, buscando o interesse coletivo, é o da:",
@@ -1778,140 +1660,106 @@ const bancoDeDadosGeral = [
 // BLOCO: GEO-HISTÓRIA E LEGISLAÇÃO AVANÇADA (NÍVEL CÂMARA DE GOIÂNIA)
 
     { 
-        id: 3001, s: 'g', p: 2, 
+        id: 3201, s: 'g', p: 2, 
         q: "No contexto da construção de Goiânia na década de 1930, a escolha do sítio na bacia do Rio Meia Ponte, em detrimento da região de Campinas (que já existia), visava tecnicamente:", 
         o: ["Evitar a influência política dos antigos coronéis da Cidade de Goiás.", "Garantir o abastecimento de água e uma topografia que permitisse o traçado de uma cidade moderna.", "Aproximar a capital da nova linha férrea que chegava por Anápolis.", "Proteger a capital de possíveis inundações do Rio Araguaia."], 
         a: 1, 
         e: "A topografia da região escolhida permitia o traçado monumental de Attilio Corrêa Lima e a proximidade com o Meia Ponte era vital para o abastecimento hídrico planejado." 
     },
     { 
-        id: 3002, s: 'g', p: 2, 
+        id: 3202, s: 'g', p: 2, 
         q: "Sobre a Lei Orgânica do Município de Goiânia, se o Prefeito julgar um projeto de lei inconstitucional ou contrário ao interesse público, deverá vetá-lo dentro de qual prazo e sob qual rito?", 
         o: ["15 dias úteis, comunicando os motivos ao Presidente da Câmara em 48 horas.", "10 dias corridos, publicando o veto imediatamente no Diário Oficial.", "15 dias corridos, enviando o veto para análise do Governador do Estado.", "48 horas após a aprovação, sob pena de sanção tácita."], 
         a: 0, 
         e: "O Prefeito tem 15 dias úteis para vetar. Após decidir pelo veto, ele tem 48 horas para comunicar os motivos à Presidência da Câmara." 
     },
     { 
-        id: 3003, s: 'g', p: 2, 
+        id: 3203, s: 'g', p: 2, 
         q: "O 'Batismo Cultural' de Goiânia, ocorrido em 5 de julho de 1942, teve uma importância política fundamental para o governo de Pedro Ludovico Teixeira pois:", 
         o: ["Marcou o fim definitivo do ciclo do ouro na região central.", "Celebrou a chegada da TV Anhanguera ao estado de Goiás.", "Serviu para oficializar Goiânia perante as elites nacionais como o novo centro de modernidade do interior do Brasil.", "Anunciou a emancipação política de Goiânia em relação à Cidade de Goiás."], 
         a: 2, 
         e: "O evento foi uma demonstração de força política para validar o projeto modernizador de Ludovico diante do governo Vargas e do resto do país." 
     },
     { 
-        id: 3004, s: 'g', p: 2, 
+        id: 3204, s: 'g', p: 2, 
         q: "De acordo com o Regimento Interno da Câmara de Goiânia, a iniciativa de leis que criem cargos, funções ou empregos públicos na administração direta e autárquica do Município é competência:", 
         o: ["Exclusiva da Mesa Diretora da Câmara.", "Privativa de qualquer vereador em conjunto com o Ministério Público.", "Privativa do Prefeito Municipal.", "Concorrente entre o Prefeito e o Presidente da Câmara."], 
         a: 2, 
         e: "Pelo princípio da separação de poderes, apenas o Chefe do Executivo pode propor leis que aumentem despesa ou alterem a estrutura administrativa da Prefeitura." 
     },
     { 
-        id: 3005, s: 'g', p: 2, 
+        id: 3205, s: 'g', p: 2, 
         q: "A vegetação do Cerrado goiano é caracterizada por árvores de troncos tortuosos e casca grossa. Tecnicamente, essa casca espessa (suberosa) funciona como proteção contra:", 
         o: ["O excesso de umidade durante as chuvas de verão.", "Ataques de pragas vindas da região amazônica.", "As queimadas naturais de baixa intensidade, comuns no período de seca.", "A alta acidez do solo que corrói as raízes superficiais."], 
         a: 2, 
         e: "O suber (casca grossa) é um isolante térmico que protege o câmbio da árvore do calor do fogo, permitindo que ela rebrote após as queimadas." 
     },
     { 
-        id: 3006, s: 'g', p: 2, 
+        id: 3206, s: 'g', p: 2, 
         q: "Caso o Prefeito e o Vice-Prefeito de Goiânia tenham seus mandatos cassados pela Justiça Eleitoral no terceiro ano do mandato, o Regimento e a LOM preveem que:", 
         o: ["O Presidente da Câmara assumirá definitivamente até o fim do mandato.", "Serão realizadas eleições diretas em 90 dias para um mandato tampão.", "A Câmara Municipal realizará eleições indiretas dentro de 30 dias.", "O Governador de Goiás nomeará um interventor municipal."], 
         a: 1, 
         e: "Se a vacância ocorre nos primeiros 3 anos de mandato, a eleição é direta. Se for no último ano, a eleição é indireta pela Câmara." 
     },
     { 
-        id: 3007, s: 'g', p: 2, 
+        id: 3207, s: 'g', p: 2, 
         q: "O estilo arquitetônico Art Déco em Goiânia, presente no núcleo central, possui como uma de suas características visuais:", 
         o: ["Uso excessivo de ornamentos dourados e formas circulares barrocas.", "Simetria, linhas aerodinâmicas e o uso do concreto armado com visual 'limpo'.", "Fachadas em madeira e telhados coloniais de barro.", "Estruturas brutas de aço exposto com vidros espelhados."], 
         a: 1, 
         e: "O Art Déco preza pela geometria, aerodinâmica e uma estética de modernidade industrial típica das décadas de 20 e 30." 
     },
     { 
-        id: 3008, s: 'g', p: 2, 
+        id: 3208, s: 'g', p: 2, 
         q: "A fiscalização contábil, financeira e orçamentária do Município de Goiânia é exercida pela Câmara Municipal. Para isso, ela conta com o auxílio obrigatório de qual órgão?", 
         o: ["Tribunal de Contas do Estado (TCE).", "Tribunal de Contas da União (TCU).", "Controladoria Geral do Município (CGM).", "Tribunal de Contas dos Municípios (TCM-GO)."], 
         a: 3, 
         e: "Em Goiás, existe um tribunal específico para fiscalizar as prefeituras e câmaras: o Tribunal de Contas dos Municípios." 
     },
+   
     { 
-        id: 3009, s: 'g', p: 2, 
-        q: "O Rio Araguaia, símbolo do turismo em Goiás, faz a divisa natural do estado com quais outras unidades da federação?", 
-        o: ["Mato Grosso, Tocantins e Pará.", "Mato Grosso do Sul e Minas Gerais.", "Bahia e Maranhão.", "Apenas o estado do Tocantins."], 
-        a: 0, 
-        e: "O Araguaia banha a divisa oeste e norte de Goiás, encontrando MT, TO e uma ponta do Pará no 'Bico do Papagaio'." 
-    },
-    { 
-        id: 3010, s: 'g', p: 2, 
-        q: "Segundo a Lei Orgânica de Goiânia, qual é o quórum necessário para a aprovação de uma Emenda à própria Lei Orgânica?", 
-        o: ["Maioria absoluta em turno único.", "Maioria simples em dois turnos.", "Dois terços dos membros da Câmara em dois turnos.", "Três quintos dos vereadores presentes."], 
-        a: 2, 
-        e: "A LOM é a 'Constituição Municipal', exigindo o quórum qualificado mais alto (2/3 ou 24 votos) e dois turnos de votação." 
-    },
-    { 
-        id: 3011, s: 'g', p: 2, 
-        q: "Na economia goiana do século XIX, após o declínio da mineração de ouro, a principal atividade que sustentou a economia regional foi:", 
-        o: ["A produção industrial de tecidos no sul goiano.", "A pecuária extensiva e a agricultura de subsistência.", "O extrativismo de borracha na região de Campinas.", "A exportação de soja para o mercado europeu."], 
-        a: 1, 
-        e: "Com o fim do ouro, Goiás viveu um período de isolamento onde o gado (que 'andava' até os mercados) e a roça foram a base da sobrevivência." 
-    },
-    { 
-        id: 3012, s: 'g', p: 2, 
-        q: "O 'Plano Diretor' original de Goiânia de 1933 foi assinado por Attilio Corrêa Lima. No entanto, o projeto foi finalizado por outro urbanista devido a divergências. Quem foi ele?", 
-        o: ["Oscar Niemeyer.", "Lúcio Costa.", "Armando de Godoy.", "Burle Marx."], 
-        a: 2, 
-        e: "Armando de Godoy foi quem deu continuidade e fez alterações significativas no plano original de Attilio, como a inclusão do Setor Sul com conceitos de cidades-jardim." 
-    },
-    { 
-        id: 3013, s: 'g', p: 2, 
-        q: "Compete privativamente à Câmara Municipal de Goiânia:", 
-        o: ["Decretar a intervenção estadual no município.", "Fixar os subsídios dos Vereadores, do Prefeito e do Vice-Prefeito por meio de lei.", "Comandar as forças de segurança pública da capital.", "Arrecadar o Imposto de Renda dos cidadãos goianienses."], 
-        a: 1, 
-        e: "É atribuição legislativa fixar os valores dos salários dos políticos daquela esfera, respeitados os limites constitucionais." 
-    },
-    { 
-        id: 3014, s: 'g', p: 2, 
+        id: 3214, s: 'g', p: 2, 
         q: "A Mesorregião do Centro Goiano, onde Goiânia está localizada, destaca-se por ser a área de maior:", 
         o: ["Produção de grãos (soja e milho) para exportação.", "Densidade demográfica e concentração de serviços e indústrias do estado.", "Extração mineral de níquel e fosfato.", "Preservação da vegetação nativa intocada."], 
         a: 1, 
         e: "O eixo Goiânia-Anápolis-Aparecida concentra a maior parte da população e do PIB de serviços e indústria de Goiás." 
     },
     { 
-        id: 3015, s: 'g', p: 2, 
+        id: 3215, s: 'g', p: 2, 
         q: "Sobre a licença de Vereadores em Goiânia, o parlamentar perderá o mandato se deixar de comparecer, em cada sessão legislativa (ano), à terça parte das sessões ordinárias, SALVO:", 
         o: ["Se estiver em viagem particular ao exterior.", "Se estiver licenciado ou em missão autorizada pela Câmara.", "Se houver concordância do partido político.", "Se apresentar justificativa verbal ao Presidente na sessão seguinte."], 
         a: 1, 
         e: "A ausência não justificada ou sem licença formal acima de 1/3 das sessões gera a perda do mandato." 
     },
     { 
-        id: 3016, s: 'g', p: 2, 
+        id: 3216, s: 'g', p: 2, 
         q: "A Ferrovia que liga o sudeste do Brasil ao estado de Goiás e que foi fundamental para o escoamento da produção no século XX é a:", 
         o: ["Ferrovia Norte-Sul.", "Estrada de Ferro Goyaz (EFG).", "Ferrovia Transnordestina.", "Estrada de Ferro Vitória-Minas."], 
         a: 1, 
         e: "A EFG (Estrada de Ferro Goyaz) chegou a Goiás via Ipameri e depois Anápolis, integrando o estado ao mercado paulista." 
     },
     { 
-        id: 3017, s: 'g', p: 2, 
+        id: 3217, s: 'g', p: 2, 
         q: "Conforme o Regimento Interno, as Comissões Parlamentares de Inquérito (CPI) na Câmara de Goiânia terão poderes de investigação próprios de:", 
         o: ["Autoridades judiciárias.", "Governador do Estado.", "Delegados de Polícia Civil apenas.", "Presidente da República."], 
         a: 0, 
         e: "A CPI possui poderes de investigação equivalentes aos dos juízes, embora não possa condenar criminalmente." 
     },
     { 
-        id: 3018, s: 'g', p: 2, 
+        id: 3218, s: 'g', p: 2, 
         q: "O 'Eixo Anhanguera', principal corredor de transporte de Goiânia, atravessa a cidade em qual sentido predominante?", 
         o: ["Norte-Sul.", "Leste-Oeste.", "Circular concêntrico.", "Diagonal Sudeste."], 
         a: 1, 
         e: "O Eixo Anhanguera liga o leste (Novo Mundo) ao oeste (Padre Pelágio), cortando o Centro e Campinas." 
     },
     { 
-        id: 3019, s: 'g', p: 2, 
+        id: 3219, s: 'g', p: 2, 
         q: "Na estrutura do Poder Legislativo de Goiânia, a Mesa Diretora é composta por quais cargos eletivos internos?", 
         o: ["Presidente, Vice-Prefeito e Secretário de Governo.", "Presidente, 1º e 2º Vice-Presidentes, 1º, 2º, 3º e 4º Secretários.", "Apenas o Presidente e o Líder do Governo.", "Presidente, Corregedor e Procurador do Município."], 
         a: 1, 
         e: "A Mesa é o órgão diretor da Casa, composta por 7 membros: Presidente, dois Vices e quatro Secretários." 
     },
     { 
-        id: 3020, s: 'g', p: 2, 
+        id: 3220, s: 'g', p: 2, 
         q: "A transferência da capital para Goiânia foi inserida em um contexto nacional de integração territorial. Qual era o nome do programa do Governo Federal que incentivava essa mudança?", 
         o: ["Plano de Metas.", "Brasil Potência.", "Marcha para o Oeste.", "Integração Nacional."], 
         a: 2, 
@@ -2307,11 +2155,8 @@ const bancoDeDadosGeral = [
     { id: 413, s: 'i', p: 1, q: "O termo 'Cloud Computing' (Computação em Nuvem) refere-se a:", o: ["Aumentar a velocidade do cooler", "Serviços de computação oferecidos através da internet", "Limpar o histórico do navegador", "Um tipo de vírus que ataca o HD"], a: 1, e: "Refere-se ao processamento e armazenamento de dados em servidores remotos acessados via web." },
     { id: 414, s: 'i', p: 1, q: "O que é um 'Firewall' no contexto de segurança de redes?", o: ["Um componente que acelera a internet", "Um sistema que filtra o tráfego de rede para proteger o computador", "Um programa para editar vídeos", "A parte física do roteador"], a: 1, e: "O firewall atua como uma barreira de segurança, autorizando ou bloqueando conexões." },
     { id: 415, s: 'i', p: 1, q: "Qual a função principal de um roteador em uma rede de computadores?", o: ["Processar textos", "Encaminhar pacotes de dados entre redes diferentes", "Armazenar fotos", "Imprimir documentos"], a: 1, e: "O roteador gerencia o tráfego de dados, escolhendo a melhor rota para a informação chegar ao destino." },
-    { id: 411, s: 'i', p: 1, q: "No Microsoft Word, qual é a função do atalho de teclado 'Ctrl + K'?", o: ["Imprimir o documento", "Inserir um hiperlink", "Colocar o texto em negrito", "Alinhar o texto à direita"], a: 1, e: "O atalho Ctrl+K abre a janela para inserir links em textos selecionados." },
-    { id: 412, s: 'i', p: 1, q: "Qual das alternativas abaixo apresenta apenas sistemas operacionais?", o: ["Windows, Linux e Android", "Excel, Word e PowerPoint", "Chrome, Firefox e Edge", "Intel, AMD e Nvidia"], a: 0, e: "Windows, Linux e Android são softwares que gerenciam o hardware e permitem a execução de outros programas." },
-    { id: 413, s: 'i', p: 1, q: "O termo 'Cloud Computing' (Computação em Nuvem) refere-se a:", o: ["Aumentar a velocidade do cooler", "Serviços de computação oferecidos através da internet", "Limpar o histórico do navegador", "Um tipo de vírus que ataca o HD"], a: 1, e: "Refere-se ao processamento e armazenamento de dados em servidores remotos acessados via web." },
-    { id: 414, s: 'i', p: 1, q: "O que é um 'Firewall' no contexto de segurança de redes?", o: ["Um componente que acelera a internet", "Um sistema que filtra o tráfego de rede para proteger o computador", "Um programa para editar vídeos", "A parte física do roteador"], a: 1, e: "O firewall atua como uma barreira de segurança, autorizando ou bloqueando conexões." },
-    { id: 415, s: 'i', p: 1, q: "Qual a função principal de um roteador em uma rede de computadores?", o: ["Processar textos", "Encaminhar pacotes de dados entre redes diferentes", "Armazenar fotos", "Imprimir documentos"], a: 1, e: "O roteador gerencia o tráfego de dados, escolhendo a melhor rota para a informação chegar ao destino." },
+   
+   
     // === ELITE: INFORMÁTICA (Redes e Segurança) ===
     { id: 416, s: 'i', p: 1, q: "Qual topologia de rede é caracterizada por um nó central que gerencia todas as comunicações, comum em redes Wi-Fi de escritórios?", o: ["Anel (Ring)", "Estrela (Star)", "Barramento (Bus)", "Malha (Mesh)"], a: 1, e: "Na topologia Estrela, todos os dispositivos se conectam a um ponto central (Switch ou AP)." },
     { id: 417, s: 'i', p: 1, q: "No Windows 10, o que faz o comando 'ping' executado no Prompt de Comando (CMD)?", o: ["Apaga arquivos temporários", "Testa a conectividade e a latência com outro endereço IP", "Formata o pendrive", "Altera a senha do usuário"], a: 1, e: "O ping envia pacotes ICMP para verificar se um destino está alcançável e o tempo de resposta." },
@@ -2428,35 +2273,7 @@ const bancoDeDadosGeral = [
         e: "Win + D é o atalho para 'Show Desktop'."
     },
    
-    // === ELITE: INFORMÁTICA E REDES (s: 'i') ===
-    {
-        id: 427, s: 'i', p: 1,
-        q: "O que define um ataque de 'Denial of Service' (DoS) contra um servidor de transmissão da Câmara?",
-        o: ["Roubo de senhas por meio de e-mails falsos.", "Sobrecarga do servidor com requisições simultâneas para torná-lo indisponível aos usuários legítimos.", "Instalação de um vírus que espiona a webcam.", "Falsificação física do crachá do técnico."],
-        a: 1,
-        e: "O ataque de Negação de Serviço visa derrubar sistemas inundando-os com tráfego inútil."
-    },
-    {
-        id: 428, s: 'i', p: 1,
-        q: "Qual a função de um servidor de 'DNS' (Domain Name System) em uma rede de computadores?",
-        o: ["Atribuir endereços IP automaticamente.", "Traduzir nomes de domínio (como www.goiania.go.leg.br) em endereços IP numéricos.", "Bloquear o acesso de sites maliciosos.", "Realizar a varredura de vírus em e-mails."],
-        a: 1,
-        e: "O DNS é a 'lista telefônica' da internet, resolvendo nomes em IPs para que os roteadores saibam para onde enviar os dados."
-    },
-    {
-        id: 429, s: 'i', p: 1,
-        q: "O que caracteriza a tecnologia de virtualização de servidores, amplamente utilizada em data centers?",
-        o: ["Aumentar o tamanho físico dos servidores.", "Executar múltiplos sistemas operacionais independentes em um único hardware físico.", "Eliminar a necessidade de cabos de rede.", "Substituir o uso de memórias RAM por HDs externos."],
-        a: 1,
-        e: "Virtualização permite otimizar hardware, rodando vários servidores virtuais em uma única máquina física (host)."
-    },
-    {
-        id: 430, s: 'i', p: 1,
-        q: "No Microsoft Windows 10, o que acontece ao pressionar a combinação de teclas 'Win + D'?",
-        o: ["Abre o Explorador de Arquivos.", "Minimiza todas as janelas e mostra a Área de Trabalho.", "Bloqueia o computador imediatamente.", "Abre o Painel de Controle."],
-        a: 1,
-        e: "Win + D é o atalho para 'Show Desktop'."
-    },
+   
     {
         id: 502, s: 'g', p: 2,
         q: "Conforme o Regimento Interno da Câmara Municipal de Goiânia, qual o quórum necessário para a abertura de uma Sessão Ordinária?",
